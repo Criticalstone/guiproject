@@ -4,7 +4,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
@@ -14,3 +13,9 @@ hs_err_pid*
 
 *.project
 *.classpath
+
+.idea/
+__MACOSX/
+guiproject.iml
+out/
+
