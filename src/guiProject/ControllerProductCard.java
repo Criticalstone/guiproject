@@ -37,15 +37,15 @@ public class ControllerProductCard {
 	}
 	
 	public void buttonAddAction(ActionEvent e){
-		labelProductName.setText("Tomater");
+		
 	}
 	
 	public void buttonSubAction(ActionEvent e){
-		labelProductName.setText("Bananer");
+		
 	}
 	
 	public void textFieldQtyAction(){
-		labelProductName.setText(textFieldQty.getText());
+		
 
 	}
 }
