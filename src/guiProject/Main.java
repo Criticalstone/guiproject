@@ -18,19 +18,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
         primaryStage.setTitle("iMat");
-
-        TabPane tabPane = new TabPane();
-        Tab tab1 = new Tab("T1"); tab1.setContent(new Rectangle(200, 200, Color.LIGHTGREEN));
-        Tab tab2 = new Tab("T2"); tab2.setContent(new Rectangle(200, 200, Color.LIGHTSTEELBLUE));
-        tabPane.getTabs().addAll(tab1, tab2);
-        tabPane.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
-
-        // layout the stage.
-        StackPane layout = new StackPane();
-        layout.getChildren().add(tabPane);
-        layout.setStyle("-fx-background-color: cornsilk; -fx-padding: 10;");
-
-        Scene scene = new Scene(layout);
+        
+        Scene scene = new Scene(root);
         scene.getStylesheets().add("/res/sample.css");
 
         primaryStage.setScene(scene);

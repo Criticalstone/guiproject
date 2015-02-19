@@ -21,3 +21,6 @@
     -fx-tab-max-width: 35px;
 }*/
 
+.button{
+	-fx-text-alignment: LEFT;
+}
