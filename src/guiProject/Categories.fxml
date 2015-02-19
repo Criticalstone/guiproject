@@ -4,7 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiProject.ControllerCateg">
   <tabs>
     <Tab fx:id="tabCateg" styleClass="profile-tab" text="Cateories">
          <contextMenu>
@@ -13,7 +13,37 @@
                 <MenuItem mnemonicParsing="false" text="Unspecified Action" />
               </items>
             </ContextMenu>
-         </contextMenu></Tab>
+         </contextMenu>
+         <content>
+            <Accordion>
+              <panes>
+                <TitledPane animated="false" text="untitled 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="3.0" prefHeight="200.0" prefWidth="165.0">
+                                 <children>
+                                    <Button fx:id="buttonTest" mnemonicParsing="false" onAction="#menuOnAction" text="Button" />
+                                    <Button fx:id="buttonTest2" mnemonicParsing="false" onAction="#menuOnAction" text="Button" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="untitled 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="untitled 3">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </content></Tab>
     <Tab fx:id="tabList" text="List" />
       <Tab fx:id="tabProfile" styleClass="cat-tab" text="Profile">
         <content>
