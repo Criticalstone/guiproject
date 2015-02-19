@@ -1,4 +1,22 @@
-.custom-button {
+/*.cat-tab {
     -fx-background-image: url("categories.png");
-    -fx-padding: 15git px;
 }
+
+.list-tab{
+    -fx-background-image: url("list.png");
+}
+
+.profile-tab{
+    -fx-background-image: url("profile.png");
+}
+
+.tab-label{
+    -fx-content-display: top;
+}
+
+.tab-pane{
+    -fx-tab-min-height: 45px;
+    -fx-tab-max-height: 45px;
+    -fx-tab-min-width: 35px;
+    -fx-tab-max-width: 35px;
+}*/
