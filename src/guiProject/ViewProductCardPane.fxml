@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<GridPane prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiProject.ControllerProductCard">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -86,9 +85,9 @@
             </Label>
             <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: green;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="buttonSub" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="-" HBox.hgrow="ALWAYS" />
-                  <TextField fx:id="textFieldQty" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="buttonAdd" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonSub" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonSubAction" text="-" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="textFieldQty" onAction="#textFieldQtyAction" onKeyReleased="#textFieldQtyAction" />
+                  <Button fx:id="buttonAdd" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonAddAction" text="+" HBox.hgrow="ALWAYS" />
                </children>
                <GridPane.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
