@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiProject.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiProject.ControllerCateg">
    <children>
       <Pane layoutX="546.0" layoutY="109.0" prefHeight="390.0" prefWidth="159.0" style="-fx-background-color: #ff0000;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0" />
       <Pane prefHeight="108.0" prefWidth="690.0" style="-fx-background-color: #00FF00;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
@@ -28,6 +29,9 @@
                                                    <VBox.margin>
                                                       <Insets bottom="2.0" top="2.0" />
                                                    </VBox.margin>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
                                                 </Label>
                                                 <Label text="Griskött">
                                                    <VBox.margin>
@@ -44,6 +48,7 @@
                                                       <Insets bottom="2.0" top="2.0" />
                                                    </VBox.margin>
                                                 </Label>
+                                                <Button fx:id="buttonTest" mnemonicParsing="false" onAction="#handleButtonAction" text="Button" />
                                              </children>
                                           </VBox>
                                        </children>
