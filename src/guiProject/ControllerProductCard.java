@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
 
-public class ControllerProductCard {
+public class ControllerProductCard{
 	@FXML
 	private ImageView imageProduct;
 	@FXML
@@ -31,11 +31,16 @@ public class ControllerProductCard {
 	@FXML
 	private TextField textFieldQty;
 
-	public void setName(){
+	
+	//Create controller so that this object can be instanced.
+	
+	private void setName(){
 		labelProductName.setText("Tomater");
 		
 	}
 	
+	
+	//Action events
 	public void buttonAddAction(ActionEvent e){
 		
 	}
