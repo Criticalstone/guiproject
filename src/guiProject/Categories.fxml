@@ -5,8 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiProject.ControllerCateg">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="165.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
     <Tab fx:id="tabCateg" styleClass="profile-tab" text="Cateories">
          <contextMenu>
@@ -19,28 +18,28 @@
          <content>
             <Accordion>
               <panes>
-                <TitledPane animated="false" text="Kött">
+                <TitledPane animated="false" prefHeight="275.0" prefWidth="195.0" text="Kött">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
                               <VBox layoutX="17.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label text="Nötkött">
+                                    <Label onMouseClicked="#buttonOnClick" text="Nötkött">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Griskött">
+                                    <Label onMouseClicked="#buttonOnClick" text="Griskött">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Kyckling">
+                                    <Label onMouseClicked="#buttonOnClick" text="Kyckling">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Fisk">
+                                    <Label onMouseClicked="#buttonOnClick" text="Fisk">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -58,52 +57,52 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label text="Baljväxter">
+                                    <Label onMouseClicked="#buttonOnClick" text="Baljväxter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Bär">
+                                    <Label onMouseClicked="#buttonOnClick" text="Bär">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Citrosfrukter">
+                                    <Label onMouseClicked="#buttonOnClick" text="Citrosfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Exotiska frukter">
+                                    <Label onMouseClicked="#buttonOnClick" text="Exotiska frukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Grönsaksfrukter">
+                                    <Label onMouseClicked="#buttonOnClick" text="Grönsaksfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Kål">
+                                    <Label onMouseClicked="#buttonOnClick" text="Kål">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Meloner ">
+                                    <Label onMouseClicked="#buttonOnClick" text="Meloner ">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Rotfrukter">
+                                    <Label onMouseClicked="#buttonOnClick" text="Rotfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Stenfrukter">
+                                    <Label onMouseClicked="#buttonOnClick" text="Stenfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Örtkryddor">
+                                    <Label onMouseClicked="#buttonOnClick" text="Örtkryddor">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -120,22 +119,22 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label text="Mjölk">
+                                    <Label fx:id="milk" onMouseClicked="#buttonOnClick" text="Mjölk">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Fil &amp; yoghurt">
+                                    <Label onMouseClicked="#buttonOnClick" text="Fil &amp; yoghurt">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Ost">
+                                    <Label onMouseClicked="#buttonOnClick" text="Ost">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Ägg">
+                                    <Label onMouseClicked="#buttonOnClick" text="Ägg">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -152,42 +151,42 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label text="Bröd">
+                                    <Label onMouseClicked="#buttonOnClick" text="Bröd">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Mjöl">
+                                    <Label onMouseClicked="#buttonOnClick" text="Mjöl">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Socker">
+                                    <Label onMouseClicked="#buttonOnClick" text="Socker">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Salt">
+                                    <Label onMouseClicked="#buttonOnClick" text="Salt">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Nötter &amp; frön">
+                                    <Label onMouseClicked="#buttonOnClick" text="Nötter &amp; frön">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Pasta">
+                                    <Label onMouseClicked="#buttonOnClick" text="Pasta">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Potatis">
+                                    <Label onMouseClicked="#buttonOnClick" text="Potatis">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Ris">
+                                    <Label onMouseClicked="#buttonOnClick" text="Ris">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -204,12 +203,12 @@
                            <children>
                               <VBox layoutX="14.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label text="Varma">
+                                    <Label onMouseClicked="#buttonOnClick" text="Varma">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Kalla">
+                                    <Label onMouseClicked="#buttonOnClick" text="Kalla">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -226,22 +225,22 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label text="Choklad">
+                                    <Label onMouseClicked="#buttonOnClick" text="Choklad">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Chips">
+                                    <Label onMouseClicked="#buttonOnClick" text="Chips">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Glass">
+                                    <Label onMouseClicked="#buttonOnClick" text="Glass">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="Kakor &amp; bakelser">
+                                    <Label onMouseClicked="#buttonOnClick" text="Kakor &amp; bakelser">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -294,4 +293,4 @@
         </content>
       </Tab>
   </tabs>
-</TabPane>
+</fx:root>
