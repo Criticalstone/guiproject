@@ -26,19 +26,24 @@ public class ControllerProductCardPane extends GridPane{
 	@FXML
 	private Label labelProductName;
 	@FXML
+	private Label labelSize;
+	@FXML
+	private Label labelSizeUnit;
+	@FXML
 	private Label labelPrice;
 	@FXML
-	private Label labelPriceSpecifier;
+	private Label labelPriceUnit;
 	@FXML
 	private Label labelAvPrice;
 	@FXML
-	private Label labelAvPriceSpecifier;
+	private Label labelAvPriceUnit;
 	@FXML
 	private Button buttonSub;
 	@FXML
 	private Button buttonAdd;
 	@FXML
 	private TextField textFieldQty;
+
 
 	
 	//Create controller so that this object can be instanced.
@@ -54,11 +59,19 @@ public class ControllerProductCardPane extends GridPane{
             throw new RuntimeException(exception);
         }
         setName();
+        setSize();
         setImage();
-//        setPrice();
+        setPrice();
 //        setAvPrice();
+
 	}
 	
+	private void setSize() {
+//		labelSize.setText();
+		labelSizeUnit.setText(product.getUnitSuffix());
+		
+	}
+
 	private void setName(){
 		labelProductName.setText(product.getName());
 		
@@ -68,11 +81,13 @@ public class ControllerProductCardPane extends GridPane{
 		imageProduct.setImage(Utilities.getProductImage(product, new Dimension((int)imageProduct.getFitWidth(), (int)imageProduct.getFitHeight())));
 	}
 	private void setPrice(){
-//		labelPrice.setText(Utilities.zeroPappedPrice(product.getPrice()));
+		labelPrice.setText(Utilities.zeroPappedPrice(product.getPrice()));
+		labelPriceUnit.setText(product.getUnit());
+
 	}
 	
 	private void setAvPrice(){
-		
+
 	}
 	
 	

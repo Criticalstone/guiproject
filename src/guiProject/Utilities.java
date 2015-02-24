@@ -24,6 +24,9 @@ public class Utilities {
 	
 	public static String zeroPappedPrice(Double price){
 		String priceString = ((Double)price).toString();
+		if (priceString.indexOf(".") == priceString.length()-2){
+			priceString = priceString+"0";
+		}
 		return priceString;
 	}
 }
