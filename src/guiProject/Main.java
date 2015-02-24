@@ -7,8 +7,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -16,21 +14,26 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("mainView.fxml"));
+
+        Parent root = FXMLLoader.load(getClass().getResource("mainFrame.fxml"));
+        primaryStage.setTitle("iMat");
 
         Scene scene = new Scene(root);
+        //Category test setup 
+        Pane categoriesPane = (Pane) scene.lookup("#categories");
+        categoriesPane.getChildren().add(new Categories());
         
+        //Setup test for details
         Pane pane = (Pane) scene.lookup("#centerPane");
         ControllerProductList productList = new ControllerProductList();
-        
-
         productList.addItem(IMatDataHandler.getInstance().getProduct(43));
-
         pane.getChildren().add(productList);
 
-        
-        primaryStage.setTitle("iMat");
+        //Complete setup
+        scene.getStylesheets().add("/res/sample.css");
         primaryStage.setScene(scene);
+        ControllerMain.initialize();
+
         primaryStage.show();
         
 
