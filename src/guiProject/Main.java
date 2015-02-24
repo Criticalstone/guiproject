@@ -4,15 +4,24 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mainFrame.fxml"));
         primaryStage.setTitle("iMat");
-        primaryStage.setScene(new Scene(root, 300, 275));
+
+        Scene scene = new Scene(root);
+        Pane categoriesPane = (Pane) scene.lookup("#categories");
+        categoriesPane.getChildren().add(new Categories());
+
+        scene.getStylesheets().add("/res/sample.css");
+
+        primaryStage.setScene(scene);
+        ControllerMain.initialize();
         primaryStage.show();
     }
 
