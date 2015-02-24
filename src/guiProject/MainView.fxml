@@ -12,6 +12,6 @@
       <Pane layoutX="546.0" layoutY="109.0" prefHeight="390.0" prefWidth="159.0" style="-fx-background-color: #ff0000;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0" />
       <Pane prefHeight="108.0" prefWidth="690.0" style="-fx-background-color: #00FF00;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Pane fx:id="categories" layoutY="108.0" prefHeight="390.0" prefWidth="159.0" style="-fx-background-color: #09cdda;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="108.0" />
-      <Pane layoutX="158.0" layoutY="108.0" prefHeight="390.0" prefWidth="390.0" style="-fx-background-color: #0000ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="158.0" AnchorPane.topAnchor="108.0" />
+      <Pane fx:id="centerPane" layoutX="158.0" layoutY="108.0" prefHeight="390.0" prefWidth="390.0" style="-fx-background-color: #0000ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="158.0" AnchorPane.topAnchor="108.0" />
    </children>
 </AnchorPane>
