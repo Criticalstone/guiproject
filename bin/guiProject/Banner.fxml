@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToolBar layoutY="117.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="690.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <Label text="Varukorg">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" text="List" />
+                  <Button mnemonicParsing="false" text="Icon">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" text="Sök" />
+            <TextField prefHeight="26.0" prefWidth="120.0" />
+         </items>
+      </ToolBar>
+      <AnchorPane layoutX="252.0" layoutY="55.0" prefHeight="62.0" prefWidth="186.0" style="-fx-background-color: Grey;" AnchorPane.bottomAnchor="38.0" AnchorPane.topAnchor="40.0" />
+   </children>
+</AnchorPane>
