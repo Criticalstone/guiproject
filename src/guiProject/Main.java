@@ -18,15 +18,24 @@ public class Main extends Application {
         primaryStage.setTitle("iMat");
 
         Scene scene = new Scene(root);
+       
         //Category test setup 
         Pane categoriesPane = (Pane) scene.lookup("#categories");
         categoriesPane.getChildren().add(new Categories());
         
         //Setup test for details
-        Pane pane = (Pane) scene.lookup("#centerPane");
+        Pane detailsPane = (Pane) scene.lookup("#centerPane");
         ControllerProductList productList = new ControllerProductList();
         productList.addItem(IMatDataHandler.getInstance().getProduct(43));
-        pane.getChildren().add(productList);
+        detailsPane.getChildren().add(productList);
+        
+        //Setup test for banner
+        Pane bannerPane = (Pane) scene.lookup("#bannerPane");
+        bannerPane.getChildren().add(new Banner());
+        
+        //Setup test for shoppingcart
+        Pane shoppingCartPane = (Pane) scene.lookup("#shoppingCartPane");
+        shoppingCartPane.getChildren().add(new ShoppingCart());
 
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
