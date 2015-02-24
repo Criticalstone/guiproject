@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: red;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="300.0" prefWidth="200.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -17,7 +17,7 @@
       <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <GridPane prefHeight="85.0" prefWidth="298.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.rowIndex="1">
+      <GridPane prefHeight="85.0" prefWidth="298.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="87.0" />
           <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="105.0" />
@@ -55,7 +55,7 @@
                <children>
                   <HBox prefHeight="62.0" prefWidth="196.0">
                      <children>
-                        <Label fx:id="labelPrice" alignment="BOTTOM_RIGHT" prefHeight="62.0" prefWidth="65.0" text="19,90" textAlignment="RIGHT">
+                        <Label fx:id="labelPrice" alignment="BOTTOM_RIGHT" prefHeight="62.0" prefWidth="65.0" textAlignment="RIGHT">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -75,7 +75,7 @@
                   </HBox>
                </children>
             </HBox>
-            <Label fx:id="labelProductName" prefHeight="162.0" prefWidth="287.0" text="Bananer" wrapText="true" GridPane.columnSpan="2" GridPane.valignment="TOP">
+            <Label fx:id="labelProductName" prefHeight="162.0" prefWidth="287.0" wrapText="true" GridPane.columnSpan="2" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
@@ -83,7 +83,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: green;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <Button fx:id="buttonSub" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonSubAction" text="-" HBox.hgrow="ALWAYS" />
                   <TextField fx:id="textFieldQty" onAction="#textFieldQtyAction" onKeyReleased="#textFieldQtyAction" />
@@ -105,7 +105,7 @@
         </rowConstraints>
          <children>
             <ImageView fx:id="imageProduct" fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
-            <VBox fx:id="boxDetailIcons" maxHeight="1.7976931348623157E308" prefHeight="135.0" prefWidth="60.0" style="-fx-background-color: orange;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="ALWAYS" />
+            <VBox fx:id="boxDetailIcons" maxHeight="1.7976931348623157E308" prefHeight="135.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="ALWAYS" />
          </children>
       </GridPane>
    </children>

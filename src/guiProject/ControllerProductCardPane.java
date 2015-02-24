@@ -3,6 +3,7 @@ package guiProject;
 import java.awt.Dimension;
 import java.io.IOException;
 
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,22 +44,19 @@ public class ControllerProductCardPane extends GridPane{
 	//Create controller so that this object can be instanced.
 	public ControllerProductCardPane(Product p)  {
 		this.product = p;
-		System.out.println("1");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "ViewProductCardPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-		System.out.println("2");
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-		System.out.println("3");
         setName();
         setImage();
-        setPrice();
-        setAvPrice();
+//        setPrice();
+//        setAvPrice();
 	}
 	
 	private void setName(){
@@ -70,8 +68,9 @@ public class ControllerProductCardPane extends GridPane{
 		imageProduct.setImage(Utilities.getProductImage(product, new Dimension((int)imageProduct.getFitWidth(), (int)imageProduct.getFitHeight())));
 	}
 	private void setPrice(){
-		
+//		labelPrice.setText(Utilities.zeroPappedPrice(product.getPrice()));
 	}
+	
 	private void setAvPrice(){
 		
 	}

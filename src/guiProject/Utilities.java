@@ -21,4 +21,9 @@ public class Utilities {
 		SwingFXUtils.toFXImage(img, fxImg);
 		return fxImg;
 	}
+	
+	public static String zeroPappedPrice(Double price){
+		String priceString = ((Double)price).toString();
+		return priceString;
+	}
 }

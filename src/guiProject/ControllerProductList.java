@@ -4,19 +4,19 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.ait.dat215.project.Product;
 
-public class ControllerProductList extends FlowPane{
+public class ControllerProductList extends AnchorPane{
 	@FXML
-	private FlowPane paneProductList;
+	private AnchorPane paneResultList;
 
 	public ControllerProductList(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "ViewProductCardPane.fxml"));
-//        fxmlLoader.setRoot(this);
-//        fxmlLoader.setController(this);
+                "ViewProductResultList.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
         
         try {
             fxmlLoader.load();
@@ -28,6 +28,6 @@ public class ControllerProductList extends FlowPane{
 	}
 	
 	public void addItem(Product p){
-		paneProductList.getChildren().add(new ControllerProductCardPane(p));
+		paneResultList.getChildren().add(new ControllerProductCardPane(p));
 	}
 }
