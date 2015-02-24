@@ -15,13 +15,13 @@ public class Main extends Application {
         primaryStage.setTitle("iMat");
 
         Scene scene = new Scene(root);
-
         Pane categoriesPane = (Pane) scene.lookup("#categories");
         categoriesPane.getChildren().add(new Categories());
 
         scene.getStylesheets().add("/res/sample.css");
 
         primaryStage.setScene(scene);
+        ControllerMain.initialize();
         primaryStage.show();
     }
 

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.MouseEvent;
+import se.chalmers.ait.dat215.project.ProductCategory;
 
 import java.io.IOException;
 
@@ -26,6 +27,7 @@ public class Categories extends TabPane{
 
     @FXML
     public void buttonOnClick(MouseEvent event){
-        System.out.println(((Label)event.getSource()).getId());
+        //ProductCategory categ = ProductCategory
+        //ControllerMain.setProductFromCategory(());
     }
 }
