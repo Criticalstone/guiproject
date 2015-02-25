@@ -36,7 +36,7 @@ public class ControllerDetailedCard{
 	public ControllerDetailedCard(Product p){
 		this.product = p;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "DetailedProductView.fxml"));
+                "fxml/DetailedProductView.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {

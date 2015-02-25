@@ -13,7 +13,7 @@ public class Categories extends TabPane{
 
         public Categories() {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                    "Categories.fxml"));
+                    "fxml/Categories.fxml"));
 
             fxmlLoader.setController(this);
             fxmlLoader.setRoot(this);
