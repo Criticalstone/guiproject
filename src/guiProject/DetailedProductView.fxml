@@ -1,34 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="259.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="298.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="238.0" fitWidth="312.0" layoutX="26.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="523.0" AnchorPane.topAnchor="10.0">
-         <image>
-            <Image url="@../../../../../../Desktop/2000px-000080_Navy_Blue_Square.svg.png" />
-         </image>
-      </ImageView>
-      <Pane layoutX="248.0" layoutY="10.0" prefHeight="238.0" prefWidth="51.0" style="-fx-background-color: green;" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="671.0" AnchorPane.topAnchor="10.0" />
-      <Pane layoutX="299.0" layoutY="10.0" prefHeight="259.0" prefWidth="450.0" style="-fx-background-color: yellow;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="221.0" AnchorPane.topAnchor="0.0">
+      <ImageView fx:id="detImage" fitHeight="238.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="238.0" prefHeight="238.0" prefWidth="51.0" style="-fx-border-color: black;" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="289.0" prefHeight="298.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="289.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="238.0" style="-fx-background-color: orange;" text="Label" />
+            <Label fx:id="detNameLabel" layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="238.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
             <Label layoutX="14.0" layoutY="75.0" text="Info" underline="true" />
-            <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="96.0" prefHeight="39.0" prefWidth="294.0" text="Description" />
+            <Label fx:id="detDescrLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="96.0" prefHeight="39.0" prefWidth="294.0" text="Description" />
             <Label layoutX="14.0" layoutY="143.0" text="Ingredienser" underline="true" />
-            <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="164.0" prefHeight="47.0" prefWidth="188.0" text="Innehåll" />
-         </children></Pane>
-      <AnchorPane layoutX="749.0" prefHeight="259.0" prefWidth="223.0" style="-fx-background-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="747.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label fx:id="detIngLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="164.0" prefHeight="47.0" prefWidth="188.0" text="Innehåll" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="637.0" prefHeight="259.0" prefWidth="245.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="637.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TableView layoutX="12.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="45.0">
+            <TableView layoutX="24.0" layoutY="41.0" prefHeight="189.0" prefWidth="446.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="40.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="Energi" />
+                <TableColumn prefWidth="75.0" />
               </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </TableView>
-         </children></AnchorPane>
+            <HBox layoutX="127.0" layoutY="215.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <Button layoutX="127.0" layoutY="215.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="39.0" prefWidth="40.0" text="-">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textFieldQty" alignment="CENTER" prefHeight="39.0" prefWidth="60.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="233.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="43.0" text="+">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="12.0" layoutY="14.0" text="Näringsinformation" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="detCostLabel" layoutX="208.0" layoutY="244.0" prefHeight="39.0" prefWidth="93.0" text="Kostnad" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="169.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="14.0" layoutY="253.0" mnemonicParsing="false" text="Starred" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="390.0" />
+            <Button layoutX="96.0" layoutY="253.0" mnemonicParsing="false" text="Add to list" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="285.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

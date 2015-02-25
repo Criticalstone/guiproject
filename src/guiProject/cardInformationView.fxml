@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="64.0" layoutY="43.0" text="Kontonummer: " />
+      <Label layoutX="129.0" layoutY="81.0" prefHeight="21.0" prefWidth="39.0" text="CVC:" />
+      <TextField layoutX="177.0" layoutY="38.0" promptText="xxxx xxxx xxxx xxxx" />
+      <TextField layoutX="177.0" layoutY="76.0" prefHeight="31.0" prefWidth="67.0" promptText="xxx" />
+      <TextField layoutX="177.0" layoutY="117.0" promptText="ex. Karl Karlsson" />
+      <Label layoutX="8.0" layoutY="122.0" text="Kortinnehavarens namn:" />
+      <Label layoutX="65.0" layoutY="160.0" text="Utgångsdatum:" />
+      <Label layoutX="133.0" layoutY="200.0" text="Kort:" />
+      <TextField layoutX="177.0" layoutY="155.0" prefHeight="31.0" prefWidth="39.0" promptText="åå" />
+      <Label layoutX="222.0" layoutY="153.0" text="/">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="237.0" layoutY="155.0" prefHeight="31.0" prefWidth="45.0" promptText="mm" />
+      <ComboBox layoutX="177.0" layoutY="195.0" prefHeight="31.0" prefWidth="187.0" />
+   </children>
+</AnchorPane>

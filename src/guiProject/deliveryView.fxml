@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Hämtning och leverans">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="60.0" text="Butik" />
+      <ComboBox layoutX="59.0" layoutY="55.0" prefHeight="31.0" prefWidth="180.0" />
+      <RadioButton layoutX="14.0" layoutY="111.0" mnemonicParsing="false" text="Hemleverans">
+         <toggleGroup>
+            <ToggleGroup fx:id="dgroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="159.0" layoutY="111.0" mnemonicParsing="false" text="Hämta i butik" toggleGroup="$dgroup" />
+   </children>
+</AnchorPane>
