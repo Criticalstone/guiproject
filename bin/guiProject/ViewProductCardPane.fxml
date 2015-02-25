@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="300.0" prefWidth="200.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: white;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -17,46 +17,23 @@
       <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="157.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <GridPane prefHeight="85.0" prefWidth="298.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.rowIndex="1">
+      <GridPane prefHeight="85.0" prefWidth="298.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="87.0" />
           <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="105.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
-               <children>
-                  <Label fx:id="labelAvPrice" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="88.0" text="avPrice">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="labelAvPriceUnit" minWidth="33.0" prefHeight="36.0" prefWidth="33.0" text="unit">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-               <GridPane.margin>
-                  <Insets right="2.0" />
-               </GridPane.margin>
-            </HBox>
             <HBox prefHeight="122.0" prefWidth="147.0" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                <children>
-                  <HBox prefHeight="62.0" prefWidth="196.0">
+                  <HBox prefHeight="62.0" prefWidth="196.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label fx:id="labelPrice" alignment="BOTTOM_RIGHT" prefHeight="62.0" prefWidth="65.0" text="price" textAlignment="RIGHT">
+                        <Label fx:id="labelPrice" alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" text="price" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -64,7 +41,7 @@
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelPriceUnit" alignment="BOTTOM_LEFT" minWidth="38.0" prefHeight="71.0" prefWidth="43.0" text="unit">
+                        <Label fx:id="labelPriceUnit" alignment="BOTTOM_LEFT" prefHeight="71.0" text="unit" HBox.hgrow="ALWAYS">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -94,23 +71,10 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
-               <children>
-                  <Label fx:id="labelSize" text="size">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="labelSizeUnit" text="unit">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
+            <Button fx:id="buttonStar" mnemonicParsing="false" prefHeight="27.0" prefWidth="105.0" text="Star" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <GridPane>
+      <GridPane style="-fx-background-color: white;">
         <columnConstraints>
           <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="125.0" />
           <ColumnConstraints hgrow="NEVER" maxWidth="60.0" minWidth="10.0" prefWidth="60.0" />
