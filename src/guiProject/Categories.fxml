@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="165.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="165.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
     <Tab fx:id="tabCateg" styleClass="profile-tab" text="Cateories">
          <contextMenu>
@@ -57,52 +57,52 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label onMouseClicked="#buttonOnClick" text="Baljväxter">
+                                    <Label fx:id="POD" onMouseClicked="#buttonOnClick" text="Baljväxter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Bär">
+                                    <Label fx:id="BERRY" onMouseClicked="#buttonOnClick" text="Bär">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Citrosfrukter">
+                                    <Label fx:id="CITRUS_FRUIT" onMouseClicked="#buttonOnClick" text="Citrosfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Exotiska frukter">
+                                    <Label fx:id="EXOTIC_FRUIT" onMouseClicked="#buttonOnClick" text="Exotiska frukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Grönsaksfrukter">
+                                    <Label fx:id="VEGETABLE_FRUIT" onMouseClicked="#buttonOnClick" text="Grönsaksfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Kål">
+                                    <Label fx:id="CABBAGE" onMouseClicked="#buttonOnClick" text="Kål">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Meloner ">
+                                    <Label fx:id="MELONS" onMouseClicked="#buttonOnClick" text="Meloner ">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Rotfrukter">
+                                    <Label fx:id="ROOT_VEGETABLES" onMouseClicked="#buttonOnClick" text="Rotfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Stenfrukter">
+                                    <Label fx:id="FRUIT" onMouseClicked="#buttonOnClick" text="Stenfrukter">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Örtkryddor">
+                                    <Label fx:id="HERB" onMouseClicked="#buttonOnClick" text="Örtkryddor">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -119,22 +119,22 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label fx:id="milk" onMouseClicked="#buttonOnClick" text="Mjölk">
+                                    <Label fx:id="DAIRIES" onMouseClicked="#buttonOnClick" text="Mjölk">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Fil &amp; yoghurt">
+                                    <Label fx:id="DAIRIES" onMouseClicked="#buttonOnClick" text="Fil &amp; yoghurt">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Ost">
+                                    <Label fx:id="DAIRIES" onMouseClicked="#buttonOnClick" text="Ost">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Ägg">
+                                    <Label fx:id="DAIRIES" onMouseClicked="#buttonOnClick" text="Ägg">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -151,42 +151,42 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label onMouseClicked="#buttonOnClick" text="Bröd">
+                                    <Label fx:id="BREAD" onMouseClicked="#buttonOnClick" text="Bröd">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Mjöl">
+                                    <Label fx:id="FLOUR_SUGAR_SALT" onMouseClicked="#buttonOnClick" text="Mjöl">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Socker">
+                                    <Label fx:id="FLOUR_SUGAR_SALT" onMouseClicked="#buttonOnClick" text="Socker">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Salt">
+                                    <Label fx:id="FLOUR_SUGAR_SALT" onMouseClicked="#buttonOnClick" text="Salt">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Nötter &amp; frön">
+                                    <Label fx:id="NUTS_AND_SEEDS" onMouseClicked="#buttonOnClick" text="Nötter &amp; frön">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Pasta">
+                                    <Label fx:id="PASTA" onMouseClicked="#buttonOnClick" text="Pasta">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Potatis">
+                                    <Label fx:id="POTATO_RICE" onMouseClicked="#buttonOnClick" text="Potatis">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Ris">
+                                    <Label fx:id="POTATO_RICE" onMouseClicked="#buttonOnClick" text="Ris">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
@@ -203,12 +203,12 @@
                            <children>
                               <VBox layoutX="14.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <Label onMouseClicked="#buttonOnClick" text="Varma">
+                                    <Label fx:id="HOT_DRINKS" onMouseClicked="#buttonOnClick" text="Varma">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Kalla">
+                                    <Label fx:id="COLD_DRINKS" onMouseClicked="#buttonOnClick" text="Kalla">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>

@@ -27,16 +27,6 @@ public class Main extends Application {
         productList.addItem(IMatDataHandler.getInstance().getProduct(43));
         detailPane.getChildren().add(productList);
 
-        /*//Category test setup
-        Pane categoriesPane = (Pane) scene.lookup("#categories");
-        categoriesPane.getChildren().add(new Categories());
-        
-        //Setup test for details
-        Pane pane = (Pane) scene.lookup("#centerPane");
-        ControllerProductList productList = new ControllerProductList();
-        productList.addItem(IMatDataHandler.getInstance().getProduct(43));
-        pane.getChildren().add(productList);
-*/
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
         primaryStage.setScene(scene);
