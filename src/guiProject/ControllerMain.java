@@ -22,7 +22,7 @@ public class ControllerMain{
     }
 
     public static List<Product> getProductFromCategory(ProductCategory categ){
-        List<Product> products = imat.getProducts(categ);
+        List<Product> products = git imat.getProducts(categ);
         for(Product p:products){
             System.out.println(p.getName());
         }
