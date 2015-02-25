@@ -18,28 +18,28 @@
          <content>
             <Accordion>
               <panes>
-                <TitledPane animated="false" prefHeight="275.0" prefWidth="195.0" text="Kött">
+                <TitledPane animated="false" prefHeight="157.0" prefWidth="202.0" text="Kött">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
                            <children>
-                              <VBox layoutX="17.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
+                              <VBox prefHeight="119.0" prefWidth="150.0">
                                  <children>
-                                    <Label onMouseClicked="#buttonOnClick" text="Nötkött">
+                                    <Label fx:id="MEAT" onMouseClicked="#buttonOnClick" text="Nötkött">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Griskött">
+                                    <Label fx:id="MEAT" onMouseClicked="#buttonOnClick" text="Griskött">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Kyckling">
+                                    <Label fx:id="MEAT" onMouseClicked="#buttonOnClick" text="Kyckling">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label onMouseClicked="#buttonOnClick" text="Fisk">
+                                    <Label fx:id="FISH" onMouseClicked="#buttonOnClick" text="Fisk">
                                        <VBox.margin>
                                           <Insets bottom="2.0" top="2.0" />
                                        </VBox.margin>
