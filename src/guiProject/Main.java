@@ -21,13 +21,15 @@ public class Main extends Application {
         primaryStage.setTitle("iMat");
 
         Scene scene = new Scene(root);
+        ControllerMain.initialize();
+
         //Categories test
         Pane categoriesPane = (Pane) scene.lookup("#categoriesView");
         categoriesPane.getChildren().add(new Categories());
 
         //Details view test
         Pane detailPane = (Pane) scene.lookup("#detailView");
-        ControllerProductList productList = new ControllerProductList();
+        ControllerProductList productList = ControllerMain.getProductList();
         
         ArrayList<Product> products = new ArrayList<Product>();
         for (int i = 1; i < 30;i++){
@@ -48,7 +50,6 @@ public class Main extends Application {
         scene.getStylesheets().add("/res/sample.css");
         primaryStage.setScene(scene);
 
-        ControllerMain.initialize(productList);
 
         primaryStage.show();
         
