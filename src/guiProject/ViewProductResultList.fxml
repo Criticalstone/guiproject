@@ -8,13 +8,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <fx:root fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: purple;" type="ScrollPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <content>
-      <TilePane fx:id="tilePaneResultArea" hgap="20.0" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: pink;" vgap="20.0" />
+      <TilePane fx:id="tilePaneResultArea" alignment="TOP_CENTER" hgap="20.0" prefColumns="0" prefRows="0" style="-fx-background-color: pink;" vgap="20.0" />
    </content>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
 </fx:root>
-
