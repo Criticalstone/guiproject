@@ -3,7 +3,6 @@ package guiProject;
 import java.awt.Dimension;
 import java.io.IOException;
 
-import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,7 +43,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	public ControllerProductCardPane(Product p)  {
 		this.product = p;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "ViewProductCardPane.fxml"));
+                "fxml/ViewProductCardPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
