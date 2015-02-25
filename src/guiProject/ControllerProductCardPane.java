@@ -16,7 +16,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 
-public class ControllerProductCardPane extends GridPane{
+public class ControllerProductCardPane extends GridPane implements IFProductCard{
 	
 	Product product;
 	@FXML
@@ -26,17 +26,11 @@ public class ControllerProductCardPane extends GridPane{
 	@FXML
 	private Label labelProductName;
 	@FXML
-	private Label labelSize;
-	@FXML
-	private Label labelSizeUnit;
+	private Button buttonStar;
 	@FXML
 	private Label labelPrice;
 	@FXML
 	private Label labelPriceUnit;
-	@FXML
-	private Label labelAvPrice;
-	@FXML
-	private Label labelAvPriceUnit;
 	@FXML
 	private Button buttonSub;
 	@FXML
@@ -59,18 +53,13 @@ public class ControllerProductCardPane extends GridPane{
             throw new RuntimeException(exception);
         }
         setName();
-        setSize();
-        setImage();
         setPrice();
-//        setAvPrice();
+        setImage();
+
 
 	}
-	
-	private void setSize() {
-//		labelSize.setText();
-		labelSizeUnit.setText(product.getUnitSuffix());
-		
-	}
+
+
 
 	private void setName(){
 		labelProductName.setText(product.getName());
@@ -86,9 +75,6 @@ public class ControllerProductCardPane extends GridPane{
 
 	}
 	
-	private void setAvPrice(){
-
-	}
 	
 	
 	//Action events
@@ -103,5 +89,12 @@ public class ControllerProductCardPane extends GridPane{
 	public void textFieldQtyAction(){
 		
 
+	}
+
+
+
+	@Override
+	public Product getProduct() {
+		return product;
 	}
 }

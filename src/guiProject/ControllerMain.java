@@ -35,9 +35,8 @@ public class ControllerMain{
     }
 
     public static void setProductList(List<Product> productList){
-        for(Product p: productList){
-            controllerProdList.addItem(p);
-        }
+    	controllerProdList.addItem(productList);
+        
     }
 
 
