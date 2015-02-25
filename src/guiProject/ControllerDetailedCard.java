@@ -1,14 +1,19 @@
 package guiProject;
 
+import java.awt.Dimension;
 import java.io.IOException;
 
 import se.chalmers.ait.dat215.project.Product;
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class ControllerDetailedCard{
 	
@@ -26,6 +31,8 @@ public class ControllerDetailedCard{
 	@FXML
 	private Button buttonAdd;
 	@FXML
+	private Label detCostLabel;
+	@FXML
 	private Button buttonStarred;
 	@FXML
 	private Button buttonAddToList;
@@ -33,7 +40,7 @@ public class ControllerDetailedCard{
 	private TextField textFieldQty;
 	
 	
-	public ControllerDetailedCard(Product p){
+	public ControllerDetailedCard(Product p) {
 		this.product = p;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "DetailedProductView.fxml"));
@@ -45,55 +52,43 @@ public class ControllerDetailedCard{
             throw new RuntimeException(exception);
         }
         
+       
+        setImageCard();
+        setName();
         setDescription();
         setIngrediens();
-        setName();
-        setSize();
-        setImage();
         setPrice();
 	}
+
+
+
+	private void setImageCard(){
+		 detImage.setImage(Utilities.getProductImage(product, new Dimension((int)detImage.getFitWidth(), (int)detImage.getFitHeight())));
+	}
 	
+	
+	private void setName(){
+		detNameLabel.setText(product.getName());
+	}
+	
+	private void setDescription() {
+		detDescrLabel.setText("God");
+	}
 	
 	private void setIngrediens() {
-		// TODO Auto-generated method stub
-		
+		detIngLabel.setText("Pasta");
 	}
-
-
-	private void setDescription() {
-		// TODO Auto-generated method stub
-		
+	
+	private void setPrice(){
+		detCostLabel.setText(new Double(product.getPrice()).toString());
 	}
-
-
-	private void setSize() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private void setName() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private void setPrice() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private void setImage() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 	@FXML
 	private void handleButtonAction() {
-		textFieldQty.setText("6");
-		//int quantity=Integer.parseInt(textFieldQty.getText())-1;
-		//textFieldQty.appendText(Integer.toString(quantity));
+		int quantity=Integer.parseInt(textFieldQty.getText())-1;
+		textFieldQty.appendText(Integer.toString(quantity));
 	}
 
 }

@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="298.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="298.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiProject.ControllerDetailedCard{">
    <children>
       <ImageView fx:id="detImage" fitHeight="238.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Pane layoutX="238.0" prefHeight="238.0" prefWidth="51.0" style="-fx-border-color: black;" AnchorPane.topAnchor="0.0" />
@@ -28,7 +28,12 @@
          <children>
             <TableView layoutX="24.0" layoutY="41.0" prefHeight="189.0" prefWidth="446.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="40.0">
               <columns>
-                <TableColumn prefWidth="75.0" />
+                <TableColumn editable="false" prefWidth="75.0" sortable="false" />
+                  <TableColumn prefWidth="75.0" />
+                  <TableColumn prefWidth="75.0" />
+                  <TableColumn prefWidth="75.0" />
+                  <TableColumn prefWidth="75.0" />
+                  <TableColumn prefWidth="75.0" />
               </columns>
                <opaqueInsets>
                   <Insets />
@@ -63,8 +68,8 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="253.0" mnemonicParsing="false" text="Starred" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="390.0" />
             <Button layoutX="96.0" layoutY="253.0" mnemonicParsing="false" text="Add to list" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="285.0" />
+            <ToggleButton layoutX="12.0" layoutY="253.0" mnemonicParsing="false" text="Starred" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="390.0" />
          </children>
       </AnchorPane>
    </children>
