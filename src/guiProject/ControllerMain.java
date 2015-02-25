@@ -36,7 +36,6 @@ public class ControllerMain{
 
     public static void setProductList(List<Product> productList){
     	controllerProdList.setItems(productList);
-        
     }
 
 

@@ -6,13 +6,9 @@ import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.TilePane;
-import se.chalmers.ait.dat215.project.Product;
 
 public class ControllerProductList extends ScrollPane implements IFControllerProductList{
 
@@ -21,7 +17,7 @@ public class ControllerProductList extends ScrollPane implements IFControllerPro
 	
 	public ControllerProductList(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "ViewProductResultList.fxml"));
+                "fxml/ViewProductResultList.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         setStyle("-fx-background-color: blue");
