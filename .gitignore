@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 /bin/
 
 *.project
 .classpath
-=======
+
 *.class
 bin/
 .gitignore
@@ -13,5 +13,4 @@ build.fxbuild
 .gitignore
 Thumbs.db
 
->>>>>>> detailsView
 /bin1/

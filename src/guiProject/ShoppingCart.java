@@ -1,22 +1,32 @@
 package guiProject;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import se.chalmers.ait.dat215.project.ProductCategory;
 
-import java.io.IOException;
+import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
+import se.chalmers.ait.dat215.project.Product;
 
-public class ShoppingCart extends AnchorPane{
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class ShoppingCart extends GridPane{
+
+    HashMap<Product, Integer> productList;
 
     public ShoppingCart() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "ShoppingCart.fxml"));
+                "fxml/ShoppingCart.fxml"));
 
         fxmlLoader.setController(this);
         fxmlLoader.setRoot(this);
+
+        productList = new HashMap<>();
 
         try {
             fxmlLoader.load();
@@ -24,4 +34,13 @@ public class ShoppingCart extends AnchorPane{
             throw new RuntimeException(exception);
         }
     }
+
+    /*public void addProduct(Product p){
+        if(!productList.cogit ){
+            productList.add(p);
+        }else{
+            Product product = productList.get(productList.indexOf(p));
+            product.get
+        }
+    }*/
 }
