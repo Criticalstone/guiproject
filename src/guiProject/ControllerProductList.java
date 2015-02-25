@@ -10,6 +10,7 @@ import javafx.scene.layout.TilePane;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.scene.control.ScrollPane;
 
+
 public class ControllerProductList extends ScrollPane implements IFControllerProductList{
 
 	@FXML
