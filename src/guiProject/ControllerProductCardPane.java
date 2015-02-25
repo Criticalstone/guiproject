@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
@@ -55,6 +56,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
         setName();
         setPrice();
         setImage();
+        setQtyInCart();
 
 
 	}
@@ -87,14 +89,35 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	}
 	
 	public void textFieldQtyAction(){
-		
-
+	    String c = textFieldQty.getText();
+	    if("1234567890".contains(c)) {
+	    	}
+	    
+	    else {
+	    	textFieldQty.setText(Utilities.removeAllButNumbers(textFieldQty.getText()));
+	    	textFieldQty.positionCaret(textFieldQty.getText().length());
+	    }
+	    if (textFieldQty.getText().equals("")){
+	    	textFieldQty.setText("0");
+	    }
+		int qty = Integer.parseInt(textFieldQty.getText());
+//		ControllerMain.addProductToCart(product, qty - ControllerMain.getQtyOfProduct(product));
 	}
+	
+
 
 
 
 	@Override
 	public Product getProduct() {
 		return product;
+	}
+
+
+
+	@Override
+	public void setQtyInCart() {
+//		textFieldQty.setText(ControllerMain.getQtyOfProduct(product));
+		
 	}
 }

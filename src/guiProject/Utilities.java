@@ -29,4 +29,9 @@ public class Utilities {
 		}
 		return priceString;
 	}
+	
+	public static String removeAllButNumbers(String s){
+		String value = s.replaceAll("[^0-9]","");
+		return value;
+	}
 }
