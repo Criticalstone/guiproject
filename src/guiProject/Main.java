@@ -1,7 +1,10 @@
 package guiProject;
 
 
+import java.util.ArrayList;
+
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Product;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,7 +28,15 @@ public class Main extends Application {
         //Setup test for details
         Pane pane = (Pane) scene.lookup("#centerPane");
         ControllerProductList productList = new ControllerProductList();
-        productList.addItem(IMatDataHandler.getInstance().getProduct(43));
+        ArrayList<Product> products = new ArrayList<Product>();
+        for (int i = 1; i < 30;i++){
+        	products.add(IMatDataHandler.getInstance().getProduct(i));
+        }
+
+        
+        
+        
+        productList.addItem(products);
         pane.getChildren().add(productList);
 
         //Complete setup

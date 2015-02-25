@@ -1,4 +1,9 @@
 *.class
-
 bin/
 .gitignore
+.classpath
+.project
+build.fxbuild
+.gitignore
+Thumbs.db
+
