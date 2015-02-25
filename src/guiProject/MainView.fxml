@@ -15,8 +15,8 @@
       <GridPane fx:id="mainview" prefHeight="294.0" prefWidth="527.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
         <columnConstraints>
           <ColumnConstraints hgrow="NEVER" />
-            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="392.0" />
-          <ColumnConstraints hgrow="NEVER" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="285.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="179.0" minWidth="100.0" prefWidth="165.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />

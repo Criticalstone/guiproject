@@ -16,7 +16,6 @@ import se.chalmers.ait.dat215.project.Product;
 
 public class ControllerProductList extends ScrollPane implements IFControllerProductList{
 
-
 	@FXML
 	private TilePane tilePaneResultArea;
 	
@@ -35,12 +34,10 @@ public class ControllerProductList extends ScrollPane implements IFControllerPro
         
         
 	}
-	
 
-
-	public void addItem(List<Product> p){
-		for (int i = 0; i < p.size(); i++){
-			tilePaneResultArea.getChildren().add(new ControllerProductCardPane(p.get(i)));
-		}
-	}
+	public void addItem(List<Product> p) {
+        for (int i = 0; i < p.size(); i++) {
+            tilePaneResultArea.getChildren().add(new ControllerProductCardPane(p.get(i)));
+        }
+    }
 }

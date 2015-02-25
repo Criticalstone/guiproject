@@ -11,23 +11,23 @@ import java.io.IOException;
 
 public class Categories extends TabPane{
 
-    public Categories() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "Categories.fxml"));
+        public Categories() {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
+                    "Categories.fxml"));
 
-        fxmlLoader.setController(this);
-        fxmlLoader.setRoot(this);
+            fxmlLoader.setController(this);
+            fxmlLoader.setRoot(this);
 
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
+            try {
+                fxmlLoader.load();
+            } catch (IOException exception) {
+                throw new RuntimeException(exception);
+            }
         }
-    }
 
     @FXML
     public void buttonOnClick(MouseEvent event){
-        //ProductCategory categ = ProductCategory
-        //ControllerMain.setProductFromCategory(());
+        ProductCategory categ = ProductCategory.valueOf(((Label)event.getSource()).getId());
+        ControllerMain.setProductFromCategory(categ);
     }
 }

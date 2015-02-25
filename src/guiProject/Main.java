@@ -16,14 +16,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//Main	
+        //Main
         Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
         primaryStage.setTitle("iMat");
 
         Scene scene = new Scene(root);
         //Categories test
         Pane categoriesPane = (Pane) scene.lookup("#categoriesView");
-//        categoriesPane.getChildren().add(new Categories());
+        categoriesPane.getChildren().add(new Categories());
 
         //Details view test
         Pane detailPane = (Pane) scene.lookup("#detailView");
@@ -44,13 +44,11 @@ public class Main extends Application {
         Pane shoppingCartPane = (Pane) scene.lookup("#shoppingCartPane");
         shoppingCartPane.getChildren().add(new ShoppingCart());
 
-
-
-
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
         primaryStage.setScene(scene);
-//        ControllerMain.initialize(productList);
+
+        ControllerMain.initialize(productList);
 
         primaryStage.show();
         
