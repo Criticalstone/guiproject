@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="160.0" prefHeight="500.0" prefWidth="160.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root gridLinesVisible="true" minHeight="500.0" minWidth="160.0" prefHeight="500.0" prefWidth="160.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>

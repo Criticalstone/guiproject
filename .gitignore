@@ -12,5 +12,8 @@ bin/
 build.fxbuild
 .gitignore
 Thumbs.db
+projectbackend.jar
+.DS_Store
+src/.DS_Store
 
 /bin1/
