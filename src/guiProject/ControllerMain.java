@@ -15,10 +15,12 @@ import java.util.ResourceBundle;
 public class ControllerMain{
     private static IMatDataHandler imat;
     private static ControllerProductList controllerProdList;
+    private static ShoppingCart cart;
 
-    public static void initialize(ControllerProductList productList) {
+    public static void initialize() {
         imat = IMatDataHandler.getInstance();
-        controllerProdList = productList;
+        controllerProdList = new ControllerProductList();
+        cart = new ShoppingCart();
     }
 
     public static List<Product> getProductFromCategory(ProductCategory categ){
@@ -36,6 +38,18 @@ public class ControllerMain{
 
     public static void setProductList(List<Product> productList){
     	controllerProdList.addItem(productList);
+    }
+
+    public static int getQuantityOfProduct(Product p){
+        return cart.getQtyOfProduct(p);
+    }
+
+    public static void addProductToCart(Product p, int quantityDiff){
+        cart.addProduct(p, quantityDiff);
+    }
+
+    public static ControllerProductList getProductList(){
+        return controllerProdList;
     }
 
 
