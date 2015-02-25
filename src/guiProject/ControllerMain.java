@@ -16,13 +16,17 @@ public class ControllerMain{
     private static IMatDataHandler imat;
     private static ControllerProductList controllerProdList;
 
-    public static void initialize() {
+    public static void initialize(ControllerProductList productList) {
         imat = IMatDataHandler.getInstance();
-        controllerProdList = new ControllerProductList();
+        controllerProdList = productList;
     }
 
     public static List<Product> getProductFromCategory(ProductCategory categ){
-        return imat.getProducts(categ);
+        List<Product> products = imat.getProducts(categ);
+        for(Product p:products){
+            System.out.println(p.getName());
+        }
+        return products;
     }
 
     public static void setProductFromCategory(ProductCategory categ){

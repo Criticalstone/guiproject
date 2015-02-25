@@ -18,7 +18,16 @@ public class Main extends Application {
         primaryStage.setTitle("iMat");
 
         Scene scene = new Scene(root);
-        //Category test setup 
+
+        Pane categoriesPane = (Pane) scene.lookup("#categoriesView");
+        categoriesPane.getChildren().add(new Categories());
+
+        Pane detailPane = (Pane) scene.lookup("#detailView");
+        ControllerProductList productList = new ControllerProductList();
+        productList.addItem(IMatDataHandler.getInstance().getProduct(43));
+        detailPane.getChildren().add(productList);
+
+        /*//Category test setup
         Pane categoriesPane = (Pane) scene.lookup("#categories");
         categoriesPane.getChildren().add(new Categories());
         
@@ -27,11 +36,11 @@ public class Main extends Application {
         ControllerProductList productList = new ControllerProductList();
         productList.addItem(IMatDataHandler.getInstance().getProduct(43));
         pane.getChildren().add(productList);
-
+*/
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
         primaryStage.setScene(scene);
-        ControllerMain.initialize();
+        ControllerMain.initialize(productList);
 
         primaryStage.show();
         

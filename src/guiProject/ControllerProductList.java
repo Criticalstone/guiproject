@@ -6,17 +6,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.TilePane;
 import se.chalmers.ait.dat215.project.Product;
 
-public class ControllerProductList extends AnchorPane{
-	@FXML
-	private AnchorPane paneResultList;
+public class ControllerProductList extends TilePane{
 
 	public ControllerProductList(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "ViewProductResultList.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
+        setStyle("-fx-background-color: blue");
         
         try {
             fxmlLoader.load();
@@ -28,6 +28,6 @@ public class ControllerProductList extends AnchorPane{
 	}
 	
 	public void addItem(Product p){
-		paneResultList.getChildren().add(new ControllerProductCardPane(p));
+        this.getChildren().add(new ControllerProductCardPane(p));
 	}
 }
