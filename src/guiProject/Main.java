@@ -33,7 +33,7 @@ public class Main extends Application {
         for (int i = 1; i < 30;i++){
         	products.add(IMatDataHandler.getInstance().getProduct(i));
         }
-        productList.addItem(products);
+        productList.setItems(products);
         detailPane.getChildren().add(productList);
 
         //Setup test for banner

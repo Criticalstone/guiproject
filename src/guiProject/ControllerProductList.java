@@ -35,9 +35,19 @@ public class ControllerProductList extends ScrollPane implements IFControllerPro
         
 	}
 
-	public void addItem(List<Product> p) {
+
+	public void setItems(List<Product> p) {
+		clearPane();
+		addItems(p);
+    }
+
+	private void clearPane() {
+		tilePaneResultArea.getChildren().removeAll(tilePaneResultArea.getChildren());
+		
+	}
+	private void addItems(List<Product> p){
         for (int i = 0; i < p.size(); i++) {
             tilePaneResultArea.getChildren().add(new ControllerProductCardPane(p.get(i)));
         }
-    }
+	}
 }
