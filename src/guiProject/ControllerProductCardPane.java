@@ -80,11 +80,13 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	
 	//Action events
 	public void buttonAddAction(ActionEvent e){
-		
+		ControllerMain.addProductToCart(product, 1);
+		setQtyInCart();
 	}
 	
 	public void buttonSubAction(ActionEvent e){
-		
+		ControllerMain.addProductToCart(product, -1);
+		setQtyInCart();
 	}
 	
 	public void textFieldQtyAction(){
@@ -100,7 +102,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	    	textFieldQty.setText("0");
 	    }
 		int qty = Integer.parseInt(textFieldQty.getText());
-//		ControllerMain.addProductToCart(product, qty - ControllerMain.getQtyOfProduct(product));
+		ControllerMain.addProductToCart(product, qty - ControllerMain.getQuantityOfProduct(product));
 	}
 	
 
@@ -116,7 +118,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 
 	@Override
 	public void setQtyInCart() {
-//		textFieldQty.setText(ControllerMain.getQtyOfProduct(product));
+		textFieldQty.setText(Integer.toString(ControllerMain.getQuantityOfProduct(product)));
 		
 	}
 }
