@@ -14,7 +14,6 @@
     <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <ListView prefHeight="390.0" prefWidth="160.0" />
       <GridPane prefHeight="96.0" prefWidth="160.0" GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -41,22 +40,23 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Label text="Summa">
+            <Label fx:id="label" text="Summa">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </Label>
-            <Label text="0 kr" GridPane.columnIndex="1">
+            <Label fx:id="sum" text="0 kr" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="50.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" text="Spara" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#clearOnClick" text="Rensa" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
          </children>
       </GridPane>
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </fx:root>
