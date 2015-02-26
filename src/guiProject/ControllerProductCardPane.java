@@ -71,7 +71,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 		imageProduct.setImage(Utilities.getProductImage(product, new Dimension((int)imageProduct.getFitWidth(), (int)imageProduct.getFitHeight())));
 	}
 	private void setPrice(){
-		labelPrice.setText(Utilities.zeroPappedPrice(product.getPrice()));
+		labelPrice.setText(Utilities.zeroPaddedPrice(product.getPrice()));
 		labelPriceUnit.setText(product.getUnit());
 
 	}
