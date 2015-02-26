@@ -1,10 +1,10 @@
 package guiProject;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.ToggleButton;
 import se.chalmers.ait.dat215.project.ProductCategory;
 
 import java.io.IOException;
@@ -26,8 +26,8 @@ public class Categories extends TabPane{
     }
 
     @FXML
-    public void buttonOnClick(MouseEvent event){
-        ProductCategory categ = ProductCategory.valueOf(((Label)event.getSource()).getId());
+    public void buttonOnClick(ActionEvent event){
+        ProductCategory categ = ProductCategory.valueOf(((ToggleButton)event.getSource()).getId());
         ControllerMain.setProductFromCategory(categ);
     }
 }

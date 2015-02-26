@@ -1,0 +1,12 @@
+.toggle-button{
+	-fx-background-color: null;
+	-fx-text-alignment: LEFT;
+}
+
+.toggle-button:selected{
+	-fx-background-color: #ccffff;
+}
+
+.toggle-button:hover{
+	-fx-font-weight: bold;
+}
