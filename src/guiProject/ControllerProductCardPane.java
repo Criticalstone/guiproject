@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -76,33 +77,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	}
 	
 	
-	
-	//Action events
-	public void buttonAddAction(ActionEvent e){
-		ControllerMain.addProductToCart(product, 1);
-		updateQtyInCart();
-	}
-	
-	public void buttonSubAction(ActionEvent e){
-		ControllerMain.addProductToCart(product, -1);
-		updateQtyInCart();
-	}
-	
-	public void textFieldQtyAction(){
-	    String c = textFieldQty.getText();
-	    if("1234567890".contains(c)) {
-	    	}
-	    
-	    else {
-	    	textFieldQty.setText(Utilities.removeAllButNumbers(textFieldQty.getText()));
-	    	textFieldQty.positionCaret(textFieldQty.getText().length());
-	    }
-	    if (textFieldQty.getText().equals("")){
-	    	textFieldQty.setText("0");
-	    }
-		int qty = Integer.parseInt(textFieldQty.getText());
-		ControllerMain.addProductToCart(product, qty - ControllerMain.getQuantityOfProduct(product));
-	}
+
 	
 
 
@@ -144,5 +119,37 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	public int compareTo(IFProductCard o) {
 		return product.getName().compareTo(o.getProduct().getName());
 
+	}
+	
+	
+	//Action events
+	public void buttonAddAction(ActionEvent e){
+		ControllerMain.addProductToCart(product, 1);
+		updateQtyInCart();
+	}
+	
+	public void buttonSubAction(ActionEvent e){
+		ControllerMain.addProductToCart(product, -1);
+		updateQtyInCart();
+	}
+	
+	public void textFieldQtyAction(){
+	    String c = textFieldQty.getText();
+	    if("1234567890".contains(c)) {
+	    	}
+	    
+	    else {
+	    	textFieldQty.setText(Utilities.removeAllButNumbers(textFieldQty.getText()));
+	    	textFieldQty.positionCaret(textFieldQty.getText().length());
+	    }
+	    if (textFieldQty.getText().equals("")){
+	    	textFieldQty.setText("0");
+	    }
+		int qty = Integer.parseInt(textFieldQty.getText());
+		ControllerMain.addProductToCart(product, qty - ControllerMain.getQuantityOfProduct(product));
+	}
+	
+	public void starButtonAction(ActionEvent e){
+		ControllerMain.starProduct(product, ((ToggleButton)e.getSource()).isSelected());
 	}
 }

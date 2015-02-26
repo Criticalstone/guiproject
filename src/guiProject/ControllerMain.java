@@ -51,6 +51,13 @@ public class ControllerMain{
     public static ControllerProductList getProductList(){
         return controllerProdList;
     }
+    
+    public static void starProduct(Product p, boolean toggle){
+    	//TODO
+    	System.out.println("Starbutton has been pressed for " + p.getName() + " and it's is now set to " + toggle);
+    }
+    
+    
 
 
 

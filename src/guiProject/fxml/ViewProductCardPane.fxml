@@ -71,7 +71,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </HBox>
-            <Button fx:id="buttonStar" mnemonicParsing="false" prefHeight="27.0" prefWidth="105.0" text="Star" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ToggleButton mnemonicParsing="false" onAction="#starButtonAction" text="Star" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
       <GridPane prefHeight="125.0" prefWidth="192.0" style="-fx-background-color: white;">
