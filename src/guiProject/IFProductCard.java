@@ -2,8 +2,17 @@ package guiProject;
 
 import se.chalmers.ait.dat215.project.Product;
 
-public interface IFProductCard {
+public interface IFProductCard extends Comparable<IFProductCard>{
+	
+	/**
+	 * 
+	 * @return The product that the card is displaying. (NOT CLONED)
+	 */
 	public Product getProduct();
-	public void setQtyInCart();
+	
+	/**
+	 * Force the card to update the qty in the cart displayed on the card.
+	 */
+	public void updateQtyInCart();
 	
 }

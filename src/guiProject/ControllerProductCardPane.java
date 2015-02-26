@@ -55,7 +55,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
         setName();
         setPrice();
         setImage();
-        setQtyInCart();
+        updateQtyInCart();
 
 
 	}
@@ -81,12 +81,12 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	//Action events
 	public void buttonAddAction(ActionEvent e){
 		ControllerMain.addProductToCart(product, 1);
-		setQtyInCart();
+		updateQtyInCart();
 	}
 	
 	public void buttonSubAction(ActionEvent e){
 		ControllerMain.addProductToCart(product, -1);
-		setQtyInCart();
+		updateQtyInCart();
 	}
 	
 	public void textFieldQtyAction(){
@@ -117,8 +117,33 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 
 
 	@Override
-	public void setQtyInCart() {
+	public void updateQtyInCart() {
 		textFieldQty.setText(Integer.toString(ControllerMain.getQuantityOfProduct(product)));
 		
+	}
+
+	/**
+	 * Checks if both are the same class, then check if the cards contain the same product.
+	 * @param o
+	 * @return
+	 */
+	public boolean equals(Object o){
+		if (o == this){
+			return true;
+		}else if (o.getClass() == this.getClass()){
+			return ((ControllerProductCardPane)o).getProduct().equals(this.product);
+		}
+		return false;
+	}
+
+	@Override
+	/**
+	 * Compares the name of the product alfabetically.
+	 * @param o The object to compare
+	 * @return 0 if it is not a ProductCardPane, +/- depending on the product names.
+	 */
+	public int compareTo(IFProductCard o) {
+		return product.getName().compareTo(o.getProduct().getName());
+
 	}
 }
