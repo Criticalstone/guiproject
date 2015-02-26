@@ -83,14 +83,14 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
                                  <children>
-                                    <ToggleButton fx:id="BREAD" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Bröd" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjöl" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Socker" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Salt" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="NUTS_AND_SEEDS" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötter &amp; frön" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="PASTA" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Pasta" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Potatis" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" stylesheets="@../../res/CategoriesMenuItem.css" text="Ris" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="BREAD" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Bröd" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjöl" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Socker" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Salt" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="NUTS_AND_SEEDS" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötter &amp; frön" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="PASTA" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Pasta" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Potatis" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Ris" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -156,17 +156,63 @@
             </Accordion>
          </content></Tab>
       <Tab fx:id="tabProfile" styleClass="cat-tab" text="Profile">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="412.0">
+         <content>
+            <GridPane gridLinesVisible="true">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <SplitPane dividerPositions="0.5" layoutX="-3.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="157.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="192.0" prefWidth="155.0" />
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-                    </items>
-                  </SplitPane>
-               </children></AnchorPane>
-        </content>
+                  <VBox prefHeight="105.0" prefWidth="127.0">
+                     <children>
+                        <Label text="Mitt iMat">
+                           <VBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Mest köpta">
+                           <VBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Ordrar">
+                           <VBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Inställningar">
+                           <VBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Kundtjänst &amp; hjälp " GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="2.0" top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label text="Om oss" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="2.0" top="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </VBox>
+               </children>
+            </GridPane>
+         </content>
       </Tab>
   </tabs>
 </fx:root>
