@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: white;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 3;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -61,11 +61,11 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="buttonSub" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonSubAction" text="-" HBox.hgrow="ALWAYS" />
-                  <TextField fx:id="textFieldQty" onAction="#textFieldQtyAction" onKeyReleased="#textFieldQtyAction" />
-                  <Button fx:id="buttonAdd" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonAddAction" text="+" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="buttonSub" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSubAction" prefHeight="40.0" prefWidth="40.0" text="-" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="textFieldQty" alignment="CENTER" onAction="#textFieldQtyAction" onKeyReleased="#textFieldQtyAction" prefHeight="39.0" prefWidth="96.0" />
+                  <Button fx:id="buttonAdd" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonAddAction" prefHeight="40.0" prefWidth="40.0" text="+" HBox.hgrow="ALWAYS" />
                </children>
                <GridPane.margin>
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
