@@ -4,16 +4,13 @@ import java.awt.Dimension;
 import java.io.IOException;
 
 import se.chalmers.ait.dat215.project.Product;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+
 
 public class ControllerDetailedCard{
 	

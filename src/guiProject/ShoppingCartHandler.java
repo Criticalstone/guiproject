@@ -61,9 +61,9 @@ public class ShoppingCartHandler extends GridPane{
     }
 
     public int getQtyOfProduct(Product p){
-        if(productList.containsKey(p))
-            return productList.get(p);
-        else
+//        if(productList.containsKey(p))
+//            return productList.get(p);
+//        else
             return 0;
     }
 

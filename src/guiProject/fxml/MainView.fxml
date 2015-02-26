@@ -22,7 +22,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane fx:id="detailView" gridLinesVisible="true" style="-fx-background-color: red;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES">
+            <GridPane fx:id="detailView" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
               </columnConstraints>
