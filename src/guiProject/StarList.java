@@ -1,44 +1,29 @@
 package guiProject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import guiProject.interfaces.IFStarList;
 
 public class StarList implements IFStarList{
 
-
-	HashMap<Product, Integer> productList;
+	private static final long serialVersionUID = -8665428642080036392L;
+	List<Product> productList;
 	String name;
+	IMatDataHandler imat;
 	
-	public StarList(String name){
-		this.name=name;
-	}
-	
-	@Override
-	public void increaseQtyOfProduct(Product p, int qty) {
-		if (productList.containsKey(p)){
-			productList.put(p, productList.get(p)+qty);
-		}
-		else productList.put(p, qty);
-		
+	public StarList(){
+		this.name="Star";
+		productList = new ArrayList<Product>();
+		imat = IMatDataHandler.getInstance();
 	}
 
-	@Override
-	public void reduceQtyOfProduct(Product p, int qty) {
-		if (productList.containsKey(p) && productList.get(p)> qty){
-			productList.put(p, productList.get(p)-qty);
-		} else if (productList.containsKey(p)){
-			productList.put(p, 0);
-		}
-		
-	}
 
 	@Override
-	public void addProduct(Product p, int qty) {
-		productList.put(p, qty);
+	public void addProduct(Product p) {
+		productList.add(p);
 		
 	}
 
@@ -50,22 +35,10 @@ public class StarList implements IFStarList{
 
 	@Override
 	public boolean containProduct(Product p) {
-		return productList.containsKey(p);
+		return productList.contains(p);
 	}
 
-	@Override
-	public int getQtyOfProduct(Product p) {
-		if (containProduct(p)){
-			return productList.get(p);
-		}
-		return 0;
-	}
 
-	@Override
-	public HashMap<Product, Integer> getProducts() {
-		HashMap<Product, Integer> toReturn = new HashMap<Product, Integer>(productList);
-		return toReturn;
-	}
 
 	@Override
 	public String getName() {
@@ -73,13 +46,23 @@ public class StarList implements IFStarList{
 	}
 
 	@Override
-	public List<Product> getStaredProducts() {
-		List<Product> toReturn = new ArrayList<Product>(productList.keySet());
-		return toReturn;
+	public List<Product> getProducts() {
+		return new ArrayList<Product>(productList);
 	}
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8665428642080036392L;
+
+	@Override
+	public void addList(List<Product> products) {
+		productList.addAll(products);
+		
+	}
+
+
+	@Override
+	public void removeProductList(List<Product> products) {
+		productList.removeAll(products);
+		
+	}
+	
+
 }

@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.ImageView;
@@ -31,6 +33,8 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	private VBox boxDetailIcons;
 	@FXML
 	private Label labelProductName;
+	@FXML
+	private MenuButton menuButtonAddToList;
 	@FXML
 	private Button buttonStar;
 	@FXML
@@ -68,8 +72,15 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
         setPrice();
         setImage();
         updateQtyInCart();
+        setShoppingLists();
+
+	}
 
 
+
+	private void setShoppingLists() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
@@ -171,5 +182,11 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	 */
 	public void starButtonAction(ActionEvent e){
 		ControllerMain.starProduct(product, ((ToggleButton)e.getSource()).isSelected());
+	}
+	
+	public void shoppingListActionButton(ActionEvent e){
+		Object o = e.getSource();
+		MenuItem selectedItem = (MenuItem)o;
+		selectedItem.getText();
 	}
 }

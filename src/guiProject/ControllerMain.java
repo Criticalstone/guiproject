@@ -90,7 +90,9 @@ public class ControllerMain{
     		imat.addFavorite(p);
     	}
     	//Else do nothing as toggle just became synced with DB.
+    	
     }
+    
     
     
 
