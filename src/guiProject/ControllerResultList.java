@@ -42,8 +42,6 @@ public class ControllerResultList extends ScrollPane implements IFControllerProd
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        
-        
 	}
 
 	@Override

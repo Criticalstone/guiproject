@@ -25,7 +25,7 @@ public class PersonNumberView extends AnchorPane{
 	
 	public PersonNumberView(){
 		 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-            "fxml/personNumberView.fxml"));
+            "fxml/personnumberView.fxml"));
 
 		 fxmlLoader.setController(this);
 		 fxmlLoader.setRoot(this);
