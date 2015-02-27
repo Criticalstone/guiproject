@@ -2,15 +2,16 @@ package guiProject;
 
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
-
-import javax.swing.ImageIcon;
-
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
-
+/**
+ * Utilities are a collection of methods that available all throughout the application for any method to call in order to modify it's data, such as cleaning up text fields from unwanted data.
+ * @author Anton
+ *
+ */
 public class Utilities {
 	
 	static IMatDataHandler iMatDH = IMatDataHandler.getInstance();

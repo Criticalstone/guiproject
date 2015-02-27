@@ -22,7 +22,11 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-
+/**
+ * 
+ * @author Kevin
+ *
+ */
 public class ShoppingCartHandler extends GridPane{
 
     private HashMap<Product, Integer> productList;
@@ -34,6 +38,9 @@ public class ShoppingCartHandler extends GridPane{
 
     private ShoppingCart cart;
 
+    /**
+     * Constructor for the shopping cart handler. Sets up the FXML, initialize the IMatDataHandler shopping cart and the list for the shopping cart displayed in the GUI.
+     */
     public ShoppingCartHandler() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/ShoppingCart.fxml"));
@@ -48,7 +55,7 @@ public class ShoppingCartHandler extends GridPane{
         }
 
         cart = IMatDataHandler.getInstance().getShoppingCart();
-
+        //Gui shopping cart list.
         listView.setCellFactory(new Callback<ListView<String>,
                 ListCell<String>>() {
             @Override
@@ -60,6 +67,11 @@ public class ShoppingCartHandler extends GridPane{
         listView.setPadding(new Insets(5, 0, 0, 0));
     }
 
+    /**
+     * This method returns the current qty of the specified item in the back end shopping cart.
+     * @param p The product for which the qty is requested.
+     * @return The quantity of the item in the shopping cart.
+     */
     public int getQtyOfProduct(Product p){
 //        if(productList.containsKey(p))
 //            return productList.get(p);
@@ -67,6 +79,11 @@ public class ShoppingCartHandler extends GridPane{
             return 0;
     }
 
+    /**
+     * Returns the ShoppingItem (from back end) for the specified Product.
+     * @param p The product for which the ShoppItem is requested.
+     * @return the corresponding ShoppingItem from the shopping cart in back end.
+     */
     public ShoppingItem getShoppItemFromProd(Product p){
         List<ShoppingItem> list = cart.getItems();
         for(ShoppingItem item: list){
@@ -77,6 +94,11 @@ public class ShoppingCartHandler extends GridPane{
         return null;
     }
 
+    /**
+     * Adds the item to the back end shopping cart, or modifies the qty in the back end shopping cart if the item already exist.
+     * @param p The product for which the qty should be modified.
+     * @param quantityDiff The change in qty. May be either positive or negative.
+     */
     public void addProduct(Product p, int quantityDiff){
 
         if(cart.getItems().contains(getShoppItemFromProd(p))){
@@ -92,6 +114,10 @@ public class ShoppingCartHandler extends GridPane{
         updateList();
     }
 
+    /**
+     * Update the displayed GUI list to display the items currently in the back end shopping cart.
+     */
+    //TODO REMOVE UNUSED CODE!!
     public void updateList(){
         listView.getItems().clear();
         System.out.println(listView.getItems().size());
@@ -108,6 +134,7 @@ public class ShoppingCartHandler extends GridPane{
         System.out.println(listView.getItems().size());
     }
 
+    //ActionEvent for the clear button
     @FXML
     private void clearOnClick(ActionEvent event){
         listView.getItems().clear();
@@ -115,6 +142,7 @@ public class ShoppingCartHandler extends GridPane{
         updateList();
     }
 
+    //Private class which represent the List items in the gui.
     private class CartListCell extends ListCell<String> {
         @Override
         public void updateItem(String item, boolean empty) {
