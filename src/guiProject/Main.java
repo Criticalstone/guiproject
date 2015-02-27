@@ -44,8 +44,13 @@ public class Main extends Application {
         
         //Setup test for shoppingcart
         Pane shoppingCartPane = (Pane) scene.lookup("#shoppingCartPane");
-        shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
 
+        shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
+        
+        //Setup test for checkoutView
+        Pane checkoutViewPane = (Pane) scene.lookup("#detailView");
+        checkoutViewPane.getChildren().add(new CheckoutView());
+        
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
         primaryStage.setScene(scene);

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="352.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ListView layoutX="-3.0" layoutY="-3.0" prefHeight="307.0" prefWidth="358.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label layoutX="14.0" layoutY="36.0" text="Personnummer" />
-      <TextField layoutX="130.0" layoutY="31.0" prefHeight="31.0" prefWidth="92.0" promptText="ååmmdd" />
-      <TextField layoutX="240.0" layoutY="31.0" prefHeight="31.0" prefWidth="53.0" promptText="xxxx" />
+      <TextField fx:id="personNrTwo" layoutX="240.0" layoutY="31.0" prefHeight="31.0" prefWidth="53.0" promptText="xxxx" />
       <Label layoutX="229.0" layoutY="36.0" prefHeight="21.0" prefWidth="11.0" text="-" />
       <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="33.0" prefHeight="21.0" prefWidth="11.0" text="?">
          <font>
@@ -20,13 +19,15 @@
             <Tooltip text="Om du fyller i personnumret så kopplar vi din information till denna" />
          </tooltip>
       </Label>
-      <Label layoutX="71.0" layoutY="84.0" prefHeight="21.0" prefWidth="53.0" text="Namn*" />
-      <TextField layoutX="130.0" layoutY="79.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. Karl Karlsson" />
-      <TextField layoutX="129.0" layoutY="124.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. Länsvägen 6" />
+      <TextField fx:id="name" layoutX="130.0" layoutY="79.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. Karl Karlsson" />
+      <TextField fx:id="adress" layoutX="129.0" layoutY="124.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. Länsvägen 6" />
       <Label layoutX="65.0" layoutY="129.0" text="Adress*" />
       <Label layoutX="63.0" layoutY="179.0" text="Postnr.*" />
-      <TextField layoutX="129.0" layoutY="174.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. 411 65" />
-      <TextField layoutX="129.0" layoutY="219.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. Göteborg" />
-      <Label layoutX="91.0" layoutY="224.0" text="Ort*" />
+      <TextField fx:id="postNumber" layoutX="129.0" layoutY="174.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. 411 65" />
+      <TextField fx:id="city" layoutX="129.0" layoutY="219.0" prefHeight="31.0" prefWidth="161.0" promptText="ex. Göteborg" />
+      <Label layoutX="89.0" layoutY="224.0" text="Ort*" />
+      <Label layoutX="15.0" layoutY="36.0" text="Personnummer" />
+      <Label layoutX="66.0" layoutY="84.0" prefHeight="21.0" prefWidth="53.0" text="Namn*" />
+      <TextField fx:id="personNrOne" layoutX="126.0" layoutY="31.0" prefHeight="31.0" prefWidth="101.0" promptText="ååmmdd" />
    </children>
-</AnchorPane>
+</fx:root>

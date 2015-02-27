@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.io.IOException;
 
 import guiProject.Utilities;
+import guiProject.interfaces.IFProductCard;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,12 +13,20 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
+
 /**
  * The class handling the detailed cards in the result view. These cards are displayed when user request further information of the item.
  * @author Jennifer
  *
  */
-public class DetailedCard {
+
+
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+public class DetailedCard extends GridPane implements IFProductCard{
+
 	
 	Product product;
 	@FXML
@@ -45,6 +54,7 @@ public class DetailedCard {
 	public DetailedCard(Product p) {
 		
 		//Load the FXML
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/DetailedProductView.fxml"));
         fxmlLoader.setRoot(this);
@@ -94,6 +104,27 @@ public class DetailedCard {
 		//This method may cause issues as it the text field is not checked for only numbers.
 		int quantity=Integer.parseInt(textFieldQty.getText())-1;
 		textFieldQty.appendText(Integer.toString(quantity));
+	}
+
+
+	@Override
+	public int compareTo(IFProductCard o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public Product getProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void updateQtyInCart() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

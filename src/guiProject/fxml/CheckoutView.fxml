@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="300.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="300.0" />
@@ -16,7 +16,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <GridPane>
+      <GridPane fx:id="gridpaneCheckout">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -27,10 +27,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+            <AnchorPane fx:id="gridOne" prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane fx:id="gridTwo" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <AnchorPane fx:id="gridThree" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+            <AnchorPane fx:id="gridFour" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <GridPane nodeOrientation="RIGHT_TO_LEFT" GridPane.columnIndex="1">
@@ -80,4 +80,4 @@
          </children>
       </GridPane>
    </children>
-</GridPane>
+</fx:root>
