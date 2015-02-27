@@ -1,12 +1,15 @@
+guiproject.iml
+out/
+dist/
+.idea/
+__MACOSX/
 
 /bin/
 
 *.project
 .classpath
-
 *.class
 bin/
-.gitignore
 .classpath
 .project
 build.fxbuild

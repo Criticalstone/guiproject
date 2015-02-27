@@ -2,6 +2,7 @@ package guiProject;
 
 import com.sun.javafx.collections.ObservableListWrapper;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.*;
@@ -115,7 +116,7 @@ public class ShoppingCartHandler extends GridPane{
         updateList();
     }
 
-    private class CartListCell extends ListCell<String> {
+    private class CartListCell extends ListCell<String> implements IListCell{
         @Override
         public void updateItem(String item, boolean empty) {
             super.updateItem(item, empty);
@@ -153,5 +154,16 @@ public class ShoppingCartHandler extends GridPane{
                 setGraphic(null);
             }
         }
+
+        @Override
+        public void onAction(ActionEvent event) {
+
+        }
     }
+
+    private interface IListCell{
+        public void onAction(ActionEvent event);
+    }
+
+
 }
