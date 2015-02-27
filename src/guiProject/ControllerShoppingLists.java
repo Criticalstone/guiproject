@@ -1,10 +1,16 @@
 package guiProject;
 
+import guiProject.interfaces.IFProductList;
+import guiProject.interfaces.IFStarList;
+
 import java.io.Serializable;
 
 
 import java.util.ArrayList;
 import java.util.List;
+
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Product;
 
 
 /**
@@ -13,17 +19,30 @@ import java.util.List;
  *
  */
 public class ControllerShoppingLists implements Serializable{
+	
+	private static final long serialVersionUID = 3054308858388647312L;
+//    private List<IFProductList> favoriteLists;
+    private static IFStarList starList = new StarList();
+   
 
-	//A list of all the Favorite lists
-    private List<SavedShoppingList> favoriteLists;
-    
-	public ControllerShoppingLists(){
-		favoriteLists = new ArrayList<SavedShoppingList>();
+	
+	public static List<Product> getStaredProducts(){
+		return starList.getProducts();
 	}
-	/**
-	 * A default serialization of the object.
-	 */
-	private static final long serialVersionUID = 1L;
+	
+	public static boolean isStared(Product p){
+		return starList.containProduct(p);
+	}
+	
+	public static void starProduct(Product p, boolean toggle){
+		if (starList.containProduct(p) && !toggle){
+			starList.removeProduct(p);
+		} else if (!starList.containProduct(p) && toggle){
+			starList.addProduct(p);
+		}
+	}
+	
+
 	
 	
 

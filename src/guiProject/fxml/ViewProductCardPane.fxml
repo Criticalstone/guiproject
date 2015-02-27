@@ -71,7 +71,23 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </GridPane.margin>
             </HBox>
-            <ToggleButton mnemonicParsing="false" onAction="#starButtonAction" text="Star" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <MenuButton fx:id="menuButtonAddToList" disable="true" mnemonicParsing="false" opacity="0.0" HBox.hgrow="NEVER">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#shoppingListActionButton" text="Ny inköpslista..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                  </MenuButton>
+                  <ToggleButton fx:id="buttonStar" mnemonicParsing="false" onAction="#starButtonAction" text="*" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="NEVER" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </HBox>
          </children>
       </GridPane>
       <GridPane prefHeight="125.0" prefWidth="192.0" style="-fx-background-color: white;">

@@ -1,71 +1,47 @@
 package guiProject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import guiProject.interfaces.IFStarList;
 
+/**
+ * A list of all items set with a star. This list is also connected to the Backend.
+ * @author Anton
+ *
+ */
 public class StarList implements IFStarList{
 
-
-	HashMap<Product, Integer> productList;
+	private static final long serialVersionUID = -8665428642080036392L;
 	String name;
+	IMatDataHandler imat;
 	
-	public StarList(String name){
-		this.name=name;
-	}
-	
-	@Override
-	public void increaseQtyOfProduct(Product p, int qty) {
-		if (productList.containsKey(p)){
-			productList.put(p, productList.get(p)+qty);
-		}
-		else productList.put(p, qty);
-		
+	public StarList(){
+		this.name="Star";
+		imat = IMatDataHandler.getInstance();
 	}
 
-	@Override
-	public void reduceQtyOfProduct(Product p, int qty) {
-		if (productList.containsKey(p) && productList.get(p)> qty){
-			productList.put(p, productList.get(p)-qty);
-		} else if (productList.containsKey(p)){
-			productList.put(p, 0);
-		}
-		
-	}
 
 	@Override
-	public void addProduct(Product p, int qty) {
-		productList.put(p, qty);
+	public void addProduct(Product p) {
+		imat.addFavorite(p);
 		
 	}
 
 	@Override
 	public void removeProduct(Product p) {
-		productList.remove(p);
+		imat.removeFavorite(p);
 		
 	}
 
 	@Override
 	public boolean containProduct(Product p) {
-		return productList.containsKey(p);
+		return imat.isFavorite(p);
 	}
 
-	@Override
-	public int getQtyOfProduct(Product p) {
-		if (containProduct(p)){
-			return productList.get(p);
-		}
-		return 0;
-	}
 
-	@Override
-	public HashMap<Product, Integer> getProducts() {
-		HashMap<Product, Integer> toReturn = new HashMap<Product, Integer>(productList);
-		return toReturn;
-	}
 
 	@Override
 	public String getName() {
@@ -73,13 +49,27 @@ public class StarList implements IFStarList{
 	}
 
 	@Override
-	public List<Product> getStaredProducts() {
-		List<Product> toReturn = new ArrayList<Product>(productList.keySet());
-		return toReturn;
+	public List<Product> getProducts() {
+		return new ArrayList<Product>(imat.favorites());
 	}
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8665428642080036392L;
+
+	@Override
+	public void addList(List<Product> products) {
+		for (Product p: products){
+			imat.addFavorite(p);
+		}
+		
+	}
+
+
+	@Override
+	public void removeProductList(List<Product> products) {
+		for (Product p:products){
+			imat.removeFavorite(p);
+		}
+		
+	}
+	
+
 }
