@@ -1,5 +1,7 @@
-package guiProject;
+package guiProject.productCard;
 
+import guiProject.ControllerMain;
+import guiProject.Utilities;
 import guiProject.interfaces.IFProductCard;
 
 import java.awt.Dimension;
@@ -22,7 +24,7 @@ import javafx.scene.layout.VBox;
  * @author Anton
  *
  */
-public class ControllerProductCardPane extends GridPane implements IFProductCard{
+public class ProductCard extends GridPane implements IFProductCard{
 	
 	Product product;
 	@FXML
@@ -50,7 +52,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	 * Constructor for the product card. Will create and initialize a product card based on the provided product.
 	 * @param p The product to be displayed on the card.
 	 */
-	public ControllerProductCardPane(Product p)  {
+	public ProductCard(Product p)  {
 		//Load FXML
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/ViewProductCardPane.fxml"));
@@ -80,7 +82,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	}
 	//Sets the image through the Utilities method getProductImage. Wrapper method used to extract image as the image is stored in swing/awt format.
 	private void setImage(){
-		imageProduct.setImage(Utilities.getProductImage(product, new Dimension((int)imageProduct.getFitWidth(), (int)imageProduct.getFitHeight())));
+		imageProduct.setImage(Utilities.getProductImage(product, new Dimension((int) imageProduct.getFitWidth(), (int) imageProduct.getFitHeight())));
 	}
 	
 	private void setPrice(){
@@ -111,7 +113,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 		if (o == this){
 			return true;
 		}else if (o.getClass() == this.getClass()){
-			return ((ControllerProductCardPane)o).getProduct().equals(this.product);
+			return ((ProductCard)o).getProduct().equals(this.product);
 		}
 		return false;
 	}

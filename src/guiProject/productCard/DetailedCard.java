@@ -1,8 +1,9 @@
-package guiProject;
+package guiProject.productCard;
 
 import java.awt.Dimension;
 import java.io.IOException;
 
+import guiProject.Utilities;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +17,7 @@ import javafx.scene.image.ImageView;
  * @author Jennifer
  *
  */
-public class ControllerDetailedCard{
+public class DetailedCard {
 	
 	Product product;
 	@FXML
@@ -41,7 +42,7 @@ public class ControllerDetailedCard{
 	private TextField textFieldQty;
 	
 	
-	public ControllerDetailedCard(Product p) {
+	public DetailedCard(Product p) {
 		
 		//Load the FXML
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -65,7 +66,7 @@ public class ControllerDetailedCard{
 
 	//Sets the image through the Utilities method getProductImage. Wrapper method used to extract image as the image is stored in swing/awt format.
 	private void setImageCard(){
-		 detImage.setImage(Utilities.getProductImage(product, new Dimension((int)detImage.getFitWidth(), (int)detImage.getFitHeight())));
+		 detImage.setImage(Utilities.getProductImage(product, new Dimension((int) detImage.getFitWidth(), (int) detImage.getFitHeight())));
 	}
 	
 	

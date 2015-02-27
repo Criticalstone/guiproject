@@ -1,4 +1,4 @@
-package guiProject;
+package guiProject.productCard;
 
 import guiProject.interfaces.IFProductCard;
 

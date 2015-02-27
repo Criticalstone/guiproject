@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import guiProject.productCard.ComparatorProductCard;
+import guiProject.productCard.ProductCard;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -58,17 +60,17 @@ public class ControllerResultList extends ScrollPane implements IFControllerProd
 	}
 
 	//Internal method to add cards to the display area.
-	private void addCards(List<ControllerProductCardPane> listOfCards){
-        for (ControllerProductCardPane card: listOfCards) {
+	private void addCards(List<ProductCard> listOfCards){
+        for (ProductCard card: listOfCards) {
             tilePaneResultArea.getChildren().add(card);
         }
         
 	}
 	//Internal method the takes a list of products and returns a sorted list of cards.
-	private List<ControllerProductCardPane> createSortedCardsAZ(List<Product> p){
-		List<ControllerProductCardPane> listOfCards = new ArrayList<ControllerProductCardPane>();
+	private List<ProductCard> createSortedCardsAZ(List<Product> p){
+		List<ProductCard> listOfCards = new ArrayList<ProductCard>();
 		for (Product product: p){
-			listOfCards.add(new ControllerProductCardPane(product));
+			listOfCards.add(new ProductCard(product));
 		}
 		
 		Collections.sort(listOfCards, new ComparatorProductCard());
