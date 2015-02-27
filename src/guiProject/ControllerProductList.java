@@ -1,6 +1,9 @@
 package guiProject;
 
 
+import guiProject.interfaces.IFControllerProductList;
+import guiProject.interfaces.IFProductCard;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;

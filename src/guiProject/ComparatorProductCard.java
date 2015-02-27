@@ -1,5 +1,7 @@
 package guiProject;
 
+import guiProject.interfaces.IFProductCard;
+
 import java.util.Comparator;
 /**
  * A comparator used to sort the product cards in the result list.

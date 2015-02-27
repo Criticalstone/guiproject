@@ -1,5 +1,7 @@
 package guiProject;
 
+import guiProject.interfaces.IFProductCard;
+
 import java.awt.Dimension;
 import java.io.IOException;
 
