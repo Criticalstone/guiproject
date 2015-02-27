@@ -99,7 +99,6 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	@Override
 	public void updateQtyInCart() {
 		textFieldQty.setText(Integer.toString(ControllerMain.getQuantityOfProduct(product)));
-		
 	}
 
 	/**

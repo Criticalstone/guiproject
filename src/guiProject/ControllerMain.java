@@ -45,6 +45,10 @@ public class ControllerMain{
         setProductList(productList);
     }
 
+    public static void updateQtyAllCards(){
+        controllerProdList.updateQtyInCartForAllCards();
+    }
+
     /**
      * Sets which items should be displayed in the result list.
      * @param productList A list of all items to be displayed (unsorted).

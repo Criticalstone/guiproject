@@ -1,8 +1,10 @@
 package guiProject;
 
 import com.sun.javafx.collections.ObservableListWrapper;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import guiProject.interfaces.IFObserver;
+import guiProject.interfaces.IFSubject;
+import javafx.event.*;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.*;
@@ -10,6 +12,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.util.Callback;
@@ -29,6 +32,13 @@ import java.util.List;
  *
  */
 public class ShoppingCartHandler extends GridPane{
+    public enum Type {
+        PLUS,
+        MINUS,
+        REMOVE,
+        TEXT,
+        CLOSE;
+    }
 
     private HashMap<Product, Integer> productList;
 
@@ -74,10 +84,10 @@ public class ShoppingCartHandler extends GridPane{
      * @return The quantity of the item in the shopping cart.
      */
     public int getQtyOfProduct(Product p){
-//        if(productList.containsKey(p))
-//            return productList.get(p);
-//        else
+        if(getShoppItemFromProd(p) == null)
             return 0;
+
+        return (int)getShoppItemFromProd(p).getAmount();
     }
 
     /**
@@ -140,7 +150,17 @@ public class ShoppingCartHandler extends GridPane{
     }
 
     //Private class which represent the List items in the gui.
-    private class CartListCell extends ListCell<String> implements IListCell{
+    private class CartListCell extends ListCell<String> implements IFSubject{
+
+        IFObserver observer;
+        ShoppingItem shoppingItem;
+        Product p;
+        TextField numberOf;
+
+        public CartListCell(){
+            this.addObserver(new CartListObserver());
+        }
+
         @Override
         public void updateItem(String item, boolean empty) {
             super.updateItem(item, empty);
@@ -149,14 +169,42 @@ public class ShoppingCartHandler extends GridPane{
                 VBox details = new VBox();
                 HBox quantity = new HBox();
 
-                Product p = IMatDataHandler.getInstance().getProduct(Integer.parseInt(item));
-                ShoppingItem shoppingItem = getShoppItemFromProd(p);
+                p = IMatDataHandler.getInstance().getProduct(Integer.parseInt(item));
+                shoppingItem = getShoppItemFromProd(p);
 
                 Label name = new Label(p.getName());
-                Label price = new Label(Utilities.zeroPaddedPrice(p.getPrice()));
+                Label price = new Label(Utilities.zeroPaddedPrice(p.getPrice()) + " kr");
                 Button minus = new Button("-");
-                Label numberOf = new Label(shoppingItem.getAmount() + " " + p.getUnit());
+                minus.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        onAction(Type.MINUS);
+                    }
+                });
+
+                numberOf = new TextField(Integer.toString((int)shoppingItem.getAmount()));
+                numberOf.setPrefColumnCount(3);
+                EventHandler eventHandler = new EventHandler() {
+                    @Override
+                    public void handle(Event event) {
+                        numberOf.setText(Utilities.removeAllButNumbers(numberOf.getText()));
+                        if(!numberOf.getText().equals("")){
+                            onAction(Type.TEXT);
+                        }
+
+                    }
+                };
+                numberOf.setOnKeyReleased(eventHandler);
+                numberOf.setOnAction(eventHandler);
+
                 Button plus = new Button("+");
+                plus.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        onAction(Type.PLUS);
+                    }
+                });
+
                 quantity.getChildren().addAll(minus, numberOf, plus);
                 quantity.setSpacing(3);
                 details.getChildren().addAll(name, price, quantity);
@@ -167,6 +215,12 @@ public class ShoppingCartHandler extends GridPane{
                 imageContainer.getChildren().addAll(image);
 
                 Button removeButton = new Button("X");
+                removeButton.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        onAction(Type.REMOVE);
+                    }
+                });
 
                 main.setAlignment(Pos.CENTER);
                 main.setSpacing(8);
@@ -179,15 +233,55 @@ public class ShoppingCartHandler extends GridPane{
             }
         }
 
-        @Override
-        public void onAction(ActionEvent event) {
+        public void onAction(Type type) {
+            System.out.println(type.toString());
+            int qDiff = 0;
+            if(type == Type.PLUS){
+                qDiff = 1;
+            }else if(type == Type.MINUS){
+                qDiff = -1;
+            }else if(type == Type.TEXT){
+                qDiff = Integer.parseInt(numberOf.getText()) - getQtyOfProduct(p);
+            }else if(type == Type.REMOVE){
+                cart.removeItem(shoppingItem);
+            }
+            notifyObserver(qDiff);
+        }
 
+        @Override
+        public void addObserver(IFObserver obj) {
+            observer = obj;
+        }
+
+        @Override
+        public void removeObserver(IFObserver obj) {
+            observer = null;
+        }
+
+        @Override
+        public void notifyObserver(Object... obj) {
+            observer.update(p, obj[0]);
+        }
+
+        @Override
+        public Object getUpdate(IFObserver obj) {
+            return shoppingItem.getAmount();
         }
     }
 
-    private interface IListCell{
-        public void onAction(ActionEvent event);
-    }
+    private class CartListObserver implements IFObserver{
+        IFSubject subject;
 
+        @Override
+        public void update(Object... obj) {
+            addProduct((Product) obj[0], (int) obj[1]);
+            ControllerMain.updateQtyAllCards();
+        }
+
+        @Override
+        public void setSubject(IFSubject sub) {
+            this.subject = sub;
+        }
+    }
 
 }
