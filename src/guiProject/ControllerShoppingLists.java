@@ -24,9 +24,6 @@ public class ControllerShoppingLists implements Serializable{
     
 	public ControllerShoppingLists(){
 		favoriteLists = new ArrayList<IFProductList>();
-
-		
-		
 	}
 
 	//Commented out until shopping lists are implemented.

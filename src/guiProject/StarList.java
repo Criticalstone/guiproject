@@ -7,35 +7,38 @@ import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import guiProject.interfaces.IFStarList;
 
+/**
+ * A list of all items set with a star. This list is also connected to the Backend.
+ * @author Anton
+ *
+ */
 public class StarList implements IFStarList{
 
 	private static final long serialVersionUID = -8665428642080036392L;
-	List<Product> productList;
 	String name;
 	IMatDataHandler imat;
 	
 	public StarList(){
 		this.name="Star";
-		productList = new ArrayList<Product>();
 		imat = IMatDataHandler.getInstance();
 	}
 
 
 	@Override
 	public void addProduct(Product p) {
-		productList.add(p);
+		imat.addFavorite(p);
 		
 	}
 
 	@Override
 	public void removeProduct(Product p) {
-		productList.remove(p);
+		imat.removeFavorite(p);
 		
 	}
 
 	@Override
 	public boolean containProduct(Product p) {
-		return productList.contains(p);
+		return imat.isFavorite(p);
 	}
 
 
@@ -47,20 +50,24 @@ public class StarList implements IFStarList{
 
 	@Override
 	public List<Product> getProducts() {
-		return new ArrayList<Product>(productList);
+		return new ArrayList<Product>(imat.favorites());
 	}
 
 
 	@Override
 	public void addList(List<Product> products) {
-		productList.addAll(products);
+		for (Product p: products){
+			imat.addFavorite(p);
+		}
 		
 	}
 
 
 	@Override
 	public void removeProductList(List<Product> products) {
-		productList.removeAll(products);
+		for (Product p:products){
+			imat.removeFavorite(p);
+		}
 		
 	}
 	
