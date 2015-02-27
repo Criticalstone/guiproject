@@ -2,7 +2,9 @@ package guiProject;
 
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
@@ -41,7 +43,6 @@ public class Utilities {
 	}
 	
 	/**
-	 * WORK IN PROGRESS DO NOT USE!!!
 	 * This method will save the specified object to a file at the specified path.
 	 * @param objectToSave The Serializable object to save.
 	 * @param path The path to save the object to. Will be set to default home directory if left as null.
@@ -56,10 +57,32 @@ public class Utilities {
 			ObjectOutputStream oos = new ObjectOutputStream(fout);   
 			oos.writeObject(objectToSave);
 			oos.close();
-			System.out.println("Done");
+			System.out.println("Saved file to " + path);
 
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Loads the specified file into a Serializable object.
+	 * @param path The path to the file to load
+	 * @return the loaded file, or if none was found, null.
+	 */
+	public static Serializable LoadFile(String path){
+
+		try{
+			FileInputStream fin = new FileInputStream(path);
+			ObjectInputStream ois = new ObjectInputStream(fin);
+			Object toReturn= ois.readObject();
+			ois.close();
+			System.out.println("Loaded file " + path);
+			return (Serializable)toReturn;
+		}catch(Exception ex){
+			ex.printStackTrace();
+			return null;
+		}
+		
+		
 	}
 }
