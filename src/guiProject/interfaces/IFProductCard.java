@@ -1,4 +1,4 @@
-package guiProject;
+package guiProject.interfaces;
 
 import se.chalmers.ait.dat215.project.Product;
 

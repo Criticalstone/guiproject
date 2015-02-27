@@ -29,7 +29,7 @@ public class Main extends Application {
 
         //Details view test
         Pane detailPane = (Pane) scene.lookup("#detailView");
-        ControllerProductList productList = ControllerMain.getProductList();
+        ControllerResultList productList = ControllerMain.getProductList();
         
         ArrayList<Product> products = new ArrayList<Product>();
         for (int i = 1; i < 30;i++){

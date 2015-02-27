@@ -1,4 +1,4 @@
-package guiProject;
+package guiProject.interfaces;
 
 import java.util.List;
 

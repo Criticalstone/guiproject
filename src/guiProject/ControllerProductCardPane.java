@@ -1,5 +1,7 @@
 package guiProject;
 
+import guiProject.interfaces.IFProductCard;
+
 import java.awt.Dimension;
 import java.io.IOException;
 
@@ -15,7 +17,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
-
+/**
+ * The default "card" used to display products in the result area.
+ * @author Anton
+ *
+ */
 public class ControllerProductCardPane extends GridPane implements IFProductCard{
 	
 	Product product;
@@ -40,9 +46,12 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 
 
 	
-	//Create controller so that this object can be instanced.
+	/**
+	 * Constructor for the product card. Will create and initialize a product card based on the provided product.
+	 * @param p The product to be displayed on the card.
+	 */
 	public ControllerProductCardPane(Product p)  {
-		this.product = p;
+		//Load FXML
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/ViewProductCardPane.fxml"));
         fxmlLoader.setRoot(this);
@@ -52,6 +61,9 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        
+        //Initialize
+        this.product = p;
         setName();
         setPrice();
         setImage();
@@ -66,16 +78,16 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 		labelProductName.setText(product.getName());
 		
 	}
-	
+	//Sets the image through the Utilities method getProductImage. Wrapper method used to extract image as the image is stored in swing/awt format.
 	private void setImage(){
 		imageProduct.setImage(Utilities.getProductImage(product, new Dimension((int)imageProduct.getFitWidth(), (int)imageProduct.getFitHeight())));
 	}
+	
 	private void setPrice(){
 		labelPrice.setText(Utilities.zeroPaddedPrice(product.getPrice()));
 		labelPriceUnit.setText(product.getUnit());
 
 	}
-	
 	
 	@Override
 	public Product getProduct() {
@@ -117,16 +129,27 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	
 	
 	//Action events
+	/**
+	 * The action event used by the add button to increase the quantity in the cart by 1.
+	 * @param e ActionEvent provided by the button. Not used.
+	 */
 	public void buttonAddAction(ActionEvent e){
 		ControllerMain.addProductToCart(product, 1);
 		updateQtyInCart();
 	}
-	
+	/**
+	 * The action event used by the subtract button to decrease the quantity in the cart by 1.
+	 * @param e ActionEvent provided by the button. Not used.
+	 */
 	public void buttonSubAction(ActionEvent e){
 		ControllerMain.addProductToCart(product, -1);
 		updateQtyInCart();
 	}
-	
+	/**
+	 * The action event used by the quantity text field to set the quantity in the cart to the contained value. 
+	 * Method is run everytime a button is pressed in the text field.
+	 * Will remove any data but the values "1234567890" before parsing to int.
+	 */
 	public void textFieldQtyAction(){
 	    String c = textFieldQty.getText();
 	    if("1234567890".contains(c)) {
@@ -142,7 +165,10 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 		int qty = Integer.parseInt(textFieldQty.getText());
 		ControllerMain.addProductToCart(product, qty - ControllerMain.getQuantityOfProduct(product));
 	}
-	
+	/**
+	 * The action event used by the star toggle button to set if the item should be set as stared or not
+	 * @param e ActionEvent sent by the button. Not currently used.
+	 */
 	public void starButtonAction(ActionEvent e){
 		ControllerMain.starProduct(product, ((ToggleButton)e.getSource()).isSelected());
 	}

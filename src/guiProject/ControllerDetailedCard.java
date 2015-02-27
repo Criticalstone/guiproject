@@ -11,7 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-
+/**
+ * The class handling the detailed cards in the result view. These cards are displayed when user request further information of the item.
+ * @author Jennifer
+ *
+ */
 public class ControllerDetailedCard{
 	
 	Product product;
@@ -38,7 +42,8 @@ public class ControllerDetailedCard{
 	
 	
 	public ControllerDetailedCard(Product p) {
-		this.product = p;
+		
+		//Load the FXML
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/DetailedProductView.fxml"));
         fxmlLoader.setRoot(this);
@@ -48,8 +53,8 @@ public class ControllerDetailedCard{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        
-       
+        //Initialize
+        this.product = p;
         setImageCard();
         setName();
         setDescription();
@@ -58,7 +63,7 @@ public class ControllerDetailedCard{
 	}
 
 
-
+	//Sets the image through the Utilities method getProductImage. Wrapper method used to extract image as the image is stored in swing/awt format.
 	private void setImageCard(){
 		 detImage.setImage(Utilities.getProductImage(product, new Dimension((int)detImage.getFitWidth(), (int)detImage.getFitHeight())));
 	}
@@ -84,6 +89,8 @@ public class ControllerDetailedCard{
 
 	@FXML
 	private void handleButtonAction() {
+		//TODO
+		//This method may cause issues as it the text field is not checked for only numbers.
 		int quantity=Integer.parseInt(textFieldQty.getText())-1;
 		textFieldQty.appendText(Integer.toString(quantity));
 	}
