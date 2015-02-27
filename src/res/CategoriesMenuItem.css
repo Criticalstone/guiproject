@@ -1,12 +1,23 @@
-.toggle-button{
+
+.star-button{
+	-fx-background-color: null;
+	-fx-background-image: url("gold-star-clipart-big_gold_star.png");
+}
+
+.star-button:selected{
+	-fx-background-image: url("gold-star-clipart-big_gold_star_toggled.png");
+}
+
+
+.menu-button{
 	-fx-background-color: null;
 	-fx-text-alignment: LEFT;
 }
-
-.toggle-button:selected{
+ 
+.menu-button:selected{
 	-fx-background-color: #ccffff;
 }
 
-.toggle-button:hover{
+.menu-button:hover{
 	-fx-font-weight: bold;
 }

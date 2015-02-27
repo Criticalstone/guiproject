@@ -79,7 +79,7 @@
                         <SeparatorMenuItem mnemonicParsing="false" />
                     </items>
                   </MenuButton>
-                  <ToggleButton fx:id="buttonStar" mnemonicParsing="false" onAction="#starButtonAction" text="*" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="NEVER" />
+                  <ToggleButton fx:id="buttonStar" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#starButtonAction" styleClass="star-button" stylesheets="@../../res/CategoriesMenuItem.css" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="NEVER" />
                </children>
                <opaqueInsets>
                   <Insets />
