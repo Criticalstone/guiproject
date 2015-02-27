@@ -2,6 +2,10 @@ package guiProject;
 
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.embed.swing.SwingFXUtils;
@@ -34,5 +38,28 @@ public class Utilities {
 	public static String removeAllButNumbers(String s){
 		String value = s.replaceAll("[^0-9]","");
 		return value;
+	}
+	
+	/**
+	 * WORK IN PROGRESS DO NOT USE!!!
+	 * This method will save the specified object to a file at the specified path.
+	 * @param objectToSave The Serializable object to save.
+	 * @param path The path to save the object to. Will be set to default home directory if left as null.
+	 */
+	public void SaveToFile(Serializable objectToSave, String path, String name){
+		if (path == null){
+			path = System.getProperty("user.home") + "/" + name;
+		}
+		try{
+	   
+			FileOutputStream fout = new FileOutputStream(path);
+			ObjectOutputStream oos = new ObjectOutputStream(fout);   
+			oos.writeObject(objectToSave);
+			oos.close();
+			System.out.println("Done");
+
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}
 	}
 }
