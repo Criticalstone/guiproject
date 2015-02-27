@@ -59,7 +59,7 @@ public class ProductCard extends GridPane implements IFProductCard{
 	public ProductCard(Product p)  {
 		//Load FXML
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "fxml/ViewProductCardPane.fxml"));
+                "../fxml/ViewProductCardPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
@@ -75,7 +75,7 @@ public class ProductCard extends GridPane implements IFProductCard{
         setImage();
         updateQtyInCart();
         setStar();
-        setShoppingLists();
+//        setShoppingLists();
 
 	}
 
@@ -83,7 +83,6 @@ public class ProductCard extends GridPane implements IFProductCard{
 
 	private void setStar() {
 		buttonStar.setSelected(ControllerMain.isStared(product));
-
 	}
 
 

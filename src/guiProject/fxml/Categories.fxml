@@ -24,14 +24,14 @@
                            <children>
                               <VBox layoutX="14.0" prefHeight="104.0" prefWidth="130.0">
                                  <children>
-                                    <ToggleButton fx:id="MEAT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötkött">
+                                    <ToggleButton fx:id="MEAT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötkött">
                                        <toggleGroup>
                                           <ToggleGroup fx:id="categories" />
                                        </toggleGroup>
                                     </ToggleButton>
-                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Griskött" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Kyckling" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FISH" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Fisk" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Griskött" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kyckling" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FISH" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Fisk" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -45,16 +45,16 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
                                  <children>
-                                    <ToggleButton fx:id="POD" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Baljväxter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="BERRY" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Bär" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="CITRUS_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Citrosfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="EXOTIC_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Exotiska frukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="VEGETABLE_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Grönsaksfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="CABBAGE" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Kål" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="MELONS" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Meloner " toggleGroup="$categories" />
-                                    <ToggleButton fx:id="ROOT_VEGETABLES" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Rotfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Stenfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="HERB" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Örtkryddor" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="POD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Baljväxter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="BERRY" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Bär" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="CITRUS_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Citrosfrukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="EXOTIC_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Exotiska frukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="VEGETABLE_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Grönsaksfrukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="CABBAGE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kål" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="MELONS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Meloner " toggleGroup="$categories" />
+                                    <ToggleButton fx:id="ROOT_VEGETABLES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Rotfrukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Stenfrukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="HERB" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Örtkryddor" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -67,10 +67,10 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
                                  <children>
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjölk" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Fil &amp; yoghurt" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Ost" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Ägg" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjölk" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Fil &amp; yoghurt" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ost" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ägg" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -83,14 +83,14 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
                                  <children>
-                                    <ToggleButton fx:id="BREAD" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Bröd" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjöl" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Socker" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Salt" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="NUTS_AND_SEEDS" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötter &amp; frön" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="PASTA" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Pasta" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Potatis" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Ris" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="BREAD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Bröd" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjöl" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Socker" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Salt" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="NUTS_AND_SEEDS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötter &amp; frön" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="PASTA" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Pasta" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Potatis" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ris" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -103,8 +103,8 @@
                            <children>
                               <VBox layoutX="14.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <ToggleButton fx:id="HOT_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Varma" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="COLD_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Kalla" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="HOT_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Varma" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="COLD_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kalla" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -117,10 +117,10 @@
                            <children>
                               <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
                                  <children>
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Choklad" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Chips" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Glass" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" stylesheets="@../../res/CategoriesMenuItem.css" text="Kakor &amp; bakelser" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Choklad" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Chips" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Glass" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kakor &amp; bakelser" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
