@@ -50,5 +50,9 @@ public interface IFProductList extends Serializable{
 	 * @return Map of all the items and their quantities.
 	 */
 	public HashMap<Product, Integer> getProducts();
+	/**
+	 * Returns the name of the list.
+	 * @return The name of the list as a String.
+	 */
 	public String getName();
 }

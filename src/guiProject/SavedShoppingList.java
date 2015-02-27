@@ -1,17 +1,17 @@
 package guiProject;
 
-import guiProject.interfaces.IFFavoriteList;
+import guiProject.interfaces.IFShoppingList;
 
 import java.util.HashMap;
 
 import se.chalmers.ait.dat215.project.Product;
 
-public class FavoriteList implements IFFavoriteList{
+public class SavedShoppingList implements IFShoppingList{
 
 	private HashMap<Product, Integer> productList;
 	private String name;
 	
-	public FavoriteList(String name){
+	public SavedShoppingList(String name){
 		this.name = name;
 		productList = new HashMap<Product, Integer>();
 	}
@@ -29,10 +29,10 @@ public class FavoriteList implements IFFavoriteList{
 
 	@Override
 	public void reduceQtyOfProduct(Product p, int qty) {
-		if (containProduct(p) && productList.get(p) <= qty){
-			productList.remove(p);
-		} else if (containProduct(p) && productList.get(p) > qty){
+		if (productList.containsKey(p) && productList.get(p)> qty){
 			productList.put(p, productList.get(p)-qty);
+		} else if (productList.containsKey(p)){
+			productList.put(p, 0);
 		}
 		
 	}

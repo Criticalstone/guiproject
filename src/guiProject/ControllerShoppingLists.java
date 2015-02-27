@@ -12,13 +12,13 @@ import java.util.List;
  * @author Anton
  *
  */
-public class ControllerFavoriteList implements Serializable{
+public class ControllerShoppingLists implements Serializable{
 
 	//A list of all the Favorite lists
-    private List<FavoriteList> favoriteLists;
+    private List<SavedShoppingList> favoriteLists;
     
-	public ControllerFavoriteList(){
-		favoriteLists = new ArrayList<FavoriteList>();
+	public ControllerShoppingLists(){
+		favoriteLists = new ArrayList<SavedShoppingList>();
 	}
 	/**
 	 * A default serialization of the object.

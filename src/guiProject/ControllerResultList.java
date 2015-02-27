@@ -21,7 +21,7 @@ import javafx.scene.control.ScrollPane;
  * @author Anton
  *
  */
-public class ControllerProductList extends ScrollPane implements IFControllerProductList{
+public class ControllerResultList extends ScrollPane implements IFControllerProductList{
 
 	@FXML
 	private TilePane tilePaneResultArea;
@@ -29,7 +29,7 @@ public class ControllerProductList extends ScrollPane implements IFControllerPro
 	/**
 	 * Constructor for the result list. Will setup the FXML only.
 	 */
-	public ControllerProductList(){
+	public ControllerResultList(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/ViewProductResultList.fxml"));
         fxmlLoader.setRoot(this);

@@ -13,7 +13,7 @@ import java.util.List;
 //Maybe this class should be set as a singleton?
 public class ControllerMain{
     private static IMatDataHandler imat;
-    private static ControllerProductList controllerProdList;
+    private static ControllerResultList controllerProdList;
     private static ShoppingCartHandler cart;
 
     /**
@@ -22,7 +22,7 @@ public class ControllerMain{
      */
     public static void initialize() {
         imat = IMatDataHandler.getInstance();
-        controllerProdList = new ControllerProductList();
+        controllerProdList = new ControllerResultList();
         cart = new ShoppingCartHandler();
     }
 
@@ -75,7 +75,7 @@ public class ControllerMain{
      * Returns the instance of the Product result list (which displays the items for the user)
      * @return the current instance of the product result list.
      */
-    public static ControllerProductList getProductList(){
+    public static ControllerResultList getProductList(){
         return controllerProdList;
     }
     /**
