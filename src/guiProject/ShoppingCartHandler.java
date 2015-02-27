@@ -74,10 +74,10 @@ public class ShoppingCartHandler extends GridPane{
      * @return The quantity of the item in the shopping cart.
      */
     public int getQtyOfProduct(Product p){
-//        if(productList.containsKey(p))
-//            return productList.get(p);
-//        else
+        if(getShoppItemFromProd(p)==null)
             return 0;
+
+        return (int)getShoppItemFromProd(p).getAmount();
     }
 
     /**
@@ -120,7 +120,6 @@ public class ShoppingCartHandler extends GridPane{
      */
     public void updateList(){
         listView.getItems().clear();
-        System.out.println(listView.getItems().size());
         List<String> templist = new ArrayList<>();
         for(ShoppingItem item: cart.getItems()){
             templist.add(Integer.toString(item.getProduct().getProductId()));
