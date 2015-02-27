@@ -12,10 +12,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class ControllerDetailedCard{
+public class ControllerDetailedCard extends GridPane implements IFProductCard{
 	
 	Product product;
 	@FXML
@@ -40,8 +41,8 @@ public class ControllerDetailedCard{
 	private TextField textFieldQty;
 	
 	
-	public ControllerDetailedCard(Product p) {
-		this.product = p;
+	public ControllerDetailedCard() {
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/DetailedProductView.fxml"));
         fxmlLoader.setRoot(this);
@@ -91,4 +92,8 @@ public class ControllerDetailedCard{
 		textFieldQty.appendText(Integer.toString(quantity));
 	}
 
+	@Override
+	public Product getProduct() {
+		return product;
+	}
 }
