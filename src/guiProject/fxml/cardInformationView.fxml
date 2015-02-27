@@ -13,11 +13,11 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="174.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <Label layoutX="65.0" layoutY="160.0" text="Utgångsdatum:" GridPane.rowIndex="2">
@@ -30,7 +30,7 @@
                   <Insets left="60.0" />
                </GridPane.margin>
             </Label>
-            <TextField layoutX="177.0" layoutY="76.0" prefHeight="31.0" prefWidth="67.0" promptText="xxx" GridPane.rowIndex="3">
+            <TextField layoutX="177.0" layoutY="76.0" prefHeight="31.0" prefWidth="67.0" promptText="xxx" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="160.0" right="180.0" />
                </GridPane.margin>
@@ -58,7 +58,7 @@
                   <Insets left="215.0" />
                </GridPane.margin>
             </Label>
-            <ChoiceBox prefHeight="31.0" prefWidth="202.0" GridPane.rowIndex="4">
+            <ChoiceBox prefHeight="31.0" prefWidth="202.0">
                <GridPane.margin>
                   <Insets left="160.0" right="60.0" />
                </GridPane.margin>
@@ -70,17 +70,17 @@
                   </ContextMenu>
                </contextMenu>
             </ChoiceBox>
-            <Label layoutX="129.0" layoutY="81.0" prefHeight="21.0" prefWidth="39.0" text="CVC:" GridPane.rowIndex="3">
+            <Label layoutX="129.0" layoutY="81.0" prefHeight="21.0" prefWidth="39.0" text="CVC:" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="124.0" />
                </GridPane.margin>
             </Label>
-            <Label layoutX="133.0" layoutY="200.0" text="Kort:" GridPane.rowIndex="4">
+            <Label layoutX="133.0" layoutY="200.0" text="Kort:">
                <GridPane.margin>
                   <Insets left="124.0" />
                </GridPane.margin>
             </Label>
-            <Label contentDisplay="RIGHT" layoutX="8.0" layoutY="122.0" text="Kortinnehavarens namn:">
+            <Label contentDisplay="RIGHT" layoutX="8.0" layoutY="122.0" text="Kortinnehavarens namn:" GridPane.rowIndex="3">
                <padding>
                   <Insets right="10.0" />
                </padding>
@@ -88,7 +88,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TextField layoutX="177.0" layoutY="117.0" prefHeight="31.0" prefWidth="244.0" promptText="ex. Karl Karlsson">
+            <TextField layoutX="177.0" layoutY="117.0" prefHeight="31.0" prefWidth="244.0" promptText="ex. Karl Karlsson" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="165.0" right="60.0" />
                </GridPane.margin>
