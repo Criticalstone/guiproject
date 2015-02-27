@@ -6,11 +6,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane prefHeight="295.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="cardPane" prefHeight="295.0" prefWidth="495.0" type="Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane prefHeight="295.0" prefWidth="404.0">
+      <GridPane prefHeight="295.0" prefWidth="495.0">
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="174.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="174.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -25,29 +25,29 @@
                   <Insets left="58.0" />
                </GridPane.margin>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="64.0" layoutY="43.0" text="Kontonummer: " GridPane.rowIndex="1">
+            <Label alignment="CENTER_RIGHT" layoutX="64.0" layoutY="43.0" text="Kortnummer:" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="60.0" />
+                  <Insets left="70.0" />
                </GridPane.margin>
             </Label>
-            <TextField layoutX="177.0" layoutY="76.0" prefHeight="31.0" prefWidth="67.0" promptText="xxx" GridPane.rowIndex="4">
+            <TextField fx:id="cvc" layoutX="177.0" layoutY="76.0" prefHeight="31.0" prefWidth="67.0" promptText="xxx" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="160.0" right="180.0" />
+                  <Insets left="165.0" right="285.0" />
                </GridPane.margin>
             </TextField>
-            <TextField layoutX="237.0" layoutY="155.0" prefHeight="31.0" prefWidth="231.0" promptText="mm" GridPane.rowIndex="2">
+            <TextField fx:id="dateMonth" layoutX="237.0" layoutY="155.0" prefHeight="31.0" prefWidth="231.0" promptText="mm" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets left="230.0" right="110.0" />
+                  <Insets left="230.0" right="220.0" />
                </GridPane.margin>
             </TextField>
-            <TextField layoutX="177.0" layoutY="38.0" promptText="xxxx xxxx xxxx xxxx" GridPane.rowIndex="1">
+            <TextField fx:id="cardNumberOne" layoutX="177.0" layoutY="38.0" prefHeight="31.0" prefWidth="42.0" promptText="xxxx" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="165.0" right="60.0" />
+                  <Insets left="165.0" right="275.0" />
                </GridPane.margin>
             </TextField>
-            <TextField layoutX="177.0" layoutY="155.0" prefHeight="31.0" prefWidth="71.0" promptText="åå" GridPane.rowIndex="2">
+            <TextField fx:id="dateYear" layoutX="177.0" layoutY="155.0" prefHeight="31.0" prefWidth="71.0" promptText="åå" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets left="165.0" right="180.0" />
+                  <Insets left="165.0" right="285.0" />
                </GridPane.margin>
             </TextField>
             <Label layoutX="222.0" layoutY="153.0" text="/" GridPane.rowIndex="2">
@@ -58,9 +58,9 @@
                   <Insets left="215.0" />
                </GridPane.margin>
             </Label>
-            <ChoiceBox prefHeight="31.0" prefWidth="202.0">
+            <ChoiceBox fx:id="cardType" prefHeight="31.0" prefWidth="237.0">
                <GridPane.margin>
-                  <Insets left="160.0" right="60.0" />
+                  <Insets left="165.0" right="95.0" />
                </GridPane.margin>
                <contextMenu>
                   <ContextMenu>
@@ -88,12 +88,27 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TextField layoutX="177.0" layoutY="117.0" prefHeight="31.0" prefWidth="244.0" promptText="ex. Karl Karlsson" GridPane.rowIndex="3">
+            <TextField fx:id="cardholder" layoutX="177.0" layoutY="117.0" prefHeight="31.0" prefWidth="244.0" promptText="ex. Karl Karlsson" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets left="165.0" right="60.0" />
+                  <Insets left="165.0" right="95.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cardNumberTwo" prefHeight="31.0" prefWidth="42.0" promptText="xxxx" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="225.0" right="215.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cardNumberThree" prefHeight="31.0" prefWidth="47.0" promptText="xxxx" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="285.0" right="155.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cardNumberFour" prefHeight="31.0" prefWidth="54.0" promptText="xxxx" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="345.0" right="95.0" />
                </GridPane.margin>
             </TextField>
          </children>
       </GridPane>
    </children>
-</Pane>
+</fx:root>

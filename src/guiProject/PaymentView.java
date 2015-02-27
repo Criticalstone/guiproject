@@ -3,10 +3,10 @@ package guiProject;
 import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 
-public class PaymentView {
+public class PaymentView extends AnchorPane{
 
-	
 	public PaymentView(){
 	  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/PaymentView.fxml"));
 
@@ -20,7 +20,4 @@ public class PaymentView {
 	  }
 	}
   
-	
-	
-	
 }

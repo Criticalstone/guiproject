@@ -19,13 +19,13 @@ import javafx.scene.layout.TilePane;
 public class CheckoutView extends GridPane{
 	
 	@FXML
-	private GridPane gridOne;
+	private AnchorPane gridOne;
 	@FXML
-	private GridPane gridTwo;
+	private AnchorPane gridTwo;
 	@FXML
-	private GridPane gridThree;
+	private AnchorPane gridThree;
 	@FXML
-	private GridPane gridFour;
+	private AnchorPane gridFour;
 	
 	
 	 public CheckoutView() {
@@ -40,7 +40,10 @@ public class CheckoutView extends GridPane{
 	        } catch (IOException exception) {
 	            throw new RuntimeException(exception);
 	        }
-            
-	        	gridOne.add(arg0, arg1, arg2);
+
+	       gridOne.getChildren().add(new CardInformationView());
+//	       gridTwo.getChildren().add(new PaymentView());
+	       gridThree.getChildren().add(new PersonNumberView());
+	       gridFour.getChildren().add(new DeliveryView());
 	 }
 }
