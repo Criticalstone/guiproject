@@ -84,14 +84,13 @@ public class ControllerMain{
      * @param toggle If the items should be a favorite (true) or not (false).
      */
     public static void starProduct(Product p, boolean toggle){
-    	if (!toggle && imat.isFavorite(p)){ //If toggled to false and product is favorite, remove favorite.
-    		imat.removeFavorite(p);
-    	} else if (toggle && !imat.isFavorite(p)){ //If toggled to true and product is not favorite, add to favorite.
-    		imat.addFavorite(p);
-    	}
-    	//Else do nothing as toggle just became synced with DB.
+    	ControllerShoppingLists.starProduct(p, toggle);
     	
     }
+    
+	public static boolean isStared(Product p){
+		return ControllerShoppingLists.isStared(p);
+	}
     
     
     

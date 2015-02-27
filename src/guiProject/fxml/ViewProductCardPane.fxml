@@ -79,7 +79,7 @@
                         <SeparatorMenuItem mnemonicParsing="false" />
                     </items>
                   </MenuButton>
-                  <ToggleButton mnemonicParsing="false" onAction="#starButtonAction" text="*" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="NEVER" />
+                  <ToggleButton fx:id="buttonStar" mnemonicParsing="false" onAction="#starButtonAction" text="*" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="NEVER" />
                </children>
                <opaqueInsets>
                   <Insets />

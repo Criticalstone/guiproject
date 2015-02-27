@@ -36,7 +36,7 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
 	@FXML
 	private MenuButton menuButtonAddToList;
 	@FXML
-	private Button buttonStar;
+	private ToggleButton buttonStar;
 	@FXML
 	private Label labelPrice;
 	@FXML
@@ -72,7 +72,15 @@ public class ControllerProductCardPane extends GridPane implements IFProductCard
         setPrice();
         setImage();
         updateQtyInCart();
+        setStar();
         setShoppingLists();
+
+	}
+
+
+
+	private void setStar() {
+		buttonStar.setSelected(ControllerMain.isStared(product));
 
 	}
 
