@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="604.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Personuppgifter">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="46.0" text="Namn:" />
+      <Label layoutX="81.0" layoutY="46.0" text="-" />
+      <Label layoutX="12.0" layoutY="75.0" text="Adress:" />
+      <Label layoutX="81.0" layoutY="75.0" text="-" />
+      <Label layoutX="14.0" layoutY="102.0" text="Postnr:" />
+      <Label layoutX="81.0" layoutY="102.0" text="-" />
+      <Label layoutX="14.0" layoutY="130.0" text="Ort:" />
+      <Label layoutX="81.0" layoutY="130.0" text="-" />
+      <Label layoutX="12.0" layoutY="174.0" text="Betalningssätt">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="207.0" text="PayPal" />
+      <Label layoutX="12.0" layoutY="252.0" text="Kortinformation">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="310.0" text="Kontonummer:" />
+      <Label layoutX="20.0" layoutY="408.0" text="CVC:" />
+      <Label layoutX="15.0" layoutY="342.0" text="Utgångsdatum:" />
+      <Label layoutX="14.0" layoutY="376.0" text="Kortinnehavare:" />
+      <Label layoutX="142.0" layoutY="279.0" text="-" />
+      <Label layoutX="142.0" layoutY="310.0" text="-" />
+      <Label layoutX="142.0" layoutY="342.0" text="-" />
+      <Label layoutX="142.0" layoutY="376.0" text="-" />
+      <Label layoutX="15.0" layoutY="438.0" text="Leverans">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="499.0" text="Butik:" />
+      <Label layoutX="15.0" layoutY="470.0" text="Leveranssätt:" />
+      <Label layoutX="21.0" layoutY="526.0" text="Leveranstid:" />
+      <Label layoutX="142.0" layoutY="526.0" text="-" />
+      <Label layoutX="142.0" layoutY="470.0" text="-" />
+      <Label layoutX="142.0" layoutY="499.0" text="-" />
+      <CheckBox layoutX="12.0" layoutY="574.0" mnemonicParsing="false" text="Spara all information till KöpNu-knappen">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="440.0" layoutY="557.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="104.0" text="Redigera" />
+      <Label layoutX="20.0" layoutY="279.0" text="Kort:" />
+      <Label layoutX="142.0" layoutY="408.0" text="-" />
+   </children>
+</AnchorPane>

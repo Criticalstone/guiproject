@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="755.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Personuppgifter">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="46.0" text="Namn:" />
+      <Label layoutX="12.0" layoutY="86.0" text="Adress:" />
+      <Label layoutX="14.0" layoutY="125.0" text="Postnr:" />
+      <Label layoutX="17.0" layoutY="166.0" text="Ort:" />
+      <Label layoutX="13.0" layoutY="204.0" text="Betalningssätt">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="297.0" text="Kortinformation">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="377.0" text="Kontonummer:" />
+      <Label layoutX="20.0" layoutY="502.0" text="CVC:" />
+      <Label layoutX="15.0" layoutY="418.0" text="Utgångsdatum:" />
+      <Label layoutX="13.0" layoutY="460.0" text="Kortinnehavare:" />
+      <Label layoutX="15.0" layoutY="541.0" text="Leverans">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="610.0" text="Butik:" />
+      <Label layoutX="15.0" layoutY="568.0" text="Leveranssätt:" />
+      <Label layoutX="17.0" layoutY="655.0" text="Leveranstid:" />
+      <CheckBox layoutX="11.0" layoutY="721.0" mnemonicParsing="false" text="Spara all information till KöpNu-knappen">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="458.0" layoutY="714.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="86.0" text="Spara" />
+      <Label layoutX="20.0" layoutY="332.0" text="Kort:" />
+      <Button layoutX="364.0" layoutY="714.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="86.0" text="Avbryt" />
+      <TextField layoutX="73.0" layoutY="44.0" prefHeight="31.0" prefWidth="266.0" />
+      <TextField layoutX="73.0" layoutY="81.0" prefHeight="31.0" prefWidth="266.0" />
+      <TextField layoutX="73.0" layoutY="120.0" prefHeight="31.0" prefWidth="266.0" />
+      <TextField layoutX="74.0" layoutY="161.0" prefHeight="31.0" prefWidth="266.0" />
+      <RadioButton layoutX="189.0" layoutY="271.0" mnemonicParsing="false" text="PayPal">
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="189.0" layoutY="231.0" mnemonicParsing="false" text="Faktura" toggleGroup="$group" />
+      <RadioButton layoutX="15.0" layoutY="271.0" mnemonicParsing="false" text="Direktbank" toggleGroup="$group" />
+      <RadioButton layoutX="15.0" layoutY="231.0" mnemonicParsing="false" text="Konto-/Kreditkort" toggleGroup="$group" />
+      <ChoiceBox layoutX="73.0" layoutY="327.0" prefHeight="31.0" prefWidth="266.0" />
+      <TextField layoutX="129.0" layoutY="372.0" prefHeight="31.0" prefWidth="48.0" promptText="xxxx" />
+      <TextField layoutX="182.0" layoutY="372.0" prefHeight="31.0" prefWidth="48.0" promptText="xxxx" />
+      <TextField layoutX="235.0" layoutY="372.0" prefHeight="31.0" prefWidth="48.0" promptText="xxxx" />
+      <TextField layoutX="285.0" layoutY="372.0" prefHeight="31.0" prefWidth="48.0" promptText="xxxx" />
+      <TextField layoutX="129.0" layoutY="413.0" prefHeight="31.0" prefWidth="44.0" promptText="åå" />
+      <TextField layoutX="189.0" layoutY="413.0" prefHeight="31.0" prefWidth="44.0" promptText="mm" />
+      <Label layoutX="178.0" layoutY="415.0" text="/">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="129.0" layoutY="455.0" prefHeight="31.0" prefWidth="208.0" />
+      <TextField layoutX="131.0" layoutY="497.0" prefHeight="31.0" prefWidth="48.0" promptText="xxx" />
+      <RadioButton layoutX="118.0" layoutY="568.0" mnemonicParsing="false" text="Hemleverans" />
+      <RadioButton layoutX="254.0" layoutY="568.0" mnemonicParsing="false" text="Hämta i butik" />
+      <ChoiceBox layoutX="118.0" layoutY="605.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="118.0" layoutY="650.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="283.0" layoutY="650.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

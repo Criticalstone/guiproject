@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -46,10 +47,15 @@ public class Main extends Application {
         Pane shoppingCartPane = (Pane) scene.lookup("#shoppingCartPane");
 
         shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
+//        
+//        //Setup test for checkoutView
+//        Pane checkoutViewPane = (Pane) scene.lookup("#detailView");
+//        checkoutViewPane.getChildren().add(new CheckoutView());
         
-        //Setup test for checkoutView
-        /*Pane checkoutViewPane = (Pane) scene.lookup("#detailView");
-        checkoutViewPane.getChildren().add(new CheckoutView());*/
+//        //Setup Test for DeliveryCalender
+//        Pane delivery = (Pane) scene.lookup("#detailView");
+//        delivery.getChildren().add(new DeliveryCalender());
+        
         
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
