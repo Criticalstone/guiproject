@@ -147,7 +147,7 @@
                                              <image>
                                                 <Image url="@../../res/gold-star-clipart-big_gold_star_toggled.png" />
                                              </image></ImageView>
-                                          <ToggleButton fx:id="buttonStarList" mnemonicParsing="false" onAction="#starButtonAction" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Stjärnmarkerade varor" />
+                                          <ToggleButton fx:id="buttonStarList" mnemonicParsing="false" onAction="#starButtonAction" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mina favoriter" />
                                        </children>
                                     </HBox>
                                     <Separator prefWidth="200.0" />
