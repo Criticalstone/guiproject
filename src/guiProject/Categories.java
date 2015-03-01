@@ -10,6 +10,9 @@ import se.chalmers.ait.dat215.project.ProductCategory;
 import java.io.IOException;
 
 public class Categories extends TabPane{
+	
+	@FXML
+	private ToggleButton buttonStarList;
 
     public Categories() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -29,5 +32,10 @@ public class Categories extends TabPane{
     public void buttonOnClick(ActionEvent event){
         ProductCategory categ = ProductCategory.valueOf(((ToggleButton)event.getSource()).getId());
         ControllerMain.setProductFromCategory(categ);
+    }
+    
+    @FXML
+    public void starButtonAction(){
+    	ControllerMain.setProductList(ControllerShoppingLists.getStaredProducts());
     }
 }
