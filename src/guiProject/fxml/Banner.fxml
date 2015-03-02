@@ -32,8 +32,8 @@
             <HBox />
             <HBox>
                <children>
-                  <Button mnemonicParsing="false" text="Sök" />
-                  <TextField prefHeight="26.0" prefWidth="120.0" />
+                  <Button mnemonicParsing="false" onAction="#searchOnAction" text="Sök" />
+                  <TextField fx:id="textSearch" onAction="#searchOnAction" prefHeight="26.0" prefWidth="120.0" />
                </children>
             </HBox>
          </items>

@@ -15,6 +15,7 @@ public class ControllerMain{
     private static IMatDataHandler imat;
     private static ControllerResultList controllerProdList;
     private static ShoppingCartHandler cart;
+    private static boolean isSearching = false;
 
     /**
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
@@ -95,12 +96,14 @@ public class ControllerMain{
 	public static boolean isStared(Product p){
 		return ControllerShoppingLists.isStared(p);
 	}
-    
-    
-    
 
     public static ShoppingCartHandler getShoppingCart(){
         return cart;
+    }
+
+    public static void performSearch(String query){
+        List<Product> result = imat.findProducts(query);
+        controllerProdList.setItems(result);
     }
 
 
