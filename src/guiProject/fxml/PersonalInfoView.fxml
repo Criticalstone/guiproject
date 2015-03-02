@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="558.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="22.0" layoutY="169.0" text="Personuppgifter">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="201.0" text="Namn:" />
+      <Label layoutX="20.0" layoutY="230.0" text="Adress:" />
+      <Label layoutX="22.0" layoutY="257.0" text="Postnr:" />
+      <Label layoutX="23.0" layoutY="293.0" text="Ort:" />
+      <Label layoutX="20.0" layoutY="418.0" text="Betalningssätt">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="451.0" text="PayPal" />
+      <Label layoutX="248.0" layoutY="169.0" text="Kortinformation">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="253.0" layoutY="227.0" text="Kontonummer:" />
+      <Label layoutX="256.0" layoutY="325.0" text="CVC:" />
+      <Label layoutX="251.0" layoutY="259.0" text="Utgångsdatum:" />
+      <Label layoutX="250.0" layoutY="293.0" text="Kortinnehavare:" />
+      <Label layoutX="251.0" layoutY="368.0" text="Leverans">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="429.0" text="Butik:" />
+      <Label layoutX="251.0" layoutY="400.0" text="Leveranssätt:" />
+      <Label layoutX="252.0" layoutY="456.0" text="Leveranstid:" />
+      <CheckBox layoutX="11.0" layoutY="528.0" mnemonicParsing="false" text="Spara all information till KöpNu-knappen">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="368.0" layoutY="521.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="104.0" text="Redigera" />
+      <Label layoutX="250.0" layoutY="196.0" text="Kort:" />
+      <ImageView fitHeight="151.0" fitWidth="157.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/greyprofile.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="196.0" layoutY="74.0" mnemonicParsing="false" text="Byt lösenord" />
+      <Label layoutX="21.0" layoutY="335.0" text="Telefon:" />
+      <Label layoutX="25.0" layoutY="368.0" text="Email:" />
+      <Label layoutX="196.0" layoutY="26.0" text="Namn">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
