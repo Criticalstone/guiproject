@@ -25,7 +25,7 @@ public class Main extends Application {
 
         //Categories test
         Pane categoriesPane = (Pane) scene.lookup("#categoriesView");
-        categoriesPane.getChildren().add(new Categories());
+        categoriesPane.getChildren().add(Categories.getInstance());
 
         //Details view test
         Pane detailPane = (Pane) scene.lookup("#detailView");
@@ -51,8 +51,14 @@ public class Main extends Application {
         /*Pane checkoutViewPane = (Pane) scene.lookup("#detailView");
         checkoutViewPane.getChildren().add(new CheckoutView());*/
         
+        //Testing Favorite lists
+    	ControllerMain.addFavoriteList("Derp list");
+
+
+        
         //Complete setup
         scene.getStylesheets().add("/res/sample.css");
+        scene.getStylesheets().add("/res/CategoriesMenuItem.css");
         primaryStage.setScene(scene);
 
 
