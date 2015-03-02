@@ -3,6 +3,7 @@ package guiProject;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
+import guiProject.interfaces.IFProductList;
 
 import java.util.List;
 /**
@@ -15,6 +16,8 @@ public class ControllerMain{
     private static IMatDataHandler imat;
     private static ControllerResultList controllerProdList;
     private static ShoppingCartHandler cart;
+    private static ControllerShoppingLists favoriteLists;
+    private static Categories categories;
 
     /**
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
@@ -24,6 +27,8 @@ public class ControllerMain{
         imat = IMatDataHandler.getInstance();
         controllerProdList = new ControllerResultList();
         cart = new ShoppingCartHandler();
+        favoriteLists = ControllerShoppingLists.getInstance();
+        categories = Categories.getInstance();
     }
 
     /**
@@ -88,12 +93,12 @@ public class ControllerMain{
      * @param toggle If the items should be a favorite (true) or not (false).
      */
     public static void starProduct(Product p, boolean toggle){
-    	ControllerShoppingLists.starProduct(p, toggle);
+    	favoriteLists.starProduct(p, toggle);
     	
     }
     
 	public static boolean isStared(Product p){
-		return ControllerShoppingLists.isStared(p);
+		return favoriteLists.isStared(p);
 	}
     
     
@@ -102,6 +107,20 @@ public class ControllerMain{
     public static ShoppingCartHandler getShoppingCart(){
         return cart;
     }
+    
+    public static List<IFProductList> getFavoriteLists(){
+    	return favoriteLists.getFavoriteLists();
+    }
+
+	public static List<Product> getStaredProducts() {
+		return favoriteLists.getStaredProducts();
+	}
+	
+	public static void addFavoriteList(String name){
+		favoriteLists.addFavoriteList(name);
+		categories.displayLists();
+		
+	}
 
 
 

@@ -24,3 +24,16 @@
 .button{
 	-fx-text-alignment: LEFT;
 }
+
+.menu-button{
+	-fx-background-color: null;
+	-fx-text-alignment: LEFT;
+}
+ 
+.menu-button:selected{
+	-fx-background-color: #ccffff;
+}
+
+.menu-button:hover{
+	-fx-font-weight: bold;
+}
