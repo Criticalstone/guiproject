@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="640.0" prefHeight="124.0" prefWidth="640.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="640.0" prefHeight="125.0" prefWidth="640.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="65.0" minHeight="8.0" prefHeight="52.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="65.0" minHeight="8.0" prefHeight="40.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <ToolBar maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" GridPane.rowIndex="1">
@@ -21,22 +22,34 @@
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="62.0" right="62.0" />
+               </padding>
             </Label>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
             <HBox>
                <children>
-                  <ToggleButton mnemonicParsing="false" text="List" />
-                  <ToggleButton mnemonicParsing="false" text="Icon" />
+                  <ToggleButton mnemonicParsing="false" text="List">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="View" />
+                     </toggleGroup></ToggleButton>
+                  <ToggleButton mnemonicParsing="false" text="Icon" toggleGroup="$View" />
                </children>
             </HBox>
             <HBox />
             <HBox>
                <children>
                   <Button mnemonicParsing="false" text="Sök" />
-                  <TextField prefHeight="26.0" prefWidth="120.0" />
+                  <TextField alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="120.0" />
                </children>
             </HBox>
          </items>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
       </ToolBar>
       <GridPane>
         <columnConstraints>
