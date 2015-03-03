@@ -23,14 +23,14 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <RadioButton layoutX="14.0" layoutY="89.0" mnemonicParsing="false" text="Direktbank" GridPane.rowIndex="1">
+            <RadioButton fx:id="toggleTransfer" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="Direktbank" GridPane.rowIndex="1">
                <toggleGroup>
                   <ToggleGroup fx:id="group" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="14.0" layoutY="49.0" mnemonicParsing="false" text="Konto-/Kreditkort" toggleGroup="$group" />
-            <RadioButton layoutX="188.0" layoutY="89.0" mnemonicParsing="false" text="PayPal" toggleGroup="$group" GridPane.columnIndex="1" />
-            <RadioButton layoutX="188.0" layoutY="49.0" mnemonicParsing="false" text="Faktura" toggleGroup="$group" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <RadioButton fx:id="toggleCard" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="Konto-/Kreditkort" toggleGroup="$group" />
+            <RadioButton fx:id="togglePayPal" layoutX="188.0" layoutY="89.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="PayPal" toggleGroup="$group" GridPane.columnIndex="1" />
+            <RadioButton fx:id="toggleBill" layoutX="188.0" layoutY="49.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="Faktura" toggleGroup="$group" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>

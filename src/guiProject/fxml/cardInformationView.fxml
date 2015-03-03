@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import guiProject.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-
 
 <fx:root hgap="5.0" maxHeight="295.0" maxWidth="475.0" minHeight="295.0" minWidth="475.0" prefHeight="295.0" prefWidth="475.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
@@ -30,72 +30,6 @@
             <Insets left="70.0" />
          </GridPane.margin>
       </Label>
-      <TextField fx:id="cvc" layoutX="177.0" layoutY="76.0" maxWidth="60.0" minWidth="60.0" prefHeight="31.0" prefWidth="60.0" promptText="xxx" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-      </TextField>
-      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-         <children>
-            <TextField fx:id="dateYear" layoutX="177.0" layoutY="155.0" maxWidth="60.0" minWidth="60.0" prefHeight="31.0" prefWidth="60.0" promptText="åå" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="165.0" right="285.0" />
-               </GridPane.margin>
-            </TextField>
-            <Label layoutX="222.0" layoutY="153.0" text="/" GridPane.rowIndex="2">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="215.0" />
-               </GridPane.margin>
-            </Label>
-            <TextField fx:id="dateMonth" layoutX="237.0" layoutY="155.0" maxWidth="60.0" minWidth="60.0" prefHeight="31.0" prefWidth="60.0" promptText="mm" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="230.0" right="220.0" />
-               </GridPane.margin>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" maxWidth="260.0" minWidth="260.0" prefWidth="260.0" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <children>
-            <TextField fx:id="cardNumberOne" layoutX="177.0" layoutY="38.0" promptText="xxxx" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="165.0" right="275.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="cardNumberTwo" promptText="xxxx" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="225.0" right="215.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="cardNumberThree" promptText="xxxx" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="285.0" right="155.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="cardNumberFour" promptText="xxxx" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="345.0" right="95.0" />
-               </GridPane.margin>
-            </TextField>
-         </children>
-         <GridPane.margin>
-            <Insets right="5.0" />
-         </GridPane.margin>
-      </HBox>
-      <ChoiceBox fx:id="cardType" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-         <contextMenu>
-            <ContextMenu>
-              <items>
-                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-              </items>
-            </ContextMenu>
-         </contextMenu>
-      </ChoiceBox>
       <Label layoutX="129.0" layoutY="81.0" prefHeight="21.0" prefWidth="39.0" text="CVC:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets left="124.0" />
@@ -111,10 +45,38 @@
             <Insets />
          </GridPane.margin>
       </Label>
-      <TextField fx:id="cardholder" layoutX="177.0" layoutY="117.0" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-         <GridPane.margin>
-            <Insets right="5.0" />
-         </GridPane.margin>
-      </TextField>
+      <ChoiceBox fx:id="cardType" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" GridPane.columnIndex="1">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </ChoiceBox>
+      <HBox alignment="CENTER_LEFT" maxWidth="260.0" minWidth="260.0" prefWidth="260.0" spacing="2.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <IntegerTextField fx:id="cardNo1" promptText="xxxx" />
+            <IntegerTextField fx:id="cardNo2" promptText="xxxx" />
+            <IntegerTextField fx:id="cardNo3" promptText="xxxx" />
+            <IntegerTextField fx:id="cardNo4" promptText="xxxx" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="2.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <IntegerTextField fx:id="dateYear" maxWidth="60.0" minWidth="60.0" prefHeight="31.0" prefWidth="60.0" promptText="åå" />
+            <Label layoutX="222.0" layoutY="153.0" text="/" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="215.0" />
+               </GridPane.margin>
+            </Label>
+            <IntegerTextField fx:id="dateMonth" maxWidth="60.0" minWidth="60.0" prefHeight="31.0" prefWidth="60.0" promptText="mm" />
+         </children>
+      </HBox>
+      <TextField fx:id="cardholder" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <IntegerTextField fx:id="cvc" maxWidth="60.0" minWidth="60.0" prefHeight="31.0" prefWidth="60.0" promptText="xxx" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    </children>
 </fx:root>

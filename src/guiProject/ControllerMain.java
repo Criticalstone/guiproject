@@ -3,6 +3,7 @@ package guiProject;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
+import guiProject.CheckoutView.PaymentOption;
 import guiProject.interfaces.IFProductList;
 
 import java.util.ArrayList;
@@ -29,7 +30,6 @@ public class ControllerMain extends Application{
     private static ShoppingCartHandler cart;
     private static ControllerShoppingLists favoriteLists;
     private static Categories categories;
-
     private static CheckoutView checkoutView;
     
     @FXML
@@ -155,6 +155,10 @@ public class ControllerMain extends Application{
 	public static void displayProductResultList(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(controllerProdList);
+	}
+	
+	public static void displayPaymentOption(PaymentOption option){
+		checkoutView.displayPaymentOption(option);
 	}
 	
 	@Override
