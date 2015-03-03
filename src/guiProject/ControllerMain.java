@@ -153,9 +153,6 @@ public class ControllerMain extends Application{
 	}
 	
 	public static void displayProductResultList(){
-		if (detailView == null){
-			System.out.println("derp");
-		}
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(controllerProdList);
 	}

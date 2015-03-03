@@ -4,8 +4,9 @@ import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
-public class PaymentView extends AnchorPane{
+public class PaymentView extends VBox{
 
 	public PaymentView(){
 	  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/PaymentView.fxml"));

@@ -6,8 +6,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 
-public class PersonNumberView extends AnchorPane{
+public class PersonNumberView extends GridPane{
 	
 	@FXML
 	private TextField postNumber;
