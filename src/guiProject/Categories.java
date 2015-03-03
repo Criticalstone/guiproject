@@ -6,8 +6,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToggleButton;
+
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
+
 import se.chalmers.ait.dat215.project.ProductCategory;
 
 import java.io.IOException;
@@ -66,6 +68,7 @@ public class Categories extends TabPane{
         ProductCategory categ = ProductCategory.valueOf(((ToggleButton)event.getSource()).getId());
         ControllerMain.setProductFromCategory(categ);
     }
+
     
     @FXML
     public void starButtonAction(){

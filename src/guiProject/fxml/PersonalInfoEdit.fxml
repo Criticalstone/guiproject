@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Kortinnehavare:" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="Butik:" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="Kortinformation" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Kontonummer: " GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="Kort:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="Leverans" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label />
+      <Label text="Leveranssätt:" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="Leveranstid:" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="Utgångsdatum:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text="CVC:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <CheckBox mnemonicParsing="false" text="Spara till KöpNu-knappen" GridPane.rowIndex="12">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </CheckBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <Label />
+            <Label text="Namn">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label />
+            <Button mnemonicParsing="false" text="Byt lösenord" />
+         </children>
+      </VBox>
+      <Label text=" Betalningssätt" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text=" Namn: " GridPane.rowIndex="2">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text=" Postnr:" GridPane.rowIndex="4">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label GridPane.rowIndex="2" />
+      <Label GridPane.rowIndex="2" />
+      <Label text=" Personuppgifter" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label text=" Ort:" GridPane.rowIndex="5">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text=" Email:" GridPane.rowIndex="7">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label text=" Telefon:" GridPane.rowIndex="6">
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <ImageView fitHeight="151.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/greyprofile.png" />
+         </image>
+      </ImageView>
+      <Label text=" Adress: " GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Button mnemonicParsing="false" text="Avbryt" GridPane.columnIndex="1" GridPane.rowIndex="12">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" text="Spara" GridPane.columnIndex="1" GridPane.rowIndex="12">
+         <GridPane.margin>
+            <Insets left="180.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField prefHeight="31.0" prefWidth="152.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="55.0" right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField prefHeight="31.0" prefWidth="159.0" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="55.0" right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="55.0" right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="55.0" right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="60.0" right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="55.0" right="30.0" />
+         </GridPane.margin>
+      </TextField>
+      <ChoiceBox prefHeight="31.0" prefWidth="353.0" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="5.0" right="30.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <ChoiceBox prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="35.0" right="10.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="105.0" right="110.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="142.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="155.0" right="55.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="110.0" right="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="35.0" right="160.0" />
+         </GridPane.margin>
+      </TextField>
+      <ChoiceBox prefHeight="31.0" prefWidth="233.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets left="40.0" right="10.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="90.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <ChoiceBox prefHeight="31.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="80.0" right="10.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="331.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="247.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="249.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="176.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</GridPane>
