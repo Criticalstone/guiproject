@@ -134,6 +134,10 @@ public class ControllerMain extends Application{
     public static void setBanner(ProductCategory categ){
     	banner.setBanner(categ);
     }
+    
+    public static void setBanner(String n){
+    	banner.setBanner(n);
+    }
 
     public static List<IFProductList> getFavoriteLists(){
     	return favoriteLists.getFavoriteLists();

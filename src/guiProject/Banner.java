@@ -128,6 +128,17 @@ public class Banner extends GridPane{
     			break;	
     	}
     }
+    
+    public void setBanner(String n){
+    	switch(n){
+    		case "kassa":
+    			bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
+    			bannerTitle.setStyle("-fx-background-image: url('res/banner/kassa.png');");
+    			break;
+    		default:
+    			break;
+    	}
+    }
 
     public void searchOnAction(){
         ControllerMain.performSearch(textSearch.getText());

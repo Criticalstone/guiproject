@@ -156,6 +156,7 @@ public class ShoppingCartHandler extends GridPane{
 
     public void checkoutButtonAction(ActionEvent e){
     	ControllerMain.displayCheckout();
+    	ControllerMain.setBanner("kassa");
     }
 
     public void buyNowButtonAction(ActionEvent e){
@@ -163,7 +164,7 @@ public class ShoppingCartHandler extends GridPane{
     }
 
     public void saveToListButtonAction(ActionEvent e){
-    	ControllerMain.addFavoriteList("Inköpslista " + LocalDateTime.now().toLocalDate());
+    	ControllerMain.addFavoriteList("Inkï¿½pslista " + LocalDateTime.now().toLocalDate());
     }
 
     //Private class which represent the List items in the gui.
