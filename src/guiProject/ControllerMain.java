@@ -168,6 +168,16 @@ public class ControllerMain extends Application{
 		checkoutView.displayPaymentOption(option);
 	}
 	
+	public static void displayPurchaseConfirmation() {
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(new ThankYouForPurchase());
+		
+	}
+	public static void emptyCart() {
+		cart.emptyCart();
+		
+	}
+	
 	@Override
     public void start(Stage primaryStage) throws Exception{
 		
@@ -239,13 +249,6 @@ public class ControllerMain extends Application{
         //Testing Favorite lists
     	ControllerMain.addFavoriteList("Derp list");
 	}
-	public static void displayPurchaseConfirmation() {
-		// TODO Auto-generated method stub
-		
-	}
-	public static void emptyCart() {
-		cart.emptyCart();
-		
-	}
+
 
 }

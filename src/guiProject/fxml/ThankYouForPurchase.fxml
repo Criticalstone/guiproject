@@ -6,16 +6,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="152.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<fx:root alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="152.0" minWidth="400.0" prefHeight="152.0" prefWidth="400.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="ALWAYS" minWidth="400.0" prefWidth="400.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="189.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="46.0" minHeight="46.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label alignment="CENTER" prefHeight="70.0" prefWidth="604.0" text="Tack för ditt köp!" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label alignment="CENTER" prefHeight="70.0" prefWidth="604.0" text="Tack för ditt köp!" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
@@ -23,7 +25,7 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Button disable="true" mnemonicParsing="false" text="Spara kvitto" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <Button disable="true" mnemonicParsing="false" text="Spara kvitto" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -32,4 +34,4 @@
          </GridPane.margin>
       </Button>
    </children>
-</GridPane>
+</fx:root>
