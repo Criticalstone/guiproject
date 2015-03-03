@@ -8,7 +8,7 @@
 
 <fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
-    <Tab fx:id="tabCateg" styleClass="profile-tab" text="Cateories">
+    <Tab fx:id="tabCateg" styleClass="profile-tab" text="Kategorier">
          <contextMenu>
             <ContextMenu>
               <items>
@@ -131,7 +131,7 @@
               </panes>
             </Accordion>
          </content></Tab>
-    <Tab fx:id="tabList" text="FavorIT">
+    <Tab fx:id="tabList" text="Mina Listor">
          <content>
             <Accordion prefHeight="400.0">
               <panes>
@@ -173,7 +173,7 @@
               </panes>
             </Accordion>
          </content></Tab>
-      <Tab fx:id="tabProfile" styleClass="cat-tab" text="Profile">
+      <Tab fx:id="tabProfile" styleClass="cat-tab" text="Profil">
          <content>
             <GridPane gridLinesVisible="true">
               <columnConstraints>
