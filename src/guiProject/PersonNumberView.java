@@ -13,9 +13,9 @@ public class PersonNumberView extends GridPane{
 	@FXML
 	private TextField postNumber;
 	@FXML
-	private TextField personNrOne;
+	private IntegerTextField personNrOne;
 	@FXML
-	private TextField personNrTwo;
+	private IntegerTextField personNrTwo;
 	@FXML
 	private TextField name;
 	@FXML
@@ -36,9 +36,17 @@ public class PersonNumberView extends GridPane{
 		 } catch (IOException exception) {
 			 throw new RuntimeException(exception);
 		 }	 	 
+		 setupTextfieldLength();
 	}
 	
 	
+	private void setupTextfieldLength() {
+		personNrOne.setMaxLength(6);
+		personNrTwo.setMaxLength(4);
+		
+	}
+
+
 	public String getPersonalNumber(){
 		return personNrOne.getText()+personNrTwo.getText();	
 	}

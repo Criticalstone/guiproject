@@ -200,16 +200,21 @@ public class ShoppingCartHandler extends GridPane{
                     }
                 });
 
-                numberOf = new TextField(Integer.toString((int)shoppingItem.getAmount()));
+                numberOf = new IntegerTextField();
+                numberOf.setText(Integer.toString((int)shoppingItem.getAmount()));
                 numberOf.setPrefColumnCount(3);
                 EventHandler eventHandler = new EventHandler() {
                     @Override
                     public void handle(Event event) {
-                        numberOf.setText(Utilities.removeAllButNumbers(numberOf.getText()));
-                        if(!numberOf.getText().equals("")){
-                            onAction(Type.TEXT);
-                        }
-
+//                        numberOf.setText(Utilities.removeAllButNumbers(numberOf.getText()));
+//                        if(!numberOf.getText().equals("")){
+//                            
+//                        }
+                		if (numberOf.getText().equals("")){
+                			numberOf.setText("1");
+                			numberOf.selectPositionCaret(1);
+                		}
+                    	onAction(Type.TEXT);
                     }
                 };
                 numberOf.setOnKeyReleased(eventHandler);
