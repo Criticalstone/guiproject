@@ -182,7 +182,7 @@ public class ControllerMain extends Application{
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
         primaryStage.setTitle("iMat");
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 1000, 600);
         
         //Initialize main panels.
 		categoriesView = (GridPane) scene.lookup("#categoriesView");
