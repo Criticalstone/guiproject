@@ -160,4 +160,9 @@ public class Banner extends GridPane{
     public void searchOnAction(){
         ControllerMain.performSearch(textSearch.getText());
     }
+    
+    @FXML
+    public void goHomeOnAction(){
+    	ControllerMain.displayStartView();
+    }
 }
