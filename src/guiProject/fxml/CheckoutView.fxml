@@ -7,7 +7,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <fx:root fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" type="ScrollPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <GridPane>
@@ -56,7 +55,7 @@
                         <Insets left="-20.0" />
                      </GridPane.margin>
                   </Polygon>
-                  <Button mnemonicParsing="false" text="Köp nu" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button mnemonicParsing="false" onAction="#buyNowButtonAction" text="Köp nu" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font size="32.0" />
                      </font>

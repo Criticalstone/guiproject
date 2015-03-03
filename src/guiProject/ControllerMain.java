@@ -239,5 +239,13 @@ public class ControllerMain extends Application{
         //Testing Favorite lists
     	ControllerMain.addFavoriteList("Derp list");
 	}
+	public static void displayPurchaseConfirmation() {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void emptyCart() {
+		cart.emptyCart();
+		
+	}
 
 }

@@ -30,7 +30,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="buttonBuyNow" mnemonicParsing="false" onAction="#buyNowButtonAction" text="Köp nu" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="buttonBuyNow" disable="true" mnemonicParsing="false" onAction="#buyNowButtonAction" text="Köp nu" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>

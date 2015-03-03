@@ -150,9 +150,8 @@ public class ShoppingCartHandler extends GridPane{
     //ActionEvent for the clear button
     @FXML
     private void clearOnClick(ActionEvent event){
-        listView.getItems().clear();
-        cart.clear();
-        updateList();
+    	emptyCart();
+
     }
 
     public void checkoutButtonAction(ActionEvent e){
@@ -302,5 +301,12 @@ public class ShoppingCartHandler extends GridPane{
             this.subject = sub;
         }
     }
+
+	public void emptyCart() {
+        listView.getItems().clear();
+        cart.clear();
+        updateList();
+		
+	}
 
 }
