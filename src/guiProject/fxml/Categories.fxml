@@ -186,14 +186,26 @@
                <children>
                   <VBox prefHeight="105.0" prefWidth="127.0">
                      <children>
-                        <ToggleButton fx:id="myImat" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
+                        <ToggleButton fx:id="myImat" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="68.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
                            <toggleGroup>
                               <ToggleGroup fx:id="profilegroup" />
                            </toggleGroup>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
                         </ToggleButton>
-                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup" />
+                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin></ToggleButton>
+                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin></ToggleButton>
+                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="92.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin></ToggleButton>
                      </children>
                      <padding>
                         <Insets left="5.0" top="5.0" />
@@ -201,16 +213,16 @@
                   </VBox>
                   <VBox GridPane.rowIndex="1">
                      <children>
-                        <Label text="Kundtjänst &amp; hjälp " GridPane.rowIndex="1">
-                           <padding>
-                              <Insets bottom="2.0" top="2.0" />
-                           </padding>
-                        </Label>
-                        <Label text="Om oss" GridPane.rowIndex="1">
-                           <padding>
-                              <Insets bottom="2.0" top="2.0" />
-                           </padding>
-                        </Label>
+                        <ToggleButton disable="true" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kundtjänst &amp; hjälp " toggleGroup="$profilegroup">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </ToggleButton>
+                        <ToggleButton disable="true" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Om oss" toggleGroup="$profilegroup">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </ToggleButton>
                      </children>
                      <GridPane.margin>
                         <Insets left="5.0" top="5.0" />
