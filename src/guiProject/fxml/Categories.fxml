@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="165.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
     <Tab fx:id="tabCateg" styleClass="profile-tab" text="Cateories">
          <contextMenu>
@@ -138,12 +139,29 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="88.0">
                            <children>
-                              <ListView prefHeight="348.0" prefWidth="153.0" />
+                              <VBox prefHeight="321.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#starButtonAction" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../res/gold-star-clipart-big_gold_star_toggled.png" />
+                                             </image></ImageView>
+                                          <ToggleButton fx:id="buttonStarList" mnemonicParsing="false" onAction="#starButtonAction" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mina favoriter">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="favoriteListGroup" />
+                                             </toggleGroup></ToggleButton>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                    <VBox fx:id="favoritesList" />
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                   </content>
                 </TitledPane>
-                <TitledPane animated="false" text="Recept">
+                <TitledPane animated="false" expanded="false" text="Recept">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -168,26 +186,14 @@
                <children>
                   <VBox prefHeight="105.0" prefWidth="127.0">
                      <children>
-                        <Label text="Mitt iMat">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Mest köpta">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Ordrar">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Inställningar">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
+                        <ToggleButton fx:id="myImat" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="profilegroup" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup" />
                      </children>
                      <padding>
                         <Insets left="5.0" top="5.0" />

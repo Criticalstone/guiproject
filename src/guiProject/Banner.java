@@ -2,8 +2,8 @@ package guiProject;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.AnchorPane;
 
@@ -17,6 +17,8 @@ public class Banner extends GridPane{
 	private GridPane bannerBackground;
 	@FXML
 	private AnchorPane bannerTitle;
+    @FXML
+    private TextField textSearch;
 
     public Banner() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -38,7 +40,7 @@ public class Banner extends GridPane{
     
     public void setBanner(ProductCategory categ){
     	switch(categ){
-    		case MEAT:	
+    		case MEAT:
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
     			bannerTitle.setStyle("-fx-background-image: url('res/banner/meatTitle.png');");
     			break;
@@ -125,5 +127,9 @@ public class Banner extends GridPane{
     		default:	
     			break;	
     	}
+    }
+
+    public void searchOnAction(){
+        ControllerMain.performSearch(textSearch.getText());
     }
 }

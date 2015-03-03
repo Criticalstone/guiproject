@@ -3,9 +3,15 @@
 	-fx-background-image: url("gold-star-clipart-big_gold_star.png");
 }
 
+.star-button:hover{
+	-fx-background-image:url("gold-star-clipart-big_gold_star_hover.png");
+}
+
 .star-button:selected{
 	-fx-background-image: url("gold-star-clipart-big_gold_star_toggled.png");
 }
+
+
 
 
 .menu-button{

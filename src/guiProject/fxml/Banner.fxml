@@ -34,12 +34,12 @@
                <children>
                   <ToggleButton fx:id="listButton" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" stylesheets="@../../res/Banner.css" textAlignment="RIGHT">
                      <toggleGroup>
-                        <ToggleGroup fx:id="View" />
+                        <ToggleGroup fx:id="viewGroup" />
                      </toggleGroup>
                      <padding>
                         <Insets right="30.0" top="10.0" />
                      </padding></ToggleButton>
-                  <ToggleButton fx:id="iconButton" mnemonicParsing="false" stylesheets="@../../res/Banner.css" toggleGroup="$View">
+                  <ToggleButton fx:id="iconButton" mnemonicParsing="false" stylesheets="@../../res/Banner.css" toggleGroup="$viewGroup">
                      <padding>
                         <Insets right="30.0" top="10.0" />
                      </padding></ToggleButton>
@@ -48,8 +48,8 @@
             <HBox />
             <HBox>
                <children>
-                  <Button mnemonicParsing="false" text="Sök" />
-                  <TextField fx:id="textSearch" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="120.0" />
+                  <Button mnemonicParsing="false" onAction="#searchOnAction" text="Sök" />
+                  <TextField fx:id="textSearch" onAction="#searchOnAction" prefHeight="26.0" prefWidth="120.0" />
                </children>
             </HBox>
          </items>

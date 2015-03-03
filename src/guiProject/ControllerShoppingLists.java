@@ -21,25 +21,45 @@ import se.chalmers.ait.dat215.project.Product;
 public class ControllerShoppingLists implements Serializable{
 	
 	private static final long serialVersionUID = 3054308858388647312L;
-//    private List<IFProductList> favoriteLists;
+    private static List<IFProductList> favoriteLists;
     private static IFStarList starList = new StarList();
+    private static ControllerShoppingLists singleton;
    
+    private ControllerShoppingLists(){
+    	favoriteLists = new ArrayList<IFProductList>();
+    }
+    
+    public static synchronized ControllerShoppingLists getInstance(){
+    	if (singleton == null){
+    		singleton = new ControllerShoppingLists();
+ 
+    	}
+    	return singleton;
+    }
 
 	
-	public static List<Product> getStaredProducts(){
+	public List<Product> getStaredProducts(){
 		return starList.getProducts();
 	}
 	
-	public static boolean isStared(Product p){
+	public boolean isStared(Product p){
 		return starList.containProduct(p);
 	}
 	
-	public static void starProduct(Product p, boolean toggle){
+	public void starProduct(Product p, boolean toggle){
 		if (starList.containProduct(p) && !toggle){
 			starList.removeProduct(p);
 		} else if (!starList.containProduct(p) && toggle){
 			starList.addProduct(p);
 		}
+	}
+	
+	public List<IFProductList> getFavoriteLists(){
+		return favoriteLists;
+	}
+	
+	public void addFavoriteList(String name){
+		favoriteLists.add(new SavedShoppingList(name));
 	}
 	
 

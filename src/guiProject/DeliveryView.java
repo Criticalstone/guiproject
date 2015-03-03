@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
 public class DeliveryView extends GridPane {
@@ -15,9 +16,11 @@ public class DeliveryView extends GridPane {
 	@FXML
 	private ChoiceBox<String> shop;
 	@FXML
-	private DatePicker deliveryDate;
+	private AnchorPane calenderPane;
 	@FXML
 	private ToggleGroup group;
+	
+	
 
 	public DeliveryView(){
 		 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -32,6 +35,7 @@ public class DeliveryView extends GridPane {
 			 throw new RuntimeException(exception);
 		 }
 		 
+		 calenderPane.getChildren().add(new DeliveryCalender());
 		 setShopChoice();
 	}
 	
@@ -42,14 +46,4 @@ public class DeliveryView extends GridPane {
 	public String getShop(){
 		return shop.toString();
 	}
-	
-	public String getDeliveryDate(){
-		return deliveryDate.toString();
-		
-	}
-	
-	
-	
-	
-	
 }
