@@ -1,0 +1,6 @@
+#banner{
+	-fx-background-image: url('start.png');
+	-fx-background-repeat: stretch; 
+	-fx-background-position: center center;
+	-fx-border-color: BLACK;
+}

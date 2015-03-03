@@ -42,6 +42,8 @@ public class ControllerMain extends Application{
     private static GridPane shoppingCartPane;
     @FXML
     private static GridPane bannerPane;
+    @FXML
+    private static GridPane startView;
 
     /**
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
@@ -170,7 +172,6 @@ public class ControllerMain extends Application{
 	
 	@Override
     public void start(Stage primaryStage) throws Exception{
-		
         imat = IMatDataHandler.getInstance();
         controllerProdList = new ControllerResultList();
         cart = new ShoppingCartHandler();
@@ -189,7 +190,7 @@ public class ControllerMain extends Application{
 		detailView = (GridPane) scene.lookup("#detailView");
 		shoppingCartPane = (GridPane) scene.lookup("#shoppingCartPane");
 		bannerPane = (GridPane) scene.lookup("#bannerPane");
-        
+		startView = (GridPane) scene.lookup("#detailView");
 
         //Add Categories pane
 		categoriesView.getChildren().add(Categories.getInstance());
@@ -199,7 +200,9 @@ public class ControllerMain extends Application{
         
         //Add shoppingcart
         shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
-        
+       
+        //Add startView
+        startView.getChildren().add(new StartView());
         
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
 //        testDataTEMPORARY();
