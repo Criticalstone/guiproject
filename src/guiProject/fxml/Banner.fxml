@@ -25,8 +25,11 @@
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
             <HBox>
                <children>
-                  <ToggleButton mnemonicParsing="false" text="List" />
-                  <ToggleButton mnemonicParsing="false" text="Icon" />
+                  <ToggleButton mnemonicParsing="false" text="List">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="viewGroup" />
+                     </toggleGroup></ToggleButton>
+                  <ToggleButton mnemonicParsing="false" text="Icon" toggleGroup="$viewGroup" />
                </children>
             </HBox>
             <HBox />

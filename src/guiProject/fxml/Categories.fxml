@@ -186,26 +186,14 @@
                <children>
                   <VBox prefHeight="105.0" prefWidth="127.0">
                      <children>
-                        <Label text="Mitt iMat">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Mest köpta">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Ordrar">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label text="Inställningar">
-                           <VBox.margin>
-                              <Insets bottom="2.0" top="2.0" />
-                           </VBox.margin>
-                        </Label>
+                        <ToggleButton fx:id="myImat" mnemonicParsing="false" prefHeight="31.0" prefWidth="128.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="profilegroup" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup" />
+                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup" />
                      </children>
                      <padding>
                         <Insets left="5.0" top="5.0" />
