@@ -30,7 +30,12 @@
             <Insets />
          </opaqueInsets>
          <GridPane.margin>
-            <Insets />
+            <Insets right="95.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onMouseClicked="#homeEvent" text="Till startsidan" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets left="95.0" />
          </GridPane.margin>
       </Button>
    </children>

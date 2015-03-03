@@ -3,6 +3,7 @@ package guiProject;
 import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
 public class ThankYouForPurchase extends GridPane{
@@ -19,5 +20,9 @@ public class ThankYouForPurchase extends GridPane{
 	        throw new RuntimeException(exception);
 	    }
 	    
+	}
+	
+	public void homeEvent(MouseEvent e){
+		ControllerMain.displayStartView();
 	}
 }

@@ -2,7 +2,9 @@ package guiProject;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.AnchorPane;
@@ -32,9 +34,9 @@ public class Banner extends GridPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        
+        setBanner("start");
        
-        bannerTitle.setStyle("-fx-background-image: url('res/banner/iMat.png');");
-        bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
     }
     
     
@@ -93,8 +95,8 @@ public class Banner extends GridPane{
     			bannerTitle.setStyle("-fx-background-image: url('res/banner/melonsTitle.png');");
 				break;
     		case FLOUR_SUGAR_SALT:
-    			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGER_SALT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/flour_suger_saltTitle.png');");
+    			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
+    			bannerTitle.setStyle("-fx-background-image: url('res/banner/flour_sugar_saltTitle.png');");
 				break;
     		case NUTS_AND_SEEDS:
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/NUTS_AND_SEEDS.jpg');");
@@ -135,11 +137,26 @@ public class Banner extends GridPane{
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
     			bannerTitle.setStyle("-fx-background-image: url('res/banner/kassa.png');");
     			break;
+    		case "start":
+    	        bannerTitle.setStyle("-fx-background-image: url('res/banner/iMat.png');");
+    	        bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
     		default:
     			break;
     	}
     }
-
+    
+    public void bannerEvent(MouseEvent e){
+    	ControllerMain.displayStartView();
+    }
+    
+    public void bannerMouse(MouseEvent e){
+    	setCursor(Cursor.HAND);
+    }
+    
+    public void bannerMouseExit(MouseEvent e){
+    	setCursor(Cursor.DEFAULT);
+    }
+    
     public void searchOnAction(){
         ControllerMain.performSearch(textSearch.getText());
     }

@@ -32,6 +32,7 @@ public class ControllerMain extends Application{
     private static ControllerShoppingLists favoriteLists;
     private static Categories categories;
     private static CheckoutView checkoutView;
+    private static StartView startView;
     
     @FXML
     private static GridPane categoriesView;
@@ -41,8 +42,6 @@ public class ControllerMain extends Application{
     private static GridPane shoppingCartPane;
     @FXML
     private static GridPane bannerPane;
-    @FXML
-    private static GridPane startView;
 
     /**
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
@@ -179,6 +178,12 @@ public class ControllerMain extends Application{
 		detailView.getChildren().add(new ThankYouForPurchase());
 		
 	}
+	
+	public static void displayStartView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(startView);
+		setBanner("start");
+	}
 	public static void emptyCart() {
 		cart.emptyCart();
 		
@@ -193,6 +198,7 @@ public class ControllerMain extends Application{
         categories = Categories.getInstance();
         checkoutView = new CheckoutView();
         banner = new Banner();
+        startView = new StartView();
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
@@ -204,7 +210,6 @@ public class ControllerMain extends Application{
 		detailView = (GridPane) scene.lookup("#detailView");
 		shoppingCartPane = (GridPane) scene.lookup("#shoppingCartPane");
 		bannerPane = (GridPane) scene.lookup("#bannerPane");
-		startView = (GridPane) scene.lookup("#detailView");
 
         //Add Categories pane
 		categoriesView.getChildren().add(Categories.getInstance());
@@ -216,7 +221,7 @@ public class ControllerMain extends Application{
         shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
        
         //Add startView
-        startView.getChildren().add(new StartView());
+        detailView.getChildren().add(startView);
         
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
 //        testDataTEMPORARY();

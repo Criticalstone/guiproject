@@ -67,7 +67,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane fx:id="bannerTitle" prefHeight="98.0" prefWidth="213.0" GridPane.columnIndex="1">
+            <AnchorPane fx:id="bannerTitle" onMouseClicked="#bannerEvent" onMouseEntered="#bannerMouse" onMouseExited="#bannerMouseExit" prefHeight="98.0" prefWidth="213.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets top="10.0" />
                </GridPane.margin>
