@@ -26,7 +26,7 @@
                   <Font size="20.0" />
                </font>
                <padding>
-                  <Insets left="62.0" right="62.0" />
+                  <Insets left="102.0" right="102.0" />
                </padding>
             </Label>
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />

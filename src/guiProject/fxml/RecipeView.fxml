@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<fx:root fx:id="recipeView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="721.0" stylesheets="@../../res/recipeView.css" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -19,14 +19,17 @@
    <children>
       <GridPane>
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="343.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="230.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="358.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="350.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="215.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fitHeight="239.0" fitWidth="345.0" nodeOrientation="INHERIT" pickOnBounds="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../../res/recipeView/tacoRecipe.jpg" />
+               </image></ImageView>
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -50,21 +53,21 @@
                               <Label layoutX="89.0" layoutY="44.0" prefHeight="16.0" prefWidth="50.0" text="0 röster" />
                            </children>
                         </HBox>
-                        <TextArea layoutX="14.0" layoutY="77.0" prefHeight="107.0" prefWidth="341.0" />
+                        <TextArea editable="false" layoutX="14.0" layoutY="77.0" prefHeight="107.0" prefWidth="341.0" text="Barnens favorit – en spännande och supersmarrig variant på fredagstacosen! Den fabulösa gratängen gör du av bland annat nötfärs, taco kryddmix, pastasås (med vitlök), majs, tomat och gratängcrème. Servera med ris, gurka, rödlök och låt er väl smaka!" wrapText="true" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="0.0" prefWidth="357.0" GridPane.rowIndex="1">
                      <children>
                         <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" text="Spara" />
                         <Button layoutX="80.0" layoutY="8.0" mnemonicParsing="false" text="Betygsätt" />
-                        <Button layoutX="164.0" layoutY="8.0" mnemonicParsing="false" text="Lägg till kundvagn" />
+                        <Button layoutX="164.0" layoutY="8.0" mnemonicParsing="false" onAction="#addToCartEvent" text="Lägg till kundvagn" />
                      </children>
                   </AnchorPane>
                </children>
             </GridPane>
          </children>
       </GridPane>
-      <GridPane GridPane.rowIndex="1">
+      <GridPane prefHeight="203.0" prefWidth="718.0" GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.0" minWidth="10.0" prefWidth="401.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="200.0" />
@@ -85,10 +88,13 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: Gray;">
                      <children>
                         <Label layoutX="11.0" layoutY="6.0" text="Ingridienser" />
-                        <ListView layoutY="25.0" prefHeight="149.0" prefWidth="90.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+                        <TextArea editable="false" layoutX="2.0" layoutY="25.0" prefHeight="178.0" prefWidth="95.0" text="Ris&#10;Nötfärs&#10;Rosmarin&#10;Basilika&#10;Aubergine&#10;Mozzarella&#10;&#10;&#10;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                      </children>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
                   </AnchorPane>
-                  <TextArea prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: Gray;" GridPane.columnIndex="1" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: Gray;" text="1. Sätt ugnen på 225°C.&#10;2. Koka riset. Läs på förpackningen hur man gör.&#10;3. Gratäng: Hetta upp oljan i en stekpanna. 4. Lägg ner färsen, dela den och stek den klar under omrörning. Den ska bli smulig.&#10;4. Rör i tacokryddan i köttfärsen. Blanda ner pastasåsen och vattnet och allt låt koka upp. Rör då och då. Häll det i en ugnssäker form.&#10;5. Låt majsen rinna av och skär tomaterna i skivor.&#10;Lägg tomaterna och hälften av majsen jämnt fördelat på köttfärsen. Bred över gratängcrèmen. Sätt in formen mitt i ugnen ca 10 minuter så att den blir varm och får lite färg.&#10;7. Grönsaker: Skala löken och gurkan. Hacka löken och tärna gurkan.&#10;8. Servera tacogratängen med ris, resten av majsen, gurka och rödlök." wrapText="true" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
@@ -103,10 +109,32 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
+                     <children>
+                        <ImageView fx:id="r1" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="r2" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="r3" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="r4" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
                   </GridPane>
                </children>
             </AnchorPane>
          </children>
       </GridPane>
    </children>
-</GridPane>
+</fx:root>

@@ -1,0 +1,15 @@
+#r1{
+	-fx-image:url("startView/recept5.jpg");
+}
+
+#r2{
+	-fx-image:url("startView/recept2.jpg");
+}
+
+#r3{
+	-fx-image:url("startView/recept3.jpg");
+}
+
+#r4{
+	-fx-image:url("startView/recept4.jpg");
+}

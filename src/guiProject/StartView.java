@@ -3,6 +3,8 @@ package guiProject;
 import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
 public class StartView extends GridPane {
@@ -20,5 +22,17 @@ public class StartView extends GridPane {
             throw new RuntimeException(exception);
         }
     }
+	
+	public void recipeEvent(MouseEvent e){
+		ControllerMain.displayRecipeView();
+	}
+	
+	public void recipeMouseEntered(MouseEvent e){
+		setCursor(Cursor.HAND);
+	}
+	
+	public void recipeMouseExited(MouseEvent e){
+		setCursor(Cursor.DEFAULT);
+	}
 
 }

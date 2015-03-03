@@ -35,6 +35,9 @@
                      <viewport>
                         <Rectangle2D />
                      </viewport>
+                     <image>
+                        <Image url="@../../res/startView/middagstips.jpg" />
+                     </image>
                   </ImageView>
                </children>
                <padding>
@@ -59,49 +62,49 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ImageView fx:id="r1" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="r1" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r2" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                        <ImageView fx:id="r2" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r3" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                        <ImageView fx:id="r3" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r4" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                        <ImageView fx:id="r4" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r5" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <ImageView fx:id="r5" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r6" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <ImageView fx:id="r6" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r7" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                        <ImageView fx:id="r7" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r8" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <ImageView fx:id="r8" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
-                        <ImageView fx:id="r9" fitHeight="70.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <ImageView fx:id="r9" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <GridPane.margin>
-                              <Insets left="1.5" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </GridPane.margin>
                         </ImageView>
                      </children>
