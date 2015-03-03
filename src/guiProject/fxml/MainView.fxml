@@ -3,12 +3,12 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="640.0" prefHeight="585.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="NEVER" />
+    <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="NEVER" />
     <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
   </rowConstraints>
    <children>
@@ -16,13 +16,13 @@
         <columnConstraints>
           <ColumnConstraints hgrow="NEVER" />
             <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="241.0" />
-          <ColumnConstraints hgrow="NEVER" maxWidth="220.0" minWidth="220.0" prefWidth="220.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane fx:id="detailView" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="SOMETIMES">
+            <GridPane fx:id="detailView" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
               </columnConstraints>
@@ -30,7 +30,7 @@
                 <RowConstraints maxHeight="1.7976931348623157E308" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <GridPane fx:id="categoriesView">
+            <GridPane fx:id="categoriesView" GridPane.hgrow="NEVER" GridPane.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
               </columnConstraints>
@@ -38,9 +38,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <GridPane fx:id="shoppingCartPane" GridPane.columnIndex="2">
+            <GridPane fx:id="shoppingCartPane" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.vgrow="ALWAYS">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />

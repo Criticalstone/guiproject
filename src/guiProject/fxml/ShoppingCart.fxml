@@ -5,58 +5,59 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root gridLinesVisible="true" minHeight="500.0" minWidth="160.0" prefHeight="500.0" prefWidth="160.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root gridLinesVisible="true" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="462.0" minHeight="10.0" prefHeight="401.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="401.0" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="130.0" minHeight="130.0" prefHeight="130.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <GridPane prefHeight="96.0" prefWidth="160.0" GridPane.rowIndex="1">
+      <GridPane hgap="5.0" prefHeight="96.0" prefWidth="160.0" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="80.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="buttonSaveToList" mnemonicParsing="false" onAction="#saveToListButtonAction" text="Spara" GridPane.rowIndex="1">
+            <Button fx:id="buttonSaveToList" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#saveToListButtonAction" prefWidth="100.0" text="Spara" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
-                  <Insets left="5.0" />
+                  <Insets />
                </GridPane.margin>
             </Button>
-            <Button fx:id="buttonBuyNow" disable="true" mnemonicParsing="false" onAction="#buyNowButtonAction" text="Köp nu" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="buttonBuyNow" disable="true" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buyNowButtonAction" prefWidth="100.0" text="Köp nu" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
-                  <Insets left="5.0" />
+                  <Insets />
                </GridPane.margin>
             </Button>
-            <Button fx:id="buttonCheckout" mnemonicParsing="false" onAction="#checkoutButtonAction" text="Kassa" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="buttonCheckout" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#checkoutButtonAction" prefWidth="100.0" text="Kassa" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
-                  <Insets left="5.0" />
+                  <Insets />
                </GridPane.margin>
             </Button>
-            <Label fx:id="label" text="Summa">
+            <Label fx:id="label" text="Summa" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </Label>
-            <Label fx:id="sum" text="0 kr" GridPane.columnIndex="1">
+            <Label fx:id="sum" text="0 kr" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <GridPane.margin>
-                  <Insets left="50.0" />
+                  <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" onAction="#clearOnClick" text="Rensa" GridPane.rowIndex="2">
+            <Button maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#clearOnClick" prefWidth="100.0" text="Rensa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
-                  <Insets left="5.0" />
+                  <Insets />
                </GridPane.margin>
             </Button>
          </children>
       </GridPane>
-      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listView" />
    </children>
 </fx:root>
