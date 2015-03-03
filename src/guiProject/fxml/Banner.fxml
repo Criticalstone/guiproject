@@ -32,11 +32,17 @@
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
             <HBox>
                <children>
-                  <ToggleButton mnemonicParsing="false" text="List">
+                  <ToggleButton fx:id="listButton" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" stylesheets="@../../res/Banner.css" textAlignment="RIGHT">
                      <toggleGroup>
                         <ToggleGroup fx:id="View" />
-                     </toggleGroup></ToggleButton>
-                  <ToggleButton mnemonicParsing="false" text="Icon" toggleGroup="$View" />
+                     </toggleGroup>
+                     <padding>
+                        <Insets right="30.0" top="10.0" />
+                     </padding></ToggleButton>
+                  <ToggleButton fx:id="iconButton" mnemonicParsing="false" stylesheets="@../../res/Banner.css" toggleGroup="$View">
+                     <padding>
+                        <Insets right="30.0" top="10.0" />
+                     </padding></ToggleButton>
                </children>
             </HBox>
             <HBox />
