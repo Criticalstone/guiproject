@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="167.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/greyprofile.png" />
+         </image>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ToggleButton mnemonicParsing="false" onAction="#ButtonLogIn" opacity="0.0" prefHeight="167.0" prefWidth="216.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="LogInGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="218.0" prefWidth="216.0" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="213.0" text="Karl Karlsson">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox fx:id="logInBox" prefHeight="219.0" prefWidth="216.0" visible="false">
+               <children>
+                  <Label />
+                  <Label text="Lösenord">
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="89.0" text="Logga In">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="60.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="241.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</fx:root>

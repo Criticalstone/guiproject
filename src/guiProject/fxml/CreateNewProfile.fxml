@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -21,7 +22,14 @@
                   <Image url="@../../res/1425397892_add-128.png" />
                </image>
             </ImageView>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonAddProfile" opacity="0.0" prefHeight="56.0" prefWidth="54.0" GridPane.valignment="BOTTOM" />
+            <ToggleButton mnemonicParsing="false" onAction="#ButtonAddProfile" opacity="0.0" prefHeight="141.0" prefWidth="54.0">
+               <GridPane.margin>
+                  <Insets top="60.0" />
+               </GridPane.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="LogInGroup" />
+               </toggleGroup>
+            </ToggleButton>
          </children>
       </GridPane>
    </children>

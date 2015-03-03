@@ -12,7 +12,6 @@ public class TestMain extends Application {
 	
 	  @FXML
 	   private static HBox hBox;
-	
 	public static void main(String[] args){
 		launch(args);
 	}
@@ -28,15 +27,19 @@ public class TestMain extends Application {
 		//Initialize main panels.
 		hBox = (HBox) scene.lookup("#hBox");
 		
-		hBox.getChildren().add(new LogInView());
+		
 		hBox.getChildren().add(new CreateNewProfile());
-	
+		createLogInBox();
   		//Complete setup
   		scene.getStylesheets().add("/res/sample.css");
   		scene.getStylesheets().add("/res/CategoriesMenuItem.css");
   		primaryStage.setScene(scene);
 
   		primaryStage.show();
+	}
+	
+	public static void createLogInBox(){
+			hBox.getChildren().add(new LogInView());
 	}
 
 

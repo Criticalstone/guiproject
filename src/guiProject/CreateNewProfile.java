@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 
 
@@ -12,6 +13,8 @@ public class CreateNewProfile extends HBox{
 	
 	@FXML
 	private HBox hBox;
+	private int one=1;
+	
 	public CreateNewProfile(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
         "fxml/CreateNewProfile.fxml"));
@@ -28,8 +31,12 @@ public class CreateNewProfile extends HBox{
 	
 	@FXML
 	public void ButtonAddProfile(){
-		hBox.getChildren().add(new NewProfileAccount());
+		if(one==1){
+			hBox.getChildren().add(new NewProfileAccount());
+			one=one+1;
+		}
 		
+				
 	}
 	
 	

@@ -14,7 +14,7 @@ public class LogInView extends GridPane {
 	
 	public LogInView(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-        "fxml/LogInView.fxml"));
+        "fxml/LogInBox.fxml"));
 
 		  fxmlLoader.setController(this);
 		  fxmlLoader.setRoot(this);
@@ -29,6 +29,11 @@ public class LogInView extends GridPane {
 	
 	@FXML
 	public void ButtonLogIn(){
-		logInBox.setVisible(true);	
+		if(logInBox.isVisible()){
+			logInBox.setVisible(false);
+		}else{
+			logInBox.setVisible(true);
+		}
+			
 	}
 }
