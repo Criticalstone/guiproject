@@ -7,77 +7,66 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="300.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="300.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <GridPane fx:id="gridpaneCheckout">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+
+<fx:root fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" type="ScrollPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="400.0" />
+            <ColumnConstraints fillWidth="false" maxWidth="200.0" minWidth="200.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
          <children>
-            <AnchorPane fx:id="gridOne" prefHeight="200.0" prefWidth="200.0" />
-            <AnchorPane fx:id="gridTwo" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-            <AnchorPane fx:id="gridThree" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-            <AnchorPane fx:id="gridFour" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+            <VBox fx:id="boxDetails" maxWidth="1.7976931348623157E308" scaleShape="false" GridPane.hgrow="ALWAYS" />
+            <GridPane alignment="TOP_RIGHT" maxWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" scaleShape="false" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="91.0" vgrow="NEVER" />
+                <RowConstraints minHeight="110.0" prefHeight="220.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="150.0" minHeight="150.0" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0">
+                     <GridPane.margin>
+                        <Insets left="44.8" />
+                     </GridPane.margin>
+                  </Rectangle>
+                  <Label text="Dina varor">
+                     <GridPane.margin>
+                        <Insets left="45.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Polygon fill="DODGERBLUE" rotate="270.0" scaleX="0.8" scaleY="0.3" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <points>
+                        <Double fx:value="-50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="50.0" />
+                        <Double fx:value="40.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-60.0" />
+                     </points>
+                     <GridPane.margin>
+                        <Insets left="-20.0" />
+                     </GridPane.margin>
+                  </Polygon>
+                  <Button mnemonicParsing="false" text="Köp nu" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
          </children>
       </GridPane>
-      <GridPane nodeOrientation="RIGHT_TO_LEFT" GridPane.columnIndex="1">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0">
-               <GridPane.margin>
-                  <Insets left="44.8" />
-               </GridPane.margin>
-            </Rectangle>
-            <Label text="Dina varor">
-               <GridPane.margin>
-                  <Insets left="45.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Polygon fill="DODGERBLUE" rotate="270.0" scaleX="0.8" scaleY="0.3" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-               <points>
-                  <Double fx:value="-50.0" />
-                  <Double fx:value="40.0" />
-                  <Double fx:value="50.0" />
-                  <Double fx:value="40.0" />
-                  <Double fx:value="0.0" />
-                  <Double fx:value="-60.0" />
-               </points>
-               <GridPane.margin>
-                  <Insets left="-20.0" />
-               </GridPane.margin>
-            </Polygon>
-            <Button mnemonicParsing="false" text="Köp nu" GridPane.rowIndex="2">
-               <font>
-                  <Font size="32.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="10.0" top="40.0" />
-               </GridPane.margin>
-            </Button>
-         </children>
-      </GridPane>
-   </children>
+   </content>
 </fx:root>
