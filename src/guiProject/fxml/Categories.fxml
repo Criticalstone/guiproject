@@ -44,12 +44,12 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
+                              <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="200.0">
                                  <children>
                                     <ToggleButton fx:id="POD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Baljväxter" toggleGroup="$categories" />
                                     <ToggleButton fx:id="BERRY" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Bär" toggleGroup="$categories" />
                                     <ToggleButton fx:id="CITRUS_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Citrosfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="EXOTIC_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Exotiska frukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="EXOTIC_FRUIT" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#buttonOnClick" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Exotiska frukter" toggleGroup="$categories" />
                                     <ToggleButton fx:id="VEGETABLE_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Grönsaksfrukter" toggleGroup="$categories" />
                                     <ToggleButton fx:id="CABBAGE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kål" toggleGroup="$categories" />
                                     <ToggleButton fx:id="MELONS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Meloner " toggleGroup="$categories" />
@@ -156,15 +156,11 @@
                     <panes>
                       <TitledPane animated="false" text="Inköpslista">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="88.0">
-                                 <children>
-                                    <VBox prefHeight="321.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <VBox fx:id="favoritesList" />
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </AnchorPane>
+                              <VBox fx:id="favoritesList" layoutX="14.399999618530273" layoutY="14.399999618530273">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
                         </content>
                       </TitledPane>
                       <TitledPane animated="false" expanded="false" text="Recept">
@@ -194,7 +190,7 @@
                <children>
                   <VBox prefHeight="105.0" prefWidth="127.0">
                      <children>
-                        <ToggleButton fx:id="myImat" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="68.0" selected="true" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
+                        <ToggleButton fx:id="myImat" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" selected="true" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
                            <toggleGroup>
                               <ToggleGroup fx:id="profilegroup" />
                            </toggleGroup>
@@ -202,15 +198,15 @@
                               <Insets left="5.0" />
                            </VBox.margin>
                         </ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup">
+                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup">
                            <VBox.margin>
                               <Insets left="5.0" />
                            </VBox.margin></ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="50.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup">
+                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup">
                            <VBox.margin>
                               <Insets left="5.0" />
                            </VBox.margin></ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="92.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup">
+                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup">
                            <VBox.margin>
                               <Insets left="5.0" />
                            </VBox.margin></ToggleButton>
@@ -221,12 +217,12 @@
                   </VBox>
                   <VBox GridPane.rowIndex="1">
                      <children>
-                        <ToggleButton disable="true" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kundtjänst &amp; hjälp " toggleGroup="$profilegroup">
+                        <ToggleButton alignment="CENTER_LEFT" disable="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kundtjänst &amp; hjälp " toggleGroup="$profilegroup">
                            <VBox.margin>
                               <Insets left="5.0" />
                            </VBox.margin>
                         </ToggleButton>
-                        <ToggleButton disable="true" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Om oss" toggleGroup="$profilegroup">
+                        <ToggleButton alignment="CENTER_LEFT" disable="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Om oss" toggleGroup="$profilegroup">
                            <VBox.margin>
                               <Insets left="5.0" />
                            </VBox.margin>
