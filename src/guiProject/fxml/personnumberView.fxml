@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import guiProject.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-
 
 <fx:root hgap="5.0" maxWidth="475.0" minWidth="475.0" prefWidth="475.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
@@ -22,9 +22,9 @@
    <children>
       <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
          <children>
-            <TextField fx:id="personNrOne" layoutX="126.0" layoutY="31.0" prefHeight="31.0" prefWidth="110.0" promptText="ååmmdd" />
+            <IntegerTextField fx:id="personNrOne" prefHeight="31.0" prefWidth="110.0" promptText="ååmmdd" />
             <Label layoutX="229.0" layoutY="36.0" prefHeight="21.0" prefWidth="11.0" text="-" />
-            <TextField fx:id="personNrTwo" layoutX="240.0" layoutY="31.0" prefHeight="31.0" prefWidth="70.0" promptText="xxxx" />
+            <IntegerTextField fx:id="personNrTwo" prefHeight="31.0" prefWidth="70.0" promptText="xxxx" />
             <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="33.0" prefHeight="21.0" prefWidth="11.0" text="?">
                <font>
                   <Font name="System Bold" size="18.0" />
