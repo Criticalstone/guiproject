@@ -53,7 +53,7 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="640.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="100.0" percentHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="120.0" percentHeight="100.0" prefHeight="120.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
    </children>

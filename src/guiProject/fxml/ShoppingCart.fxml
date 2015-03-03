@@ -7,7 +7,7 @@
 
 <fx:root gridLinesVisible="true" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
-    <ColumnConstraints hgrow="ALWAYS" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+    <ColumnConstraints hgrow="ALWAYS" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="401.0" vgrow="ALWAYS" />
@@ -16,7 +16,7 @@
    <children>
       <GridPane hgap="5.0" prefHeight="96.0" prefWidth="160.0" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="80.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
         </columnConstraints>
