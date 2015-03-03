@@ -76,7 +76,12 @@ public class Categories extends TabPane{
     public void starButtonAction(){
     	ControllerMain.setProductList(ControllerMain.getStaredProducts());
     }
-    
+
+    @FXML
+    public void settingsOnAction() {
+        ControllerMain.displayProfile();
+    }
+
     class ListButton extends ToggleButton{
     	public ListButton(IFProductList list){
 //    		this.getStylesheets().add("../res/CategoriesMenuItem.css");

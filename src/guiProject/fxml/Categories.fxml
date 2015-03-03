@@ -193,7 +193,7 @@
                         </ToggleButton>
                         <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup" />
                         <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup" />
-                        <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup" />
+                        <ToggleButton mnemonicParsing="false" onAction="#settingsOnAction" prefHeight="31.0" prefWidth="121.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup" />
                      </children>
                      <padding>
                         <Insets left="5.0" top="5.0" />

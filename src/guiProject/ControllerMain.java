@@ -1,8 +1,6 @@
 package guiProject;
 
-import se.chalmers.ait.dat215.project.IMatDataHandler;
-import se.chalmers.ait.dat215.project.Product;
-import se.chalmers.ait.dat215.project.ProductCategory;
+import se.chalmers.ait.dat215.project.*;
 import guiProject.interfaces.IFProductList;
 
 import java.util.ArrayList;
@@ -16,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
 /**
  * The main controller for iMat. The sub controllers will call for this class, which will coordinate actions between different nodes.
  * @author Kevin
@@ -30,8 +29,10 @@ public class ControllerMain extends Application{
     private static ShoppingCartHandler cart;
     private static ControllerShoppingLists favoriteLists;
     private static Categories categories;
-
+    private static Profile profile;
     private static CheckoutView checkoutView;
+    private static User user;
+    private static Customer customer;
     
     @FXML
     private static GridPane categoriesView;
@@ -48,8 +49,10 @@ public class ControllerMain extends Application{
      * This method must me run only once for the controller to work.
      */
     public static void initialize(String[] args) {
+        imat = IMatDataHandler.getInstance();
+        user = imat.getUser();
+        customer = imat.getCustomer();
     	launch(args);
-
     }
 
     /**
@@ -141,17 +144,21 @@ public class ControllerMain extends Application{
 		
 	}
 
-
     public static void performSearch(String query){
         List<Product> result = imat.findProducts(query);
         controllerProdList.setItems(result);
     }
 
-
 	public static void displayCheckout(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(checkoutView);
 	}
+
+    public static void displayProfile(){
+        detailView.getChildren().removeAll(detailView.getChildren());
+        detailView.getChildren().add(profile);
+        profile.loadInfo();
+    }
 	
 	public static void displayProductResultList(){
 		if (detailView == null){
@@ -160,17 +167,25 @@ public class ControllerMain extends Application{
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(controllerProdList);
 	}
+
+    public static User getUser(){
+        return user;
+    }
+
+    public static Customer getCustomer(){
+        return customer;
+    }
 	
 	@Override
     public void start(Stage primaryStage) throws Exception{
-		
-        imat = IMatDataHandler.getInstance();
+
         controllerProdList = new ControllerResultList();
         cart = new ShoppingCartHandler();
         favoriteLists = ControllerShoppingLists.getInstance();
         categories = Categories.getInstance();
         checkoutView = new CheckoutView();
-        
+        profile = new Profile();
+
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
         primaryStage.setTitle("iMat");
@@ -184,13 +199,13 @@ public class ControllerMain extends Application{
         
 
         //Add Categories pane
-		categoriesView.getChildren().add(Categories.getInstance());
+		categoriesView.getChildren().add(categories);
 		
         //Add banner
         bannerPane.getChildren().add(new Banner());
         
         //Add shoppingcart
-        shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
+        shoppingCartPane.getChildren().add(cart);
         
         
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
