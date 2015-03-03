@@ -7,13 +7,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="640.0" prefHeight="125.0" prefWidth="640.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="banner" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="640.0" prefHeight="100.0" prefWidth="640.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="65.0" minHeight="8.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="65.0" minHeight="8.0" prefHeight="35.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <ToolBar maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" GridPane.rowIndex="1">
@@ -43,7 +43,7 @@
             <HBox>
                <children>
                   <Button mnemonicParsing="false" text="Sök" />
-                  <TextField alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="120.0" />
+                  <TextField fx:id="textSearch" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="120.0" />
                </children>
             </HBox>
          </items>
@@ -51,7 +51,7 @@
             <Insets />
          </GridPane.margin>
       </ToolBar>
-      <GridPane>
+      <GridPane fx:id="bannerBackground" stylesheets="@../../res/Banner.css">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -61,9 +61,9 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="68.0" prefWidth="213.0" style="-fx-background-color: Gray;" GridPane.columnIndex="1">
+            <AnchorPane fx:id="bannerTitle" prefHeight="98.0" prefWidth="213.0" stylesheets="@../../res/Banner.css" GridPane.columnIndex="1">
                <GridPane.margin>
-                  <Insets top="20.0" />
+                  <Insets top="10.0" />
                </GridPane.margin>
             </AnchorPane>
          </children>

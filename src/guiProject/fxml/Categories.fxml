@@ -52,7 +52,7 @@
                                     <ToggleButton fx:id="VEGETABLE_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Grönsaksfrukter" toggleGroup="$categories" />
                                     <ToggleButton fx:id="CABBAGE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kål" toggleGroup="$categories" />
                                     <ToggleButton fx:id="MELONS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Meloner " toggleGroup="$categories" />
-                                    <ToggleButton fx:id="ROOT_VEGETABLES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Rotfrukter" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="ROOT_VEGETABLE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Rotfrukter" toggleGroup="$categories" />
                                     <ToggleButton fx:id="FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Stenfrukter" toggleGroup="$categories" />
                                     <ToggleButton fx:id="HERB" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Örtkryddor" toggleGroup="$categories" />
                                  </children>

@@ -40,7 +40,7 @@ public class Main extends Application {
 
         //Setup test for banner
         Pane bannerPane = (Pane) scene.lookup("#bannerPane");
-        bannerPane.getChildren().add(new Banner());
+        bannerPane.getChildren().add(ControllerMain.getBanner());
         
         //Setup test for shoppingcart
         Pane shoppingCartPane = (Pane) scene.lookup("#shoppingCartPane");

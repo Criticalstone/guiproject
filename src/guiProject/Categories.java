@@ -29,5 +29,6 @@ public class Categories extends TabPane{
     public void buttonOnClick(ActionEvent event){
         ProductCategory categ = ProductCategory.valueOf(((ToggleButton)event.getSource()).getId());
         ControllerMain.setProductFromCategory(categ);
+        ControllerMain.setBanner(categ);
     }
 }

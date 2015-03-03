@@ -15,6 +15,7 @@ public class ControllerMain{
     private static IMatDataHandler imat;
     private static ControllerResultList controllerProdList;
     private static ShoppingCartHandler cart;
+    private static Banner banner;
 
     /**
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
@@ -24,6 +25,7 @@ public class ControllerMain{
         imat = IMatDataHandler.getInstance();
         controllerProdList = new ControllerResultList();
         cart = new ShoppingCartHandler();
+        banner = new Banner();
     }
 
     /**
@@ -101,6 +103,14 @@ public class ControllerMain{
 
     public static ShoppingCartHandler getShoppingCart(){
         return cart;
+    }
+    
+    public static Banner getBanner(){
+    	return banner;
+    }
+    
+    public static void setBanner(ProductCategory categ){
+    	banner.setBanner(categ);
     }
 
 
