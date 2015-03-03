@@ -133,45 +133,53 @@
          </content></Tab>
     <Tab fx:id="tabList" text="Mina Listor">
          <content>
-            <Accordion prefHeight="400.0">
-              <panes>
-                <TitledPane animated="false" text="Inköpslista">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="88.0">
-                           <children>
-                              <VBox prefHeight="321.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#starButtonAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/gold-star-clipart-big_gold_star_toggled.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="buttonStarList" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#starButtonAction" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mina favoriter">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="favoriteListGroup" />
+                           </toggleGroup>
+                        </ToggleButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Accordion prefHeight="400.0">
+                    <panes>
+                      <TitledPane animated="false" text="Inköpslista">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="88.0">
                                  <children>
-                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <VBox prefHeight="321.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#starButtonAction" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../res/gold-star-clipart-big_gold_star_toggled.png" />
-                                             </image></ImageView>
-                                          <ToggleButton fx:id="buttonStarList" mnemonicParsing="false" onAction="#starButtonAction" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mina favoriter">
-                                             <toggleGroup>
-                                                <ToggleGroup fx:id="favoriteListGroup" />
-                                             </toggleGroup></ToggleButton>
+                                          <VBox fx:id="favoritesList" />
                                        </children>
-                                    </HBox>
-                                    <Separator prefWidth="200.0" />
-                                    <VBox fx:id="favoritesList" />
+                                    </VBox>
                                  </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" expanded="false" text="Recept">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <ListView prefHeight="349.0" prefWidth="154.0" />
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" expanded="false" text="Recept">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView prefHeight="349.0" prefWidth="154.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </VBox>
          </content></Tab>
       <Tab fx:id="tabProfile" styleClass="cat-tab" text="Profil">
          <content>
