@@ -1,6 +1,60 @@
 #banner{
-	-fx-background-image: url('start.png');
+	-fx-background-image: url('startView/start.png');
 	-fx-background-repeat: stretch; 
 	-fx-background-position: center center;
 	-fx-border-color: BLACK;
+}
+
+#midTip{
+	-fx-image:url("startView/middagstips.jpg");
+}
+
+#r1{
+	-fx-image:url("startView/recept1.jpg");
+}
+
+#r2{
+	-fx-image:url("startView/recept2.jpg");
+}
+
+#r3{
+	-fx-image:url("startView/recept3.jpg");
+}
+
+#r4{
+	-fx-image:url("startView/recept4.jpg");
+}
+
+#r5{
+	-fx-image:url("startView/recept5.jpg");
+}
+
+#r6{
+	-fx-image:url("startView/recept6.jpg");
+}
+
+#r7{
+	-fx-image:url("startView/recept7.jpg");
+}
+
+#r8{
+	-fx-image:url("startView/recept8.jpg");
+}
+
+#r9{
+	-fx-image:url("startView/recept9.jpg");
+}
+
+#e1{
+	-fx-image:url("startView/erbjudande1.jpg");
+}
+
+
+#e2{
+	-fx-image:url("startView/erbjudande2.jpg");
+}
+
+
+#e3{
+	-fx-image:url("startView/erbjudande3.jpg");
 }
