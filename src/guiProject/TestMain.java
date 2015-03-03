@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -29,7 +28,7 @@ public class TestMain extends Application {
 		//Initialize main panels.
 		hBox = (HBox) scene.lookup("#hBox");
 		
-		//hBox.getChildren().add(new LogInView());
+		hBox.getChildren().add(new LogInView());
 		hBox.getChildren().add(new CreateNewProfile());
 	
   		//Complete setup

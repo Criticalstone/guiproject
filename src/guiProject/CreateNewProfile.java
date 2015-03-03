@@ -2,10 +2,16 @@ package guiProject;
 
 import java.io.IOException;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 
-public class CreateNewProfile extends AnchorPane {
+
+
+public class CreateNewProfile extends HBox{
+	
+	@FXML
+	private HBox hBox;
 	public CreateNewProfile(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
         "fxml/CreateNewProfile.fxml"));
@@ -19,4 +25,13 @@ public class CreateNewProfile extends AnchorPane {
 			  throw new RuntimeException(exception);
 		  }
 	}
+	
+	@FXML
+	public void ButtonAddProfile(){
+		hBox.getChildren().add(new NewProfileAccount());
+		
+	}
+	
+	
+
 }
