@@ -9,6 +9,10 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.Pane;
+
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.VBox;
+
 import se.chalmers.ait.dat215.project.ProductCategory;
 
 import java.io.IOException;
