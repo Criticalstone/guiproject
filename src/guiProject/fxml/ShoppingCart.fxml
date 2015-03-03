@@ -25,17 +25,17 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Spara" GridPane.rowIndex="1">
+            <Button fx:id="buttonSaveToList" mnemonicParsing="false" onAction="#saveToListButtonAction" text="Spara" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Köp nu" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="buttonBuyNow" disable="true" mnemonicParsing="false" onAction="#buyNowButtonAction" text="Köp nu" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Kassa" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="buttonCheckout" mnemonicParsing="false" onAction="#checkoutButtonAction" text="Kassa" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>

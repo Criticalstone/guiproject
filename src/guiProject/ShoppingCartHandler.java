@@ -1,6 +1,7 @@
 package guiProject;
 
 import com.sun.javafx.collections.ObservableListWrapper;
+
 import guiProject.interfaces.IFObserver;
 import guiProject.interfaces.IFSubject;
 import javafx.event.*;
@@ -17,13 +18,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.util.Callback;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
-
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
 import java.awt.*;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.List;
 /**
@@ -46,6 +47,12 @@ public class ShoppingCartHandler extends GridPane{
     private ListView<String> listView;
     @FXML
     private Label sum;
+    @FXML
+    private Button buttonCheckout;
+    @FXML
+    private Button buttonBuyNow;
+    @FXML
+    private Button buttonSaveToList;
 
     private ShoppingCart cart;
 
@@ -143,9 +150,20 @@ public class ShoppingCartHandler extends GridPane{
     //ActionEvent for the clear button
     @FXML
     private void clearOnClick(ActionEvent event){
-        listView.getItems().clear();
-        cart.clear();
-        updateList();
+    	emptyCart();
+
+    }
+
+    public void checkoutButtonAction(ActionEvent e){
+    	ControllerMain.displayCheckout();
+    }
+
+    public void buyNowButtonAction(ActionEvent e){
+    	
+    }
+
+    public void saveToListButtonAction(ActionEvent e){
+    	ControllerMain.addFavoriteList("Inköpslista " + LocalDateTime.now().toLocalDate());
     }
 
     //Private class which represent the List items in the gui.
@@ -247,6 +265,7 @@ public class ShoppingCartHandler extends GridPane{
             notifyObserver(qDiff);
         }
 
+
         @Override
         public void addObserver(IFObserver obj) {
             observer = obj;
@@ -282,5 +301,12 @@ public class ShoppingCartHandler extends GridPane{
             this.subject = sub;
         }
     }
+
+	public void emptyCart() {
+        listView.getItems().clear();
+        cart.clear();
+        updateList();
+		
+	}
 
 }
