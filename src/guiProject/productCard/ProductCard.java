@@ -1,6 +1,7 @@
 package guiProject.productCard;
 
 import guiProject.ControllerMain;
+import guiProject.IntegerTextField;
 import guiProject.Utilities;
 import guiProject.interfaces.IFProductCard;
 
@@ -48,7 +49,7 @@ public class ProductCard extends GridPane implements IFProductCard{
 	@FXML
 	private Button buttonAdd;
 	@FXML
-	private TextField textFieldQty;
+	private IntegerTextField textFieldQty;
 
 
 	
@@ -170,17 +171,10 @@ public class ProductCard extends GridPane implements IFProductCard{
 	 * Will remove any data but the values "1234567890" before parsing to int.
 	 */
 	public void textFieldQtyAction(){
-	    String c = textFieldQty.getText();
-	    if("1234567890".contains(c)) {
-	    	}
-	    
-	    else {
-	    	textFieldQty.setText(Utilities.removeAllButNumbers(textFieldQty.getText()));
-	    	textFieldQty.positionCaret(textFieldQty.getText().length());
-	    }
-	    if (textFieldQty.getText().equals("")){
-	    	textFieldQty.setText("0");
-	    }
+		if (textFieldQty.getText().equals("")){
+			textFieldQty.setText("0");
+			textFieldQty.selectPositionCaret(1);
+		}
 		int qty = Integer.parseInt(textFieldQty.getText());
 		ControllerMain.addProductToCart(product, qty - ControllerMain.getQuantityOfProduct(product));
 	}
