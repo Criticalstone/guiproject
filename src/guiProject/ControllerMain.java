@@ -3,6 +3,7 @@ package guiProject;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
+import guiProject.CheckoutView.PaymentOption;
 import guiProject.interfaces.IFProductList;
 
 import java.util.ArrayList;
@@ -14,7 +15,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 /**
  * The main controller for iMat. The sub controllers will call for this class, which will coordinate actions between different nodes.
@@ -28,9 +28,9 @@ public class ControllerMain extends Application{
     private static IMatDataHandler imat;
     private static ControllerResultList controllerProdList;
     private static ShoppingCartHandler cart;
+    private static Banner banner;
     private static ControllerShoppingLists favoriteLists;
     private static Categories categories;
-
     private static CheckoutView checkoutView;
     
     @FXML
@@ -42,16 +42,14 @@ public class ControllerMain extends Application{
     @FXML
     private static GridPane bannerPane;
 
-
     /**
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
      * This method must me run only once for the controller to work.
      */
+
     public static void initialize(String[] args) {
-    	launch(args);
-
+        launch(args);
     }
-
     /**
      * Returns a list of products based on a category.
      * @param categ The category for which all items are requested.
@@ -127,6 +125,14 @@ public class ControllerMain extends Application{
         return cart;
     }
     
+    public static Banner getBanner(){
+    	return banner;
+    }
+    
+    public static void setBanner(ProductCategory categ){
+    	banner.setBanner(categ);
+    }
+
     public static List<IFProductList> getFavoriteLists(){
     	return favoriteLists.getFavoriteLists();
     }
@@ -154,11 +160,12 @@ public class ControllerMain extends Application{
 	}
 	
 	public static void displayProductResultList(){
-		if (detailView == null){
-			System.out.println("derp");
-		}
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(controllerProdList);
+	}
+	
+	public static void displayPaymentOption(PaymentOption option){
+		checkoutView.displayPaymentOption(option);
 	}
 	
 	@Override
@@ -170,11 +177,12 @@ public class ControllerMain extends Application{
         favoriteLists = ControllerShoppingLists.getInstance();
         categories = Categories.getInstance();
         checkoutView = new CheckoutView();
+        banner = new Banner();
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
         primaryStage.setTitle("iMat");
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 1000, 600);
         
         //Initialize main panels.
 		categoriesView = (GridPane) scene.lookup("#categoriesView");
@@ -187,7 +195,7 @@ public class ControllerMain extends Application{
 		categoriesView.getChildren().add(Categories.getInstance());
 		
         //Add banner
-        bannerPane.getChildren().add(new Banner());
+        bannerPane.getChildren().add(banner);
         
         //Add shoppingcart
         shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
@@ -231,7 +239,5 @@ public class ControllerMain extends Application{
         //Testing Favorite lists
     	ControllerMain.addFavoriteList("Derp list");
 	}
-
-
 
 }

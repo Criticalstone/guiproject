@@ -1,0 +1,21 @@
+#bannerTitle{
+	-fx-background-repeat: stretch; 
+	-fx-background-position: center center;
+}
+
+#bannerBackground{
+	-fx-background-repeat: stretch; 
+	-fx-background-position: center center;
+}
+
+#listButton{
+	-fx-background-image: url('banner/listIcon.png');
+	-fx-background-repeat: stretch; 
+	-fx-background-position: center center;
+}
+
+#iconButton{
+	-fx-background-image: url('banner/gridIcon.gif');
+	-fx-background-repeat: stretch; 
+	-fx-background-position: center center;
+}
