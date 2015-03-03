@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label text="Kortinnehavare:" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <VBox.margin>
@@ -95,7 +95,7 @@
             <Insets />
          </GridPane.margin>
       </Label>
-      <CheckBox mnemonicParsing="false" text="Spara till KöpNu-knappen" GridPane.rowIndex="12">
+      <CheckBox mnemonicParsing="false" prefHeight="20.0" prefWidth="314.0" text="Spara all information till KöpNu-knappen" GridPane.columnIndex="1" GridPane.rowIndex="12">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -189,32 +189,22 @@
             <Insets />
          </GridPane.margin>
       </Label>
-      <Button mnemonicParsing="false" text="Avbryt" GridPane.columnIndex="1" GridPane.rowIndex="12">
-         <GridPane.margin>
-            <Insets left="100.0" />
-         </GridPane.margin>
-      </Button>
-      <Button mnemonicParsing="false" text="Spara" GridPane.columnIndex="1" GridPane.rowIndex="12">
-         <GridPane.margin>
-            <Insets left="180.0" />
-         </GridPane.margin>
-      </Button>
-      <TextField prefHeight="31.0" prefWidth="152.0" GridPane.rowIndex="2">
+      <TextField prefHeight="31.0" prefWidth="152.0" promptText="ex. Karl Karlsson" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets left="55.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <TextField prefHeight="31.0" prefWidth="159.0" GridPane.rowIndex="3">
+      <TextField prefHeight="31.0" prefWidth="159.0" promptText="ex. Kapellgången 1" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets left="55.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <TextField GridPane.rowIndex="4">
+      <TextField promptText="411 31" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets left="55.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <TextField GridPane.rowIndex="5">
+      <TextField promptText="Göteborg" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets left="55.0" right="30.0" />
          </GridPane.margin>
@@ -224,7 +214,7 @@
             <Insets left="60.0" right="30.0" />
          </GridPane.margin>
       </TextField>
-      <TextField GridPane.rowIndex="7">
+      <TextField promptText="ex. dittemail@gmail.com" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets left="55.0" right="30.0" />
          </GridPane.margin>
@@ -234,58 +224,78 @@
             <Insets left="5.0" right="30.0" />
          </GridPane.margin>
       </ChoiceBox>
-      <ChoiceBox prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <ChoiceBox prefHeight="31.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
-            <Insets left="35.0" right="10.0" />
+            <Insets left="105.0" right="10.0" />
          </GridPane.margin>
       </ChoiceBox>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <TextField promptText="åå" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
-            <Insets left="105.0" right="110.0" />
+            <Insets left="105.0" right="190.0" />
          </GridPane.margin>
       </TextField>
       <Label text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
-            <Insets left="142.0" />
+            <Insets left="155.0" />
          </GridPane.margin>
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <TextField promptText="mm" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
-            <Insets left="155.0" right="55.0" />
+            <Insets left="170.0" right="122.0" />
          </GridPane.margin>
       </TextField>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <TextField promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <GridPane.margin>
-            <Insets left="110.0" right="10.0" />
+            <Insets left="105.0" right="10.0" />
          </GridPane.margin>
       </TextField>
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <TextField promptText="xxx" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <GridPane.margin>
-            <Insets left="35.0" right="160.0" />
+            <Insets left="105.0" right="180.0" />
          </GridPane.margin>
       </TextField>
-      <ChoiceBox prefHeight="31.0" prefWidth="233.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+      <ChoiceBox prefHeight="31.0" prefWidth="308.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
          <GridPane.margin>
-            <Insets left="40.0" right="10.0" />
+            <Insets left="105.0" right="10.0" />
          </GridPane.margin>
       </ChoiceBox>
-      <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+      <ChoiceBox prefHeight="31.0" prefWidth="229.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
          <GridPane.margin>
-            <Insets left="90.0" />
+            <Insets left="105.0" right="10.0" />
          </GridPane.margin>
       </ChoiceBox>
-      <ChoiceBox prefHeight="31.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+      <ChoiceBox prefHeight="31.0" prefWidth="238.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
          <GridPane.margin>
-            <Insets left="80.0" right="10.0" />
+            <Insets left="105.0" right="10.0" />
          </GridPane.margin>
       </ChoiceBox>
+      <TextField promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="105.0" right="180.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField prefHeight="31.0" prefWidth="32.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="162.0" right="122.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField prefHeight="31.0" prefWidth="32.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="220.0" right="65.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="278.0" right="10.0" />
+         </GridPane.margin>
+      </TextField>
    </children>
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="331.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="247.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="241.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="338.0" />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
