@@ -13,12 +13,14 @@ import se.chalmers.ait.dat215.project.Product;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
+import javafx.scene.paint.Color;
 /**
  * Utilities are a collection of methods that available all throughout the application for any method to call in order to modify it's data, such as cleaning up text fields from unwanted data.
  * @author Anton
  *
  */
 public class Utilities {
+
 	
 	static IMatDataHandler iMatDH = IMatDataHandler.getInstance();
 	
@@ -85,4 +87,5 @@ public class Utilities {
 		
 		
 	}
+	
 }

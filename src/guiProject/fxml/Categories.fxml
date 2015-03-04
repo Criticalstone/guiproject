@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" side="LEFT" styleClass="details-background" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
     <Tab fx:id="tabCateg" styleClass="profile-tab" text="Kategorier">
          <contextMenu>
@@ -19,20 +19,20 @@
          <content>
             <Accordion>
               <panes>
-                <TitledPane animated="false" prefHeight="157.0" prefWidth="202.0" text="Kött">
+                <TitledPane animated="false" prefHeight="157.0" prefWidth="202.0" styleClass="menu-item-color" text="Kött">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
                            <children>
                               <VBox layoutX="14.0" prefHeight="104.0" prefWidth="130.0">
                                  <children>
-                                    <ToggleButton fx:id="MEAT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötkött">
+                                    <ToggleButton fx:id="MEAT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Nötkött">
                                        <toggleGroup>
                                           <ToggleGroup fx:id="categories" />
                                        </toggleGroup>
                                     </ToggleButton>
-                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Griskött" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kyckling" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FISH" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Fisk" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Griskött" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Kyckling" toggleGroup="$categories" />
+                                    <ToggleButton fx:id="FISH" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Fisk" toggleGroup="$categories" />
                                  </children>
                               </VBox>
                            </children>
@@ -40,7 +40,7 @@
                   </content>
                 </TitledPane>
 
-                                  <TitledPane animated="false" text="Frukt &amp; Grönt">
+                                  <TitledPane animated="false" styleClass="menu-item-color" text="Frukt &amp; Grönt">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -62,7 +62,7 @@
                         </AnchorPane>
                   </content>
                 </TitledPane>
-                <TitledPane animated="false" text="Mejeri">
+                <TitledPane animated="false" styleClass="menu-item-color" text="Mejeri">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -78,7 +78,7 @@
                         </AnchorPane>
                   </content>
                 </TitledPane>
-                  <TitledPane animated="false" text="Skafferi">
+                  <TitledPane animated="false" styleClass="menu-item-color" text="Skafferi">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -98,7 +98,7 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane animated="false" text="Dryck">
+                  <TitledPane animated="false" styleClass="menu-item-color" text="Dryck">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -112,7 +112,7 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane animated="false" text="Sötsaker">
+                  <TitledPane animated="false" styleClass="menu-item-color" text="Sötsaker">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
