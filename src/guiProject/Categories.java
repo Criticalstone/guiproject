@@ -4,8 +4,8 @@ import guiProject.interfaces.IFProductList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup;
+import javafx.geometry.Insets;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.ToggleGroup;
@@ -27,19 +27,35 @@ public class Categories extends GridPane{
 	private ToggleGroup favoriteListGroup;
 
     private Categories() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-                "fxml/Categories.fxml"));
 
-        fxmlLoader.setController(this);
-        fxmlLoader.setRoot(this);
+        // Create the accordion control
+        Accordion acc = new Accordion();
+        acc.getPanes().addAll(initMeat());
+        acc.setPrefWidth(1000);
+        add(acc, 0, 0);
+    }
 
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
-        
-        //displayLists();
+
+
+    private TitledPane initMeat(){
+        ToggleButton meat = new ToggleButton("Nötkött");
+        ToggleButton chicken = new ToggleButton("Kyckling");
+        ToggleButton fish = new ToggleButton("Fisk");
+        meat.setId("BEEFMEAT");
+        chicken.setId("CHICKEN");
+        fish.setId("FISH");
+
+        meat.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+        chicken.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+        fish.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+
+        ToggleGroup meatGroup = new ToggleGroup();
+        meatGroup.getToggles().addAll(meat, chicken, fish);
+
+        VBox inside = new VBox(10);
+        inside.getChildren().addAll(meat, chicken, fish);
+        TitledPane res = new TitledPane("Kött", inside);
+        return res;
     }
     
     public static synchronized Categories getInstance(){
@@ -65,17 +81,10 @@ public class Categories extends GridPane{
 
     @FXML
     public void buttonOnClick(ActionEvent event){
-        ProductCategory categ = ProductCategory.valueOf(((ToggleButton)event.getSource()).getId());
+        CategoryInterpreter.Category categ = CategoryInterpreter.categoryValueOf(((ToggleButton) event.getSource()).getId());
         ControllerMain.setProductFromCategory(categ);
-        ControllerMain.setBanner(categ);
+        //ControllerMain.setBanner(CategoryInterpreter.customCategToCateg(categ));
     }
-    
-    @FXML
-    public void starButtonAction(){
-    	ControllerMain.setProductList(ControllerMain.getStaredProducts());
-    }
-
-
     @FXML
     public void settingsOnAction() {
         ControllerMain.displayProfile();
