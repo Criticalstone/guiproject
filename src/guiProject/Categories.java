@@ -78,14 +78,19 @@ public class Categories extends TabPane{
     	ControllerMain.setProductList(ControllerMain.getStaredProducts());
     }
 
+
     @FXML
     public void settingsOnAction() {
         ControllerMain.displayProfile();
     }
 
+    @FXML
+    public void myImatButtonAction(){
+    	ControllerMain.displayDisplayProfile();
+    }
+    
     class ListButton extends ToggleButton{
     	public ListButton(IFProductList list){
-//    		this.getStylesheets().add("../res/CategoriesMenuItem.css");
     		this.getStyleClass().add("menu-button");
     		this.setText(list.getName());
     		this.setToggleGroup(favoriteListGroup);
