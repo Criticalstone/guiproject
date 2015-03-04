@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="641.0" prefWidth="644.0" style="-fx-background-color: white;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="641.0" prefWidth="700.0" style="-fx-background-color: white;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <children>
-            <Label text="Kortinnehavare:" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Kortinnehavare:" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -28,7 +28,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
       <Label text="Kortinformation" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -39,9 +39,9 @@
             <Insets left="10.0" />
          </VBox.margin>
       </Label>
-      <HBox alignment="CENTER_RIGHT" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <Label text="Kontonummer: " GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Kontonummer: " GridPane.columnIndex="1" GridPane.rowIndex="3">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -49,34 +49,38 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="textNum1" prefWidth="50.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="105.0" right="180.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="textNum2" prefWidth="50.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="162.0" right="122.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="textNum3" prefWidth="50.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="220.0" right="65.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="textNum4" prefWidth="50.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="278.0" right="10.0" />
-               </GridPane.margin>
-            </TextField>
+            <HBox spacing="3.0">
+               <children>
+                  <TextField fx:id="textNum1" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="105.0" right="180.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textNum2" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="162.0" right="122.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textNum3" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="220.0" right="65.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="textNum4" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="278.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </HBox>
          </children>
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <Label text="Kort:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Kort:" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -91,7 +95,7 @@
             </ChoiceBox>
          </children>
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
       <Label text="Leverans" GridPane.columnIndex="1" GridPane.rowIndex="7">
@@ -105,9 +109,9 @@
             <Insets bottom="20.0" top="20.0" />
          </GridPane.margin>
       </Label>
-      <HBox alignment="CENTER_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <children>
-            <Label text="Utgångsdatum:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Utgångsdatum:" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -118,7 +122,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <TextField fx:id="textExpir1" prefWidth="40.0" promptText="åå" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextField fx:id="textExpir1" alignment="CENTER" prefWidth="60.0" promptText="åå" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="105.0" right="190.0" />
                </GridPane.margin>
@@ -131,19 +135,19 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="textExpir2" prefWidth="40.0" promptText="mm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextField fx:id="textExpir2" alignment="CENTER" prefWidth="60.0" promptText="mm" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="170.0" right="122.0" />
                </GridPane.margin>
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <children>
-            <Label text="CVC:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="CVC:" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -151,17 +155,17 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="textCVC" promptText="xxx" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <TextField fx:id="textCVC" alignment="CENTER" maxWidth="50.0" promptText="xxx" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="105.0" right="180.0" />
                </GridPane.margin>
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+      <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
          <children>
             <HBox alignment="CENTER" spacing="5.0">
                <children>
@@ -207,7 +211,7 @@
       </Label>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="2">
          <children>
-            <Label text=" Namn: " GridPane.rowIndex="2">
+            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Namn: " GridPane.rowIndex="2">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -228,9 +232,9 @@
             <Insets right="30.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="4">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="4">
          <children>
-            <Label text=" Postnr: " GridPane.rowIndex="4">
+            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Postnr: " GridPane.rowIndex="4">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -241,14 +245,14 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textPostalCode" promptText="411 31" GridPane.rowIndex="4">
+            <TextField fx:id="textPostalCode" maxWidth="80.0" promptText="411 31" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="30.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
       <Label GridPane.rowIndex="2">
@@ -274,7 +278,7 @@
       </Label>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="5">
          <children>
-            <Label text=" Ort: " GridPane.rowIndex="5">
+            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Ort: " GridPane.rowIndex="5">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -285,7 +289,7 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textPostal" promptText="Göteborg" GridPane.rowIndex="5">
+            <TextField fx:id="textPostal" promptText="ex. Göteborg" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>
@@ -297,7 +301,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="7">
          <children>
-            <Label text=" Email: " GridPane.rowIndex="7">
+            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Email: " GridPane.rowIndex="7">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -320,7 +324,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="6">
          <children>
-            <Label text=" Telefon: " GridPane.rowIndex="6">
+            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Telefon: " GridPane.rowIndex="6">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -331,7 +335,7 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textTel" GridPane.rowIndex="6">
+            <TextField fx:id="textTel" promptText="ex. +46707-123456" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets left="60.0" right="30.0" />
                </GridPane.margin>
@@ -348,7 +352,7 @@
       </ImageView>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="3">
          <children>
-            <Label text=" Adress: " GridPane.rowIndex="3">
+            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Adress: " GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -371,27 +375,27 @@
             <Insets left="5.0" right="30.0" />
          </GridPane.margin>
       </ChoiceBox>
-      <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
          <children>
-            <Label text="Leveranstid:" />
-            <ChoiceBox fx:id="comboDeliveryTime" prefWidth="224.0" />
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Leveranstid:" />
+            <ChoiceBox fx:id="comboDeliveryTime" prefWidth="223.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="9">
          <children>
-            <Label text="Butik:">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Butik:">
                <HBox.margin>
-                  <Insets right="45.0" />
+                  <Insets />
                </HBox.margin>
             </Label>
             <ChoiceBox fx:id="comboStore" prefHeight="25.0" prefWidth="223.0" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+      <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="10">
          <children>
-            <Label text="Leveranssätt:">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Leveranssätt:">
                <HBox.margin>
-                  <Insets right="-4.0" />
+                  <Insets />
                </HBox.margin>
             </Label>
             <ChoiceBox fx:id="comboDeliveryOptions" prefHeight="25.0" prefWidth="223.0" />
@@ -399,22 +403,23 @@
       </HBox>
    </children>
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="241.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="338.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" />
+      <ColumnConstraints hgrow="SOMETIMES" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="249.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="176.0" minHeight="0.0" prefHeight="53.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="155.0" minHeight="155.0" prefHeight="155.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="44.0" minHeight="44.0" prefHeight="44.0" vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
    </rowConstraints>
 </fx:root>

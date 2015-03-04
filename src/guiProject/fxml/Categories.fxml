@@ -6,235 +6,126 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" type="TabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-    <tabs>
-    <Tab fx:id="tabCateg" styleClass="profile-tab" text="Kategorier">
-         <contextMenu>
-            <ContextMenu>
-              <items>
-                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-              </items>
-            </ContextMenu>
-         </contextMenu>
-         <content>
-            <Accordion>
-              <panes>
-                <TitledPane animated="false" prefHeight="157.0" prefWidth="202.0" text="Kött">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
-                           <children>
-                              <VBox layoutX="14.0" prefHeight="104.0" prefWidth="130.0">
-                                 <children>
-                                    <ToggleButton fx:id="MEAT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötkött">
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="categories" />
-                                       </toggleGroup>
-                                    </ToggleButton>
-                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Griskött" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kyckling" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FISH" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Fisk" toggleGroup="$categories" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-
-                                  <TitledPane animated="false" text="Frukt &amp; Grönt">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="200.0">
-                                 <children>
-                                    <ToggleButton fx:id="POD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Baljväxter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="BERRY" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Bär" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="CITRUS_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Citrosfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="EXOTIC_FRUIT" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#buttonOnClick" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Exotiska frukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="VEGETABLE_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Grönsaksfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="CABBAGE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kål" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="MELONS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Meloner " toggleGroup="$categories" />
-                                    <ToggleButton fx:id="ROOT_VEGETABLE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Rotfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Stenfrukter" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="HERB" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Örtkryddor" toggleGroup="$categories" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="Mejeri">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
-                                 <children>
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjölk" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Fil &amp; yoghurt" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ost" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ägg" toggleGroup="$categories" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-                  <TitledPane animated="false" text="Skafferi">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
-                                 <children>
-                                    <ToggleButton fx:id="BREAD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Bröd" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mjöl" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Socker" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Salt" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="NUTS_AND_SEEDS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Nötter &amp; frön" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="PASTA" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Pasta" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Potatis" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ris" toggleGroup="$categories" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </TitledPane>
-                  <TitledPane animated="false" text="Dryck">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox layoutX="14.0" prefHeight="265.0" prefWidth="150.0">
-                                 <children>
-                                    <ToggleButton fx:id="HOT_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Varma" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="COLD_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kalla" toggleGroup="$categories" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </TitledPane>
-                  <TitledPane animated="false" text="Sötsaker">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
-                                 <children>
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Choklad" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Chips" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Glass" toggleGroup="$categories" />
-                                    <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kakor &amp; bakelser" toggleGroup="$categories" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </TitledPane>
-              </panes>
-            </Accordion>
-         </content></Tab>
-    <Tab fx:id="tabList" text="Mina Listor">
-         <content>
-            <VBox spacing="5.0">
-               <children>
-                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+<fx:root fx:id="categories" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="252.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="369.0" minHeight="10.0" prefHeight="369.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="237.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Accordion>
+         <panes>
+            <TitledPane animated="false" prefHeight="157.0" prefWidth="202.0" text="Kött">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="209.0" prefWidth="121.0">
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#starButtonAction" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../res/gold-star-clipart-big_gold_star_toggled.png" />
-                           </image>
-                        </ImageView>
-                        <ToggleButton fx:id="buttonStarList" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#starButtonAction" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mina favoriter">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="favoriteListGroup" />
-                           </toggleGroup>
-                        </ToggleButton>
+                        <VBox layoutX="14.0" prefHeight="104.0" prefWidth="130.0">
+                           <children>
+                              <ToggleButton fx:id="MEAT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Nötkött">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="categories" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Griskött" toggleGroup="$categories" />
+                              <ToggleButton fx:id="MEAT" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Kyckling" toggleGroup="$categories" />
+                              <ToggleButton fx:id="FISH" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Fisk" toggleGroup="$categories" />
+                           </children>
+                        </VBox>
                      </children>
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <Accordion prefHeight="400.0">
-                    <panes>
-                      <TitledPane animated="false" text="Inköpslista">
-                        <content>
-                              <VBox fx:id="favoritesList" layoutX="14.399999618530273" layoutY="14.399999618530273">
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </VBox>
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" expanded="false" text="Recept">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <ListView prefHeight="349.0" prefWidth="154.0" />
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                    </panes>
-                  </Accordion>
-               </children>
-            </VBox>
-         </content></Tab>
-      <Tab fx:id="tabProfile" styleClass="cat-tab" text="Profil">
-         <content>
-            <GridPane gridLinesVisible="true">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <VBox prefHeight="105.0" prefWidth="127.0">
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Frukt &amp; Grönt">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ToggleButton fx:id="myImat" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" selected="true" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="profilegroup" />
-                           </toggleGroup>
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin>
-                        </ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mest köpta" toggleGroup="$profilegroup">
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin></ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Ordrar" toggleGroup="$profilegroup">
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin></ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Inställningar" toggleGroup="$profilegroup">
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin></ToggleButton>
+                        <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="200.0">
+                           <children>
+                              <ToggleButton fx:id="POD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Baljväxter" toggleGroup="$categories" />
+                              <ToggleButton fx:id="BERRY" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Bär" toggleGroup="$categories" />
+                              <ToggleButton fx:id="CITRUS_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Citrosfrukter" toggleGroup="$categories" />
+                              <ToggleButton fx:id="EXOTIC_FRUIT" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#buttonOnClick" prefWidth="200.0" styleClass="menu-button" text="Exotiska frukter" toggleGroup="$categories" />
+                              <ToggleButton fx:id="VEGETABLE_FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Grönsaksfrukter" toggleGroup="$categories" />
+                              <ToggleButton fx:id="CABBAGE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Kål" toggleGroup="$categories" />
+                              <ToggleButton fx:id="MELONS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Meloner " toggleGroup="$categories" />
+                              <ToggleButton fx:id="ROOT_VEGETABLE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Rotfrukter" toggleGroup="$categories" />
+                              <ToggleButton fx:id="FRUIT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Stenfrukter" toggleGroup="$categories" />
+                              <ToggleButton fx:id="HERB" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Örtkryddor" toggleGroup="$categories" />
+                           </children>
+                        </VBox>
                      </children>
-                     <padding>
-                        <Insets left="5.0" top="5.0" />
-                     </padding>
-                  </VBox>
-                  <VBox GridPane.rowIndex="1">
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Mejeri">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ToggleButton alignment="CENTER_LEFT" disable="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Kundtjänst &amp; hjälp " toggleGroup="$profilegroup">
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin>
-                        </ToggleButton>
-                        <ToggleButton alignment="CENTER_LEFT" disable="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Om oss" toggleGroup="$profilegroup">
-                           <VBox.margin>
-                              <Insets left="5.0" />
-                           </VBox.margin>
-                        </ToggleButton>
+                        <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
+                           <children>
+                              <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Mjölk" toggleGroup="$categories" />
+                              <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Fil &amp; yoghurt" toggleGroup="$categories" />
+                              <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Ost" toggleGroup="$categories" />
+                              <ToggleButton fx:id="DAIRIES" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Ägg" toggleGroup="$categories" />
+                           </children>
+                        </VBox>
                      </children>
-                     <GridPane.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </GridPane.margin>
-                  </VBox>
-               </children>
-            </GridPane>
-         </content>
-      </Tab>
-  </tabs>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Skafferi">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="118.0">
+                           <children>
+                              <ToggleButton fx:id="BREAD" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Bröd" toggleGroup="$categories" />
+                              <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Mjöl" toggleGroup="$categories" />
+                              <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Socker" toggleGroup="$categories" />
+                              <ToggleButton fx:id="FLOUR_SUGAR_SALT" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Salt" toggleGroup="$categories" />
+                              <ToggleButton fx:id="NUTS_AND_SEEDS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Nötter &amp; frön" toggleGroup="$categories" />
+                              <ToggleButton fx:id="PASTA" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Pasta" toggleGroup="$categories" />
+                              <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Potatis" toggleGroup="$categories" />
+                              <ToggleButton fx:id="POTATO_RICE" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Ris" toggleGroup="$categories" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Dryck">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="14.0" prefHeight="265.0" prefWidth="150.0">
+                           <children>
+                              <ToggleButton fx:id="HOT_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Varma" toggleGroup="$categories" />
+                              <ToggleButton fx:id="COLD_DRINKS" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Kalla" toggleGroup="$categories" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Sötsaker">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="2.0" prefHeight="265.0" prefWidth="150.0">
+                           <children>
+                              <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Choklad" toggleGroup="$categories" />
+                              <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Chips" toggleGroup="$categories" />
+                              <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Glass" toggleGroup="$categories" />
+                              <ToggleButton fx:id="SWEET" mnemonicParsing="false" onAction="#buttonOnClick" styleClass="menu-button" text="Kakor &amp; bakelser" toggleGroup="$categories" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
 </fx:root>
