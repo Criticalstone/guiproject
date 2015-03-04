@@ -265,6 +265,9 @@ public class ControllerMain extends Application{
         //Add shoppingcart
         shoppingCartPane.getChildren().add(cart);
         
+        //DIsplay start
+        detailView.getChildren().add(startView);
+        
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
 //        testDataTEMPORARY();
 
