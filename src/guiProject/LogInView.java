@@ -1,20 +1,20 @@
-package Archive;
-
+package guiProject;
 
 import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
-public class TotalLogInView extends HBox {
-	
+public class LogInView extends GridPane {
 	@FXML
-	private HBox hBox;
+	private VBox logInBox;
 	
-	public TotalLogInView(){
+	
+	public LogInView(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-            "fxml/TotalLogInView.fxml"));
+        "fxml/LogInBox.fxml"));
 
 		  fxmlLoader.setController(this);
 		  fxmlLoader.setRoot(this);
@@ -25,10 +25,15 @@ public class TotalLogInView extends HBox {
 			  throw new RuntimeException(exception);
 		  }
 		  
-		  hBox.getChildren().add(new LogInView());
-		  hBox.getChildren().add(new CreateNewProfile());
-		  
 	}
-  
-
+	
+	@FXML
+	public void ButtonLogIn(){
+		if(logInBox.isVisible()){
+			logInBox.setVisible(false);
+		}else{
+			logInBox.setVisible(true);
+		}
+			
+	}
 }
