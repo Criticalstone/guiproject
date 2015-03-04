@@ -4,20 +4,17 @@ import guiProject.interfaces.IFProductList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TabPane;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.layout.Pane;
-
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
-
 import se.chalmers.ait.dat215.project.ProductCategory;
 
 import java.io.IOException;
 
-public class Categories extends TabPane{
+public class Categories extends GridPane{
 	
 	@FXML
 	private ToggleButton buttonStarList;
@@ -42,7 +39,7 @@ public class Categories extends TabPane{
             throw new RuntimeException(exception);
         }
         
-        displayLists();
+        //displayLists();
     }
     
     public static synchronized Categories getInstance(){
