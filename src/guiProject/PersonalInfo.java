@@ -5,9 +5,9 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.GridPane;
 
-public class PersonalInfoEdit extends GridPane{
+public class PersonalInfo extends GridPane{
 
-	public PersonalInfoEdit(){
+	public PersonalInfo(){
 	    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
 	            "fxml/PersonalInfo.fxml"));
 	    fxmlLoader.setRoot(this);
@@ -18,6 +18,10 @@ public class PersonalInfoEdit extends GridPane{
 	    } catch (IOException exception) {
 	        throw new RuntimeException(exception);
 	    }
+	}
+	
+	public void saveOnAction(){
+		
 	}
 	
 }

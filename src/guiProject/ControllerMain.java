@@ -213,7 +213,7 @@ public class ControllerMain extends Application{
 	
 	public static void displayDisplayProfile() {
 		detailView.getChildren().removeAll(detailView.getChildren());
-//		detailView.getChildren().add(new PersonalInfoEdit()); 
+		detailView.getChildren().add(new Profile()); 
 		
 	}
 	
