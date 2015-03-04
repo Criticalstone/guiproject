@@ -191,8 +191,25 @@ public class ControllerMain extends Application{
 		detailView.getChildren().add(recipeView);
 		setBanner("start");
 	}
+	
+	public static void displayDisplayProfile() {
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(new PersonalInfoEdit()); 
+		
+	}
+	
 	public static void emptyCart() {
 		cart.emptyCart();
+		
+	}
+	
+	public static boolean login(String username, String password){
+		if (username.equals(imat.getUser().getUserName()) && password.equals(imat.getUser().getPassword())){
+			return true;
+		}
+		return false;
+	}
+	public static void createProfile(String name, String adress, String zip, String city, String phone, String email){
 		
 	}
 	
@@ -269,6 +286,7 @@ public class ControllerMain extends Application{
         //Testing Favorite lists
     	ControllerMain.addFavoriteList("Derp list");
 	}
+
 
 
 }

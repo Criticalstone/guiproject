@@ -190,7 +190,7 @@
                <children>
                   <VBox prefHeight="105.0" prefWidth="127.0">
                      <children>
-                        <ToggleButton fx:id="myImat" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" selected="true" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
+                        <ToggleButton fx:id="myImat" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#myImatButtonAction" prefHeight="31.0" prefWidth="200.0" styleClass="menu-button" stylesheets="@../../res/CategoriesMenuItem.css" text="Mitt iMat">
                            <toggleGroup>
                               <ToggleGroup fx:id="profilegroup" />
                            </toggleGroup>

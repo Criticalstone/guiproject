@@ -1,19 +1,23 @@
-package guiProject;
+package Archive;
 
 import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
-public class TotalLogInView extends HBox {
+
+
+public class CreateNewProfile extends HBox{
 	
 	@FXML
 	private HBox hBox;
+	private int one=1;
 	
-	public TotalLogInView(){
+	public CreateNewProfile(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-            "fxml/TotalLogInView.fxml"));
+        "fxml/CreateNewProfile.fxml"));
 
 		  fxmlLoader.setController(this);
 		  fxmlLoader.setRoot(this);
@@ -23,11 +27,18 @@ public class TotalLogInView extends HBox {
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
-		  
-		  hBox.getChildren().add(new LogInView());
-		  hBox.getChildren().add(new CreateNewProfile());
-		  
 	}
-  
+	
+	@FXML
+	public void ButtonAddProfile(){
+		if(one==1){
+			hBox.getChildren().add(new NewProfileAccount());
+			one=one+1;
+		}
+		
+				
+	}
+	
+	
 
 }
