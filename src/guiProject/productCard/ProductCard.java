@@ -83,7 +83,7 @@ public class ProductCard extends GridPane implements IFProductCard{
 
 
 	private void setStar() {
-		buttonStar.setSelected(ControllerMain.isStared(product));
+		buttonStar.setSelected(ControllerMain.getIsStared(product));
 	}
 
 

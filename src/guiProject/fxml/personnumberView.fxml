@@ -25,7 +25,7 @@
             <IntegerTextField fx:id="personNrOne" prefHeight="31.0" prefWidth="110.0" promptText="ååmmdd" />
             <Label layoutX="229.0" layoutY="36.0" prefHeight="21.0" prefWidth="11.0" text="-" />
             <IntegerTextField fx:id="personNrTwo" prefHeight="31.0" prefWidth="70.0" promptText="xxxx" />
-            <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="33.0" prefHeight="21.0" prefWidth="11.0" text="?">
+            <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="33.0" prefHeight="21.0" prefWidth="11.0" styleClass="text-lables" text="?">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -35,30 +35,30 @@
             </Label>
          </children>
       </HBox>
-      <Label prefHeight="27.0" prefWidth="58.0" text="Namn*" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Label prefHeight="27.0" prefWidth="58.0" styleClass="text-lables" text="Namn*" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
       <TextField fx:id="name" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets right="5.0" />
          </GridPane.margin>
       </TextField>
-      <Label text="Adress*" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <Label styleClass="text-lables" text="Adress*" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
       <TextField fx:id="adress" maxWidth="260.0" minWidth="260.0" prefHeight="39.0" prefWidth="260.0" promptText="ex. Länsvägen 6" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets right="5.0" />
          </GridPane.margin>
       </TextField>
-      <Label text="Postnr.*" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+      <Label styleClass="text-lables" text="Postnr.*" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
       <TextField fx:id="postNumber" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. 411 65" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets right="5.0" />
          </GridPane.margin>
       </TextField>
-      <Label text="Ort*" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+      <Label styleClass="text-lables" text="Ort*" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
       <TextField fx:id="city" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. Göteborg" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets right="5.0" />
          </GridPane.margin>
       </TextField>
-      <Label text="Personnummer" GridPane.halignment="RIGHT" />
+      <Label styleClass="text-lables" text="Personnummer" GridPane.halignment="RIGHT" />
    </children>
 </fx:root>

@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 /**
  * The main controller for iMat. The sub controllers will call for this class, which will coordinate actions between different nodes.
- * @author Kevin
+ * @author Kevin & Anton
  *
  */
 //Maybe this class should be set as a singleton?
@@ -28,18 +28,20 @@ public class ControllerMain extends Application{
 	
 	
     private static IMatDataHandler imat;
-    private static ControllerResultList controllerProdList;
-    private static ShoppingCartHandler cart;
-    private static Banner banner;
-    private static ControllerShoppingLists favoriteLists;
-    private static Categories categories;
-    private static StartView startView;
+    private static Scene scene;
+    
+    //Components
+    private static ControllerResultList controllerResultList;
+    private static ShoppingCartHandler controllershoppingCart;
+    private static Banner controllerBanner;
+    private static ControllerShoppingLists controllerShoppingLists;
+    private static Categories controllerCategories;
     private static RecipeView recipeView;
+    private static StartView startView;
     private static Profile profile;
     private static CheckoutView checkoutView;
-    private static User user;
-    private static Customer customer;
     
+    //Panes in mainview
     @FXML
     private static GridPane categoriesView;
     @FXML
@@ -48,27 +50,81 @@ public class ControllerMain extends Application{
     private static GridPane shoppingCartPane;
     @FXML
     private static GridPane bannerPane;
-
-    /**
-     * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
-     * This method must me run only once for the controller to work.
-     */
-    public static void initialize(String[] args) {
-        imat = IMatDataHandler.getInstance();
-        user = imat.getUser();
-        customer = imat.getCustomer();
-    	launch(args);
+    
+    //For color schemes
+    
+    private static ColorScheme currentColorScheme;
+    private static String defaultSheet = "/res/defaultStyleSheet.css";
+    
+    public enum ColorScheme{
+    	DARK("/res/colorSchemeDark.css"),
+    	BLUE("/res/colorSchemeBlue.css"),
+    	RED("/res/colorSchemeRed.css"),
+    	PINK("/res/colorSchemePink.css");
+    	
+    	private String colorScheme;
+    	ColorScheme(String colorScheme){
+    		this.colorScheme = colorScheme;
+    	}
+    	
+    	public String getScheme(){
+    		return colorScheme;
+    	}
     }
+
+
+	//DOERS
     /**
-     * Returns a list of products based on a category.
-     * @param categ The category for which all items are requested.
-     * @return A list containing all products in the specified category.
+     * Method to toggle if the product should be marked as a favorite in the iMatHandler
+     * @param p The product which will have it's favorite status modified.
+     * @param toggle If the items should be a favorite (true) or not (false).
      */
-    public static List<Product> getProductFromCategory(ProductCategory categ){
-        List<Product> products = imat.getProducts(categ);
-        return products;
+    public static void starProduct(Product p, boolean toggle){
+    	controllerShoppingLists.starProduct(p, toggle);
+    	
+    }
+    
+	public static void addFavoriteList(String name){
+		controllerShoppingLists.addFavoriteList(name);
+		controllerCategories.displayLists();
+		
+	}
+
+    public static void performSearch(String query){
+        List<Product> result = imat.findProducts(query);
+        controllerResultList.setItems(result);
     }
 
+	public static void emptyCart() {
+		controllershoppingCart.emptyCart();
+		
+	}
+	
+	public static boolean login(String username, String password){
+		if (username.equals(imat.getUser().getUserName()) && password.equals(imat.getUser().getPassword())){
+			return true;
+		}
+		return false;
+	}
+
+	//SETTERS
+    public static void setBanner(ProductCategory categ){
+    	controllerBanner.setBanner(categ);
+    }
+    
+    public static void setBanner(String n){
+    	controllerBanner.setBanner(n);
+    }
+	
+    /**
+     * Sets which items should be displayed in the result list.
+     * @param productList A list of all items to be displayed (unsorted).
+     */
+    public static void setProductList(List<Product> productList){
+    	controllerResultList.setItems(productList);
+    	displayProductResultList();
+    }
+    
     /**
      * Sets which products to display in the result list based on a category.
      * @param categ A category for which all products should be displayed in the result area.
@@ -77,118 +133,20 @@ public class ControllerMain extends Application{
         List<Product> productList = getProductFromCategory(categ);
         setProductList(productList);
     }
+    
+    public static void setColorScheme(ColorScheme color){
+    	removeAllAddedSchemes();
+    	scene.getStylesheets().add(color.getScheme());
+    	currentColorScheme = color;
+    }
 
+
+    
+	//DISPLAY METHODS
     public static void updateQtyAllCards(){
-        controllerProdList.updateQtyInCartForAllCards();
-    }
-
-    /**
-     * Sets which items should be displayed in the result list.
-     * @param productList A list of all items to be displayed (unsorted).
-     */
-    public static void setProductList(List<Product> productList){
-    	controllerProdList.setItems(productList);
-    	displayProductResultList();
-    }
-
-    /**
-     * Returns the quantity in the current shopping cart of the specified item though the shopping cart handler.
-     * @param p The product for witch the quantity is requested
-     * @return The quantity of the item in the cart.
-     */
-    public static int getQuantityOfProduct(Product p){
-        return cart.getQtyOfProduct(p);
-    }
-
-    /**
-     * Adds a product to the shopping cart handler which communicate with the back end shopping cart.
-     * @param p Product to be added
-     * @param quantityDiff the quantity to be added or removed, accepts both positive and negative integers.
-     */
-    public static void addProductToCart(Product p, int quantityDiff){
-        cart.addProduct(p, quantityDiff);
+        controllerResultList.updateQtyInCartForAllCards();
     }
     
-    /**
-     * Returns the instance of the Product result list (which displays the items for the user)
-     * @return the current instance of the product result list.
-     */
-    public static ControllerResultList getProductList(){
-        return controllerProdList;
-    }
-    /**
-     * Method to toggle if the product should be marked as a favorite in the iMatHandler
-     * @param p The product which will have it's favorite status modified.
-     * @param toggle If the items should be a favorite (true) or not (false).
-     */
-    public static void starProduct(Product p, boolean toggle){
-    	favoriteLists.starProduct(p, toggle);
-    	
-    }
-    
-	public static boolean isStared(Product p){
-		return favoriteLists.isStared(p);
-	}
-
-    public static ShoppingCartHandler getShoppingCart(){
-        return cart;
-    }
-    
-    public static Banner getBanner(){
-    	return banner;
-    }
-    
-    public static void setBanner(ProductCategory categ){
-    	banner.setBanner(categ);
-    }
-    
-    public static void setBanner(String n){
-    	banner.setBanner(n);
-    }
-
-    public static List<IFProductList> getFavoriteLists(){
-    	return favoriteLists.getFavoriteLists();
-    }
-
-	public static List<Product> getStaredProducts() {
-		return favoriteLists.getStaredProducts();
-	}
-	
-	public static void addFavoriteList(String name){
-		favoriteLists.addFavoriteList(name);
-		categories.displayLists();
-		
-	}
-
-    public static void performSearch(String query){
-        List<Product> result = imat.findProducts(query);
-        controllerProdList.setItems(result);
-    }
-
-	public static void displayCheckout(){
-		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(checkoutView);
-	}
-
-    public static void displayProfile(){
-        detailView.getChildren().removeAll(detailView.getChildren());
-        detailView.getChildren().add(profile);
-        profile.loadInfo();
-    }
-	
-	public static void displayProductResultList(){
-		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(controllerProdList);
-	}
-
-    public static User getUser(){
-        return user;
-    }
-
-    public static Customer getCustomer(){
-        return customer;
-    }
-	
 	public static void displayPaymentOption(PaymentOption option){
 		checkoutView.displayPaymentOption(option);
 	}
@@ -217,30 +175,112 @@ public class ControllerMain extends Application{
 		
 	}
 	
-	public static void emptyCart() {
-		cart.emptyCart();
-		
+	public static void displayCheckout(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(checkoutView);
+	}
+
+    public static void displayProfile(){
+        detailView.getChildren().removeAll(detailView.getChildren());
+        detailView.getChildren().add(profile);
+        profile.loadInfo();
+    }
+	
+	public static void displayProductResultList(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(controllerResultList);
 	}
 	
-	public static boolean login(String username, String password){
-		if (username.equals(imat.getUser().getUserName()) && password.equals(imat.getUser().getPassword())){
-			return true;
-		}
-		return false;
+	//GETTERS
+	public static List<Order> getOrderHistory(){
+		return controllerShoppingLists.getOrderHistory();
 	}
-//	public static void createProfile(String name, String adress, String zip, String city, String phone, String email){
-//		
-//	}
 	
+    public static User getUser(){
+        return imat.getUser();
+    }
+
+    public static Customer getCustomer(){
+        return imat.getCustomer();
+    }
+    
+    public static List<IFProductList> getFavoriteLists(){
+    	return controllerShoppingLists.getFavoriteLists();
+    }
+
+	public static List<Product> getStaredProducts() {
+		return controllerShoppingLists.getStaredProducts();
+	}
+	
+    public static Banner getBanner(){
+    	return controllerBanner;
+    }
+
+    /**
+     * Returns the quantity in the current shopping cart of the specified item though the shopping cart handler.
+     * @param p The product for witch the quantity is requested
+     * @return The quantity of the item in the cart.
+     */
+    public static int getQuantityOfProduct(Product p){
+        return controllershoppingCart.getQtyOfProduct(p);
+    }
+
+    /**
+     * Adds a product to the shopping cart handler which communicate with the back end shopping cart.
+     * @param p Product to be added
+     * @param quantityDiff the quantity to be added or removed, accepts both positive and negative integers.
+     */
+    public static void addProductToCart(Product p, int quantityDiff){
+        controllershoppingCart.addProduct(p, quantityDiff);
+    }
+    
+    /**
+     * Returns the instance of the Product result list (which displays the items for the user)
+     * @return the current instance of the product result list.
+     */
+    public static ControllerResultList getProductList(){
+        return controllerResultList;
+    }
+    
+    /**
+     * Returns a list of products based on a category.
+     * @param categ The category for which all items are requested.
+     * @return A list containing all products in the specified category.
+     */
+    public static List<Product> getProductFromCategory(ProductCategory categ){
+        List<Product> products = imat.getProducts(categ);
+        return products;
+    }
+    
+    public static ShoppingCartHandler getShoppingCart(){
+        return controllershoppingCart;
+    }
+    
+	public static boolean getIsStared(Product p){
+		return controllerShoppingLists.isStared(p);
+	}
+	
+	//LOCAL METHODS
+	private static void removeAllAddedSchemes() {
+		for (String sheet: scene.getStylesheets()){
+    		if (!sheet.equals(defaultSheet)){
+    			scene.getStylesheets().removeAll(sheet);
+    		}
+    	}
+	}
+	
+
+	
+	//STARTUP METHODS
 	@Override
     public void start(Stage primaryStage) throws Exception{
 
-        controllerProdList = new ControllerResultList();
-        cart = new ShoppingCartHandler();
-        favoriteLists = ControllerShoppingLists.getInstance();
-        categories = Categories.getInstance();
+        controllerResultList = new ControllerResultList();
+        controllershoppingCart = new ShoppingCartHandler();
+        controllerShoppingLists = ControllerShoppingLists.getInstance();
+        controllerCategories = Categories.getInstance();
         checkoutView = new CheckoutView();
-        banner = new Banner();
+        controllerBanner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();
         profile = new Profile();
@@ -248,7 +288,7 @@ public class ControllerMain extends Application{
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
         primaryStage.setTitle("iMat");
-        Scene scene = new Scene(root, 1000, 600);
+        scene = new Scene(root, 1000, 600);
         
         //Initialize main panels.
 		categoriesView = (GridPane) scene.lookup("#categoriesView");
@@ -257,15 +297,15 @@ public class ControllerMain extends Application{
 		bannerPane = (GridPane) scene.lookup("#bannerPane");
 
         //Add Categories pane
-		categoriesView.getChildren().add(categories);
+		categoriesView.getChildren().add(controllerCategories);
 		
         //Add banner
-        bannerPane.getChildren().add(banner);
+        bannerPane.getChildren().add(controllerBanner);
         
         //Add shoppingcart
-        shoppingCartPane.getChildren().add(cart);
+        shoppingCartPane.getChildren().add(controllershoppingCart);
         
-        //DIsplay start
+        //Display start
         detailView.getChildren().add(startView);
         
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
@@ -274,14 +314,26 @@ public class ControllerMain extends Application{
 
         
         //Complete setup
-        scene.getStylesheets().add("/res/sample.css");
-        scene.getStylesheets().add("/res/CategoriesMenuItem.css");
+        scene.getStylesheets().add(defaultSheet);
+        
         primaryStage.setScene(scene);
 
         primaryStage.show();
-        
-
+        setColorScheme(ColorScheme.BLUE);
     }
+
+
+	
+    /**
+     * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
+     * This method must me run only once for the controller to work.
+     */
+    public static void initialize(String[] args) {
+        imat = IMatDataHandler.getInstance();
+    	launch(args);
+    }
+    
+
 
 	//Add statements to this method to run test data in the environment.
 	private void testDataTEMPORARY() {
@@ -295,10 +347,6 @@ public class ControllerMain extends Application{
         productList.setItems(products);
         detailView.getChildren().add(productList);
 
-
-        
-
-        
         //Setup test for checkoutView
         /*Pane checkoutViewPane = (Pane) scene.lookup("#detailView");
         checkoutViewPane.getChildren().add(new CheckoutView());*/

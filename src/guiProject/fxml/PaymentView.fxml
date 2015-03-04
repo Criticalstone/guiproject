@@ -8,7 +8,7 @@
 
 <fx:root maxHeight="125.0" maxWidth="475.0" minHeight="125.0" minWidth="475.0" prefHeight="125.0" prefWidth="475.0" spacing="10.0" type="VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Betalningssätt">
+      <Label layoutX="14.0" layoutY="14.0" styleClass="text-lables" text="Betalningssätt">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -23,14 +23,14 @@
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <RadioButton fx:id="toggleTransfer" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="Direktbank" GridPane.rowIndex="1">
+            <RadioButton fx:id="toggleTransfer" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#togglePaymentOption" styleClass="text-lables" text="Direktbank" GridPane.rowIndex="1">
                <toggleGroup>
                   <ToggleGroup fx:id="group" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="toggleCard" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="Konto-/Kreditkort" toggleGroup="$group" />
-            <RadioButton fx:id="togglePayPal" layoutX="188.0" layoutY="89.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="PayPal" toggleGroup="$group" GridPane.columnIndex="1" />
-            <RadioButton fx:id="toggleBill" layoutX="188.0" layoutY="49.0" mnemonicParsing="false" onAction="#togglePaymentOption" text="Faktura" toggleGroup="$group" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <RadioButton fx:id="toggleCard" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onAction="#togglePaymentOption" styleClass="text-lables" text="Konto-/Kreditkort" toggleGroup="$group" />
+            <RadioButton fx:id="togglePayPal" layoutX="188.0" layoutY="89.0" mnemonicParsing="false" onAction="#togglePaymentOption" styleClass="text-lables" text="PayPal" toggleGroup="$group" GridPane.columnIndex="1" />
+            <RadioButton fx:id="toggleBill" layoutX="188.0" layoutY="49.0" mnemonicParsing="false" onAction="#togglePaymentOption" styleClass="text-lables" text="Faktura" toggleGroup="$group" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
