@@ -213,7 +213,7 @@ public class ControllerMain extends Application{
 	
 	public static void displayDisplayProfile() {
 		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(new PersonalInfoEdit()); 
+//		detailView.getChildren().add(new PersonalInfoEdit()); 
 		
 	}
 	
@@ -228,9 +228,9 @@ public class ControllerMain extends Application{
 		}
 		return false;
 	}
-	public static void createProfile(String name, String adress, String zip, String city, String phone, String email){
-		
-	}
+//	public static void createProfile(String name, String adress, String zip, String city, String phone, String email){
+//		
+//	}
 	
 	@Override
     public void start(Stage primaryStage) throws Exception{

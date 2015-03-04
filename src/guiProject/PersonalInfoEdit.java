@@ -9,7 +9,7 @@ public class PersonalInfoEdit extends GridPane{
 
 	public PersonalInfoEdit(){
 	    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-	            "fxml/PersonalInfoEdit.fxml"));
+	            "fxml/PersonalInfo.fxml"));
 	    fxmlLoader.setRoot(this);
 	    fxmlLoader.setController(this);
 	    
