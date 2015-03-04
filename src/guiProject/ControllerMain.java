@@ -4,6 +4,7 @@ import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
 import guiProject.CheckoutView.PaymentOption;
+import se.chalmers.ait.dat215.project.*;
 import guiProject.interfaces.IFProductList;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
 /**
  * The main controller for iMat. The sub controllers will call for this class, which will coordinate actions between different nodes.
  * @author Kevin
@@ -31,9 +33,12 @@ public class ControllerMain extends Application{
     private static Banner banner;
     private static ControllerShoppingLists favoriteLists;
     private static Categories categories;
-    private static CheckoutView checkoutView;
     private static StartView startView;
     private static RecipeView recipeView;
+    private static Profile profile;
+    private static CheckoutView checkoutView;
+    private static User user;
+    private static Customer customer;
     
     @FXML
     private static GridPane categoriesView;
@@ -48,9 +53,11 @@ public class ControllerMain extends Application{
      * Initialize the controller. Sets the IMatDataHandler, controllerProdList (result display area) and the shopping cart handler.
      * This method must me run only once for the controller to work.
      */
-
     public static void initialize(String[] args) {
-        launch(args);
+        imat = IMatDataHandler.getInstance();
+        user = imat.getUser();
+        customer = imat.getCustomer();
+    	launch(args);
     }
     /**
      * Returns a list of products based on a category.
@@ -153,22 +160,34 @@ public class ControllerMain extends Application{
 		
 	}
 
-
     public static void performSearch(String query){
         List<Product> result = imat.findProducts(query);
         controllerProdList.setItems(result);
     }
 
-
 	public static void displayCheckout(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(checkoutView);
 	}
+
+    public static void displayProfile(){
+        detailView.getChildren().removeAll(detailView.getChildren());
+        detailView.getChildren().add(profile);
+        profile.loadInfo();
+    }
 	
 	public static void displayProductResultList(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(controllerProdList);
 	}
+
+    public static User getUser(){
+        return user;
+    }
+
+    public static Customer getCustomer(){
+        return customer;
+    }
 	
 	public static void displayPaymentOption(PaymentOption option){
 		checkoutView.displayPaymentOption(option);
@@ -198,7 +217,7 @@ public class ControllerMain extends Application{
 	
 	@Override
     public void start(Stage primaryStage) throws Exception{
-        imat = IMatDataHandler.getInstance();
+
         controllerProdList = new ControllerResultList();
         cart = new ShoppingCartHandler();
         favoriteLists = ControllerShoppingLists.getInstance();
@@ -207,6 +226,7 @@ public class ControllerMain extends Application{
         banner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();
+        profile = new Profile();
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
@@ -220,16 +240,13 @@ public class ControllerMain extends Application{
 		bannerPane = (GridPane) scene.lookup("#bannerPane");
 
         //Add Categories pane
-		categoriesView.getChildren().add(Categories.getInstance());
+		categoriesView.getChildren().add(categories);
 		
         //Add banner
         bannerPane.getChildren().add(banner);
         
         //Add shoppingcart
-        shoppingCartPane.getChildren().add(ControllerMain.getShoppingCart());
-       
-        //Add startView
-        detailView.getChildren().add(startView);
+        shoppingCartPane.getChildren().add(cart);
         
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
 //        testDataTEMPORARY();

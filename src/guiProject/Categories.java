@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
 
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
@@ -69,13 +72,17 @@ public class Categories extends TabPane{
         ControllerMain.setProductFromCategory(categ);
         ControllerMain.setBanner(categ);
     }
-
     
     @FXML
     public void starButtonAction(){
     	ControllerMain.setProductList(ControllerMain.getStaredProducts());
     }
-    
+
+    @FXML
+    public void settingsOnAction() {
+        ControllerMain.displayProfile();
+    }
+
     class ListButton extends ToggleButton{
     	public ListButton(IFProductList list){
 //    		this.getStylesheets().add("../res/CategoriesMenuItem.css");
