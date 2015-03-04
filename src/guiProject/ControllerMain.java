@@ -28,18 +28,19 @@ public class ControllerMain extends Application{
 	
 	
     private static IMatDataHandler imat;
-    private static ControllerResultList controllerProdList;
-    private static ShoppingCartHandler cart;
-    private static Banner banner;
-    private static ControllerShoppingLists favoriteLists;
-    private static Categories categories;
-    private static StartView startView;
+    
+    //Components
+    private static ControllerResultList controllerResultList;
+    private static ShoppingCartHandler controllershoppingCart;
+    private static Banner controllerBanner;
+    private static ControllerShoppingLists controllerShoppingLists;
+    private static Categories controllerCategories;
     private static RecipeView recipeView;
+    private static StartView startView;
     private static Profile profile;
     private static CheckoutView checkoutView;
-    private static User user;
-    private static Customer customer;
     
+    //Panes in mainview
     @FXML
     private static GridPane categoriesView;
     @FXML
@@ -55,8 +56,6 @@ public class ControllerMain extends Application{
      */
     public static void initialize(String[] args) {
         imat = IMatDataHandler.getInstance();
-        user = imat.getUser();
-        customer = imat.getCustomer();
     	launch(args);
     }
     /**
@@ -79,7 +78,7 @@ public class ControllerMain extends Application{
     }
 
     public static void updateQtyAllCards(){
-        controllerProdList.updateQtyInCartForAllCards();
+        controllerResultList.updateQtyInCartForAllCards();
     }
 
     /**
@@ -87,7 +86,7 @@ public class ControllerMain extends Application{
      * @param productList A list of all items to be displayed (unsorted).
      */
     public static void setProductList(List<Product> productList){
-    	controllerProdList.setItems(productList);
+    	controllerResultList.setItems(productList);
     	displayProductResultList();
     }
 
@@ -97,7 +96,7 @@ public class ControllerMain extends Application{
      * @return The quantity of the item in the cart.
      */
     public static int getQuantityOfProduct(Product p){
-        return cart.getQtyOfProduct(p);
+        return controllershoppingCart.getQtyOfProduct(p);
     }
 
     /**
@@ -106,7 +105,7 @@ public class ControllerMain extends Application{
      * @param quantityDiff the quantity to be added or removed, accepts both positive and negative integers.
      */
     public static void addProductToCart(Product p, int quantityDiff){
-        cart.addProduct(p, quantityDiff);
+        controllershoppingCart.addProduct(p, quantityDiff);
     }
     
     /**
@@ -114,7 +113,7 @@ public class ControllerMain extends Application{
      * @return the current instance of the product result list.
      */
     public static ControllerResultList getProductList(){
-        return controllerProdList;
+        return controllerResultList;
     }
     /**
      * Method to toggle if the product should be marked as a favorite in the iMatHandler
@@ -122,47 +121,47 @@ public class ControllerMain extends Application{
      * @param toggle If the items should be a favorite (true) or not (false).
      */
     public static void starProduct(Product p, boolean toggle){
-    	favoriteLists.starProduct(p, toggle);
+    	controllerShoppingLists.starProduct(p, toggle);
     	
     }
     
 	public static boolean isStared(Product p){
-		return favoriteLists.isStared(p);
+		return controllerShoppingLists.isStared(p);
 	}
 
     public static ShoppingCartHandler getShoppingCart(){
-        return cart;
+        return controllershoppingCart;
     }
     
     public static Banner getBanner(){
-    	return banner;
+    	return controllerBanner;
     }
     
     public static void setBanner(ProductCategory categ){
-    	banner.setBanner(categ);
+    	controllerBanner.setBanner(categ);
     }
     
     public static void setBanner(String n){
-    	banner.setBanner(n);
+    	controllerBanner.setBanner(n);
     }
 
     public static List<IFProductList> getFavoriteLists(){
-    	return favoriteLists.getFavoriteLists();
+    	return controllerShoppingLists.getFavoriteLists();
     }
 
 	public static List<Product> getStaredProducts() {
-		return favoriteLists.getStaredProducts();
+		return controllerShoppingLists.getStaredProducts();
 	}
 	
 	public static void addFavoriteList(String name){
-		favoriteLists.addFavoriteList(name);
-		categories.displayLists();
+		controllerShoppingLists.addFavoriteList(name);
+		controllerCategories.displayLists();
 		
 	}
 
     public static void performSearch(String query){
         List<Product> result = imat.findProducts(query);
-        controllerProdList.setItems(result);
+        controllerResultList.setItems(result);
     }
 
 	public static void displayCheckout(){
@@ -178,15 +177,15 @@ public class ControllerMain extends Application{
 	
 	public static void displayProductResultList(){
 		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(controllerProdList);
+		detailView.getChildren().add(controllerResultList);
 	}
 
     public static User getUser(){
-        return user;
+        return imat.getUser();
     }
 
     public static Customer getCustomer(){
-        return customer;
+        return imat.getCustomer();
     }
 	
 	public static void displayPaymentOption(PaymentOption option){
@@ -218,7 +217,7 @@ public class ControllerMain extends Application{
 	}
 	
 	public static void emptyCart() {
-		cart.emptyCart();
+		controllershoppingCart.emptyCart();
 		
 	}
 	
@@ -228,19 +227,20 @@ public class ControllerMain extends Application{
 		}
 		return false;
 	}
-//	public static void createProfile(String name, String adress, String zip, String city, String phone, String email){
-//		
-//	}
+
+	public static List<Order> getOrderHistory(){
+		return controllerShoppingLists.getOrderHistory();
+	}
 	
 	@Override
     public void start(Stage primaryStage) throws Exception{
 
-        controllerProdList = new ControllerResultList();
-        cart = new ShoppingCartHandler();
-        favoriteLists = ControllerShoppingLists.getInstance();
-        categories = Categories.getInstance();
+        controllerResultList = new ControllerResultList();
+        controllershoppingCart = new ShoppingCartHandler();
+        controllerShoppingLists = ControllerShoppingLists.getInstance();
+        controllerCategories = Categories.getInstance();
         checkoutView = new CheckoutView();
-        banner = new Banner();
+        controllerBanner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();
         profile = new Profile();
@@ -257,13 +257,13 @@ public class ControllerMain extends Application{
 		bannerPane = (GridPane) scene.lookup("#bannerPane");
 
         //Add Categories pane
-		categoriesView.getChildren().add(categories);
+		categoriesView.getChildren().add(controllerCategories);
 		
         //Add banner
-        bannerPane.getChildren().add(banner);
+        bannerPane.getChildren().add(controllerBanner);
         
         //Add shoppingcart
-        shoppingCartPane.getChildren().add(cart);
+        shoppingCartPane.getChildren().add(controllershoppingCart);
         
         //DIsplay start
         detailView.getChildren().add(startView);
