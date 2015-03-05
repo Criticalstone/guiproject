@@ -31,7 +31,7 @@
 
 
 .main-buttons{
-    -fx-background-color: #3D3786;
+    -fx-background-color: #51489C;
     -fx-background-radius: 5,4,3,5;
     -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
@@ -40,6 +40,7 @@
     -fx-text-fill: linear-gradient(white, #d0d0d0);
     -fx-font-size: 16px;
     -fx-font-weight: bold;
+    -fx-cursor: hand;
 
 }
 
