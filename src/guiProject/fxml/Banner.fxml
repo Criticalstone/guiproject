@@ -65,7 +65,7 @@
                               <ImageView fx:id="favoriteImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Mina favoriter" />
+                              <Tooltip text="Mina favoriter varor" />
                            </tooltip>
                         </Button>
                         <Button fx:id="shoppingList" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="main-buttons">
@@ -81,7 +81,7 @@
                               <ImageView fx:id="recipeImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Mina recept" />
+                              <Tooltip text="Mina favorit recept" />
                            </tooltip>
                         </Button>
                      </children>

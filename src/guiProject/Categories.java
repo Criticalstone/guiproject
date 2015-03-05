@@ -228,5 +228,12 @@ public class Categories extends GridPane{
     	for(TitledPane p :acc.getPanes()){
     		p.setExpanded(false);
     	}
+    	unSelectCategories();
+    }
+    
+    public void unSelectCategories(){
+    	for(Toggle b : buttonGroup.getToggles()){
+    		b.setSelected(false);
+    	}
     }
 }

@@ -109,8 +109,7 @@ public class ControllerMain extends Application{
     
 	public static void addFavoriteList(String name){
 		controllerShoppingLists.addFavoriteList(name);
-		controllerCategories.displayLists();
-		
+		controllerCategories.displayLists();	
 	}
 
     public static void performSearch(String query){
@@ -169,6 +168,7 @@ public class ControllerMain extends Application{
 	public static void displayStartView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(startView);
+		collapseCategories();
 		setBanner("start");
 	}
 	
@@ -186,11 +186,15 @@ public class ControllerMain extends Application{
 	public static void displayRecipeListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(recipeListView);
+    	unSelectCategories();
+    	setBanner("start");
 	}
 	
 	public static void displayShoppingListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(shoppingListView);
+    	unSelectCategories();
+    	setBanner("start");
 	}
 	
 
@@ -206,6 +210,10 @@ public class ControllerMain extends Application{
 	
 	public static void collapseCategories(){
 		controllerCategories.collapseCategories();
+	}
+	
+	public static void unSelectCategories(){
+		controllerCategories.unSelectCategories();
 	}
 	
 //	public static void displayLoginView(TotalLogInView.NextView nextView){
