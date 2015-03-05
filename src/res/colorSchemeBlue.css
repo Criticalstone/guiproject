@@ -1,0 +1,98 @@
+.card-background{
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-border-width: 2;
+}
+
+.shopping-cart-item-background{
+	-fx-background-color: #4F8FD1;
+}
+
+.details-background{
+	-fx-background-color: #0A3B6E;
+}
+
+.menu-item-color{
+
+}
+
+.toolbar-color{
+	-fx-background-color: #1C5FA5;
+}
+
+.shopping-cart-background{
+	-fx-background-color: #1C5FA5;
+}
+
+.shopping-cart-list-background{
+	-fx-background-color: #71A0D1;
+
+}
+
+
+.main-buttons{
+    -fx-background-color: #3D3786;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+}
+
+.main-buttons:pressed {
+    -fx-padding: 2 0 0 2;
+
+}
+
+.main-buttons:hover{
+    -fx-background-color: #38307F;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+}
+
+.addsub-buttons{
+    -fx-background-color: #51489C;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+}
+
+.addsub-buttons:pressed {
+    -fx-padding: 2 0 0 2;
+}
+
+.addsub-buttons:hover{
+    -fx-background-color: #38307F;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+}
+
+
+
+.text-lables{
+	-fx-text-fill: linear-gradient(white, #d0d0d0);
+}

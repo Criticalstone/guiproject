@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.Product;
 
 
@@ -20,10 +21,12 @@ import se.chalmers.ait.dat215.project.Product;
  */
 public class ControllerShoppingLists implements Serializable{
 	
-	private static final long serialVersionUID = 3054308858388647312L;
-    private static List<IFProductList> favoriteLists;
-    private static IFStarList starList = new StarList();
+	private final long serialVersionUID = 3054308858388647312L;
+    private List<IFProductList> favoriteLists;
+    private IFStarList starList = new StarList();
     private static ControllerShoppingLists singleton;
+    private IMatDataHandler imat;
+
    
     private ControllerShoppingLists(){
     	favoriteLists = new ArrayList<IFProductList>();
@@ -57,6 +60,11 @@ public class ControllerShoppingLists implements Serializable{
 	public List<IFProductList> getFavoriteLists(){
 		return favoriteLists;
 	}
+	
+	public List<Order> getOrderHistory(){
+		return imat.getOrders();
+	}
+	
 	
 	public void addFavoriteList(String name){
 		favoriteLists.add(new SavedShoppingList(name));

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root gridLinesVisible="true" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root gridLinesVisible="true" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" styleClass="shopping-cart-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="ALWAYS" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="401.0" vgrow="ALWAYS" />
-    <RowConstraints maxHeight="130.0" minHeight="130.0" prefHeight="130.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="140.0" minHeight="140.0" prefHeight="140.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <GridPane hgap="5.0" prefHeight="96.0" prefWidth="160.0" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
+      <GridPane hgap="5.0" prefHeight="96.0" prefWidth="160.0" styleClass="shopping-cart-background" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
@@ -26,38 +27,44 @@
           <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="buttonSaveToList" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#saveToListButtonAction" prefWidth="100.0" text="Spara" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="buttonSaveToList" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#saveToListButtonAction" prefHeight="40.0" prefWidth="100.0" styleClass="main-buttons" text="Spara" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button fx:id="buttonBuyNow" disable="true" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#buyNowButtonAction" prefWidth="100.0" text="Köp nu" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button fx:id="buttonBuyNow" disable="true" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#buyNowButtonAction" prefHeight="40.0" prefWidth="100.0" styleClass="main-buttons" text="Köp nu" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button fx:id="buttonCheckout" maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#checkoutButtonAction" prefWidth="100.0" text="Kassa" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="buttonCheckout" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#checkoutButtonAction" prefHeight="40.0" prefWidth="100.0" styleClass="main-buttons" text="Kassa" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Label fx:id="label" text="Summa" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+            <Label fx:id="label" styleClass="text-lables" text="Summa" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
             </Label>
-            <Label fx:id="sum" text="0 kr" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+            <Label fx:id="sum" styleClass="text-lables" text="0 kr" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Button maxWidth="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#clearOnClick" prefWidth="100.0" text="Rensa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#clearOnClick" prefHeight="40.0" prefWidth="100.0" styleClass="main-buttons" text="Rensa" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
          </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin>
       </GridPane>
-      <ListView fx:id="listView" />
+      <ListView fx:id="listView" styleClass="shopping-cart-list-background" />
    </children>
 </fx:root>
