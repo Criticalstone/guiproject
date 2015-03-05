@@ -50,6 +50,11 @@ public class CategoryInterpreter {
 
     public static Category categoryValueOf(String stringCateg){
         Category categ = Category.POD;
+        System.out.println(stringCateg);
+        if(stringCateg.equals(categ.toString())){
+            System.out.println("yep");
+            return categ;
+        }
         while(!stringCateg.equals(categ.next().toString())){
             categ = categ.next();
         }
