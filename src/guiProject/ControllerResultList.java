@@ -48,7 +48,6 @@ public class ControllerResultList extends ScrollPane implements IFControllerProd
 	public void setItems(List<Product> p) {
 		clearPane();
 		addCards(createSortedCardsAZ(p));
-		
     }
 
 	//Removes all product cards from the pane.

@@ -1,18 +1,23 @@
-package Archive;
+package guiProject;
 
 import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
-public class NewProfileAccount extends GridPane{
 
-	public int count=0;
+
+public class CreateNewProfile extends HBox{
 	
-	public NewProfileAccount(){
+	@FXML
+	private HBox hBox;
+	private int one=1;
+	
+	public CreateNewProfile(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
-          "fxml/NewProfileAccount.fxml"));
+        "fxml/CreateNewProfile.fxml"));
 
 		  fxmlLoader.setController(this);
 		  fxmlLoader.setRoot(this);
@@ -22,16 +27,18 @@ public class NewProfileAccount extends GridPane{
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
-		  
-		  
 	}
 	
 	@FXML
-	public void CreateNewAccount(){
-		if(count<4){
-			TestMain.createLogInBox();	
+	public void ButtonAddProfile(){
+		if(one==1){
+			hBox.getChildren().add(new NewProfileAccount());
+			one=one+1;
 		}
-		count=count+1;
 		
+				
 	}
+	
+	
+
 }

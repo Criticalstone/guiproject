@@ -1,4 +1,4 @@
-package Archive;
+package guiProject;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -12,6 +12,8 @@ public class TestMain extends Application {
 	
 	  @FXML
 	   private static HBox hBox;
+	  private int createCount=0;
+	  
 	public static void main(String[] args){
 		launch(args);
 	}
@@ -27,9 +29,13 @@ public class TestMain extends Application {
 		//Initialize main panels.
 		hBox = (HBox) scene.lookup("#hBox");
 		
-		
-		hBox.getChildren().add(new CreateNewProfile());
-		createLogInBox();
+		if(createCount==0){
+			hBox.getChildren().add(new NewProfileAccount());
+			createCount=createCount+1;
+		}else{		
+			createLogInBox();
+		}
+
   		//Complete setup
   		scene.getStylesheets().add("/res/sample.css");
   		scene.getStylesheets().add("/res/CategoriesMenuItem.css");

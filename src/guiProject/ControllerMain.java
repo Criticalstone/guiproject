@@ -42,6 +42,10 @@ public class ControllerMain extends Application{
     private static StartView startView;
 //    private static ProfileView profile;
     private static CheckoutView checkoutView;
+    private static Customer customer;
+    private static RecipeListView recipeListView;
+    private static ShoppingListView shoppingListView;
+
     
     //Panes in mainview
     @FXML
@@ -57,22 +61,40 @@ public class ControllerMain extends Application{
     private static ColorScheme currentColorScheme;
     private static String defaultSheet = "/res/defaultStyleSheet.css";
     
-    public enum ColorScheme{
-    	DARK("/res/colorSchemeDark.css"),
-    	BLUE("/res/colorSchemeBlue.css"),
-    	RED("/res/colorSchemeRed.css"),
-    	PINK("/res/colorSchemePink.css");
-    	
-    	private String colorScheme;
-    	ColorScheme(String colorScheme){
-    		this.colorScheme = colorScheme;
-    	}
-    	
-    	public String getScheme(){
-    		return colorScheme;
-    	}
+    public enum ColorScheme {
+        DARK("/res/colorSchemeDark.css"),
+        BLUE("/res/colorSchemeBlue.css"),
+        RED("/res/colorSchemeRed.css"),
+        PINK("/res/colorSchemePink.css");
+
+        private String colorScheme;
+
+        ColorScheme(String colorScheme) {
+            this.colorScheme = colorScheme;
+        }
+
+        public String getScheme() {
+            return colorScheme;
+        }
     }
 
+    /**
+     * Returns a list of products based on a category.
+     * @param categ The category for which all items are requested.
+     * @return A list containing all products in the specified category.
+     */
+    public static List<Product> getProductFromCategory(Category categ){
+        List<Product> products = CategoryInterpreter.getProductFromCateg(categ);
+        return products;
+    }
+
+    /**
+     * Sets which products to display in the result list based on a category.
+     * @param categ A category for which all products should be displayed in the result area.
+     */
+    public static void setProductFromCategory(Category categ){
+        setProductList(CategoryInterpreter.getProductFromCateg(categ));
+    }
 
 	//DOERS
     /**
@@ -110,23 +132,14 @@ public class ControllerMain extends Application{
     public static void setBanner(String n){
     	controllerBanner.setBanner(n);
     }
-	
+
     /**
      * Sets which items should be displayed in the result list.
      * @param productList A list of all items to be displayed (unsorted).
      */
     public static void setProductList(List<Product> productList){
-    	controllerResultList.setItems(productList);
-    	displayProductResultList();
-    }
-    
-    /**
-     * Sets which products to display in the result list based on a category.
-     * @param categ A category for which all products should be displayed in the result area.
-     */
-    public static void setProductFromCategory(ProductCategory categ){
-        List<Product> productList = getProductFromCategory(categ);
-        setProductList(productList);
+        controllerResultList.setItems(productList);
+        displayProductResultList();
     }
     
     public static void setColorScheme(ColorScheme color){
@@ -173,6 +186,16 @@ public class ControllerMain extends Application{
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(checkoutView);
 	}
+	public static void displayRecipeListView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(recipeListView);
+	}
+	
+	public static void displayShoppingListView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(shoppingListView);
+	}
+	
 
     public static void displayProfile(){
 		detailView.getChildren().removeAll(detailView.getChildren());
@@ -281,7 +304,9 @@ public class ControllerMain extends Application{
         controllerBanner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();
-//        profile = new ProfileView();
+        recipeListView = new RecipeListView();
+        shoppingListView = new ShoppingListView();
+
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));

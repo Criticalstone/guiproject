@@ -17,17 +17,17 @@
       <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="241.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <ImageView fitHeight="168.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="165.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
          <image>
             <Image url="@../../res/greyprofile.png" />
          </image>
          <GridPane.margin>
-            <Insets left="30.0" />
+            <Insets />
          </GridPane.margin>
       </ImageView>
       <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="254.0" prefWidth="216.0" GridPane.rowIndex="1">
          <children>
-            <Label prefHeight="32.0" prefWidth="49.0" text="Namn">
+            <Label text="Namn">
                <VBox.margin>
                   <Insets left="5.0" />
                </VBox.margin>
@@ -40,7 +40,6 @@
                   <Insets left="5.0" right="10.0" />
                </VBox.margin>
             </TextField>
-            <Label />
             <Label text="Lösenord">
                <VBox.margin>
                   <Insets left="5.0" />
