@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
@@ -20,7 +21,7 @@ public class Banner extends GridPane{
 	@FXML
 	private GridPane bannerBackground;
 	@FXML
-	private AnchorPane bannerTitle;
+	private Button bannerTitle;
     @FXML
     private TextField textSearch;
 
@@ -45,95 +46,111 @@ public class Banner extends GridPane{
     	switch(n){
     		case "kassa":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/kassa.png');");
+    			bannerTitle.setText("Kassa");
     			break;
     		case "start":
-    	        bannerTitle.setStyle("-fx-background-image: url('res/banner/iMat.png');");
     	        bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
+    	        bannerTitle.setText("iMat");
     	        break;
-    		case "MEAT":
+    		case "BEEFMEAT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/meatTitle.png');");
+    			bannerTitle.setText("Nötött");
+    			break;
+    		case "CHICKEN":
+    			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
+    			bannerTitle.setText("Kyckling");
     			break;
     		case "FISH":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FISH.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/fishTitle.png');");
+    			bannerTitle.setText("Fisk");
     			break;
     		case "POD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/POD.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/podTitle.png');");
+    			bannerTitle.setText("Baljväxter");
 				break;
     		case "BREAD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BREAD.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/breadTitle.png');");
+    			bannerTitle.setText("Bröd");
 				break;
     		case "BERRY":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BERRY.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/berryTitle.png');");
+    			bannerTitle.setText("Bär");
 				break;
     		case "CITRUS_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CITRUS_FRUIT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/citrus_fruitTitle.png');");
+    			bannerTitle.setText("Citrus frukter");
 				break;
     		case "HOT_DRINKS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/HOT_DRINKS.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/hot_drinksTitle.png');");
+    			bannerTitle.setText("Varm drycker");
 				break;
     		case "COLD_DRINKS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/COLD_DRINKS.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/cold_drinksTitle.png');");
+    			bannerTitle.setText("Kalla drycker");
 				break;
     		case "EXOTIC_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/EXOTIC_FRUIT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/exotic_fruitTitle.png');");
+    			bannerTitle.setText("Exotiska frukter");
 				break;
     		case "VEGETABLE_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/VEGETABLE_FRUIT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/vegetable_fruitTitle.png');");
+    			bannerTitle.setText("Grönsaksfrukter");
 				break;
     		case "CABBAGE":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CABBAGE.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/cabbageTitle.png');");
+    			bannerTitle.setText("Kål");
 				break;
     		case "DAIRIES":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/DAIRIES.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/dairiesTitle.png');");
+    			bannerTitle.setText("Mejeri");
 				break;
     		case "MELONS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MELONS.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/melonsTitle.png');");
+    			bannerTitle.setText("Meloner");
 				break;
-    		case "FLOUR_SUGAR_SALT":
+    		case "FLOUR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/flour_sugar_saltTitle.png');");
+    			bannerTitle.setText("Mjöl");
+				break;
+    		case "SUGAR":
+    			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
+    			bannerTitle.setText("Socker");
+				break;
+    		case "SALT":
+    			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
+    			bannerTitle.setText("Mjöl");
 				break;
     		case "NUTS_AND_SEEDS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/NUTS_AND_SEEDS.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/nuts_and_seedsTitle.png');");
+    			bannerTitle.setText("Nötter & frön");
 				break;
     		case "PASTA":	
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/PASTA.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/pastaTitle.png');");
+    			bannerTitle.setText("Pasta");
 				break;
-    		case "POTATO_RICE":
+    		case "POTATO":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/POTATO_RICE.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/potato_riceTitle.png');");
+    			bannerTitle.setText("Potatis");
+				break;
+    		case "RICE":
+    			bannerBackground.setStyle("-fx-background-image: url('res/banner/POTATO_RICE.jpg');");
+    			bannerTitle.setText("Ris");
 				break;
     		case "ROOT_VEGETABLE":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/ROOT_VEGETABLE.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/root_vegetableTitle.png');");
+    			bannerTitle.setText("Rotfrukter");
 				break;
     		case "FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FRUIT.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/fruitTitle.png');");
+    			bannerTitle.setText("Frukter");
 				break;
     		case "SWEET":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/SWEET.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/sweetTitle.png');");
+    			bannerTitle.setText("Sötsaker");
 				break;
     		case "HERB":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/HERB.jpg');");
-    			bannerTitle.setStyle("-fx-background-image: url('res/banner/herbTitle.png');");
+    			bannerTitle.setText("Örter");
 				break;
     		default:
     			break;

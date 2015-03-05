@@ -1,13 +1,12 @@
 #bannerTitle{
-	-fx-background-repeat: stretch; 
-	-fx-background-position: center center;
+	-fx-border-color: null;
+	-fx-background-color: WHITE;
 	-fx-cursor: hand;
 }
 
 #bannerBackground{
 	-fx-background-repeat: stretch; 
 	-fx-background-position: center center;
-	-fx-cursor: hand;
 }
 
 #listButton{
