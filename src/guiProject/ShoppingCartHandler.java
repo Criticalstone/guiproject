@@ -151,7 +151,6 @@ public class ShoppingCartHandler extends GridPane{
     @FXML
     private void clearOnClick(ActionEvent event){
     	emptyCart();
-
     }
 
     public void checkoutButtonAction(ActionEvent e){
@@ -206,10 +205,6 @@ public class ShoppingCartHandler extends GridPane{
                 EventHandler eventHandler = new EventHandler() {
                     @Override
                     public void handle(Event event) {
-//                        numberOf.setText(Utilities.removeAllButNumbers(numberOf.getText()));
-//                        if(!numberOf.getText().equals("")){
-//                            
-//                        }
                 		if (numberOf.getText().equals("")){
                 			numberOf.setText("1");
                 			numberOf.selectPositionCaret(1);

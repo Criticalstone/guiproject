@@ -30,6 +30,7 @@ public class ControllerShoppingLists implements Serializable{
    
     private ControllerShoppingLists(){
     	favoriteLists = new ArrayList<IFProductList>();
+        imat = IMatDataHandler.getInstance();
     }
     
     public static synchronized ControllerShoppingLists getInstance(){
@@ -62,9 +63,9 @@ public class ControllerShoppingLists implements Serializable{
 	}
 	
 	public List<Order> getOrderHistory(){
-		return imat.getOrders();
+        System.out.println(imat.getOrders().get(0).getItems().size());
+        return imat.getOrders();
 	}
-	
 	
 	public void addFavoriteList(String name){
 		favoriteLists.add(new SavedShoppingList(name));

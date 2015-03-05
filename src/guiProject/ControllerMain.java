@@ -201,6 +201,7 @@ public class ControllerMain extends Application{
 	public static void displayShoppingListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(shoppingList);
+        shoppingList.updateOrdersListView();
 	}
 	
 
@@ -241,12 +242,9 @@ public class ControllerMain extends Application{
 
     }
 
-    public static List<Order> getOrders(){
-        return imat.getOrders();
-    }
-
     public static void placeOrder(){
-        imat.placeOrder(true);
+        System.out.println(imat.getShoppingCart().getItems().size());
+        imat.placeOrder();
     }
 
     /**
@@ -355,6 +353,8 @@ public class ControllerMain extends Application{
 
         primaryStage.show();
         setColorScheme(ColorScheme.BLUE);
+
+
     }
 
 
@@ -371,24 +371,13 @@ public class ControllerMain extends Application{
 
 
 	//Add statements to this method to run test data in the environment.
-	private void testDataTEMPORARY() {
-		//Details view test
-        ControllerResultList productList = ControllerMain.getProductList();
-        
-        ArrayList<Product> products = new ArrayList<Product>();
-        for (int i = 1; i < 30;i++){
-        	products.add(IMatDataHandler.getInstance().getProduct(i));
-        }
-        productList.setItems(products);
-        detailView.getChildren().add(productList);
+	private static void testDataTEMPORARY() {
 
-        //Setup test for checkoutView
-        /*Pane checkoutViewPane = (Pane) scene.lookup("#detailView");
-        checkoutViewPane.getChildren().add(new CheckoutView());*/
-        
-        //Testing Favorite lists
-    	ControllerMain.addFavoriteList("Derp list");
-	}
+        //TESTING the shoppinglist
+        addProductToCart(imat.getProduct(1), 3);
+        addProductToCart(imat.getProduct(4), 10);
+        placeOrder();
+    }
 
 
 
