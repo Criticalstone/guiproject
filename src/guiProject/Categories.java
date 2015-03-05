@@ -26,16 +26,15 @@ public class Categories extends GridPane{
 	private VBox favoritesList;
 	
 	private static Categories singelton;
-	@FXML
-	private ToggleGroup favoriteListGroup;
+	private ToggleGroup buttonGroup = new ToggleGroup();
+	
+	Accordion acc = new Accordion();
 
     private Categories() {
         add(initCategories(), 0, 0);
     }
 
     private Accordion initCategories(){
-
-        Accordion acc = new Accordion();
         acc.getPanes().addAll(initMeat(), initFriut(), initDairies(), initPantry(), initDrink(), initSweet());
         acc.setPrefWidth(1000);
         return acc;
@@ -56,8 +55,7 @@ public class Categories extends GridPane{
             setButtonStyle(button);
         }
 
-        ToggleGroup group = new ToggleGroup();
-        group.getToggles().addAll(buttons);
+        buttonGroup.getToggles().addAll(buttons);
 
         VBox inside = new VBox();
         inside.getChildren().addAll(buttons);
@@ -94,8 +92,7 @@ public class Categories extends GridPane{
             
         }
 
-        ToggleGroup group = new ToggleGroup();
-        group.getToggles().addAll(buttons);
+        buttonGroup.getToggles().addAll(buttons);
 
         VBox inside = new VBox();
         inside.getChildren().addAll(buttons);
@@ -108,6 +105,7 @@ public class Categories extends GridPane{
         button.setId("DAIRIES");
         button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
         setButtonStyle(button);
+        buttonGroup.getToggles().add(button);
 
         VBox inside = new VBox();
         inside.getChildren().add(button);
@@ -139,8 +137,7 @@ public class Categories extends GridPane{
             setButtonStyle(button);
         }
 
-        ToggleGroup group = new ToggleGroup();
-        group.getToggles().addAll(buttons);
+        buttonGroup.getToggles().addAll(buttons);
 
         VBox inside = new VBox();
         inside.getChildren().addAll(buttons);
@@ -160,8 +157,7 @@ public class Categories extends GridPane{
             setButtonStyle(button);
         }
 
-        ToggleGroup group = new ToggleGroup();
-        group.getToggles().addAll(buttons);
+        buttonGroup.getToggles().addAll(buttons);
 
         VBox inside = new VBox();
         inside.getChildren().addAll(buttons);
@@ -174,6 +170,7 @@ public class Categories extends GridPane{
         button.setId("SWEET");
         button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
         setButtonStyle(button);
+        buttonGroup.getToggles().add(button);
 
         VBox inside = new VBox();
         inside.getChildren().add(button);
@@ -218,15 +215,18 @@ public class Categories extends GridPane{
 
     class ListButton extends ToggleButton{
     	public ListButton(IFProductList list){
-    		//this.getStyleClass().add("menu-button");
     		this.setText(list.getName());
-    		this.setToggleGroup(favoriteListGroup);
+    		//this.setToggleGroup(buttonGroup);
     	}
     }
     
     public void setButtonStyle(ToggleButton button){
     	button.getStyleClass().add("menu-button");
-    	//button.getStyleClass().add("menu-button:hover");
-    	//button.getStyleClass().add("menu-button:selected");
+    }
+    
+    public void collapseCategories(){
+    	for(TitledPane p :acc.getPanes()){
+    		p.setExpanded(false);
+    	}
     }
 }

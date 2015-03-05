@@ -204,6 +204,10 @@ public class ControllerMain extends Application{
 		detailView.getChildren().add(controllerResultList);
 	}
 	
+	public static void collapseCategories(){
+		controllerCategories.collapseCategories();
+	}
+	
 //	public static void displayLoginView(TotalLogInView.NextView nextView){
 //		detailView.getChildren().removeAll(detailView.getChildren());
 //		detailView.getChildren().add(nextView);

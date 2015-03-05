@@ -28,7 +28,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="bannerTitle" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="250.0" text="Label" GridPane.columnIndex="1">
+            <Button fx:id="bannerTitle" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#goHomeOnAction" prefHeight="70.0" prefWidth="250.0" text="Label" GridPane.columnIndex="1">
                <font>
                   <Font size="30.0" />
                </font>

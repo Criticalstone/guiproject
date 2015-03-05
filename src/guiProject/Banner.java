@@ -158,6 +158,7 @@ public class Banner extends GridPane{
     }
     
     public void buttonAction(ActionEvent e){
+    	ControllerMain.collapseCategories();
     	switch(((Node) e.getSource()).getId()){
     		case "favorite":
     			ControllerMain.setProductList(ControllerMain.getStaredProducts());
@@ -173,16 +174,14 @@ public class Banner extends GridPane{
     	}
     }
     
-    public void bannerEvent(MouseEvent e){
-    	ControllerMain.displayStartView();
-    }
-    
     public void searchOnAction(){
         ControllerMain.performSearch(textSearch.getText());
+        ControllerMain.collapseCategories();
     }
     
     @FXML
     public void goHomeOnAction(){
     	ControllerMain.displayStartView();
+    	ControllerMain.collapseCategories();
     }
 }
