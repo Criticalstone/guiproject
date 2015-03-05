@@ -11,9 +11,6 @@
 	-fx-background-image: url("gold-star-clipart-big_gold_star_toggled.png");
 }
 
-
-
-
 .menu-button{
 	-fx-background-color: null;
 	-fx-text-alignment: LEFT;
@@ -31,4 +28,8 @@
 	-fx-background-repeat: stretch; 
 	-fx-background-position: center center;
 	-fx-background-color: RED;
+}
+
+.accordion .toggle-button{
+    -fx-background-color: null;
 }
