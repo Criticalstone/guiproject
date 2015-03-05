@@ -7,9 +7,9 @@ import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 
-public class ShoppingListView extends GridPane{
+public class ShoppingList extends GridPane{
 
-    public ShoppingListView() {
+    public ShoppingList() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/ShoppingListView.fxml"));
 

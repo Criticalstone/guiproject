@@ -43,7 +43,7 @@ public class ControllerMain extends Application{
     private static User user;
     private static Customer customer;
     private static RecipeListView recipeListView;
-    private static ShoppingListView shoppingListView;
+    private static ShoppingList shoppingList;
 
     
     //Panes in mainview
@@ -200,7 +200,7 @@ public class ControllerMain extends Application{
 	
 	public static void displayShoppingListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(shoppingListView);
+		detailView.getChildren().add(shoppingList);
 	}
 	
 
@@ -238,6 +238,15 @@ public class ControllerMain extends Application{
 	
     public static Banner getBanner(){
     	return controllerBanner;
+
+    }
+
+    public static List<Order> getOrders(){
+        return imat.getOrders();
+    }
+
+    public static void placeOrder(){
+        imat.placeOrder(true);
     }
 
     /**
@@ -309,7 +318,7 @@ public class ControllerMain extends Application{
         recipeView = new RecipeView();
         profile = new Profile();
         recipeListView = new RecipeListView();
-        shoppingListView = new ShoppingListView();
+        shoppingList = new ShoppingList();
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
