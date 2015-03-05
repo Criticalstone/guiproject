@@ -1,6 +1,7 @@
 #bannerTitle{
-	-fx-background-repeat: stretch; 
-	-fx-background-position: center center;
+	-fx-border-color: null;
+	-fx-background-color: WHITE;
+	-fx-cursor: hand;
 }
 
 #bannerBackground{
@@ -18,4 +19,24 @@
 	-fx-background-image: url('banner/gridIcon.gif');
 	-fx-background-repeat: stretch; 
 	-fx-background-position: center center;
+}
+
+#startImg{
+	-fx-image: url('home.png');
+}
+
+#profileImg{
+	-fx-image: url('profileIcon.png');
+}
+
+#favoriteImg{
+	-fx-image: url('favoriteListIcon.png');
+}
+
+#shoppingImg{
+	-fx-image: url('shoppingListIcon.png');
+}
+
+#recipeImg{
+	-fx-image: url('recipeListIcon.png');
 }

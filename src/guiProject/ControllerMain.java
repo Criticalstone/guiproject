@@ -125,9 +125,6 @@ public class ControllerMain extends Application{
 	
 
 	//SETTERS
-    public static void setBanner(ProductCategory categ){
-    	controllerBanner.setBanner(categ);
-    }
     
     public static void setBanner(String n){
     	controllerBanner.setBanner(n);
