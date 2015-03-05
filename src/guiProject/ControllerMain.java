@@ -40,6 +40,11 @@ public class ControllerMain extends Application{
     private static StartView startView;
     private static Profile profile;
     private static CheckoutView checkoutView;
+    private static User user;
+    private static Customer customer;
+    private static RecipeListView recipeListView;
+    private static ShoppingListView shoppingListView;
+
     
     //Panes in mainview
     @FXML
@@ -188,6 +193,16 @@ public class ControllerMain extends Application{
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(checkoutView);
 	}
+	public static void displayRecipeListView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(recipeListView);
+	}
+	
+	public static void displayShoppingListView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(shoppingListView);
+	}
+	
 
     public static void displayProfile(){
         detailView.getChildren().removeAll(detailView.getChildren());
@@ -293,6 +308,8 @@ public class ControllerMain extends Application{
         startView = new StartView();
         recipeView = new RecipeView();
         profile = new Profile();
+        recipeListView = new RecipeListView();
+        shoppingListView = new ShoppingListView();
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
