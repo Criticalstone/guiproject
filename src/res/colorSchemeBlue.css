@@ -45,7 +45,7 @@
 }
 
 .main-buttons:pressed {
-    -fx-padding: 2 0 0 2;
+    -fx-border-color: BLACK;
 
 }
 
