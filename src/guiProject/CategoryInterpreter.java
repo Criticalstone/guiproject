@@ -6,6 +6,15 @@ import se.chalmers.ait.dat215.project.ProductCategory;
 
 import java.util.List;
 
+//         __      __  _____ __________  _______  ____ _______    ________
+//        /  \    /  \/  _  \\______   \ \      \ |   |\      \  /  _____/
+//        \   \/\/   /  /_\  \|       _/ /   |   \|   |/   |   \/   \  ___
+//         \        /    |    \    |   \/    |    \   /    |    \    \_\  \
+//          \__/\  /\____|__  /____|_  /\____|__  /___\____|__  /\______  /
+//               \/         \/       \/         \/            \/        \/
+//
+//          ## FULHAX ## FULHAX ## FULHAX ## FULHAX ## FULHAX ## FULHAX ##
+
 /**
  * Created by kritt on 2015-03-04.
  */
