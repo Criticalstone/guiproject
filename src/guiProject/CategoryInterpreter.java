@@ -20,24 +20,6 @@ import java.util.List;
  */
 public class CategoryInterpreter {
     private static IMatDataHandler imat = IMatDataHandler.getInstance();
-    public static enum Category{
-        POD, BREAD, BERRY, CITRUS_FRUIT, HOT_DRINKS, COLD_DRINKS, EXOTIC_FRUIT,
-        FISH, VEGETABLE_FRUIT, CABBAGE, BEEFMEAT, CHICKEN, DAIRIES, MELONS,
-        SALT, SUGAR, FLOUR, NUTS_AND_SEEDS, PASTA, POTATO, RICE, ROOT_VEGETABLE, FRUIT,
-        SWEET,
-        HERB{
-                @Override
-                public Category next() {
-                    return null;
-                }
-            };
-
-
-        public Category next() {
-            return values()[ordinal() + 1];
-        }
-
-    }
 
     public static List<Product> getProductFromCateg(Category categ){
         List<Product> result;

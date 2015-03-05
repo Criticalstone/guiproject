@@ -64,7 +64,7 @@ public class ControllerMain extends Application{
      * @param categ The category for which all items are requested.
      * @return A list containing all products in the specified category.
      */
-    public static List<Product> getProductFromCategory(CategoryInterpreter.Category categ){
+    public static List<Product> getProductFromCategory(Category categ){
         List<Product> products = CategoryInterpreter.getProductFromCateg(categ);
         return products;
     }
@@ -73,7 +73,7 @@ public class ControllerMain extends Application{
      * Sets which products to display in the result list based on a category.
      * @param categ A category for which all products should be displayed in the result area.
      */
-    public static void setProductFromCategory(CategoryInterpreter.Category categ){
+    public static void setProductFromCategory(Category categ){
         setProductList(CategoryInterpreter.getProductFromCateg(categ));
     }
 
