@@ -83,7 +83,7 @@ public class Categories extends GridPane{
 
     @FXML
     public void myImatButtonAction(){
-    	ControllerMain.displayDisplayProfile();
+    	ControllerMain.displayProfile();
     }
     
     class ListButton extends ToggleButton{
