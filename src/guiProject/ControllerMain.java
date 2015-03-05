@@ -39,6 +39,8 @@ public class ControllerMain extends Application{
     private static CheckoutView checkoutView;
     private static User user;
     private static Customer customer;
+    private static RecipeListView recipeListView;
+    private static ShoppingListView shoppingListView;
     
     @FXML
     private static GridPane categoriesView;
@@ -217,6 +219,16 @@ public class ControllerMain extends Application{
 		
 	}
 	
+	public static void displayRecipeListView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(recipeListView);
+	}
+	
+	public static void displayShoppingListView(){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(shoppingListView);
+	}
+	
 	public static void emptyCart() {
 		cart.emptyCart();
 		
@@ -244,6 +256,8 @@ public class ControllerMain extends Application{
         startView = new StartView();
         recipeView = new RecipeView();
         profile = new Profile();
+        recipeListView = new RecipeListView();
+        shoppingListView = new ShoppingListView();
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));

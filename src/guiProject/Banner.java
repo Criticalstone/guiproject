@@ -1,8 +1,10 @@
 package guiProject;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
@@ -140,6 +142,23 @@ public class Banner extends GridPane{
     		case "start":
     	        bannerTitle.setStyle("-fx-background-image: url('res/banner/iMat.png');");
     	        bannerBackground.setStyle("-fx-background-image: url('res/banner/IMAT.jpg');");
+    	        break;
+    		default:
+    			break;
+    	}
+    }
+    
+    public void buttonAction(ActionEvent e){
+    	switch(((Node) e.getSource()).getId()){
+    		case "favorite":
+    			ControllerMain.setProductList(ControllerMain.getStaredProducts());
+    			break;
+    		case "shoppingList":
+    			ControllerMain.displayShoppingListView();
+    			break;
+    		case "recipe":
+    			ControllerMain.displayRecipeListView();
+    			break;
     		default:
     			break;
     	}
