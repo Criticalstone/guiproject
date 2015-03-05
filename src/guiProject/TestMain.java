@@ -12,7 +12,6 @@ public class TestMain extends Application {
 	
 	  @FXML
 	   private static HBox hBox;
-	  private int createCount=0;
 	  
 	public static void main(String[] args){
 		launch(args);
@@ -29,12 +28,9 @@ public class TestMain extends Application {
 		//Initialize main panels.
 		hBox = (HBox) scene.lookup("#hBox");
 		
-		if(createCount==0){
-			hBox.getChildren().add(new NewProfileAccount());
-			createCount=createCount+1;
-		}else{		
-			createLogInBox();
-		}
+		
+			hBox.getChildren().add(new CreateNewProfile());
+			//hBox.getChildren().add(new NewProfileAccount());
 
   		//Complete setup
   		scene.getStylesheets().add("/res/sample.css");
@@ -44,8 +40,8 @@ public class TestMain extends Application {
   		primaryStage.show();
 	}
 	
-	public static void createLogInBox(){
-			hBox.getChildren().add(new LogInView());
+	public static void createLogInBox(String user){
+			hBox.getChildren().add(new LogInView(user,"hej"));
 	}
 
 
