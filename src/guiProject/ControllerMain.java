@@ -10,6 +10,7 @@ import guiProject.interfaces.IFProductList;
 import java.util.ArrayList;
 import java.util.List;
 
+import Archive.TotalLogInView;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,6 +30,7 @@ public class ControllerMain extends Application{
 	
     private static IMatDataHandler imat;
     private static Scene scene;
+    private static UserProfile user;
     
     //Components
     private static ControllerResultList controllerResultList;
@@ -38,9 +40,8 @@ public class ControllerMain extends Application{
     private static Categories controllerCategories;
     private static RecipeView recipeView;
     private static StartView startView;
-    private static Profile profile;
+//    private static ProfileView profile;
     private static CheckoutView checkoutView;
-    private static User user;
     private static Customer customer;
     private static RecipeListView recipeListView;
     private static ShoppingListView shoppingListView;
@@ -57,7 +58,6 @@ public class ControllerMain extends Application{
     private static GridPane bannerPane;
     
     //For color schemes
-    
     private static ColorScheme currentColorScheme;
     private static String defaultSheet = "/res/defaultStyleSheet.css";
     
@@ -123,12 +123,6 @@ public class ControllerMain extends Application{
 		
 	}
 	
-	public static boolean login(String username, String password){
-		if (username.equals(imat.getUser().getUserName()) && password.equals(imat.getUser().getPassword())){
-			return true;
-		}
-		return false;
-	}
 
 	//SETTERS
     public static void setBanner(ProductCategory categ){
@@ -152,6 +146,10 @@ public class ControllerMain extends Application{
     	removeAllAddedSchemes();
     	scene.getStylesheets().add(color.getScheme());
     	currentColorScheme = color;
+    }
+    
+    public static void setUser(UserProfile userprofile){
+    	user = userprofile;
     }
 
 
@@ -183,11 +181,6 @@ public class ControllerMain extends Application{
 		setBanner("start");
 	}
 	
-	public static void displayDisplayProfile() {
-		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(new Profile()); 
-		
-	}
 	
 	public static void displayCheckout(){
 		detailView.getChildren().removeAll(detailView.getChildren());
@@ -205,9 +198,8 @@ public class ControllerMain extends Application{
 	
 
     public static void displayProfile(){
-        detailView.getChildren().removeAll(detailView.getChildren());
-        detailView.getChildren().add(profile);
-        profile.loadInfo();
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(new ProfileView(user)); 
     }
 	
 	public static void displayProductResultList(){
@@ -215,13 +207,18 @@ public class ControllerMain extends Application{
 		detailView.getChildren().add(controllerResultList);
 	}
 	
+//	public static void displayLoginView(TotalLogInView.NextView nextView){
+//		detailView.getChildren().removeAll(detailView.getChildren());
+//		detailView.getChildren().add(nextView);
+//	}
+	
 	//GETTERS
 	public static List<Order> getOrderHistory(){
 		return controllerShoppingLists.getOrderHistory();
 	}
 	
-    public static User getUser(){
-        return imat.getUser();
+    public static UserProfile getUser(){
+        return user;
     }
 
     public static Customer getCustomer(){
@@ -307,9 +304,9 @@ public class ControllerMain extends Application{
         controllerBanner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();
-        profile = new Profile();
         recipeListView = new RecipeListView();
         shoppingListView = new ShoppingListView();
+
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));

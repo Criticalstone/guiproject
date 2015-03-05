@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="641.0" prefWidth="700.0" style="-fx-background-color: white;" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="641.0" prefWidth="700.0" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Kortinnehavare:" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Kortinnehavare:" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -41,7 +41,7 @@
       </Label>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Kontonummer: " GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Kontonummer: " GridPane.columnIndex="1" GridPane.rowIndex="3">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -80,7 +80,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Kort:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Kort:" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -98,7 +98,7 @@
             <Insets />
          </GridPane.margin>
       </HBox>
-      <Label text="Leverans" GridPane.columnIndex="1" GridPane.rowIndex="7">
+      <Label styleClass="text-lables" text="Leverans" GridPane.columnIndex="1" GridPane.rowIndex="7">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -111,7 +111,7 @@
       </Label>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Utgångsdatum:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Utgångsdatum:" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -147,7 +147,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="CVC:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="CVC:" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -169,7 +169,7 @@
          <children>
             <HBox alignment="CENTER" spacing="5.0">
                <children>
-                  <Label text="Spara kortinfo" />
+                  <Label styleClass="text-lables" text="Spara kortinfo" />
                   <CheckBox fx:id="checkCardSave" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
                      <opaqueInsets>
                         <Insets />
@@ -177,7 +177,7 @@
                   </CheckBox>
                </children>
             </HBox>
-            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveOnAction" text="Spara" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveOnAction" styleClass="main-buttons" text="Spara" GridPane.columnIndex="1" GridPane.rowIndex="12" />
          </children>
          <GridPane.margin>
             <Insets right="10.0" />
@@ -186,16 +186,16 @@
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
          <children>
             <Label />
-            <Label text="Namn">
+            <Label styleClass="text-lables" text="Namn">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
             <Label />
-            <Button fx:id="buttonChangePass" mnemonicParsing="false" text="Byt lösenord" />
+            <Button fx:id="buttonChangePass" mnemonicParsing="false" styleClass="main-buttons" text="Byt lösenord" />
          </children>
       </VBox>
-      <Label text=" Betalningssätt" GridPane.rowIndex="9">
+      <Label styleClass="text-lables" text=" Betalningssätt" GridPane.rowIndex="9">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -211,7 +211,7 @@
       </Label>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="2">
          <children>
-            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Namn: " GridPane.rowIndex="2">
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text="Förnamn: " GridPane.rowIndex="2">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -222,19 +222,19 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textName" promptText="ex. Karl Karlsson" GridPane.rowIndex="2">
+            <TextField fx:id="textFirstName" promptText="ex. Karl" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="30.0" />
+            <Insets right="5.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="4">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="5">
          <children>
-            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Postnr: " GridPane.rowIndex="4">
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Postnr: " GridPane.rowIndex="4">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -245,7 +245,7 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textPostalCode" maxWidth="80.0" promptText="411 31" GridPane.rowIndex="4">
+            <TextField fx:id="textPostalCode" maxWidth="110.0" promptText="ex. 123 45" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>
@@ -265,7 +265,7 @@
             <Insets left="5.0" />
          </padding>
       </Label>
-      <Label text=" Personuppgifter" GridPane.rowIndex="1">
+      <Label styleClass="text-lables" text=" Personuppgifter" GridPane.rowIndex="1">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -276,9 +276,9 @@
             <Insets left="5.0" />
          </padding>
       </Label>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="5">
+      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="6">
          <children>
-            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Ort: " GridPane.rowIndex="5">
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Ort: " GridPane.rowIndex="5">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -296,12 +296,12 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="30.0" />
+            <Insets right="5.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="7">
+      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="8">
          <children>
-            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Email: " GridPane.rowIndex="7">
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Email: " GridPane.rowIndex="7">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -319,12 +319,12 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="30.0" />
+            <Insets right="5.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="6">
+      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="7">
          <children>
-            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Telefon: " GridPane.rowIndex="6">
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Telefon: " GridPane.rowIndex="6">
                <VBox.margin>
                   <Insets left="10.0" />
                </VBox.margin>
@@ -342,7 +342,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="30.0" />
+            <Insets right="5.0" />
          </GridPane.margin>
       </HBox>
       <ImageView fitHeight="151.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
@@ -350,9 +350,9 @@
             <Image url="@../../res/greyprofile.png" />
          </image>
       </ImageView>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="3">
+      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="4">
          <children>
-            <Label maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text=" Adress: " GridPane.rowIndex="3">
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Adress: " GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -360,14 +360,14 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textAdress" promptText="ex. Kapellgången 1" GridPane.rowIndex="3">
+            <TextField fx:id="textAdress" promptText="ex. Storgatan 1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="30.0" />
+            <Insets right="5.0" />
          </GridPane.margin>
       </HBox>
       <ChoiceBox fx:id="comboPaymentOpt" prefHeight="31.0" prefWidth="353.0" GridPane.rowIndex="10">
@@ -377,13 +377,13 @@
       </ChoiceBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Leveranstid:" />
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Leveranstid:" />
             <ChoiceBox fx:id="comboDeliveryTime" prefWidth="223.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="9">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Butik:">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Butik:">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -393,13 +393,22 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="10">
          <children>
-            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Leveranssätt:">
+            <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Leveranssätt:">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Label>
             <ChoiceBox fx:id="comboDeliveryOptions" prefHeight="25.0" prefWidth="223.0" />
          </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <children>
+            <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text="Efternamn:" />
+            <TextField fx:id="textLastName" promptText="ex. Karlsson" />
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
       </HBox>
    </children>
    <columnConstraints>

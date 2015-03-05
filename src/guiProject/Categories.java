@@ -204,6 +204,13 @@ public class Categories extends GridPane{
         //TODO: fix banner
     }
 
+
+    @FXML
+    public void myImatButtonAction(){
+    	ControllerMain.displayProfile();
+    }
+    
+
     class ListButton extends ToggleButton{
     	public ListButton(IFProductList list){
     		this.getStyleClass().add("menu-button");
