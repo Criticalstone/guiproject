@@ -1,5 +1,8 @@
-package guiProject;
+package Archive;
 
+
+import guiProject.CreateNewProfile;
+import guiProject.NewProfileAccount;
 
 import java.io.IOException;
 
@@ -12,6 +15,7 @@ public class TotalLogInView extends GridPane {
 	
 	@FXML
 	private HBox hBox;
+	private int createCount=0;
 	
 	public TotalLogInView(){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -26,9 +30,11 @@ public class TotalLogInView extends GridPane {
 			  throw new RuntimeException(exception);
 		  }
 		  
-		  hBox.getChildren().add(new NewProfileAccount());
-		  hBox.getChildren().add(new CreateNewProfile());
-		  
+		 if(createCount==0){
+			hBox.getChildren().add(new NewProfileAccount()); 
+		 }else{
+			 hBox.getChildren().add(new CreateNewProfile()); 
+		 }	  
 	}
   
 

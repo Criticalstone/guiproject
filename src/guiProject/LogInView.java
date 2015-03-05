@@ -29,11 +29,6 @@ public class LogInView extends GridPane {
 	
 	@FXML
 	public void ButtonLogIn(){
-		if(logInBox.isVisible()){
-			logInBox.setVisible(false);
-		}else{
-			logInBox.setVisible(true);
-		}
 			
 	}
 }

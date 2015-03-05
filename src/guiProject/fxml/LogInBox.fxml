@@ -34,7 +34,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <VBox fx:id="logInBox" prefHeight="219.0" prefWidth="216.0" visible="false">
+            <VBox fx:id="logInBox" prefHeight="219.0" prefWidth="216.0">
                <children>
                   <Label>
                      <VBox.margin>

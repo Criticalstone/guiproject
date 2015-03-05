@@ -22,8 +22,6 @@ public class NewProfileAccount extends GridPane{
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
-		  
-		  
 	}
 	
 	@FXML
