@@ -11,18 +11,7 @@
 	-fx-background-image: url("gold-star-clipart-big_gold_star_toggled.png");
 }
 
-.menu-button{
-	-fx-background-color: null;
-	-fx-alignment: CENTER_LEFT;
-}
- 
-.menu-button:selected{
-	-fx-background-color: #ccffff;
-}
 
-.menu-button:hover{
-	-fx-font-weight: bold;
-}
 
 .pane{
 	-fx-background-repeat: stretch; 

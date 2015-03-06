@@ -109,7 +109,6 @@ public class ControllerMain extends Application{
     
 	public static void addFavoriteList(String name){
 		controllerShoppingLists.addFavoriteList(name);
-		controllerCategories.displayLists();	
 	}
 
     public static void performSearch(String query){
