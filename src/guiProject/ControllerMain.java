@@ -190,6 +190,7 @@ public class ControllerMain extends Application{
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(shoppingList);
         shoppingList.updateOrdersListView();
+        shoppingList.updateShoppingListView();
     	unSelectCategories();
     	setBanner("start");
 	}
