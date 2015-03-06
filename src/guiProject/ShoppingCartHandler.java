@@ -2,6 +2,7 @@ package guiProject;
 
 import com.sun.javafx.collections.ObservableListWrapper;
 
+import guiProject.ControllerMain.ColorScheme;
 import guiProject.interfaces.IFObserver;
 import guiProject.interfaces.IFSubject;
 import javafx.event.*;
