@@ -206,12 +206,6 @@ public class Categories extends GridPane{
         ControllerMain.setProductFromCategory(categ);
         ControllerMain.setBanner(categ.toString());
     }
-
-
-    @FXML
-    public void myImatButtonAction(){
-    	ControllerMain.displayProfile();
-    }
     
 
     class ListButton extends ToggleButton{
