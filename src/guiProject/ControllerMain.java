@@ -7,10 +7,14 @@ import guiProject.CheckoutView.PaymentOption;
 import se.chalmers.ait.dat215.project.*;
 import guiProject.interfaces.IFProductList;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArrayBase;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -139,8 +143,13 @@ public class ControllerMain extends Application{
     }
     
     public static void setColorScheme(ColorScheme color){
-    	removeAllAddedSchemes();
-    	scene.getStylesheets().add(color.getScheme());
+//    	removeAllAddedSchemes();
+    	List<String> styles = new ArrayList<String>();
+    	styles.add(defaultSheet);
+    	styles.add(color.getScheme());
+    	ObservableList<String> toAdd = FXCollections.observableArrayList(styles);
+    	
+    	scene.getStylesheets().setAll(toAdd);
     	currentColorScheme = color;
     }
 
@@ -267,7 +276,6 @@ public class ControllerMain extends Application{
     }
 
     public static void placeOrder(){
-        System.out.println(imat.getShoppingCart().getItems().size());
         imat.placeOrder();
     }
 
@@ -319,7 +327,7 @@ public class ControllerMain extends Application{
 	private static void removeAllAddedSchemes() {
 		for (String sheet: scene.getStylesheets()){
     		if (!sheet.equals(defaultSheet)){
-    			scene.getStylesheets().removeAll(sheet);
+    			scene.getStylesheets().remove(sheet);
     		}
     	}
 	}
@@ -369,12 +377,11 @@ public class ControllerMain extends Application{
 
 
         
-        //Complete setup
-        scene.getStylesheets().add(defaultSheet);
-        
+        //Complete setup    
         primaryStage.setScene(scene);
         primaryStage.show();
-        setColorScheme(ColorScheme.BLUE);
+        setColorScheme(ColorScheme.DARK);
+
 
     }
 
@@ -394,10 +401,8 @@ public class ControllerMain extends Application{
 	//Add statements to this method to run test data in the environment.
 	private static void testDataTEMPORARY() {
 
-        //TESTING the shoppinglist
-        addProductToCart(imat.getProduct(1), 3);
-        addProductToCart(imat.getProduct(4), 10);
-        placeOrder();
+		
+
     }
 
 
