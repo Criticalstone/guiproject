@@ -202,7 +202,7 @@ public class Banner extends GridPane{
 ////    		if(ProfileView.getLoggedInStatus()){
 ////    			myProfileButton.setText(ControllerMain.getUser().getUsername());
 ////    		}else{
-//    			myProfileButton.setText("Du är inloggad");
+//    			myProfileButton.setText("Du ï¿½r inloggad");
 ////    		}
 ////    	}catch(NullPointerException e){
 //    		System.out.println("NullPointerException 3");
