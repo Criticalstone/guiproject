@@ -27,7 +27,7 @@
       </ImageView>
       <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="254.0" prefWidth="216.0" GridPane.rowIndex="1">
          <children>
-            <Label text="Namn">
+            <Label styleClass="text-lables" text="Namn">
                <VBox.margin>
                   <Insets left="5.0" />
                </VBox.margin>
@@ -40,7 +40,7 @@
                   <Insets left="5.0" right="10.0" />
                </VBox.margin>
             </TextField>
-            <Label text="Lösenord">
+            <Label styleClass="text-lables" text="Lösenord">
                <VBox.margin>
                   <Insets left="5.0" />
                </VBox.margin>
@@ -50,7 +50,7 @@
                   <Insets left="5.0" right="10.0" />
                </VBox.margin>
             </PasswordField>
-            <Label text="Upprepa lösenord">
+            <Label styleClass="text-lables" text="Upprepa lösenord">
                <VBox.margin>
                   <Insets left="5.0" />
                </VBox.margin>
@@ -69,7 +69,7 @@
                </VBox.margin>
             </Label>
             <Label />
-            <Button mnemonicParsing="false" onAction="#ButtonCreateNewAccount" text="Skapa konto">
+            <Button mnemonicParsing="false" onAction="#ButtonCreateNewAccount" styleClass="main-buttons" text="Skapa konto">
                <VBox.margin>
                   <Insets bottom="5.0" left="52.0" />
                </VBox.margin>

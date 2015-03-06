@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="300.0" />
       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="300.0" />
@@ -21,22 +21,22 @@
       <RowConstraints maxHeight="1.7976931348623157E308" minHeight="8.0" prefHeight="57.0" valignment="TOP" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="Mina inköpslistor" GridPane.columnSpan="2">
+      <Label styleClass="text-lables" text="Mina inköpslistor" GridPane.columnSpan="2">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label text="Inköpslista" GridPane.rowIndex="1">
+      <Label styleClass="text-lables" text="Inköpslista" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="3.0" />
          </GridPane.margin>
       </Label>
-      <Label text="Varor" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Label styleClass="text-lables" text="Varor" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="3.0" />
          </GridPane.margin>
       </Label>
-      <ListView fx:id="listShopping" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+      <ListView fx:id="listShopping" prefHeight="200.0" prefWidth="200.0" styleClass="list-background" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
@@ -46,26 +46,26 @@
             <Insets left="10.0" right="36.0" />
          </GridPane.margin>
       </TextField>
-      <Button mnemonicParsing="false" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+      <Button mnemonicParsing="false" styleClass="addsub-buttons" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets right="10.0" />
          </GridPane.margin>
       </Button>
-      <Label text="Orderhistorik" GridPane.rowIndex="4">
+      <Label styleClass="text-lables" text="Orderhistorik" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="3.0" />
          </GridPane.margin>
       </Label>
-      <ListView fx:id="listOrder" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+      <ListView fx:id="listOrder" prefHeight="200.0" prefWidth="200.0" styleClass="list-background" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
       </ListView>
-      <ListView fx:id="listProducts" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="4">
+      <ListView fx:id="listProducts" prefHeight="200.0" prefWidth="200.0" styleClass="list-background" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="4">
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
       </ListView>
-      <Button fx:id="buttonAddToCart" mnemonicParsing="false" text="Lägg till varukorg" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Button fx:id="buttonAddToCart" mnemonicParsing="false" styleClass="main-buttons" text="Lägg till varukorg" GridPane.columnIndex="1" GridPane.rowIndex="6" />
    </children>
 </fx:root>

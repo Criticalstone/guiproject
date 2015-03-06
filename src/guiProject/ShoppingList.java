@@ -101,6 +101,11 @@ public class ShoppingList extends GridPane {
             super();
             this.observer = shoppingListObserver;
             this.item = item;
+            this.getStyleClass().add("list-cell");
+            this.setBackground(null);
+            name.getStyleClass().add("list-text");
+            plus.getStyleClass().add("addsub-buttons");
+            minus.getStyleClass().add("addsub-buttons");
             String tabs = "\t\t\t\t\t";
             for(int i = 0; i < Math.floor(item.getProduct().getName().length()/4); i++){
                 tabs = tabs.substring(1);
@@ -141,7 +146,7 @@ public class ShoppingList extends GridPane {
             quantity.getChildren().addAll(minus, numberOf, plus);
             quantity.setAlignment(Pos.CENTER_RIGHT);
             setSpacing(30);
-
+            
             this.getChildren().addAll(name, quantity);
         }
 
@@ -180,6 +185,9 @@ public class ShoppingList extends GridPane {
             super();
             this.observer = new CustomListObserver();
             this.order = order;
+            this.setBackground(null);
+            this.getStyleClass().add("list-cell");
+            label.getStyleClass().add("list-text");
             label.setText("Order: " + order.getOrderNumber() + " : " + order.getDate().toString());
             label.setMaxWidth(Double.MAX_VALUE);
             HBox.setHgrow(label, Priority.ALWAYS);
@@ -229,6 +237,9 @@ public class ShoppingList extends GridPane {
             super();
             this.observer = shoppingListObserver;
             this.list = list;
+            this.setBackground(null);
+            this.getStyleClass().add("list-cell");
+            label.getStyleClass().add("list-text");
             label.setText(list.getName() + " : " + list.getTimeStamp());
             label.setMaxWidth(Double.MAX_VALUE);
             remove.setAlignment(Pos.CENTER_RIGHT);

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="518.0" prefWidth="795.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="518.0" prefWidth="795.0" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -17,7 +17,7 @@
    </rowConstraints>
    <children>
       <HBox fx:id="hBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-      <Label text="Mitt iMat" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label styleClass="text-lables" text="Mitt iMat" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

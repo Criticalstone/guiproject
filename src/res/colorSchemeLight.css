@@ -1,3 +1,7 @@
+.text-lables{
+	-fx-text-fill: linear-gradient(white, #d0d0d0);
+}
+
 .card-background{
 	-fx-background-color: white;
 	-fx-border-color: black;
@@ -6,19 +10,19 @@
 
 
 .details-background{
-	-fx-background-color: #7A005C;
+	-fx-background-color: #eeeeee;
 }
 
 .categories-background{
-	-fx-background-color: #A92C88;
+	-fx-background-color: #B6B6B6;
 }
 
 .toolbar-color{
-	-fx-background-color: #A92C88;
+	-fx-background-color: #B6B6B6;
 }
 
 .shopping-cart-background{
-	-fx-background-color: #A92C88;
+	-fx-background-color: #B6B6B6;
 }
 
 .list-text{
@@ -27,20 +31,20 @@
 }
 
 .list-background{
-	-fx-background-color: #DD37B4;
+	-fx-background-color: #D1D1D1;
 }
 
 .list-cell:odd{
-	-fx-background-color: #DD37B4;
+	-fx-background-color: #D1D1D1;
 }
 
 .list-cell:even{
-	-fx-background-color: #CB2CA1;
+	-fx-background-color: #DFDFDF;
 }
 
 
 .main-buttons{
-    -fx-background-color: #9B001C;
+    -fx-background-color: #0088cc;
     -fx-background-radius: 5,4,3,5;
     -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
@@ -60,17 +64,17 @@
 
 .main-buttons:selected {
     -fx-padding: 2 0 0 2;
-    -fx-background-color: #7A0014;
+    -fx-background-color: #0095DF;
 
 }
 
 .main-buttons:hover{
-    -fx-background-color: #7A0014;
+    -fx-background-color: #0095DF;
 
 }
 
 .addsub-buttons{
-    -fx-background-color: #9B001C;
+    -fx-background-color: #0088cc;
     -fx-background-radius: 5,4,3,5;
     -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
@@ -87,12 +91,12 @@
 }
 
 .addsub-buttons:hover{
-    -fx-background-color: #7A0014;
+    -fx-background-color: #0095DF;
 
 }
 
 .icon-buttons{
-    -fx-background-color: #9B001C;
+    -fx-background-color: #0088cc;
     -fx-background-radius: 5,4,3,5;
     -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
@@ -112,13 +116,10 @@
 }
 
 .icon-buttons:hover{
-    -fx-background-color: #7A0014;
+    -fx-background-color: #0095DF;
 
 }
 
-.text-lables{
-	-fx-text-fill: linear-gradient(white, #d0d0d0);
-}
 
 
 .category-menu-list-item{
@@ -134,12 +135,12 @@
 }
 
 .menu-button:hover{
-	 -fx-background-color: #7A0014;
+	 -fx-background-color: #0095DF;
 	 -fx-text-fill: white;
 }
 
 .menu-button:selected{
-	-fx-background-color: #9B001C;
+	-fx-background-color: #0088cc;
 	-fx-text-fill: white;
 }
 
@@ -153,14 +154,14 @@
 	-fx-text-fill: white;
 }
 .titled-pane > .title {
-	-fx-background-color:  #9B001C;
+	-fx-background-color:  #0088cc;
 	/*-fx-box-border, -fx-inner-border,*/
 	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */ 
 
 }
 
 .titled-pane:hover > .title {
-    -fx-background-color: #7A0014;
+    -fx-background-color: #0095DF;
 
 }
 
@@ -187,7 +188,7 @@
 }
 
 .titled-pane > *.content {
-	-fx-background-color: #DD37B4;
+	-fx-background-color: #71A0D1;
  }
  
 .titled-pane:focused > .title > .arrow-button .arrow {

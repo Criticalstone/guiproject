@@ -93,7 +93,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <Label fx:id="usernameLabel" onMousePressed="#nameLabelOnAction" visible="false">
+                  <Label fx:id="usernameLabel" onMousePressed="#nameLabelOnAction" styleClass="text-lables" visible="false">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin>

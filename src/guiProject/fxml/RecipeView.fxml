@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root fx:id="recipeView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="721.0" stylesheets="@../../res/recipeView.css" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="recipeView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="721.0" styleClass="details-background" stylesheets="@../../res/recipeView.css" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -37,14 +37,14 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </ImageView>
-            <Label text="Recept | Medel | Tid: 30min">
+            <Label styleClass="text-lables" text="Recept | Medel | Tid: 30min">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
             <VBox GridPane.rowIndex="1">
                <children>
-                  <Label layoutX="14.0" layoutY="28.0" text="Tacogratäng">
+                  <Label layoutX="14.0" layoutY="28.0" styleClass="text-lables" text="Tacogratäng">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -52,7 +52,7 @@
                   <HBox layoutX="14.0" layoutY="53.0" prefHeight="16.0" prefWidth="131.0">
                      <children>
                         <Region layoutX="14.0" layoutY="44.0" prefHeight="16.0" prefWidth="80.0" style="-fx-border-color: yellow;" />
-                        <Label layoutX="89.0" layoutY="44.0" prefHeight="16.0" prefWidth="50.0" text="0 röster" />
+                        <Label layoutX="89.0" layoutY="44.0" prefHeight="16.0" prefWidth="50.0" styleClass="text-lables" text="0 röster" />
                      </children>
                   </HBox>
                </children>
@@ -67,9 +67,9 @@
             </TextArea>
             <HBox GridPane.rowIndex="3">
                <children>
-                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" text="Spara" />
-                  <Button layoutX="80.0" layoutY="8.0" mnemonicParsing="false" text="Betygsätt" />
-                  <Button layoutX="164.0" layoutY="8.0" mnemonicParsing="false" onAction="#addToCartEvent" text="Lägg till kundvagn" />
+                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" styleClass="main-buttons" text="Spara" />
+                  <Button layoutX="80.0" layoutY="8.0" mnemonicParsing="false" styleClass="main-buttons" text="Betygsätt" />
+                  <Button layoutX="164.0" layoutY="8.0" mnemonicParsing="false" onAction="#addToCartEvent" styleClass="main-buttons" text="Lägg till kundvagn" />
                </children>
                <padding>
                   <Insets left="5.0" />
@@ -90,7 +90,7 @@
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: Gray;" text="1. Sätt ugnen på 225°C.&#10;2. Koka riset. Läs på förpackningen hur man gör.&#10;3. Gratäng: Hetta upp oljan i en stekpanna. 4. Lägg ner färsen, dela den och stek den klar under omrörning. Den ska bli smulig.&#10;4. Rör i tacokryddan i köttfärsen. Blanda ner pastasåsen och vattnet och allt låt koka upp. Rör då och då. Häll det i en ugnssäker form.&#10;5. Låt majsen rinna av och skär tomaterna i skivor.&#10;Lägg tomaterna och hälften av majsen jämnt fördelat på köttfärsen. Bred över gratängcrèmen. Sätt in formen mitt i ugnen ca 10 minuter så att den blir varm och får lite färg.&#10;7. Grönsaker: Skala löken och gurkan. Hacka löken och tärna gurkan.&#10;8. Servera tacogratängen med ris, resten av majsen, gurka och rödlök." wrapText="true" GridPane.columnIndex="1" />
             <VBox>
                <children>
-                  <Label prefHeight="16.0" prefWidth="87.0" text="Ingridienser">
+                  <Label prefHeight="16.0" prefWidth="87.0" styleClass="text-lables" text="Ingridienser">
                      <padding>
                         <Insets left="10.0" />
                      </padding>
@@ -103,7 +103,7 @@
             </VBox>
             <VBox GridPane.columnIndex="2">
                <children>
-                  <Label layoutX="14.0" layoutY="6.0" text="Fler recept">
+                  <Label layoutX="14.0" layoutY="6.0" styleClass="text-lables" text="Fler recept">
                      <padding>
                         <Insets left="5.0" />
                      </padding>

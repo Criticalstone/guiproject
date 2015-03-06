@@ -4,12 +4,25 @@
 	-fx-border-width: 2;
 }
 
-.shopping-cart-item-background{
-	-fx-background-color: #4F8FD1;
-}
-
 .details-background{
 	-fx-background-color: #A60C00;
+}
+
+.list-text{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.list-background{
+	-fx-background-color: #DA0F00;
+}
+
+.list-cell:odd{
+	-fx-background-color: #DA0F00;
+}
+
+.list-cell:even{
+	-fx-background-color: #C30D00;
 }
 
 .categories-background{
@@ -24,10 +37,6 @@
 	-fx-background-color: #861D16;
 }
 
-.shopping-cart-list-background{
-	-fx-background-color: #DA0F00;
-
-}
 
 
 .main-buttons{

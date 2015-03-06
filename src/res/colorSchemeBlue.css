@@ -1,12 +1,13 @@
+.text-lables{
+	-fx-text-fill: linear-gradient(white, #d0d0d0);
+}
+
 .card-background{
 	-fx-background-color: white;
 	-fx-border-color: black;
 	-fx-border-width: 2;
 }
 
-.shopping-cart-item-background{
-	-fx-background-color: #4F8FD1;
-}
 
 .details-background{
 	-fx-background-color: #0A3B6E;
@@ -24,9 +25,21 @@
 	-fx-background-color: #1C5FA5;
 }
 
-.shopping-cart-list-background{
-	-fx-background-color: #71A0D1;
+.list-text{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
 
+.list-background{
+	-fx-background-color: #71A0D1;
+}
+
+.list-cell:odd{
+	-fx-background-color: #71A0D1;
+}
+
+.list-cell:even{
+	-fx-background-color: #4D88CB;
 }
 
 
@@ -107,9 +120,6 @@
 
 }
 
-.text-lables{
-	-fx-text-fill: linear-gradient(white, #d0d0d0);
-}
 
 
 .category-menu-list-item{

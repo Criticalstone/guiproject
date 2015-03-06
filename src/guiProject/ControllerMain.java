@@ -67,7 +67,8 @@ public class ControllerMain extends Application{
         DARK("/res/colorSchemeDark.css"),
         BLUE("/res/colorSchemeBlue.css"),
         RED("/res/colorSchemeRed.css"),
-        PINK("/res/colorSchemePink.css");
+        PINK("/res/colorSchemePink.css"),
+        LIGHT("/res/colorSchemeLight.css");
 
         private String colorScheme;
 
@@ -378,7 +379,7 @@ public class ControllerMain extends Application{
         //Complete setup    
         primaryStage.setScene(scene);
         primaryStage.show();
-        setColorScheme(ColorScheme.DARK);
+        setColorScheme(ColorScheme.LIGHT);
 
 
     }

@@ -6,29 +6,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Mina recepet" GridPane.columnSpan="2">
+      <Label styleClass="text-lables" text="Mina recepet" GridPane.columnSpan="2">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label text="Recept" GridPane.rowIndex="1">
+      <Label styleClass="text-lables" text="Recept" GridPane.rowIndex="1">
          <padding>
             <Insets bottom="3.0" />
          </padding>
       </Label>
-      <Label text="Varor" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Label styleClass="text-lables" text="Varor" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <padding>
             <Insets bottom="3.0" />
          </padding>
       </Label>
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+      <ListView prefHeight="200.0" prefWidth="200.0" styleClass="list-background" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
       </ListView>
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <ListView prefHeight="200.0" prefWidth="200.0" styleClass="list-background" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
@@ -38,12 +38,12 @@
             <Insets left="10.0" right="36.0" />
          </GridPane.margin>
       </TextField>
-      <Button mnemonicParsing="false" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+      <Button mnemonicParsing="false" styleClass="addsub-buttons" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets right="10.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" text="Lägg till varukorg" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" styleClass="main-buttons" text="Lägg till varukorg" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    </children>
    <columnConstraints>
       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />

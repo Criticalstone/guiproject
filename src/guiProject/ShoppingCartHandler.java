@@ -84,7 +84,7 @@ public class ShoppingCartHandler extends GridPane{
                 return new CartListCell();
             }
         });
-
+        
         listView.setPadding(new Insets(5, 0, 0, 0));
     }
 
@@ -183,6 +183,10 @@ public class ShoppingCartHandler extends GridPane{
 
         public CartListCell(){
             this.addObserver(new CartListObserver());
+            this.getStyleClass().add("list-cell");
+            this.getStyleClass().add("list-cell-shoppinglist");
+            
+            
         }
 
         @Override
@@ -190,6 +194,7 @@ public class ShoppingCartHandler extends GridPane{
             super.updateItem(item, empty);
             if (item != null) {
                 HBox main = new HBox();
+                main.setMinHeight(105);
                 VBox details = new VBox();
                 HBox quantity = new HBox();
 
@@ -197,8 +202,11 @@ public class ShoppingCartHandler extends GridPane{
                 shoppingItem = getShoppItemFromProd(p);
 
                 Label name = new Label(p.getName());
+                name.getStyleClass().add("list-text");               
                 Label price = new Label(Utilities.zeroPaddedPrice(p.getPrice()) + " kr");
+                price.getStyleClass().add("list-text");
                 Button minus = new Button("-");
+                minus.getStyleClass().add("addsub-buttons");
                 minus.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
@@ -223,6 +231,7 @@ public class ShoppingCartHandler extends GridPane{
                 numberOf.setOnAction(eventHandler);
 
                 Button plus = new Button("+");
+                plus.getStyleClass().add("addsub-buttons");
                 plus.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
@@ -240,6 +249,7 @@ public class ShoppingCartHandler extends GridPane{
                 imageContainer.getChildren().addAll(image);
 
                 Button removeButton = new Button("X");
+                removeButton.getStyleClass().add("addsub-buttons");
                 removeButton.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {

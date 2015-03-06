@@ -19,3 +19,7 @@
 	-fx-background-color: RED;
 }
 
+.list-cell-shoppinglist{
+	-fx-cell-size: 115;
+}
+

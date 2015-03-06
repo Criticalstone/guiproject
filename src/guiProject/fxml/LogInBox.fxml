@@ -26,7 +26,7 @@
       </ToggleButton>
       <VBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="218.0" prefWidth="216.0" GridPane.rowIndex="1">
          <children>
-            <Label fx:id="username" alignment="CENTER" prefHeight="25.0" prefWidth="213.0" text="Karl Karlsson">
+            <Label fx:id="username" alignment="CENTER" prefHeight="25.0" prefWidth="213.0" styleClass="text-lables" text="Karl Karlsson">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -40,7 +40,7 @@
                      <VBox.margin>
                         <Insets top="2.0" />
                      </VBox.margin></Label>
-                  <Label text="Lösenord">
+                  <Label styleClass="text-lables" text="Lösenord">
                      <VBox.margin>
                         <Insets left="5.0" top="6.0" />
                      </VBox.margin>
@@ -50,7 +50,7 @@
                         <Insets left="5.0" right="10.0" />
                      </VBox.margin>
                   </PasswordField>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="31.0" prefWidth="89.0" text="Logga In">
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="31.0" prefWidth="89.0" styleClass="main-buttons" text="Logga In">
                      <VBox.margin>
                         <Insets bottom="5.0" left="60.0" top="10.0" />
                      </VBox.margin>

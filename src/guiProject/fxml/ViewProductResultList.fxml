@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" type="ScrollPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="details-background" type="ScrollPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <TilePane fx:id="tilePaneResultArea" hgap="20.0" prefColumns="0" prefRows="0" styleClass="details-background" vgap="20.0">
          <padding>
