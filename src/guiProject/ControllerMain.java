@@ -7,10 +7,9 @@ import guiProject.CheckoutView.PaymentOption;
 import se.chalmers.ait.dat215.project.*;
 import guiProject.interfaces.IFProductList;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-import Archive.TotalLogInView;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,8 +25,7 @@ import javafx.stage.Stage;
  */
 //Maybe this class should be set as a singleton?
 public class ControllerMain extends Application{
-	
-	
+
     private static IMatDataHandler imat;
     private static Scene scene;
     private static UserProfile user;
@@ -107,8 +105,8 @@ public class ControllerMain extends Application{
     	
     }
     
-	public static void addFavoriteList(String name){
-		controllerShoppingLists.addFavoriteList(name);
+	public static void addShoppingList(String name){
+		controllerShoppingLists.addShoppingList(name);
 	}
 
     public static void performSearch(String query){
@@ -118,7 +116,6 @@ public class ControllerMain extends Application{
 
 	public static void emptyCart() {
 		controllershoppingCart.emptyCart();
-		
 	}
 	
 
@@ -185,13 +182,14 @@ public class ControllerMain extends Application{
 	public static void displayRecipeListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(recipeListView);
-    	unSelectCategories();
-    	setBanner("start");
-	}
+        unSelectCategories();
+        setBanner("start");
+    }
 	
 	public static void displayShoppingListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(shoppingList);
+        shoppingList.updateOrdersListView();
     	unSelectCategories();
     	setBanner("start");
 	}
@@ -233,8 +231,8 @@ public class ControllerMain extends Application{
         return imat.getCustomer();
     }
     
-    public static List<IFProductList> getFavoriteLists(){
-    	return controllerShoppingLists.getFavoriteLists();
+    public static HashMap<String, IFProductList<ShoppingItem>> getFavoriteLists(){
+    	return controllerShoppingLists.getShoppingLists();
     }
 
 	public static List<Product> getStaredProducts() {

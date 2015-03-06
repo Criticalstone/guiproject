@@ -1,66 +1,69 @@
 package guiProject;
 
-import guiProject.interfaces.IFShoppingList;
+import guiProject.interfaces.IFProductList;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
 import se.chalmers.ait.dat215.project.Product;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
-public class SavedShoppingList implements IFShoppingList{
+public class SavedShoppingList implements IFProductList<ShoppingItem>{
 
 	private static final long serialVersionUID = -4789214486011266428L;
-	private List<Product> productList;
+	private List<ShoppingItem> productList;
 	private String name;
+    private Date timeStamp;
 	
 	public SavedShoppingList(String name){
 		this.name = name;
-		productList = new ArrayList<Product>();
+        this.timeStamp = new Date();
+		productList = new ArrayList<ShoppingItem>();
+
 	}
 
-
 	@Override
-	public boolean containProduct(Product p) {
+	public boolean containProduct(ShoppingItem p) {
 		return productList.contains(p);
 	}
 
-
+    public Date getTimeStamp(){
+        return (Date)timeStamp.clone();
+    }
 
 	@Override
 	public String getName() {
 		return name;
 	}
-	
-
 
 	@Override
-	public void addProduct(Product p) {
+	public void addProduct(ShoppingItem p) {
 		productList.add(p);
 		
 	}
 
 	@Override
-	public void removeProduct(Product p) {
+	public void removeProduct(ShoppingItem p) {
 		productList.remove(p);
 		
 	}
 
 	@Override
-	public List<Product> getProducts() {
-		return new ArrayList<Product>(productList);
+	public List<ShoppingItem> getProducts() {
+		return new ArrayList<ShoppingItem>(productList);
 	}
 
 
 	@Override
-	public void addList(List<Product> products) {
+	public void addList(List<ShoppingItem> products) {
 		productList.addAll(products);
-		
 	}
 
 
 	@Override
-	public void removeProductList(List<Product> products) {
+	public void removeProductList(List<ShoppingItem> products) {
 		productList.removeAll(products);
 		
 	}

@@ -3,16 +3,16 @@ package guiProject;
 import java.util.ArrayList;
 import java.util.List;
 
+import guiProject.interfaces.IFProductList;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
-import guiProject.interfaces.IFStarList;
 
 /**
  * A list of all items set with a star. This list is also connected to the Backend.
  * @author Anton
  *
  */
-public class StarList implements IFStarList{
+public class StarList implements IFProductList<Product>{
 
 	private static final long serialVersionUID = -8665428642080036392L;
 	String name;

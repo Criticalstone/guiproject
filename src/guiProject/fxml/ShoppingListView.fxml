@@ -65,7 +65,7 @@
                         <Insets left="10.0" right="10.0" />
                      </GridPane.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" text="Lägg till varukorg" GridPane.rowIndex="2">
+                  <Button fx:id="buttonAddToCart" mnemonicParsing="false" text="Lägg till varukorg" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>

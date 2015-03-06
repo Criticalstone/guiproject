@@ -1,17 +1,17 @@
 package guiProject;
 
 import guiProject.interfaces.IFProductList;
-import guiProject.interfaces.IFStarList;
-
 import java.io.Serializable;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.Product;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 
 /**
@@ -22,21 +22,20 @@ import se.chalmers.ait.dat215.project.Product;
 public class ControllerShoppingLists implements Serializable{
 	
 	private final long serialVersionUID = 3054308858388647312L;
-    private List<IFProductList> favoriteLists;
-    private IFStarList starList = new StarList();
+    private HashMap<String, IFProductList<ShoppingItem>> shoppingLists;
+    private IFProductList<Product> starList = new StarList();
     private static ControllerShoppingLists singleton;
     private IMatDataHandler imat;
 
    
     private ControllerShoppingLists(){
-    	favoriteLists = new ArrayList<IFProductList>();
+    	shoppingLists = new HashMap<>();
         imat = IMatDataHandler.getInstance();
     }
     
     public static synchronized ControllerShoppingLists getInstance(){
     	if (singleton == null){
     		singleton = new ControllerShoppingLists();
- 
     	}
     	return singleton;
     }
@@ -58,8 +57,8 @@ public class ControllerShoppingLists implements Serializable{
 		}
 	}
 	
-	public List<IFProductList> getFavoriteLists(){
-		return favoriteLists;
+	public HashMap<String, IFProductList<ShoppingItem>> getShoppingLists(){
+		return shoppingLists;
 	}
 	
 	public List<Order> getOrderHistory(){
@@ -67,9 +66,17 @@ public class ControllerShoppingLists implements Serializable{
         return imat.getOrders();
 	}
 	
-	public void addFavoriteList(String name){
-		favoriteLists.add(new SavedShoppingList(name));
+	public void addShoppingList(String name){
+		shoppingLists.put(name, new SavedShoppingList(name));
 	}
+
+    public void addProductToList(String list, ShoppingItem item){
+
+    }
+
+    public void addProductToList(String list, List<ShoppingItem> items){
+
+    }
 	
 
 	
