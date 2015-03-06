@@ -43,38 +43,42 @@ public class Categories extends GridPane{
     private TitledPane initMeat(){
         List<ToggleButton> buttons = new ArrayList<>();
 
-        buttons.add(new ToggleButton("NÃ¶tkÃ¶tt"));
+        buttons.add(new ToggleButton("Nötkött"));
         buttons.add(new ToggleButton("Kyckling"));
         buttons.add(new ToggleButton("Fisk"));
         buttons.get(0).setId("BEEFMEAT");
         buttons.get(1).setId("CHICKEN");
         buttons.get(2).setId("FISH");
 
+        VBox inside = new VBox();
         for(ToggleButton button : buttons){
             button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+            button.setMinWidth(120);
             setButtonStyle(button);
         }
 
         buttonGroup.getToggles().addAll(buttons);
 
-        VBox inside = new VBox();
+
+        inside.setFillWidth(true);
         inside.getChildren().addAll(buttons);
-        TitledPane res = new TitledPane("KÃ¶tt", inside);
+        TitledPane res = new TitledPane("Kött", inside);
+//        res.getStyleClass().add("category-menu-list-item");
         return res;
     }
 
     private TitledPane initFriut(){
         List<ToggleButton> buttons = new ArrayList<>();
-        buttons.add(new ToggleButton("BÃ¤r"));
+        buttons.add(new ToggleButton("Bär"));
         buttons.add(new ToggleButton("Citrusfrukter"));
         buttons.add(new ToggleButton("Exotiska frukter"));
         buttons.add(new ToggleButton("Meloner"));
         buttons.add(new ToggleButton("Stenfrukter"));
         buttons.add(new ToggleButton("Rotfrukter"));
-        buttons.add(new ToggleButton("KÃ¥l"));
-        buttons.add(new ToggleButton("BaljvÃ¤xter"));
+        buttons.add(new ToggleButton("Kål"));
+        buttons.add(new ToggleButton("Baljväxter"));
         buttons.add(new ToggleButton("Potatis"));
-        buttons.add(new ToggleButton("Ã–rter"));
+        buttons.add(new ToggleButton("Örter"));
         buttons.get(0).setId("BERRY");
         buttons.get(1).setId("CITRUS_FRUIT");
         buttons.get(2).setId("EXOTIC_FRUIT");
@@ -96,7 +100,7 @@ public class Categories extends GridPane{
 
         VBox inside = new VBox();
         inside.getChildren().addAll(buttons);
-        TitledPane res = new TitledPane("Frukt och grÃ¶nt", inside);
+        TitledPane res = new TitledPane("Frukt och grönt", inside);
         return res;
     }
 
@@ -115,11 +119,11 @@ public class Categories extends GridPane{
 
     private TitledPane initPantry(){
         List<ToggleButton> buttons = new ArrayList<>();
-        buttons.add(new ToggleButton("BrÃ¶d"));
-        buttons.add(new ToggleButton("MjÃ¶l"));
+        buttons.add(new ToggleButton("Bröd"));
+        buttons.add(new ToggleButton("Mjöl"));
         buttons.add(new ToggleButton("Socker"));
         buttons.add(new ToggleButton("Salt"));
-        buttons.add(new ToggleButton("NÃ¶tter & frÃ¶n"));
+        buttons.add(new ToggleButton("Nötter & frön"));
         buttons.add(new ToggleButton("Pasta"));
         buttons.add(new ToggleButton("Potatis"));
         buttons.add(new ToggleButton("Ris"));
@@ -166,7 +170,7 @@ public class Categories extends GridPane{
     }
 
     private TitledPane initSweet(){
-        ToggleButton button = new ToggleButton("SÃ¶tsaker");
+        ToggleButton button = new ToggleButton("Sötsaker");
         button.setId("SWEET");
         button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
         setButtonStyle(button);
@@ -174,7 +178,7 @@ public class Categories extends GridPane{
 
         VBox inside = new VBox();
         inside.getChildren().add(button);
-        TitledPane res = new TitledPane("SÃ¶tsaker", inside);
+        TitledPane res = new TitledPane("Sötsaker", inside);
         return res;
     }
     
@@ -187,13 +191,6 @@ public class Categories extends GridPane{
     	
     }
     
-    public void displayLists() {
-    	favoritesList.getChildren().removeAll(favoritesList.getChildren());
-		for (IFProductList list: ControllerMain.getFavoriteLists()){
-			addFavoriteList(list);
-		}
-		
-	}
 
 	public void addFavoriteList(IFProductList list){
     	favoritesList.getChildren().add(new ListButton(list));

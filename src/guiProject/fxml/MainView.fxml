@@ -30,7 +30,7 @@
                 <RowConstraints maxHeight="1.7976931348623157E308" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <GridPane fx:id="categoriesView" GridPane.hgrow="NEVER" GridPane.vgrow="ALWAYS">
+            <GridPane fx:id="categoriesView" styleClass="categories-background" GridPane.hgrow="NEVER" GridPane.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
               </columnConstraints>
