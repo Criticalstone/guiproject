@@ -156,6 +156,7 @@ public class ShoppingCartHandler extends GridPane{
     public void checkoutButtonAction(ActionEvent e){
     	ControllerMain.displayCheckout();
     	ControllerMain.setBanner("kassa");
+    	ControllerMain.collapseCategories();
     }
 
     public void buyNowButtonAction(ActionEvent e){

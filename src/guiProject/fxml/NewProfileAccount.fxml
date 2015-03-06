@@ -32,7 +32,7 @@
                   <Insets left="5.0" />
                </VBox.margin>
             </Label>
-            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" promptText="ex. Karl Karlsson">
+            <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" promptText="ex. Karl Karlsson">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -45,7 +45,7 @@
                   <Insets left="5.0" />
                </VBox.margin>
             </Label>
-            <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0">
+            <PasswordField fx:id="firstPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0">
                <VBox.margin>
                   <Insets left="5.0" right="10.0" />
                </VBox.margin>
@@ -55,13 +55,21 @@
                   <Insets left="5.0" />
                </VBox.margin>
             </Label>
-            <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0">
+            <PasswordField fx:id="secondPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0">
                <VBox.margin>
                   <Insets left="5.0" right="10.0" />
                </VBox.margin>
             </PasswordField>
+            <Label fx:id="wrongMessage" text="*Ej samma lösenord" textFill="#ff3434" visible="false">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
             <Label />
-            <Button mnemonicParsing="false" onAction="#CreateNewAccount" text="Skapa konto">
+            <Button mnemonicParsing="false" onAction="#ButtonCreateNewAccount" text="Skapa konto">
                <VBox.margin>
                   <Insets bottom="5.0" left="52.0" />
                </VBox.margin>

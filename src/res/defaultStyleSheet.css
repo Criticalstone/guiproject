@@ -13,7 +13,7 @@
 
 .menu-button{
 	-fx-background-color: null;
-	-fx-text-alignment: LEFT;
+	-fx-alignment: CENTER_LEFT;
 }
  
 .menu-button:selected{
