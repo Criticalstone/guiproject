@@ -350,10 +350,8 @@ public class ControllerMain extends Application{
         scene.getStylesheets().add(defaultSheet);
         
         primaryStage.setScene(scene);
-
         primaryStage.show();
         setColorScheme(ColorScheme.BLUE);
-
 
     }
 

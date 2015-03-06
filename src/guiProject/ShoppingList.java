@@ -2,40 +2,31 @@ package guiProject;
 
 import guiProject.interfaces.IFObserver;
 import guiProject.interfaces.IFSubject;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
-import javafx.util.Callback;
-import se.chalmers.ait.dat215.project.IMatDataHandler;
+import javafx.scene.paint.Color;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingItem;
-import sun.plugin2.jvm.RemoteJVMLauncher;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.List;
-import java.util.Observer;
 
 public class ShoppingList extends GridPane {
 
     @FXML
     private ListView<HBox> listOrder;
     @FXML
-    private ListView<String> listProducts;
+    private ListView<GridPane> listProducts;
     @FXML
     private ListView<HBox> listShopping;
 
@@ -69,6 +60,28 @@ public class ShoppingList extends GridPane {
         }
     }
 
+    public class ProductListCell extends GridPane {
+        Label name = new Label();
+        Label amount = new Label();
+        IFObserver observer;
+        ShoppingItem item;
+
+        ProductListCell(ShoppingItem item) {
+            super();
+            this.observer = new CustomListObserver();
+            this.item = item;
+            String tabs = "\t\t\t\t\t\t\t\t";
+            for(int i = 0; i < item.getProduct().getName().length()/4; i++){
+                tabs = tabs.substring(1);
+            }
+            name.setText(item.getProduct().getName() + tabs + Integer.toString((int) item.getAmount()) + " st");
+
+            this.add(name, 0,0);
+        }
+
+
+    }
+
     public class OrderListCell extends HBox implements IFSubject {
         Label label = new Label();
         IFObserver observer;
@@ -99,7 +112,7 @@ public class ShoppingList extends GridPane {
 
         @Override
         public void addObserver(IFObserver obj) {
-            observer = obj;
+            observer = null;
         }
 
         @Override
@@ -127,7 +140,7 @@ public class ShoppingList extends GridPane {
             System.out.println(o.getItems().size());
             for(ShoppingItem item : o.getItems()){
                 System.out.println(item.getProduct().getName());
-                listProducts.getItems().add(item.getProduct().getName());
+                listProducts.getItems().add(new ProductListCell(item));
             }
         }
 

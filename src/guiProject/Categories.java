@@ -189,7 +189,6 @@ public class Categories extends GridPane{
 		for (IFProductList list: ControllerMain.getFavoriteLists()){
 			addFavoriteList(list);
 		}
-		
 	}
 
 	public void addFavoriteList(IFProductList list){
