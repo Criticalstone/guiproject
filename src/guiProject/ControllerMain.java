@@ -227,6 +227,10 @@ public class ControllerMain extends Application{
         return user;
     }
 
+    public static HashMap<String, IFProductList<ShoppingItem>> getShoppingLists(){
+        return controllerShoppingLists.getShoppingLists();
+    }
+
     public static Customer getCustomer(){
         return imat.getCustomer();
     }
