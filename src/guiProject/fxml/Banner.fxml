@@ -95,7 +95,7 @@
                <children>
                 
 
-                  <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#MyProfileOnAction" prefHeight="44.0" prefWidth="109.0" text="Logga in">
+                  <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#MyProfileOnAction" prefHeight="36.0" prefWidth="131.0" styleClass="icon-buttons" text="Logga in">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
