@@ -53,32 +53,32 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="182.0" spacing="5.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#goHomeOnAction" prefHeight="2.0" prefWidth="13.0" styleClass="main-buttons">
+                  <Button mnemonicParsing="false" onAction="#goHomeOnAction" prefHeight="2.0" prefWidth="13.0" styleClass="icon-buttons">
                      <graphic>
-                        <ImageView fx:id="startImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="startImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-buttons" />
                      </graphic>
                   </Button>
-                  <HBox alignment="CENTER">
+                  <HBox alignment="CENTER" spacing="2.0">
                      <children>
-                        <Button fx:id="favorite" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="main-buttons">
+                        <Button fx:id="favorite" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="icon-buttons">
                            <graphic>
-                              <ImageView fx:id="favoriteImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="favoriteImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-buttons" />
                            </graphic>
                            <tooltip>
                               <Tooltip text="Mina favoriter varor" />
                            </tooltip>
                         </Button>
-                        <Button fx:id="shoppingList" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="main-buttons">
+                        <Button fx:id="shoppingList" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="icon-buttons">
                            <graphic>
-                              <ImageView fx:id="shoppingImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="shoppingImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-buttons" />
                            </graphic>
                            <tooltip>
                               <Tooltip text="Mina inköpslistor" />
                            </tooltip>
                         </Button>
-                        <Button fx:id="recipe" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="main-buttons">
+                        <Button fx:id="recipe" mnemonicParsing="false" onAction="#buttonAction" prefHeight="2.0" prefWidth="13.0" styleClass="icon-buttons">
                            <graphic>
-                              <ImageView fx:id="recipeImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="recipeImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-buttons" />
                            </graphic>
                            <tooltip>
                               <Tooltip text="Mina favorit recept" />
