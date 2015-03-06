@@ -43,7 +43,7 @@ public class Categories extends GridPane{
     private TitledPane initMeat(){
         List<ToggleButton> buttons = new ArrayList<>();
 
-        buttons.add(new ToggleButton("Nötkött"));
+        buttons.add(new ToggleButton("Nï¿½tkï¿½tt"));
         buttons.add(new ToggleButton("Kyckling"));
         buttons.add(new ToggleButton("Fisk"));
         buttons.get(0).setId("BEEFMEAT");
@@ -53,7 +53,7 @@ public class Categories extends GridPane{
         VBox inside = new VBox();
         for(ToggleButton button : buttons){
             button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
-            button.setMinWidth(120);
+            button.setMinWidth(130);
             setButtonStyle(button);
         }
 
@@ -62,23 +62,23 @@ public class Categories extends GridPane{
 
         inside.setFillWidth(true);
         inside.getChildren().addAll(buttons);
-        TitledPane res = new TitledPane("Kött", inside);
+        TitledPane res = new TitledPane("Kï¿½tt", inside);
 //        res.getStyleClass().add("category-menu-list-item");
         return res;
     }
 
     private TitledPane initFriut(){
         List<ToggleButton> buttons = new ArrayList<>();
-        buttons.add(new ToggleButton("Bär"));
+        buttons.add(new ToggleButton("Bï¿½r"));
         buttons.add(new ToggleButton("Citrusfrukter"));
         buttons.add(new ToggleButton("Exotiska frukter"));
         buttons.add(new ToggleButton("Meloner"));
         buttons.add(new ToggleButton("Stenfrukter"));
         buttons.add(new ToggleButton("Rotfrukter"));
-        buttons.add(new ToggleButton("Kål"));
-        buttons.add(new ToggleButton("Baljväxter"));
+        buttons.add(new ToggleButton("Kï¿½l"));
+        buttons.add(new ToggleButton("Baljvï¿½xter"));
         buttons.add(new ToggleButton("Potatis"));
-        buttons.add(new ToggleButton("Örter"));
+        buttons.add(new ToggleButton("ï¿½rter"));
         buttons.get(0).setId("BERRY");
         buttons.get(1).setId("CITRUS_FRUIT");
         buttons.get(2).setId("EXOTIC_FRUIT");
@@ -92,6 +92,7 @@ public class Categories extends GridPane{
 
         for(ToggleButton button : buttons){
             button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+            button.setMinWidth(130);
             setButtonStyle(button);
             
         }
@@ -100,7 +101,7 @@ public class Categories extends GridPane{
 
         VBox inside = new VBox();
         inside.getChildren().addAll(buttons);
-        TitledPane res = new TitledPane("Frukt och grönt", inside);
+        TitledPane res = new TitledPane("Frukt och grï¿½nt", inside);
         return res;
     }
 
@@ -108,6 +109,7 @@ public class Categories extends GridPane{
         ToggleButton button = new ToggleButton("Mejeri");
         button.setId("DAIRIES");
         button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+        button.setMinWidth(130);
         setButtonStyle(button);
         buttonGroup.getToggles().add(button);
 
@@ -119,11 +121,11 @@ public class Categories extends GridPane{
 
     private TitledPane initPantry(){
         List<ToggleButton> buttons = new ArrayList<>();
-        buttons.add(new ToggleButton("Bröd"));
-        buttons.add(new ToggleButton("Mjöl"));
+        buttons.add(new ToggleButton("Brï¿½d"));
+        buttons.add(new ToggleButton("Mjï¿½l"));
         buttons.add(new ToggleButton("Socker"));
         buttons.add(new ToggleButton("Salt"));
-        buttons.add(new ToggleButton("Nötter & frön"));
+        buttons.add(new ToggleButton("Nï¿½tter & frï¿½n"));
         buttons.add(new ToggleButton("Pasta"));
         buttons.add(new ToggleButton("Potatis"));
         buttons.add(new ToggleButton("Ris"));
@@ -138,6 +140,7 @@ public class Categories extends GridPane{
 
         for(ToggleButton button : buttons){
             button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+            button.setMinWidth(130);
             setButtonStyle(button);
         }
 
@@ -158,6 +161,7 @@ public class Categories extends GridPane{
 
         for(ToggleButton button : buttons){
             button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+            button.setMinWidth(130);
             setButtonStyle(button);
         }
 
@@ -170,15 +174,16 @@ public class Categories extends GridPane{
     }
 
     private TitledPane initSweet(){
-        ToggleButton button = new ToggleButton("Sötsaker");
+        ToggleButton button = new ToggleButton("Sï¿½tsaker");
         button.setId("SWEET");
         button.addEventHandler(ActionEvent.ACTION, event -> buttonOnClick(event));
+        button.setMinWidth(130);
         setButtonStyle(button);
         buttonGroup.getToggles().add(button);
 
         VBox inside = new VBox();
         inside.getChildren().add(button);
-        TitledPane res = new TitledPane("Sötsaker", inside);
+        TitledPane res = new TitledPane("Sï¿½tsaker", inside);
         return res;
     }
     

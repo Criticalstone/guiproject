@@ -46,15 +46,16 @@
                         <Insets left="10.0" right="10.0" />
                      </GridPane.margin>
                   </ListView>
-                  <HBox GridPane.rowIndex="2">
-                     <children>
-                        <TextField prefHeight="26.0" prefWidth="255.0" promptText="Lägg till lista" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" text="+" GridPane.rowIndex="2" />
-                     </children>
+                  <Button mnemonicParsing="false" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                      <GridPane.margin>
-                        <Insets left="10.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin>
-                  </HBox>
+                  </Button>
+                  <TextField prefHeight="26.0" prefWidth="255.0" promptText="Lägg till inköpslista" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="36.0" />
+                     </GridPane.margin>
+                  </TextField>
                </children>
             </GridPane>
             <GridPane GridPane.columnIndex="1" GridPane.rowSpan="2">

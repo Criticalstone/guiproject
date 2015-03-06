@@ -8,7 +8,7 @@
 
 <fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="600.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Mina recpet">
+      <Label text="Mina recepet">
          <font>
             <Font size="20.0" />
          </font>
@@ -23,15 +23,16 @@
                         <Insets left="10.0" right="10.0" />
                      </GridPane.margin>
                   </ListView>
-                  <HBox GridPane.rowIndex="2">
-                     <children>
-                        <TextField prefHeight="26.0" prefWidth="255.0" promptText="Lägg till lista" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" text="+" GridPane.rowIndex="2" />
-                     </children>
+                  <Button mnemonicParsing="false" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                      <GridPane.margin>
-                        <Insets left="10.0" />
+                        <Insets right="10.0" />
                      </GridPane.margin>
-                  </HBox>
+                  </Button>
+                  <TextField prefHeight="26.0" prefWidth="255.0" promptText="Lägg till recept" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="36.0" />
+                     </GridPane.margin>
+                  </TextField>
                </children>
                <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
