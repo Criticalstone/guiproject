@@ -62,7 +62,6 @@ public class ControllerShoppingLists implements Serializable{
 	}
 	
 	public List<Order> getOrderHistory(){
-        System.out.println(imat.getOrders().get(0).getItems().size());
         return imat.getOrders();
 	}
 	

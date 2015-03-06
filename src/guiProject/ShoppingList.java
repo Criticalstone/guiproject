@@ -1,6 +1,7 @@
 package guiProject;
 
 import guiProject.interfaces.IFObserver;
+import guiProject.interfaces.IFProductList;
 import guiProject.interfaces.IFSubject;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,8 +22,11 @@ import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class ShoppingList extends GridPane {
 
@@ -77,7 +81,12 @@ public class ShoppingList extends GridPane {
 
     public void updateShoppingListView() {
         listShopping.getItems().clear();
-        list<SavedShoppingList> lists = ControllerMain.get
+        HashMap<String, IFProductList<ShoppingItem>> lists = ControllerMain.getShoppingLists();
+        Set<String> keys = lists.keySet();
+        for(String key : keys){
+            System.out.println(lists.get(key).getName());
+        }
+
     }
 
     public class ProductListCell extends HBox {

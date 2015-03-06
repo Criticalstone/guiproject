@@ -190,6 +190,7 @@ public class ControllerMain extends Application{
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(shoppingList);
         shoppingList.updateOrdersListView();
+        shoppingList.updateShoppingListView();
     	unSelectCategories();
     	setBanner("start");
 	}
@@ -225,6 +226,10 @@ public class ControllerMain extends Application{
 	
     public static UserProfile getUser(){
         return user;
+    }
+
+    public static HashMap<String, IFProductList<ShoppingItem>> getShoppingLists(){
+        return controllerShoppingLists.getShoppingLists();
     }
 
     public static Customer getCustomer(){
