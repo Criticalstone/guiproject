@@ -93,6 +93,14 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
+                  <Label fx:id="usernameLabel" onMousePressed="#nameLabelOnAction" visible="false">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <Button mnemonicParsing="false" opacity="0.0" text="Button" />
+                     </graphic>
+                  </Label>
                 
 
                   <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#MyProfileOnAction" prefHeight="44.0" prefWidth="109.0" text="Logga in">

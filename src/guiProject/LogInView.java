@@ -21,6 +21,7 @@ public class LogInView extends GridPane {
 	
 	private UserProfile user;
 	
+	private boolean isLoggedIn=false;
 	
 	public LogInView(String userName){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -41,17 +42,17 @@ public class LogInView extends GridPane {
 	
 	@FXML
 	public void LoginOnAction(){
-		user = (UserProfile)Utilities.LoadFile(null, username.getText());
-		if(password.getText().equals(user.getPassword())){
-			ControllerMain.setUser(user);
-			ProfileView.setLoggedInStatus(true);
-//			Banner.setTextToLoggedIn();
-			ControllerMain.displayProfile(user);
-		}else{
-			wrongPassword.setText("*Fel lösenord!");
-			wrongPassword.setVisible(true);
-		}
-		
+			user = (UserProfile)Utilities.LoadFile(null, username.getText());
+			if(password.getText().equals(user.getPassword())){
+				ControllerMain.setUser(user);
+				ControllerMain.getLogInView().setLoggedInStatus(true);
+				ControllerMain.getBanner().setUsernameLabel();
+				ControllerMain.getBanner().setTextToLoggedIn();
+				ControllerMain.displayProfile(user);
+			}else{
+				wrongPassword.setText("*Fel lösenord!");
+				wrongPassword.setVisible(true);
+			}
 	}
 	
 	@FXML
@@ -63,7 +64,13 @@ public class LogInView extends GridPane {
 		}
 	}
 	
-
 	
+	public void setLoggedInStatus(boolean value){
+	    isLoggedIn=value;
+	}
+	    
+	public boolean getLoggedInStatus(){
+		return isLoggedIn;
+	}
 	
 }

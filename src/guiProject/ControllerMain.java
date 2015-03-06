@@ -43,7 +43,7 @@ public class ControllerMain extends Application{
     private static Customer customer;
     private static RecipeListView recipeListView;
     private static ShoppingList shoppingList;
-
+    private static LogInView logInView;
     
     //Panes in mainview
     @FXML
@@ -213,11 +213,6 @@ public class ControllerMain extends Application{
 	public static void unSelectCategories(){
 		controllerCategories.unSelectCategories();
 	}
-	
-//	public static void displayLoginView(TotalLogInView.NextView nextView){
-//		detailView.getChildren().removeAll(detailView.getChildren());
-//		detailView.getChildren().add(nextView);
-//	}
 
 	public static void displayLoginView(/*TestMain.NextView nextView*/){
 		detailView.getChildren().removeAll(detailView.getChildren());
@@ -251,7 +246,6 @@ public class ControllerMain extends Application{
 	
     public static Banner getBanner(){
     	return controllerBanner;
-
     }
 
     public static void placeOrder(){
@@ -303,6 +297,11 @@ public class ControllerMain extends Application{
 		return controllerShoppingLists.isStared(p);
 	}
 	
+	public static LogInView getLogInView(){
+		return logInView;
+	}
+	
+	
 	//LOCAL METHODS
 	private static void removeAllAddedSchemes() {
 		for (String sheet: scene.getStylesheets()){
@@ -311,8 +310,6 @@ public class ControllerMain extends Application{
     		}
     	}
 	}
-	
-
 	
 	//STARTUP METHODS
 	@Override
@@ -323,6 +320,7 @@ public class ControllerMain extends Application{
         controllerShoppingLists = ControllerShoppingLists.getInstance();
         controllerCategories = Categories.getInstance();
         checkoutView = new CheckoutView();
+        logInView=new LogInView("");
         controllerBanner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();

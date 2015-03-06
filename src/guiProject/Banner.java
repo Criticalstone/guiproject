@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
@@ -26,7 +27,10 @@ public class Banner extends GridPane{
     private TextField textSearch;
     @FXML
     private Button myProfileButton;
+    @FXML
+    private Label usernameLabel;
 
+    
     public Banner() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/Banner.fxml"));
@@ -41,7 +45,6 @@ public class Banner extends GridPane{
         }
         
         setBanner("start");
-       
     }
     
     public void setBanner(String n){
@@ -189,23 +192,31 @@ public class Banner extends GridPane{
     
     @FXML
     public void MyProfileOnAction(){
-    	if(ProfileView.getLoggedInStatus()==true){
-    		ControllerMain.displayProfile(ControllerMain.getUser());
-    	}else{
+    	if(ControllerMain.getLogInView().getLoggedInStatus()==true){  //Loggar ut
+    		ControllerMain.getLogInView().setLoggedInStatus(false);
+    		setTextToLoggedIn();
     		ControllerMain.displayLoginView();
-    	}
+		}else{                                                         // Skickar dig så du kan logga in
+			ControllerMain.displayLoginView();
+		}		
     }
     
+    @FXML
+    public void nameLabelOnAction(){
+    	ControllerMain.displayProfile(ControllerMain.getUser());
+    }
+  
+    public void setUsernameLabel(){
+    	usernameLabel.setText(ControllerMain.getUser().getUsername());
+    }
     
-//    public void setTextToLoggedIn(){
-////    	try{
-////    		if(ProfileView.getLoggedInStatus()){
-////    			myProfileButton.setText(ControllerMain.getUser().getUsername());
-////    		}else{
-//    			myProfileButton.setText("Du är inloggad");
-////    		}
-////    	}catch(NullPointerException e){
-//    		System.out.println("NullPointerException 3");
-////    	}
-//    }
+    public void setTextToLoggedIn(){
+    	if(ControllerMain.getLogInView().getLoggedInStatus()){
+    		myProfileButton.setText("Logga ut");
+    		usernameLabel.setVisible(true);
+    	}else{
+    		usernameLabel.setVisible(false);
+    		myProfileButton.setText("Logga in");
+    	}
+    }
 }

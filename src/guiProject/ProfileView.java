@@ -65,8 +65,6 @@ public class ProfileView extends GridPane{
     
     @FXML
     private Button buttonSave;
-    
-    private static boolean isLoggedIn=false;
 
     public ProfileView(UserProfile user) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -82,11 +80,9 @@ public class ProfileView extends GridPane{
         }
         this.profile = user;
         setupChoiceBoxes();
-        if(getLoggedInStatus()){
-        	loadInfo();
-        }
-       
+        loadInfo();
     }
+
 
     @SuppressWarnings("unchecked")
 	private void setupChoiceBoxes() {
@@ -98,7 +94,7 @@ public class ProfileView extends GridPane{
 	@FXML
     private void saveOnAction(ActionEvent event){
         setInfoToCustomer();
-        setLoggedInStatus(true);
+        ControllerMain.getLogInView().setLoggedInStatus(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -173,16 +169,4 @@ public class ProfileView extends GridPane{
 	//        customer.setEmail(textEmail.getText());
     	
     }
-    
-    public static void setLoggedInStatus(boolean value){
-    	isLoggedIn=value;
-    }
-    
-    public static boolean getLoggedInStatus(){
-		return isLoggedIn;
-    	
-    }
-
-
-
 }
