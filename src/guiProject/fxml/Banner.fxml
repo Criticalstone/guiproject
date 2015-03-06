@@ -65,7 +65,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="109.0" text="min profil">
+                  <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#MyProfileOnAction" prefHeight="44.0" prefWidth="109.0" text="Logga in">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

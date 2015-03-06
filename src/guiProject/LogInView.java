@@ -8,7 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 
 public class LogInView extends GridPane {
 	@FXML
@@ -19,9 +18,11 @@ public class LogInView extends GridPane {
 	private Label wrongPassword;
 	@FXML
 	private Label username;
-	private String userPassword;
 	
-	public LogInView(String userName, String userPassword){
+	private UserProfile user;
+	
+	
+	public LogInView(String userName){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
         "fxml/LogInBox.fxml"));
 
@@ -33,15 +34,21 @@ public class LogInView extends GridPane {
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
-		  this.userPassword=userPassword;
+		  
 		  this.username.setText(userName);
+		  logInBox.setVisible(false);
 	}
 	
 	@FXML
 	public void LoginOnAction(){
-		if(password.getText().equals(this.userPassword)){
-			//Skickas till NextView så det visas
+		user = (UserProfile)Utilities.LoadFile(null, username.getText());
+		if(password.getText().equals(user.getPassword())){
+			ControllerMain.setUser(user);
+			ProfileView.setLoggedInStatus(true);
+//			Banner.setTextToLoggedIn();
+			ControllerMain.displayProfile(user);
 		}else{
+			wrongPassword.setText("*Fel lösenord!");
 			wrongPassword.setVisible(true);
 		}
 		
@@ -55,4 +62,8 @@ public class LogInView extends GridPane {
 			logInBox.setVisible(true);
 		}
 	}
+	
+
+	
+	
 }

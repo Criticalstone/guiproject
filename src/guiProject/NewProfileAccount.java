@@ -7,11 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
 
 public class NewProfileAccount extends GridPane{
 
-	private int count=0;
 	@FXML
 	private PasswordField firstPassword;
 	@FXML
@@ -38,28 +38,26 @@ public class NewProfileAccount extends GridPane{
 	
 	@FXML
 	public void ButtonCreateNewAccount(){
-			if(getPassword().equals(secondPassword.getText()) && !getPassword().equals("")){
-				if(count<3){
-					TestMain.createLogInBox(name.getText());
-					clean();
-					count=count+1;
+			if(firstPassword.getText().equals(secondPassword.getText())){	
+				if(!hasReachedAcoountLimit() &&!firstPassword.getText().equals("")){
+					createUserProfile(getUserName());
+				}else if(firstPassword.getText().equals("")){
+					setMessageNoPassword();
 				}else{
-					wrongMessage.setText("*Kan ej ha fler konton");
-					wrongMessage.setVisible(true);
+					setMessageFull();
 				}
-			}else if(getPassword().equals("")){
-				wrongMessage.setText("*Inget lösenord inskrivet");
-				wrongMessage.setVisible(true);
 			}else{
-				wrongMessage.setText("*Ej samma lösenord");
-				wrongMessage.setVisible(true);
-			}
-	
-		
+				setMessageNotSame();
+			}	
 	}
+
 	
-	public String getPassword(){
-		return firstPassword.getText();
+	public static boolean hasReachedAcoountLimit(){
+		if(Utilities.getSavedFiles(null).size()<5){
+			return false;
+		}else{
+			return true;
+		}
 	}
 	
 	public String getUserName(){
@@ -71,5 +69,34 @@ public class NewProfileAccount extends GridPane{
 		firstPassword.clear();
 		secondPassword.clear();
 		wrongMessage.setVisible(false);
+	}
+	
+	public void createUserProfile(String name){
+			UserProfile user=new UserProfile(name, firstPassword.getText());	
+			
+			Utilities.SaveToFile(user, null, name);
+			
+			ControllerMain.setUser(user);
+			ProfileView.setLoggedInStatus(true);
+//			Banner.setTextToLoggedIn();
+			
+			ControllerMain.displayProfile(user);
+			
+			clean();	
+	}
+	
+	public void setMessageFull(){
+		wrongMessage.setText("*Kan ej ha fler konton");
+		wrongMessage.setVisible(true);
+	}
+	
+	public void setMessageNoPassword(){
+		wrongMessage.setText("*Inget lösenord inskrivet");
+		wrongMessage.setVisible(true);
+	}
+	
+	public void setMessageNotSame(){
+		wrongMessage.setText("*Ej samma lösenord");
+		wrongMessage.setVisible(true);
 	}
 }

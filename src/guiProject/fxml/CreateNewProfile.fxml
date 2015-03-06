@@ -22,7 +22,7 @@
                   <Image url="@../../res/1425397892_add-128.png" />
                </image>
             </ImageView>
-            <ToggleButton mnemonicParsing="false" onAction="#ButtonAddProfile" opacity="0.0" prefHeight="141.0" prefWidth="54.0">
+            <ToggleButton fx:id="addButton" mnemonicParsing="false" onAction="#ButtonAddProfile" opacity="0.0" prefHeight="141.0" prefWidth="54.0">
                <GridPane.margin>
                   <Insets top="60.0" />
                </GridPane.margin>
