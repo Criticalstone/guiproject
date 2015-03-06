@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<fx:root hgap="5.0" type="GridPane" vgap="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label text="6:00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="12:00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label text="18:00" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label text="20:00" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label text="22:00" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label fx:id="day1" alignment="CENTER" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label fx:id="day2" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label fx:id="day3" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Label fx:id="day4" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Label fx:id="day5" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+      <Label fx:id="day6" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+      <Label fx:id="day7" text="Label" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+      <Label text="Måndag" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label text="Tisdag" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Label text="Onsdag" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Label text="Torsdag" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Label text="Fredag" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+      <Label text="Lördag" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+      <Label text="Söndag" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+   </children>
+</fx:root>
