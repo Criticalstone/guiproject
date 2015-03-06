@@ -85,12 +85,12 @@ public class DeliveryScheduleComponent extends GridPane{
 	}
 
 	private void setDeliverySelectionButtons() {
-		for (int days = 2; days <= 8; days++){
+		for (int days = 1; days <= 7; days++){
 			for (int hours = 3; hours <= 7; hours++){
 				ToggleButton button = new ToggleButton();
 				button.getStyleClass().add("main-buttons");
 				String price;
-				if (getDay(days).equals("Söndag") || getDay(days).equals("Lördag") || hours == 6 || hours == 7){
+				if (hours == 6 || hours == 7){
 					price = "59 kr";
 				} else {
 					price = "29 kr";
@@ -106,25 +106,25 @@ public class DeliveryScheduleComponent extends GridPane{
 						if (((ToggleButton)event.getSource()).isSelected()){
 							String selectedDay;
 							switch (GridPane.getColumnIndex((ToggleButton)event.getSource())){
-								case 2:
+								case 1:
 									selectedDay = day1.getText() + " " + date1.getText();
 									break;
-								case 3:
+								case 2:
 									selectedDay = day2.getText() + " " + date2.getText();
 									break;
-								case 4:
+								case 3:
 									selectedDay = day3.getText() + " " + date3.getText();
 									break;
-								case 5:
+								case 4:
 									selectedDay = day4.getText() + " " + date4.getText();
 									break;
-								case 6:
+								case 5:
 									selectedDay = day5.getText() + " " + date5.getText();
 									break;
-								case 7:
+								case 6:
 									selectedDay = day6.getText() + " " + date6.getText();
 									break;
-								case 8:
+								case 7:
 									selectedDay = day7.getText() + " " + date7.getText();
 									break;
 								default:selectedDay = "unknown";
@@ -154,7 +154,6 @@ public class DeliveryScheduleComponent extends GridPane{
 							selectedDelivery = null;
 						}
 						
-						System.out.println(selectedDelivery);
 						
 					}
 					
@@ -208,8 +207,8 @@ public class DeliveryScheduleComponent extends GridPane{
 		return Integer.parseInt(temp[0]);
 	}
 	
-	public void deliveryButtonAction(ActionEvent e){
-		
+	public String getDeliveryTime(){
+		return selectedDelivery;
 	}
 	
 }

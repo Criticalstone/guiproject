@@ -36,20 +36,9 @@ public class PersonNumberView extends GridPane{
 		 } catch (IOException exception) {
 			 throw new RuntimeException(exception);
 		 }	 	 
-		 setupTextfieldLength();
+
 	}
 	
-	
-	private void setupTextfieldLength() {
-		personNrOne.setMaxLength(6);
-		personNrTwo.setMaxLength(4);
-		
-	}
-
-
-	public String getPersonalNumber(){
-		return personNrOne.getText()+personNrTwo.getText();	
-	}
 	
 	public String getPostNumber(){
 		return postNumber.getText();

@@ -7,34 +7,19 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root hgap="5.0" maxWidth="475.0" minWidth="475.0" prefWidth="475.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root hgap="5.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="67.0" prefWidth="67.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="265.0" prefWidth="278.0" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
-         <children>
-            <IntegerTextField fx:id="personNrOne" prefHeight="31.0" prefWidth="110.0" promptText="ååmmdd" />
-            <Label layoutX="229.0" layoutY="36.0" prefHeight="21.0" prefWidth="11.0" text="-" />
-            <IntegerTextField fx:id="personNrTwo" prefHeight="31.0" prefWidth="70.0" promptText="xxxx" />
-            <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="33.0" prefHeight="21.0" prefWidth="11.0" styleClass="text-lables" text="?">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-               <tooltip>
-                  <Tooltip text="Om du fyller i personnumret så kopplar vi din information till denna" />
-               </tooltip>
-            </Label>
-         </children>
-      </HBox>
       <Label prefHeight="27.0" prefWidth="58.0" styleClass="text-lables" text="Namn*" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
       <TextField fx:id="name" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <GridPane.margin>
@@ -48,7 +33,7 @@
          </GridPane.margin>
       </TextField>
       <Label styleClass="text-lables" text="Postnr.*" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-      <TextField fx:id="postNumber" maxWidth="260.0" minWidth="260.0" prefHeight="31.0" prefWidth="260.0" promptText="ex. 411 65" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+      <TextField fx:id="postNumber" maxWidth="120.0" minWidth="120.0" prefHeight="31.0" prefWidth="120.0" promptText="ex. 411 65" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets right="5.0" />
          </GridPane.margin>
@@ -59,6 +44,13 @@
             <Insets right="5.0" />
          </GridPane.margin>
       </TextField>
-      <Label styleClass="text-lables" text="Personnummer" GridPane.halignment="RIGHT" />
+      <Label styleClass="text-lables" text="Ange leveransinformation" GridPane.columnSpan="2" GridPane.halignment="LEFT">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
 </fx:root>
