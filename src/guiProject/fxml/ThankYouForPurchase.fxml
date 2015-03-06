@@ -9,13 +9,15 @@
 <fx:root alignment="CENTER" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
       <ColumnConstraints hgrow="ALWAYS" />
-    <ColumnConstraints hgrow="ALWAYS" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" />
       <ColumnConstraints hgrow="ALWAYS" />
   </columnConstraints>
   <rowConstraints>
       <RowConstraints vgrow="SOMETIMES" />
     <RowConstraints maxHeight="92.0" minHeight="92.0" prefHeight="92.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="46.0" minHeight="46.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="46.0" minHeight="46.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="46.0" minHeight="46.0" prefHeight="46.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
       <RowConstraints vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
@@ -27,7 +29,7 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <children>
             <Button disable="true" mnemonicParsing="false" styleClass="main-buttons" text="Spara kvitto" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <opaqueInsets>
@@ -44,5 +46,15 @@
             </Button>
          </children>
       </HBox>
+      <Label fx:id="deliveryLabel" styleClass="text-lables" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label styleClass="text-lables" text="Dina varor kommer att levereras:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </fx:root>

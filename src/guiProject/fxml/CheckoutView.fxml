@@ -13,17 +13,15 @@
       <GridPane styleClass="details-background">
          <columnConstraints>
             <ColumnConstraints hgrow="ALWAYS" />
-            <ColumnConstraints hgrow="ALWAYS" minWidth="400.0" />
             <ColumnConstraints fillWidth="false" />
             <ColumnConstraints fillWidth="false" maxWidth="200.0" minWidth="200.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <VBox fx:id="boxDetails" maxWidth="1.7976931348623157E308" scaleShape="false" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
-            <GridPane alignment="TOP_RIGHT" maxWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" scaleShape="false" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <VBox fx:id="boxDetails" maxWidth="1.7976931348623157E308" scaleShape="false" spacing="20.0" GridPane.hgrow="ALWAYS" />
+            <GridPane alignment="TOP_RIGHT" maxWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" scaleShape="false" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" />
               </columnConstraints>
@@ -59,7 +57,7 @@
                         <Insets left="-20.0" />
                      </GridPane.margin>
                   </Polygon>
-                  <Button mnemonicParsing="false" onAction="#buyNowButtonAction" styleClass="main-buttons" text="Köp nu" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Button maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#buyNowButtonAction" prefHeight="50.0" prefWidth="100.0" styleClass="main-buttons" text="Köp nu" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font size="32.0" />
                      </font>

@@ -155,9 +155,9 @@ public class ControllerMain extends Application{
 		checkoutView.displayPaymentOption(option);
 	}
 	
-	public static void displayPurchaseConfirmation() {
+	public static void displayPurchaseConfirmation(String deliveryDate) {
 		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(new ThankYouForPurchase());
+		detailView.getChildren().add(new ThankYouForPurchase(deliveryDate));	
 		
 	}
 	

@@ -12,6 +12,7 @@ public class CheckoutView extends ScrollPane{
 	
 	@FXML
 	private VBox boxDetails;
+	private DeliveryScheduleComponent deliverySchedule;
 	
 	public enum PaymentOption{
 		CARD,
@@ -33,16 +34,17 @@ public class CheckoutView extends ScrollPane{
 			throw new RuntimeException(exception);
 		}
 		boxDetails.getChildren().add(new PersonNumberView());
+		deliverySchedule = new DeliveryScheduleComponent();
+		boxDetails.getChildren().add(deliverySchedule);
 		boxDetails.getChildren().add(new PaymentView());
-//		boxDetails.getChildren().add(new DeliveryView());
 	 }
 	
 	public void displayPaymentOption(PaymentOption option){
-		if (boxDetails.getChildren().size() > 2 && !(boxDetails.getChildren().get(2) instanceof PersonNumberView)){
-			boxDetails.getChildren().remove(2);
+		if (boxDetails.getChildren().size() > 3){
+			boxDetails.getChildren().remove(3);
 		}
 		if (option == PaymentOption.CARD){
-			boxDetails.getChildren().add(2,new CardInformationView());
+			boxDetails.getChildren().add(3,new CardInformationView());
 		} else if (option == PaymentOption.PAYPAL){
 			
 		} else if (option == PaymentOption.TRANSFER){
@@ -53,7 +55,7 @@ public class CheckoutView extends ScrollPane{
 	}
 	
 	public void buyNowButtonAction(){
-		ControllerMain.displayPurchaseConfirmation();
+		ControllerMain.displayPurchaseConfirmation(deliverySchedule.getDeliveryTime());
         ControllerMain.placeOrder();
         ControllerMain.emptyCart();
 	}

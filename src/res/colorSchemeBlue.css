@@ -49,6 +49,12 @@
 
 }
 
+.main-buttons:selected {
+    -fx-padding: 2 0 0 2;
+    -fx-background-color: #38307F;
+
+}
+
 .main-buttons:hover{
     -fx-background-color: #38307F;
 
