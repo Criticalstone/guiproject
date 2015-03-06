@@ -62,7 +62,6 @@ public class ShoppingList extends GridPane {
 
     public class ProductListCell extends GridPane {
         Label name = new Label();
-        Label amount = new Label();
         IFObserver observer;
         ShoppingItem item;
 
