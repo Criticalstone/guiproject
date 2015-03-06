@@ -24,6 +24,8 @@ public class Banner extends GridPane{
 	private Button bannerTitle;
     @FXML
     private TextField textSearch;
+    @FXML
+    private Button myProfileButton;
 
     public Banner() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -184,4 +186,26 @@ public class Banner extends GridPane{
     public void goHomeOnAction(){
     	ControllerMain.displayStartView();
     }
+    
+    @FXML
+    public void MyProfileOnAction(){
+    	if(ProfileView.getLoggedInStatus()==true){
+    		ControllerMain.displayProfile(ControllerMain.getUser());
+    	}else{
+    		ControllerMain.displayLoginView();
+    	}
+    }
+    
+    
+//    public void setTextToLoggedIn(){
+////    	try{
+////    		if(ProfileView.getLoggedInStatus()){
+////    			myProfileButton.setText(ControllerMain.getUser().getUsername());
+////    		}else{
+//    			myProfileButton.setText("Du är inloggad");
+////    		}
+////    	}catch(NullPointerException e){
+//    		System.out.println("NullPointerException 3");
+////    	}
+//    }
 }

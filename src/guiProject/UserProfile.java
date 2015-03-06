@@ -24,6 +24,23 @@ public class UserProfile implements Serializable {
 	public UserProfile(String username, String password){
 		this.username = username;
 		this.setPassword(password);
+		this.setFirstName("");
+		this.setLastName("");
+		this.setAdress("");
+		this.setPostalCode("");
+		this.setTown("");
+		this.setPhone("");
+		this.setEmail("");
+		this.setPaymentOption("");
+		creditCard=new CreditCard("","","","","","");
+		this.setCard(creditCard);
+		
+		
+		
+		
+		
+		
+		
 
 	}
 

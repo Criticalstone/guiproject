@@ -107,4 +107,11 @@ public class Utilities {
 	    return toReturn;
 	}
 	
+	public static void deleteFile(String name){
+		List<String> list = getSavedFiles(null); 
+		for(int i=0; i<=getSavedFiles(null).size(); i++){
+			File file=new File(System.getProperty("user.home") + "/.dat215/savedFilesGrp24" +"/" + list.get(i));
+			file.delete();
+		}
+	}
 }

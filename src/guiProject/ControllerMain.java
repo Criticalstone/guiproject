@@ -196,9 +196,9 @@ public class ControllerMain extends Application{
 	}
 	
 
-    public static void displayProfile(){
+    public static void displayProfile(UserProfile userP){
 		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(new ProfileView(user)); 
+		detailView.getChildren().add(new ProfileView(userP)); 
     }
 	
 	public static void displayProductResultList(){
@@ -218,6 +218,11 @@ public class ControllerMain extends Application{
 //		detailView.getChildren().removeAll(detailView.getChildren());
 //		detailView.getChildren().add(nextView);
 //	}
+
+	public static void displayLoginView(/*TestMain.NextView nextView*/){
+		detailView.getChildren().removeAll(detailView.getChildren());
+		detailView.getChildren().add(/*nextView*/ new TotalLogInView());
+	}
 	
 	//GETTERS
 	public static List<Order> getOrderHistory(){
