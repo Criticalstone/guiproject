@@ -34,7 +34,7 @@ public class CheckoutView extends ScrollPane{
 		}
 		boxDetails.getChildren().add(new PersonNumberView());
 		boxDetails.getChildren().add(new PaymentView());
-//		boxDetails.getChildren().add(new DeliveryView());
+		boxDetails.getChildren().add(new DeliveryScheduleComponent());
 	 }
 	
 	public void displayPaymentOption(PaymentOption option){
