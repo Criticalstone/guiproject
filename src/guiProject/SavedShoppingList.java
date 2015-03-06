@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
 public class SavedShoppingList implements IFProductList<ShoppingItem>{
@@ -20,8 +19,7 @@ public class SavedShoppingList implements IFProductList<ShoppingItem>{
 	public SavedShoppingList(String name){
 		this.name = name;
         this.timeStamp = new Date();
-		productList = new ArrayList<ShoppingItem>();
-
+		productList = new ArrayList<>();
 	}
 
 	@Override

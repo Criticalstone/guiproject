@@ -4,14 +4,12 @@ import guiProject.interfaces.IFObserver;
 import guiProject.interfaces.IFProductList;
 import guiProject.interfaces.IFSubject;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -38,6 +36,8 @@ public class ShoppingList extends GridPane {
     private ListView<HBox> listShopping;
     @FXML
     private Button buttonAddToCart;
+
+    private ShoppingListObserver shoppingListObserver = new ShoppingListObserver();
 
     private List<ShoppingItem> productList;
 
@@ -84,27 +84,90 @@ public class ShoppingList extends GridPane {
         HashMap<String, IFProductList<ShoppingItem>> lists = ControllerMain.getShoppingLists();
         Set<String> keys = lists.keySet();
         for(String key : keys){
-            System.out.println(lists.get(key).getName());
+            listShopping.getItems().add(new ShoppingListCell((SavedShoppingList)lists.get(key)));
         }
-
     }
 
-    public class ProductListCell extends HBox {
+    public class ProductListCell extends HBox implements IFSubject{
         Label name = new Label();
+        TextField numberOf = new TextField();
+        Button plus = new Button("+");
+        Button minus = new Button("-");
+        HBox quantity = new HBox();
         IFObserver observer;
         ShoppingItem item;
 
         ProductListCell(ShoppingItem item) {
             super();
-            this.observer = new CustomListObserver();
+            this.observer = shoppingListObserver;
             this.item = item;
-            String tabs = "\t\t\t\t\t\t\t\t";
-            for(int i = 0; i < item.getProduct().getName().length()/4; i++){
+            String tabs = "\t\t\t\t\t";
+            for(int i = 0; i < Math.floor(item.getProduct().getName().length()/4); i++){
                 tabs = tabs.substring(1);
             }
-            name.setText(item.getProduct().getName() + tabs + Integer.toString((int) item.getAmount()) + " st");
+            name.setText(item.getProduct().getName() + tabs);// + tabs + Integer.toString((int) item.getAmount()) + " st");
 
-            this.getChildren().add(name);
+            minus.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    item.setAmount(item.getAmount()-1);
+                    updateNumber();
+                }
+            });
+
+            numberOf = new IntegerTextField();
+            numberOf.setText(Integer.toString((int)item.getAmount()));
+            numberOf.setPrefColumnCount(3);
+            EventHandler eventHandler = new EventHandler() {
+                @Override
+                public void handle(Event event) {
+                    if (numberOf.getText().equals("")){
+                        numberOf.setText("1");
+                        numberOf.selectPositionCaret(1);
+                    }
+                }
+            };
+            numberOf.setOnKeyReleased(eventHandler);
+            numberOf.setOnAction(eventHandler);
+
+            plus.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    item.setAmount(item.getAmount()+1);
+                    updateNumber();
+                }
+            });
+
+            quantity.getChildren().addAll(minus, numberOf, plus);
+            quantity.setAlignment(Pos.CENTER_RIGHT);
+            setSpacing(30);
+
+            this.getChildren().addAll(name, quantity);
+        }
+
+        public void updateNumber(){
+            numberOf.setText(Integer.toString((int) item.getAmount()));
+            notifyObserver(item);
+        }
+
+        @Override
+        public void addObserver(IFObserver obj) {
+            this.observer = obj;
+        }
+
+        @Override
+        public void removeObserver(IFObserver obj) {
+            this.observer = null;
+        }
+
+        @Override
+        public void notifyObserver(Object... obj) {
+            observer.update(obj[0]);
+        }
+
+        @Override
+        public Object getUpdate(IFObserver obj) {
+            return item;
         }
     }
 
@@ -158,34 +221,49 @@ public class ShoppingList extends GridPane {
 
     public class ShoppingListCell extends HBox implements IFSubject {
         Label label = new Label();
+        Button remove = new Button("X");
         IFObserver observer;
         SavedShoppingList list;
 
         ShoppingListCell(SavedShoppingList list) {
             super();
-            this.observer = new CustomListObserver();
+            this.observer = shoppingListObserver;
             this.list = list;
-            label.setText(list.getName() + " : " + list.getTimeStamp().toString());
+            label.setText(list.getName() + " : " + list.getTimeStamp());
             label.setMaxWidth(Double.MAX_VALUE);
+            remove.setAlignment(Pos.CENTER_RIGHT);
             HBox.setHgrow(label, Priority.ALWAYS);
 
             this.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    onAction();
+                    onAction(event);
                 }
             });
 
-            this.getChildren().addAll(label);
+            remove.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    onAction(event);
+                }
+            });
+
+            this.getChildren().addAll(label, remove);
         }
 
-        public void onAction(){
-            notifyObserver(this.list);
+        public void onAction(Event event){
+            if(event.getClass() == MouseEvent.class) {
+                notifyObserver(this.list);
+            }else{
+                ControllerMain.removeShoppingList(list.getName());
+                updateShoppingListView();
+
+            }
         }
 
         @Override
         public void addObserver(IFObserver obj) {
-            observer = null;
+            observer = obj;
         }
 
         @Override
@@ -210,6 +288,25 @@ public class ShoppingList extends GridPane {
         @Override
         public void update(Object... obj) {
 
+            if(obj[0].getClass() == ShoppingItem.class) {
+                ShoppingItem newItem = (ShoppingItem)obj[0];
+                for(ShoppingItem item : productList){
+                    if(item.getProduct().getName().equals(newItem.getProduct().getName())){
+                        item.setAmount(newItem.getAmount());
+                        if(item.getAmount() <= 0){
+                            //TODO: REMOVE IF LOWER OR EQUAL TO ZERO
+                        }
+                    }
+                }
+            }else {
+                listProducts.getItems().clear();
+                productList.clear();
+                SavedShoppingList list = (SavedShoppingList) obj[0];
+                for (ShoppingItem item : list.getProducts()) {
+                    listProducts.getItems().add(new ProductListCell(item));
+                    productList.add(item);
+                }
+            }
         }
 
         @Override

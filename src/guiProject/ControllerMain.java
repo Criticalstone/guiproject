@@ -109,6 +109,10 @@ public class ControllerMain extends Application{
 		controllerShoppingLists.addShoppingList(name);
 	}
 
+    public static void addProductToList(String name, List<ShoppingItem> list){
+        controllerShoppingLists.addProductToList(name, list);
+    }
+
     public static void performSearch(String query){
         List<Product> result = imat.findProducts(query);
         controllerResultList.setItems(result);
@@ -139,6 +143,10 @@ public class ControllerMain extends Application{
     	scene.getStylesheets().add(color.getScheme());
     	currentColorScheme = color;
     }
+
+    public static void removeShoppingList(String name){
+        controllerShoppingLists.getShoppingLists().remove(name);
+    }
     
     public static void setUser(UserProfile userprofile){
     	user = userprofile;
@@ -149,6 +157,10 @@ public class ControllerMain extends Application{
 	//DISPLAY METHODS
     public static void updateQtyAllCards(){
         controllerResultList.updateQtyInCartForAllCards();
+    }
+
+    public static void updateShoppingListView(){
+        shoppingList.updateShoppingListView();
     }
     
 	public static void displayPaymentOption(PaymentOption option){

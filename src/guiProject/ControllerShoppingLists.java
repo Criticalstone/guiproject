@@ -26,7 +26,6 @@ public class ControllerShoppingLists implements Serializable{
     private IFProductList<Product> starList = new StarList();
     private static ControllerShoppingLists singleton;
     private IMatDataHandler imat;
-
    
     private ControllerShoppingLists(){
     	shoppingLists = new HashMap<>();
@@ -69,12 +68,13 @@ public class ControllerShoppingLists implements Serializable{
 		shoppingLists.put(name, new SavedShoppingList(name));
 	}
 
-    public void addProductToList(String list, ShoppingItem item){
+    public void addProductToList(String name, ShoppingItem item){
 
     }
 
-    public void addProductToList(String list, List<ShoppingItem> items){
-
+    public void addProductToList(String name, List<ShoppingItem> items){
+        IFProductList<ShoppingItem> list = shoppingLists.get(name);
+        list.addList(items);
     }
 	
 
