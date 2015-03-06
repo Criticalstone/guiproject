@@ -59,6 +59,7 @@
                   <Insets />
                </GridPane.margin>
             </Button>
+            <TextField fx:id="listName" promptText="Name" GridPane.rowIndex="1" />
          </children>
          <GridPane.margin>
             <Insets bottom="10.0" right="10.0" />

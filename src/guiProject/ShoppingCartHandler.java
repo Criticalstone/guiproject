@@ -53,6 +53,8 @@ public class ShoppingCartHandler extends GridPane{
     private Button buttonBuyNow;
     @FXML
     private Button buttonSaveToList;
+    @FXML
+    private TextField listName;
 
     private ShoppingCart cart;
 
@@ -164,9 +166,10 @@ public class ShoppingCartHandler extends GridPane{
     }
 
     public void saveToListButtonAction(ActionEvent e){
-    	String name = "Ink�pslista " + LocalDateTime.now().toLocalDate();
-    	ControllerMain.addShoppingList(name);
-    	
+        ControllerMain.addShoppingList(listName.getText());
+        ControllerMain.addProductToList(listName.getText(), cart.getItems());
+        System.out.println(listName.getText());
+        ControllerMain.updateShoppingListView();
     }
 
     //Private class which represent the List items in the gui.
