@@ -51,12 +51,12 @@
 
 .main-buttons:selected {
     -fx-padding: 2 0 0 2;
-    -fx-background-color: #B7B7B7;
+    -fx-background-color: #646464;
 
 }
 
 .main-buttons:hover{
-    -fx-background-color: #B7B7B7;
+    -fx-background-color: #646464;
 
 }
 
@@ -78,7 +78,7 @@
 }
 
 .addsub-buttons:hover{
-    -fx-background-color: #B7B7B7;
+    -fx-background-color: #646464;
 
 }
 
@@ -103,7 +103,7 @@
 }
 
 .icon-buttons:hover{
-    -fx-background-color: #B7B7B7;
+    -fx-background-color: #646464;
 
 }
 
@@ -125,7 +125,7 @@
 }
 
 .menu-button:hover{
-	 -fx-background-color: #B7B7B7;
+	 -fx-background-color: #646464;
 	 -fx-text-fill: white;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .titled-pane:hover > .title {
-    -fx-background-color: #B7B7B7;
+    -fx-background-color: #646464;
 
 }
 
