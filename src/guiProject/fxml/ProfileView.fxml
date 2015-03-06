@@ -186,7 +186,7 @@
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
          <children>
             <Label />
-            <Label styleClass="text-lables" text="Namn">
+            <Label fx:id="labelName" styleClass="text-lables" text="Namn">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -255,16 +255,6 @@
             <Insets />
          </GridPane.margin>
       </HBox>
-      <Label GridPane.rowIndex="2">
-         <padding>
-            <Insets left="5.0" />
-         </padding>
-      </Label>
-      <Label GridPane.rowIndex="2">
-         <padding>
-            <Insets left="5.0" />
-         </padding>
-      </Label>
       <Label styleClass="text-lables" text=" Personuppgifter" GridPane.rowIndex="1">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -289,7 +279,7 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="textPostal" promptText="ex. Göteborg" GridPane.rowIndex="5">
+            <TextField fx:id="textTown" promptText="ex. Göteborg" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>

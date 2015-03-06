@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -13,6 +14,8 @@ public class CreateNewProfile extends HBox{
 	
 	@FXML
 	private HBox hBox;
+	@FXML 
+	private ToggleButton addButton;
 	private int one=1;
 	
 	public CreateNewProfile(){
@@ -35,10 +38,5 @@ public class CreateNewProfile extends HBox{
 			hBox.getChildren().add(new NewProfileAccount());
 			one=one+1;
 		}
-		
-				
 	}
-	
-	
-
 }

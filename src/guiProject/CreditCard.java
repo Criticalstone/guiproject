@@ -22,7 +22,12 @@ public class CreditCard implements Serializable{
 	private String cvc;
 
 	public CreditCard(String cardType, String cardNo, String cardHolder, String expiryYear, String expiryMonth, String cvc){
-
+		setCardHolder(cardHolder);
+		setCardNo(cardNo);
+		setCardType(cardType);
+		setCvc(cvc);
+		setExpiryMonth(expiryMonth);
+		setExpiryYear(expiryYear);
 	}
 
 	/**
