@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
 
 public class NewProfileAccount extends GridPane{
@@ -52,8 +51,8 @@ public class NewProfileAccount extends GridPane{
 	}
 
 	
-	public static boolean hasReachedAcoountLimit(){
-		if(Utilities.getSavedFiles(null).size()<5){
+	public boolean hasReachedAcoountLimit(){
+		if(Utilities.getSavedFiles(null).size()<=5){
 			return false;
 		}else{
 			return true;
@@ -77,8 +76,8 @@ public class NewProfileAccount extends GridPane{
 			Utilities.SaveToFile(user, null, name);
 			
 			ControllerMain.setUser(user);
-			ProfileView.setLoggedInStatus(true);
-//			Banner.setTextToLoggedIn();
+			ControllerMain.getLogInView().setLoggedInStatus(true);
+			ControllerMain.getBanner().setTextToLoggedIn();
 			
 			ControllerMain.displayProfile(user);
 			

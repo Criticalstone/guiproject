@@ -6,8 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-
 
 
 public class CreateNewProfile extends HBox{
@@ -30,13 +28,18 @@ public class CreateNewProfile extends HBox{
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
+		  addButton.setDisable(false);
 	}
 	
 	@FXML
 	public void ButtonAddProfile(){
-		if(one==1){
+		if(Utilities.getSavedFiles(null).size()<=5){
+			if(one==1){
 			hBox.getChildren().add(new NewProfileAccount());
 			one=one+1;
+			}
+		}else{
+			addButton.setDisable(true);
 		}
 	}
 }

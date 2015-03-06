@@ -34,14 +34,6 @@ public class UserProfile implements Serializable {
 		this.setPaymentOption("");
 		creditCard=new CreditCard("","","","","","");
 		this.setCard(creditCard);
-		
-		
-		
-		
-		
-		
-		
-
 	}
 
 	/**
