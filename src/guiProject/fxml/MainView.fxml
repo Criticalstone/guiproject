@@ -15,7 +15,7 @@
       <GridPane fx:id="mainview" prefHeight="294.0" prefWidth="527.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
         <columnConstraints>
           <ColumnConstraints hgrow="NEVER" />
-            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="241.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="241.0" />
           <ColumnConstraints hgrow="NEVER" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
         </columnConstraints>
         <rowConstraints>
@@ -24,7 +24,7 @@
          <children>
             <GridPane fx:id="detailView" alignment="CENTER" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints maxHeight="1.7976931348623157E308" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
