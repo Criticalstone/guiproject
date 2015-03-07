@@ -43,7 +43,7 @@ public class Banner extends GridPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        
+        usernameLabel.setVisible(false);
         setBanner("start");
     }
     

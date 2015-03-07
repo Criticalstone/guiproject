@@ -94,10 +94,11 @@ public class ProfileView extends GridPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        this.profile = user;
-        correctMessage.setVisible(false);
-        setupChoiceBoxes();
-        loadInfo();
+        
+          this.profile = user;
+          correctMessage.setVisible(false);
+          setupChoiceBoxes();
+          loadInfo();
     }
 
 
