@@ -14,6 +14,7 @@ import java.util.List;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 /**
@@ -85,9 +86,7 @@ public class Utilities {
 			return (Serializable)toReturn;
 		}catch(Exception ex){
 			return null;
-		}
-		
-		
+		}	
 	}
 	
 	public static List<String> getSavedFiles(String path){
@@ -107,11 +106,21 @@ public class Utilities {
 	    return toReturn;
 	}
 	
-	public static void deleteFile(String name){
-		List<String> list = getSavedFiles(null); 
-		for(int i=0; i<=getSavedFiles(null).size(); i++){
-			File file=new File(System.getProperty("user.home") + "/.dat215/savedFilesGrp24" +"/" + list.get(i));
-			file.delete();
+	
+    public static void DeleteSpecificProfil(String path, String name){	
+		if (path == null){
+			new File(System.getProperty("user.home") + "/.dat215/savedFilesGrp24").mkdirs();
+			path = System.getProperty("user.home") + "/.dat215/savedFilesGrp24";
 		}
-	}
+		File folder = new File(path);
+		File[] listOfFiles = folder.listFiles();
+
+	    for (int i = 0; i < listOfFiles.length; i++) {
+			if (listOfFiles[i].getName().equals(name)){
+				listOfFiles[i].delete();
+			} 
+	    }
+    
+    }//tar bort den specifika profilen
+	
 }

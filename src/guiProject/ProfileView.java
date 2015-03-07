@@ -12,7 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.swing.Timer;
 
@@ -80,6 +82,10 @@ public class ProfileView extends GridPane{
     private Label wrongMessage;
     @FXML
     private Label correctMessage;
+    @FXML
+    private CheckBox deleteProfile;
+    @FXML
+    private Button deleteProfileButton;
     
     
     public ProfileView(UserProfile user) {
@@ -223,5 +229,23 @@ public class ProfileView extends GridPane{
     	newPassword.clear();
     	repeatPassword.clear();
     	wrongMessage.setVisible(false);
+    }
+    
+    @FXML
+    public void DeleteProfilOnAction(){
+    	Utilities.DeleteSpecificProfil(null, ControllerMain.getUser().getUsername());
+    	ControllerMain.getLogInView().setLoggedInStatus(false);
+    	ControllerMain.getBanner().setTextToLoggedIn();
+    	ControllerMain.displayLoginView("");	
+    }
+    
+    @FXML
+    public void ActivateDeleteProfile(){
+    	System.out.println(deleteProfile.isSelected());
+    	if(deleteProfile.isSelected()){
+    		deleteProfileButton.setDisable(false);
+    	}else{
+    		deleteProfileButton.setDisable(true);
+    	}
     }
 }

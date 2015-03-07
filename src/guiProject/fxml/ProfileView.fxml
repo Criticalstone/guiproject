@@ -449,6 +449,12 @@
                   <Button mnemonicParsing="false" onAction="#SavePasswordOnAction" text="Spara" />
                </children>
             </VBox>
+            <Button fx:id="deleteProfileButton" disable="true" mnemonicParsing="false" onAction="#DeleteProfilOnAction" text="X" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" styleClass="text-lables" text="Ta bort denna profil" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
          </children>
       </GridPane>
    </children>
@@ -457,7 +463,7 @@
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="361.0" prefWidth="388.0" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints maxHeight="200.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="220.0" minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
@@ -469,6 +475,6 @@
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="23.0" prefHeight="23.0" vgrow="SOMETIMES" />
    </rowConstraints>
 </fx:root>
