@@ -165,16 +165,31 @@ public class Banner extends GridPane{
     public void buttonAction(ActionEvent e){
     	switch(((Node) e.getSource()).getId()){
     		case "favorite":
-    			ControllerMain.setProductList(ControllerMain.getStaredProducts());
-    	    	ControllerMain.unSelectCategories();
-    	    	setBanner("start");
-    			break;
+    			if(ControllerMain.getLogInView().getLoggedInStatus()){
+    				ControllerMain.setProductList(ControllerMain.getStaredProducts());
+    				ControllerMain.unSelectCategories();
+    				setBanner("start");
+    				break;
+    			}else{
+    				ControllerMain.displayLoginView();
+    				break;
+    			}
     		case "shoppingList":
-    			ControllerMain.displayShoppingListView();
-    			break;
+    			if(ControllerMain.getLogInView().getLoggedInStatus()){
+    				ControllerMain.displayShoppingListView();
+    				break;
+    			}else{
+    				ControllerMain.displayLoginView();
+    				break;
+    			}
     		case "recipe":
-    			ControllerMain.displayRecipeListView();
-    			break;
+    			if(ControllerMain.getLogInView().getLoggedInStatus()){
+    				ControllerMain.displayRecipeListView();
+    				break;
+    			}else{
+    				ControllerMain.displayLoginView();
+    				break;
+    			}
     		default:
     			break;
     	}
@@ -207,7 +222,7 @@ public class Banner extends GridPane{
     }
   
     public void setUsernameLabel(){
-    	usernameLabel.setText(ControllerMain.getUser().getUsername());
+    	usernameLabel.setText("Profil: " + ControllerMain.getUser().getUsername());
     }
     
 

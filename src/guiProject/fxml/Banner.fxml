@@ -93,13 +93,16 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <Label fx:id="usernameLabel" onMouseClicked="#nameLabelOnAction" styleClass="text-lables" text="Karl Karlsson">
+                  <Label fx:id="usernameLabel" onMouseClicked="#nameLabelOnAction" styleClass="text-lables">
                      <HBox.margin>
-                        <Insets right="5.0" />
+                        <Insets right="10.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
                   </Label>
                 
 

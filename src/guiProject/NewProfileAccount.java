@@ -37,17 +37,18 @@ public class NewProfileAccount extends GridPane{
 	
 	@FXML
 	public void ButtonCreateNewAccount(){
-			if(firstPassword.getText().equals(secondPassword.getText())){	
-				if(!hasReachedAcoountLimit() &&!firstPassword.getText().equals("")){
-					createUserProfile(getUserName());
-				}else if(firstPassword.getText().equals("")){
-					setMessageNoPassword();
-				}else{
-					setMessageFull();
-				}
-			}else{
-				setMessageNotSame();
-			}	
+		if(name.getText().equals("")){
+			setMessageNoName();
+		}else if(firstPassword.getText().equals(secondPassword.getText())){
+			if(hasReachedAcoountLimit()){
+				setMessageFull();
+			}else if(!firstPassword.getText().equals("")){
+				createUserProfile(getUserName());
+			}
+			setMessageNoPassword();
+		}else{
+			setMessageNotSame();
+		}
 	}
 
 	
@@ -96,6 +97,11 @@ public class NewProfileAccount extends GridPane{
 	
 	public void setMessageNotSame(){
 		wrongMessage.setText("*Ej samma lösenord");
+		wrongMessage.setVisible(true);
+	}
+	
+	public void setMessageNoName(){
+		wrongMessage.setText("*Inget namn inskrivet");
 		wrongMessage.setVisible(true);
 	}
 }

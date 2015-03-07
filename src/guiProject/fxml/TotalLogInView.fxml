@@ -17,7 +17,7 @@
    </rowConstraints>
    <children>
       <HBox fx:id="hBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-      <Label styleClass="text-lables" text="Mitt iMat" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label styleClass="text-lables" text="Logga in" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

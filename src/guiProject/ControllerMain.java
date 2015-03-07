@@ -379,7 +379,7 @@ public class ControllerMain extends Application{
         //Complete setup    
         primaryStage.setScene(scene);
         primaryStage.show();
-        setColorScheme(ColorScheme.LIGHT);
+        setColorScheme(ColorScheme.DARK);
 
 
     }

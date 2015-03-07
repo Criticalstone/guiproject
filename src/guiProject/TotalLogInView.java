@@ -37,7 +37,6 @@ public class TotalLogInView extends GridPane {
 	
 
 
-
 	public void getSavedUsers(){	
 	  if(!Utilities.getSavedFiles(null).isEmpty()){
 		  for(int i=0; i<Utilities.getSavedFiles(null).size(); i++){
