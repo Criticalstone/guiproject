@@ -171,7 +171,7 @@ public class Banner extends GridPane{
     				setBanner("start");
     				break;
     			}else{
-    				ControllerMain.displayLoginView();
+    				ControllerMain.displayLoginView("favorite");
     				break;
     			}
     		case "shoppingList":
@@ -179,7 +179,7 @@ public class Banner extends GridPane{
     				ControllerMain.displayShoppingListView();
     				break;
     			}else{
-    				ControllerMain.displayLoginView();
+    				ControllerMain.displayLoginView("list");
     				break;
     			}
     		case "recipe":
@@ -187,7 +187,7 @@ public class Banner extends GridPane{
     				ControllerMain.displayRecipeListView();
     				break;
     			}else{
-    				ControllerMain.displayLoginView();
+    				ControllerMain.displayLoginView("recept");
     				break;
     			}
     		default:
@@ -210,9 +210,9 @@ public class Banner extends GridPane{
     	if(ControllerMain.getLogInView().getLoggedInStatus()==true){  //Loggar ut
     		ControllerMain.getLogInView().setLoggedInStatus(false);
     		setTextToLoggedIn();
-    		ControllerMain.displayLoginView();
+    		ControllerMain.displayLoginView("");
 		}else{                                                         // Skickar dig så du kan logga in
-			ControllerMain.displayLoginView();
+			ControllerMain.displayLoginView("");
 		}		
     }
     

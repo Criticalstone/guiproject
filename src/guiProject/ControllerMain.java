@@ -236,9 +236,9 @@ public class ControllerMain extends Application{
 		controllerCategories.unSelectCategories();
 	}
 
-	public static void displayLoginView(/*TestMain.NextView nextView*/){
+	public static void displayLoginView(String side){
 		detailView.getChildren().removeAll(detailView.getChildren());
-		detailView.getChildren().add(/*nextView*/ new TotalLogInView());
+		detailView.getChildren().add(new TotalLogInView(side));
 	}
 	
 	//GETTERS
@@ -341,7 +341,7 @@ public class ControllerMain extends Application{
         controllerShoppingLists = ControllerShoppingLists.getInstance();
         controllerCategories = Categories.getInstance();
         checkoutView = new CheckoutView();
-        logInView=new LogInView("");
+        logInView=new LogInView("","");
         controllerBanner = new Banner();
         startView = new StartView();
         recipeView = new RecipeView();

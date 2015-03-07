@@ -12,8 +12,9 @@ public class TotalLogInView extends GridPane {
 	
 	@FXML
 	private HBox hBox;
+	private String nextSide;
 	
-	public TotalLogInView(){
+	public TotalLogInView(String side){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
             "fxml/TotalLogInView.fxml"));
 
@@ -26,13 +27,14 @@ public class TotalLogInView extends GridPane {
 			  throw new RuntimeException(exception);
 		  }
 		  
+		  nextSide=side;
 		  hBox.getChildren().add(new CreateNewProfile()); //additionstecknet  
 		  getSavedUsers();  //Sätter upp alla konton som logga in konton
 			  
 	}
 	
 	public void createLogInBox(String user){
-		hBox.getChildren().add(new LogInView(user));
+		hBox.getChildren().add(new LogInView(user, nextSide));
 	}
 	
 

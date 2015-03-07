@@ -23,7 +23,9 @@ public class LogInView extends GridPane {
 	
 	private boolean isLoggedIn=false;
 	
-	public LogInView(String userName){
+	private String nameNextSide;
+	
+	public LogInView(String userName ,String sidename){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
         "fxml/LogInBox.fxml"));
 
@@ -35,7 +37,8 @@ public class LogInView extends GridPane {
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
-		  
+		 
+		  nameNextSide=sidename;
 		  this.username.setText(userName);
 		  logInBox.setVisible(false);
 	}
@@ -48,7 +51,18 @@ public class LogInView extends GridPane {
 				ControllerMain.getLogInView().setLoggedInStatus(true);
 				ControllerMain.getBanner().setUsernameLabel();
 				ControllerMain.getBanner().setTextToLoggedIn();
-				ControllerMain.displayProfile(user);
+				
+				if(nameNextSide.equals("favorite")){
+					ControllerMain.setProductList(ControllerMain.getStaredProducts());
+    				ControllerMain.unSelectCategories();
+    				ControllerMain.getBanner().setBanner("start");
+				}else if(nameNextSide.equals("list")){
+					ControllerMain.displayShoppingListView();
+				}else if(nameNextSide.equals("recept")){
+					ControllerMain.displayRecipeView();
+				}else{
+					ControllerMain.displayProfile(user);
+				}
 			}else{
 				wrongPassword.setText("*Fel lösenord!");
 				wrongPassword.setVisible(true);
