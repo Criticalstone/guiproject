@@ -118,6 +118,7 @@ public class ProfileView extends GridPane{
 	@FXML
     private void saveOnAction(ActionEvent event){
         setInfoToCustomer();
+        labelName.setText(profile.getFirstName() + " " + profile.getLastName());
         ControllerMain.getLogInView().setLoggedInStatus(true);
     }
 
@@ -196,7 +197,11 @@ public class ProfileView extends GridPane{
     
     @FXML
     public void ChangePasswordOnAction(){
-    	changePasswordBox.setVisible(true);
+    	if(changePasswordBox.isVisible()){
+    		cleanBox();
+    	}else{
+    		changePasswordBox.setVisible(true);
+    	}
     }
 
     

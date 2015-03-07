@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="704.0" prefWidth="700.0" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="781.0" prefWidth="780.0" styleClass="details-background" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <children>
@@ -21,7 +21,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="textCardName" promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <TextField fx:id="textCardName" prefWidth="249.0" promptText="ex. Karl Karlsson" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="105.0" right="10.0" />
                </GridPane.margin>
@@ -31,7 +31,7 @@
             <Insets />
          </GridPane.margin>
       </HBox>
-      <Label text="Kortinformation" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Label styleClass="text-lables" text="Kortinformation" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -88,7 +88,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <ChoiceBox fx:id="comboCard" prefHeight="31.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ChoiceBox fx:id="comboCard" prefHeight="31.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="105.0" right="10.0" />
                </GridPane.margin>
@@ -365,7 +365,7 @@
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
          <children>
             <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Leveranstid:" />
-            <ChoiceBox fx:id="comboDeliveryTime" prefWidth="223.0" />
+            <ChoiceBox fx:id="comboDeliveryTime" prefWidth="249.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="9">
@@ -375,7 +375,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <ChoiceBox fx:id="comboStore" prefHeight="25.0" prefWidth="223.0" />
+            <ChoiceBox fx:id="comboStore" prefHeight="25.0" prefWidth="249.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="10">
@@ -385,7 +385,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <ChoiceBox fx:id="comboDeliveryOptions" prefHeight="25.0" prefWidth="223.0" />
+            <ChoiceBox fx:id="comboDeliveryOptions" prefHeight="25.0" prefWidth="249.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
@@ -403,14 +403,14 @@
             <Insets right="5.0" />
          </padding>
       </HBox>
-      <GridPane GridPane.columnIndex="1">
+      <GridPane maxHeight="-Infinity" prefHeight="300.0" prefWidth="487.0" GridPane.columnIndex="1">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="186.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="214.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="214.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <VBox prefHeight="123.0" prefWidth="186.0" GridPane.rowIndex="1">
@@ -427,43 +427,49 @@
             </VBox>
             <VBox fx:id="changePasswordBox" prefHeight="200.0" prefWidth="100.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <Label text="Nuvarande lösenord" />
+                  <Label />
+                  <Label styleClass="text-lables" text="Nuvarande lösenord" />
                   <TextField fx:id="currentPassword">
                      <VBox.margin>
                         <Insets right="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label text="Nytt lösenord" />
+                  <Label styleClass="text-lables" text="Nytt lösenord" />
                   <TextField fx:id="newPassword">
                      <VBox.margin>
                         <Insets right="10.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label text="Upprepa lösenord" />
+                  <Label styleClass="text-lables" text="Upprepa lösenord" />
                   <TextField fx:id="repeatPassword">
                      <VBox.margin>
                         <Insets right="10.0" />
                      </VBox.margin>
                   </TextField>
                   <Label fx:id="wrongMessage" prefHeight="21.0" prefWidth="232.0" textFill="#fc5252" />
-                  <Button mnemonicParsing="false" onAction="#SavePasswordOnAction" text="Spara" />
+                  <Button mnemonicParsing="false" onAction="#SavePasswordOnAction" prefHeight="31.0" prefWidth="73.0" styleClass="main-buttons" text="Spara" />
                </children>
             </VBox>
-            <Button fx:id="deleteProfileButton" disable="true" mnemonicParsing="false" onAction="#DeleteProfilOnAction" text="X" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+            <Button fx:id="deleteProfileButton" disable="true" mnemonicParsing="false" onAction="#DeleteProfilOnAction" styleClass="main-buttons" text="X" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" styleClass="text-lables" text="Ta bort denna profil" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+            <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" styleClass="text-lables" text="Ta bort denna profil" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
          </children>
       </GridPane>
+      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" styleClass="main-buttons" text="Byt profilbild" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </GridPane.margin>
+      </Button>
    </children>
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="361.0" prefWidth="388.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.0" minWidth="361.0" prefWidth="388.0" />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints maxHeight="220.0" minHeight="220.0" prefHeight="220.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="276.0" minHeight="260.0" prefHeight="268.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
@@ -475,6 +481,6 @@
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="42.0" minHeight="23.0" prefHeight="23.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="42.0" prefHeight="42.0" vgrow="SOMETIMES" />
    </rowConstraints>
 </fx:root>
