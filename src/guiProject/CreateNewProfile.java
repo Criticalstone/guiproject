@@ -28,7 +28,13 @@ public class CreateNewProfile extends HBox{
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
-		  addButton.setDisable(false);
+		  
+		  if(Utilities.getSavedFiles(null).size()<=5){
+			 addButton.setDisable(false); 
+		  }else{
+			  addButton.setDisable(true);
+		  }
+		  
 	}
 	
 	@FXML

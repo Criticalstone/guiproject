@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -29,6 +30,9 @@
                <toggleGroup>
                   <ToggleGroup fx:id="LogInGroup" />
                </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ToggleButton>
          </children>
       </GridPane>

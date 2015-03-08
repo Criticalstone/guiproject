@@ -222,7 +222,7 @@ public class Banner extends GridPane{
     }
   
     public void setUsernameLabel(){
-    	usernameLabel.setText("Profil: " + ControllerMain.getUser().getUsername());
+    	usernameLabel.setText(ControllerMain.getUser().getUsername());
     }
     
 

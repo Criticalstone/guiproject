@@ -167,6 +167,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
          <children>
+            <Button mnemonicParsing="false" onAction="#RegretOnAction" styleClass="main-buttons" text="Ångra" />
             <HBox alignment="CENTER" spacing="5.0">
                <children>
                   <Label styleClass="text-lables" text="Spara kortinfo" />
@@ -429,23 +430,23 @@
                <children>
                   <Label />
                   <Label styleClass="text-lables" text="Nuvarande lösenord" />
-                  <TextField fx:id="currentPassword">
+                  <PasswordField fx:id="currentPassword">
                      <VBox.margin>
                         <Insets right="10.0" />
                      </VBox.margin>
-                  </TextField>
+                  </PasswordField>
                   <Label styleClass="text-lables" text="Nytt lösenord" />
-                  <TextField fx:id="newPassword">
+                  <PasswordField fx:id="newPassword">
                      <VBox.margin>
                         <Insets right="10.0" />
                      </VBox.margin>
-                  </TextField>
+                  </PasswordField>
                   <Label styleClass="text-lables" text="Upprepa lösenord" />
-                  <TextField fx:id="repeatPassword">
+                  <PasswordField fx:id="repeatPassword">
                      <VBox.margin>
                         <Insets right="10.0" />
                      </VBox.margin>
-                  </TextField>
+                  </PasswordField>
                   <Label fx:id="wrongMessage" prefHeight="21.0" prefWidth="232.0" textFill="#fc5252" />
                   <Button mnemonicParsing="false" onAction="#SavePasswordOnAction" prefHeight="31.0" prefWidth="73.0" styleClass="main-buttons" text="Spara" />
                </children>
@@ -463,6 +464,7 @@
             <Insets left="10.0" top="10.0" />
          </GridPane.margin>
       </Button>
+      <Label fx:id="profileSavedMessage" text="*Ny information sparats" textFill="#2bee4c" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="12" GridPane.valignment="TOP" />
    </children>
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />

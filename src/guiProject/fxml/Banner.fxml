@@ -57,6 +57,9 @@
                      <graphic>
                         <ImageView fx:id="startImg" fitHeight="16.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" styleClass="icon-buttons" />
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Startsida" />
+                     </tooltip>
                   </Button>
                   <HBox alignment="CENTER" spacing="2.0">
                      <children>

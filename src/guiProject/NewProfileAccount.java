@@ -40,9 +40,7 @@ public class NewProfileAccount extends GridPane{
 		if(name.getText().equals("")){
 			setMessageNoName();
 		}else if(firstPassword.getText().equals(secondPassword.getText())){
-			if(hasReachedAcoountLimit()){
-				setMessageFull();
-			}else if(!firstPassword.getText().equals("")){
+			if(!firstPassword.getText().equals("")){
 				createUserProfile(getUserName());
 			}
 			setMessageNoPassword();
@@ -52,13 +50,7 @@ public class NewProfileAccount extends GridPane{
 	}
 
 	
-	public boolean hasReachedAcoountLimit(){
-		if(Utilities.getSavedFiles(null).size()<=5){
-			return false;
-		}else{
-			return true;
-		}
-	}
+
 	
 	public String getUserName(){
 		return name.getText();
@@ -79,6 +71,7 @@ public class NewProfileAccount extends GridPane{
 			ControllerMain.setUser(user);
 			ControllerMain.getLogInView().setLoggedInStatus(true);
 			ControllerMain.getBanner().setTextToLoggedIn();
+			ControllerMain.getBanner().setUsernameLabel();
 			
 			ControllerMain.displayProfile(user);
 			

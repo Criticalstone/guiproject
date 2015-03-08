@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -73,11 +74,11 @@ public class ProfileView extends GridPane{
     @FXML
     private VBox changePasswordBox;
     @FXML
-    private TextField currentPassword;
+    private PasswordField currentPassword;
     @FXML
-    private TextField newPassword;
+    private PasswordField newPassword;
     @FXML
-    private TextField repeatPassword;
+    private PasswordField repeatPassword;
     @FXML
     private Label wrongMessage;
     @FXML
@@ -86,7 +87,8 @@ public class ProfileView extends GridPane{
     private CheckBox deleteProfile;
     @FXML
     private Button deleteProfileButton;
-    
+    @FXML
+    private Label profileSavedMessage;
     
     public ProfileView(UserProfile user) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -103,6 +105,7 @@ public class ProfileView extends GridPane{
         
           this.profile = user;
           correctMessage.setVisible(false);
+          profileSavedMessage.setVisible(false);
           setupChoiceBoxes();
           loadInfo();
     }
@@ -110,8 +113,8 @@ public class ProfileView extends GridPane{
 
     @SuppressWarnings("unchecked")
 	private void setupChoiceBoxes() {
-    	comboPaymentOpt.setItems(FXCollections.observableArrayList("Kredit-/Kontokort", "PayPal", "Direktbank", "Faktura"));
-    	comboCard.setItems(FXCollections.observableArrayList("MasterCard", "Visa", "Maestro"));
+    	comboPaymentOpt.setItems(FXCollections.observableArrayList("","Kredit-/Kontokort", "PayPal", "Direktbank", "Faktura"));
+    	comboCard.setItems(FXCollections.observableArrayList("","MasterCard", "Visa", "Maestro"));
 		
 	}
 
@@ -120,6 +123,7 @@ public class ProfileView extends GridPane{
         setInfoToCustomer();
         labelName.setText(profile.getFirstName() + " " + profile.getLastName());
         ControllerMain.getLogInView().setLoggedInStatus(true);
+        profileSavedMessage.setVisible(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -172,7 +176,7 @@ public class ProfileView extends GridPane{
 	    	profile.setTown(textTown.getText());
 	    	profile.setPhone(textTel.getText());
 	    	profile.setEmail(textEmail.getText());
-	    	comboPaymentOpt.setValue(profile.getPaymentOption());
+	    	profile.setPaymentOption(comboPaymentOpt.getValue().toString());
 	    	
 	    	if(checkCardSave.isSelected()){
 	    		profile.setCard(new CreditCard((String)comboCard.getValue(), (textNum1.getText()+textNum2.getText()+textNum3.getText()+textNum4.getText()), textCardName.getText(), textExpir1.getText(), textExpir2.getText(), textCVC.getText()));
@@ -252,5 +256,9 @@ public class ProfileView extends GridPane{
     	}else{
     		deleteProfileButton.setDisable(true);
     	}
+    }
+    @FXML 
+    public void RegretOnAction(){
+    	loadInfo();	
     }
 }
