@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import guiProject.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
@@ -127,7 +128,7 @@
                   <Insets left="105.0" right="190.0" />
                </GridPane.margin>
             </TextField>
-            <Label text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Label styleClass="text-lables" text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="155.0" />
                </GridPane.margin>
@@ -140,6 +141,7 @@
                   <Insets left="170.0" right="122.0" />
                </GridPane.margin>
             </TextField>
+            <IntegerTextField fx:id="test" />
          </children>
          <GridPane.margin>
             <Insets />

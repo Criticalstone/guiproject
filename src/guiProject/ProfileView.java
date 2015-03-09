@@ -99,6 +99,8 @@ public class ProfileView extends GridPane{
     private Button deleteProfileButton;
     @FXML
     private Label profileSavedMessage;
+    @FXML 
+    private IntegerTextField test;
 //    @FXML
 //    private ImageView profileImage;
 	
@@ -115,6 +117,7 @@ public class ProfileView extends GridPane{
             throw new RuntimeException(exception);
         }
         
+        test.setMaxLength(2);
           this.profile = user;
           correctMessage.setVisible(false);
           profileSavedMessage.setVisible(false);
@@ -268,6 +271,8 @@ public class ProfileView extends GridPane{
     		deleteProfileButton.setDisable(true);
     	}
     }
+    
+    
     @FXML 
     public void RegretOnAction(){
     	loadInfo();	
