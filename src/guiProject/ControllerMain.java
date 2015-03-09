@@ -16,12 +16,15 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArrayBase;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+import javafx.stage.WindowEvent;
 
 /**
  * The main controller for iMat. The sub controllers will call for this class, which will coordinate actions between different nodes.
@@ -387,6 +390,12 @@ public class ControllerMain extends Application{
 
         
         //Complete setup    
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                imat.shutDown();
+            }
+        });
         primaryStage.setScene(scene);
         primaryStage.show();
         setColorScheme(ColorScheme.DARK);
