@@ -52,26 +52,10 @@
             </Label>
             <HBox spacing="3.0">
                <children>
-                  <TextField fx:id="textNum1" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="105.0" right="180.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <TextField fx:id="textNum2" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="162.0" right="122.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <TextField fx:id="textNum3" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="220.0" right="65.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <TextField fx:id="textNum4" alignment="CENTER" prefWidth="60.0" promptText="xxxx" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="278.0" right="10.0" />
-                     </GridPane.margin>
-                  </TextField>
+                  <IntegerTextField fx:id="textNum1" alignment="CENTER" prefWidth="60.0" promptText="xxxx" />
+                  <IntegerTextField fx:id="textNum2" alignment="CENTER" prefWidth="60.0" promptText="xxxx" />
+                  <IntegerTextField fx:id="textNum3" alignment="CENTER" prefWidth="60.0" promptText="xxxx" />
+                  <IntegerTextField fx:id="textNum4" alignment="CENTER" prefWidth="60.0" promptText="xxxx" />
                </children>
             </HBox>
          </children>
@@ -123,11 +107,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <TextField fx:id="textExpir1" alignment="CENTER" prefWidth="60.0" promptText="åå" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets left="105.0" right="190.0" />
-               </GridPane.margin>
-            </TextField>
+            <IntegerTextField fx:id="textExpir1" alignment="CENTER" prefWidth="60.0" promptText="åå" />
             <Label styleClass="text-lables" text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="155.0" />
@@ -136,12 +116,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="textExpir2" alignment="CENTER" prefWidth="60.0" promptText="mm" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets left="170.0" right="122.0" />
-               </GridPane.margin>
-            </TextField>
-            <IntegerTextField fx:id="test" />
+            <IntegerTextField fx:id="textExpir2" alignment="CENTER" prefWidth="60.0" promptText="mm" />
          </children>
          <GridPane.margin>
             <Insets />
@@ -157,11 +132,7 @@
                   <Insets />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="textCVC" alignment="CENTER" maxWidth="50.0" promptText="xxx" GridPane.columnIndex="1" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets left="105.0" right="180.0" />
-               </GridPane.margin>
-            </TextField>
+            <IntegerTextField fx:id="textCVC" maxWidth="50.0" promptText="xxx" />
          </children>
          <GridPane.margin>
             <Insets />
@@ -169,17 +140,11 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
          <children>
-            <Button mnemonicParsing="false" onAction="#RegretOnAction" styleClass="main-buttons" text="Ångra" />
-            <HBox alignment="CENTER" spacing="5.0">
-               <children>
-                  <Label styleClass="text-lables" text="Spara kortinfo" />
-                  <CheckBox fx:id="checkCardSave" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </CheckBox>
-               </children>
-            </HBox>
+            <Button mnemonicParsing="false" onAction="#RegretOnAction" styleClass="main-buttons" text="Återställ">
+               <tooltip>
+                  <Tooltip text="Återställ till senast sparad information" />
+               </tooltip></Button>
+            <HBox alignment="CENTER" spacing="5.0" />
             <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveOnAction" styleClass="main-buttons" text="Spara" GridPane.columnIndex="1" GridPane.rowIndex="12" />
          </children>
          <GridPane.margin>

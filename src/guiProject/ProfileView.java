@@ -63,21 +63,21 @@ public class ProfileView extends GridPane{
 	@FXML
     private ChoiceBox comboCard;
     @FXML
-    private TextField textNum1;
+    private IntegerTextField textNum1;
     @FXML
-    private TextField textNum2;
+    private IntegerTextField textNum2;
     @FXML
-    private TextField textNum3;
+    private IntegerTextField textNum3;
     @FXML
-    private TextField textNum4;
+    private IntegerTextField textNum4;
     @FXML
-    private TextField textExpir1;
+    private IntegerTextField textExpir1;
     @FXML
-    private TextField textExpir2;
+    private IntegerTextField textExpir2;
     @FXML
     private TextField textCardName;
     @FXML
-    private TextField textCVC;
+    private IntegerTextField textCVC;
     
     @FXML
     private Button buttonSave;
@@ -99,8 +99,6 @@ public class ProfileView extends GridPane{
     private Button deleteProfileButton;
     @FXML
     private Label profileSavedMessage;
-    @FXML 
-    private IntegerTextField test;
 //    @FXML
 //    private ImageView profileImage;
 	
@@ -116,8 +114,13 @@ public class ProfileView extends GridPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        
-        test.setMaxLength(2);
+          textNum1.setMaxLength(4);
+          textNum2.setMaxLength(4);
+          textNum3.setMaxLength(4);
+          textNum4.setMaxLength(4);
+          textExpir1.setMaxLength(2);
+          textExpir2.setMaxLength(2);
+          textCVC.setMaxLength(3);
           this.profile = user;
           correctMessage.setVisible(false);
           profileSavedMessage.setVisible(false);

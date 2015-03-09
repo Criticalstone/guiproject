@@ -59,7 +59,7 @@ public class LogInView extends GridPane {
 				}else if(nameNextSide.equals("list")){
 					ControllerMain.displayShoppingListView();
 				}else if(nameNextSide.equals("recept")){
-					ControllerMain.displayRecipeView();
+					ControllerMain.displayRecipeListView();
 				}else{
 					ControllerMain.displayProfile(user);
 				}
