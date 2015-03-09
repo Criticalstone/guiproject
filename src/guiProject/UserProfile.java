@@ -2,6 +2,8 @@ package guiProject;
 
 import java.io.Serializable;
 
+import javafx.scene.image.Image;
+
 public class UserProfile implements Serializable {
 
 	/**
@@ -20,6 +22,7 @@ public class UserProfile implements Serializable {
 	private String username;
 	private String password;
 	private String town;
+//	private Image image;
 	
 	public UserProfile(String username, String password){
 		this.username = username;
@@ -34,6 +37,7 @@ public class UserProfile implements Serializable {
 		this.setPaymentOption("");
 		creditCard=new CreditCard("","","","","","");
 		this.setCard(creditCard);
+//		this.setImage(null);
 	}
 
 	/**
@@ -182,5 +186,21 @@ public class UserProfile implements Serializable {
 	public void setPaymentOption(String paymentOption) {
 		this.paymentOption = paymentOption;
 	}
+//	
+//	/**
+//	 * 
+//	 * @param image
+//	 */
+//	public void setImage(Image image){
+//		this.image=image;
+//	}
+//	
+//	/**
+//	 * 
+//	 * @return image
+//	 */
+//	public Image getImage(){
+//		return image;
+//	}
 
 }

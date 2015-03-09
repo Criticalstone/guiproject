@@ -1,5 +1,6 @@
 package guiProject;
 
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,14 +11,23 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 import javax.swing.Timer;
+
+import Archive.TestFileChooser;
 
 /**
  * Created by kritt on 2015-03-03.
@@ -89,7 +99,9 @@ public class ProfileView extends GridPane{
     private Button deleteProfileButton;
     @FXML
     private Label profileSavedMessage;
-    
+//    @FXML
+//    private ImageView profileImage;
+	
     public ProfileView(UserProfile user) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "fxml/ProfileView.fxml"));
@@ -250,7 +262,6 @@ public class ProfileView extends GridPane{
     
     @FXML
     public void ActivateDeleteProfile(){
-    	System.out.println(deleteProfile.isSelected());
     	if(deleteProfile.isSelected()){
     		deleteProfileButton.setDisable(false);
     	}else{
@@ -261,4 +272,21 @@ public class ProfileView extends GridPane{
     public void RegretOnAction(){
     	loadInfo();	
     }
+    
+//    @FXML  //Användes för att försöka ladda upp profilbild
+//    public void ChangeProfileOnAction(){
+//    	Stage stage = new Stage();
+//    	TestFileChooser file= new TestFileChooser();
+//    	file.start(stage);	
+//    }
+    
+//    public void setProfileImage(File file){  	
+//    	try{
+//    		Image me=ControllerMain.getUser().getImage();
+////    		Image me = new Image(" file:// " + file.toString());
+//    		profileImage.setImage(me);
+//    	}catch (NullPointerException ex){
+//    		System.out.println("Fel2");
+//    	}
+//    }
 }

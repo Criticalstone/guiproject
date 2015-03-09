@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import Archive.TestFileChooser;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArrayBase;
@@ -42,12 +43,13 @@ public class ControllerMain extends Application{
     private static Categories controllerCategories;
     private static RecipeView recipeView;
     private static StartView startView;
-//    private static ProfileView profile;
     private static CheckoutView checkoutView;
     private static Customer customer;
     private static RecipeListView recipeListView;
     private static ShoppingList shoppingList;
     private static LogInView logInView;
+    private static ProfileView profileView;
+//    private static TestFileChooser fileChooser;
     
     //Panes in mainview
     @FXML
@@ -321,6 +323,14 @@ public class ControllerMain extends Application{
 	public static LogInView getLogInView(){
 		return logInView;
 	}
+	
+	public static ProfileView getProfileView(){
+		return profileView; 
+	}
+	
+//	public static TestFileChooser getFileChooser(){
+//		return fileChooser;
+//	}
 	
 	
 	//LOCAL METHODS

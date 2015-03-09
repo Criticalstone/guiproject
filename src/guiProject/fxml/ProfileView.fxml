@@ -330,7 +330,7 @@
             <Insets right="5.0" />
          </GridPane.margin>
       </HBox>
-      <ImageView fitHeight="151.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="profileImage" fitHeight="151.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../res/greyprofile.png" />
          </image>
