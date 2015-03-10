@@ -51,7 +51,7 @@ public class LogInView extends GridPane {
 				ControllerMain.getLogInView().setLoggedInStatus(true);
 				ControllerMain.getBanner().setUsernameLabel();
 				ControllerMain.getBanner().setTextToLoggedIn();
-				
+				ControllerMain.setColorScheme(user.getColorScheme());
 				if(nameNextSide.equals("favorite")){
 					ControllerMain.setProductList(ControllerMain.getStaredProducts());
     				ControllerMain.unSelectCategories();
@@ -61,7 +61,6 @@ public class LogInView extends GridPane {
 				}else if(nameNextSide.equals("recept")){
 					ControllerMain.displayRecipeListView();
 				}else{
-					//ControllerMain.displayProfile(user);
 					ControllerMain.displayStartView();
 				}
 			}else{

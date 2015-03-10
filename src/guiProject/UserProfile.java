@@ -1,5 +1,7 @@
 package guiProject;
 
+import guiProject.ControllerColorScheme.ColorScheme;
+
 import java.io.Serializable;
 
 import javafx.scene.image.Image;
@@ -22,6 +24,7 @@ public class UserProfile implements Serializable {
 	private String username;
 	private String password;
 	private String town;
+	private ColorScheme colorScheme;
 //	private Image image;
 	
 	public UserProfile(String username, String password){
@@ -38,6 +41,7 @@ public class UserProfile implements Serializable {
 		creditCard=new CreditCard("","","","","","");
 		this.setCard(creditCard);
 //		this.setImage(null);
+		colorScheme = ControllerColorScheme.ColorScheme.DARK;
 	}
 
 	/**
@@ -202,5 +206,19 @@ public class UserProfile implements Serializable {
 //	public Image getImage(){
 //		return image;
 //	}
+
+	/**
+	 * @return the colorScheme
+	 */
+	public ColorScheme getColorScheme() {
+		return colorScheme;
+	}
+
+	/**
+	 * @param colorScheme the colorScheme to set
+	 */
+	public void setColorScheme(ColorScheme colorScheme) {
+		this.colorScheme = colorScheme;
+	}
 
 }

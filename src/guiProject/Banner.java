@@ -209,6 +209,7 @@ public class Banner extends GridPane{
     	if(ControllerMain.getLogInView().getLoggedInStatus()==true){  //Loggar ut
     		ControllerMain.getLogInView().setLoggedInStatus(false);
     		setTextToLoggedIn();
+    		ControllerMain.setColorScheme(ControllerColorScheme.ColorScheme.DARK);
     		ControllerMain.displayLoginView("");
 		}else{                                                         // Skickar dig s� du kan logga in
 			ControllerMain.displayLoginView("");

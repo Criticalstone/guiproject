@@ -4,6 +4,7 @@ import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
 import guiProject.CheckoutView.PaymentOption;
+import guiProject.ControllerColorScheme.ColorScheme;
 import se.chalmers.ait.dat215.project.*;
 import guiProject.interfaces.IFProductList;
 
@@ -37,6 +38,7 @@ public class ControllerMain extends Application{
     private static IMatDataHandler imat;
     private static Scene scene;
     private static UserProfile user;
+    private static ControllerColorScheme colorScheme;
     
     //Components
     private static ControllerResultList controllerResultList;
@@ -64,27 +66,7 @@ public class ControllerMain extends Application{
     @FXML
     private static GridPane bannerPane;
     
-    //For color schemes
-    private static ColorScheme currentColorScheme;
-    private static String defaultSheet = "/res/defaultStyleSheet.css";
-    
-    public enum ColorScheme {
-        DARK("/res/colorSchemeDark.css"),
-        BLUE("/res/colorSchemeBlue.css"),
-        RED("/res/colorSchemeRed.css"),
-        PINK("/res/colorSchemePink.css"),
-        LIGHT("/res/colorSchemeLight.css");
 
-        private String colorScheme;
-
-        ColorScheme(String colorScheme) {
-            this.colorScheme = colorScheme;
-        }
-
-        public String getScheme() {
-            return colorScheme;
-        }
-    }
 
     /**
      * Returns a list of products based on a category.
@@ -149,14 +131,13 @@ public class ControllerMain extends Application{
     }
     
     public static void setColorScheme(ColorScheme color){
-//    	removeAllAddedSchemes();
-    	List<String> styles = new ArrayList<String>();
-    	styles.add(defaultSheet);
-    	styles.add(color.getScheme());
-    	ObservableList<String> toAdd = FXCollections.observableArrayList(styles);
+    	colorScheme.setColorScheme(color);
+    	scene.getStylesheets().setAll(colorScheme.getColorScheme());
+
+    }
+    
+    public static void setStyleSheet(){
     	
-    	scene.getStylesheets().setAll(toAdd);
-    	currentColorScheme = color;
     }
 
     public static void removeShoppingList(String name){
@@ -331,19 +312,18 @@ public class ControllerMain extends Application{
 		return profileView; 
 	}
 	
+	public static ColorScheme getCurrentColorScheme(){
+		return colorScheme.getCurrentColor();
+	}
+	
+	public static List<ColorScheme> getAllAvailableColorSchemes(){
+		return colorScheme.getAllSchemes();
+	}
+	
 //	public static TestFileChooser getFileChooser(){
 //		return fileChooser;
 //	}
 	
-	
-	//LOCAL METHODS
-	private static void removeAllAddedSchemes() {
-		for (String sheet: scene.getStylesheets()){
-    		if (!sheet.equals(defaultSheet)){
-    			scene.getStylesheets().remove(sheet);
-    		}
-    	}
-	}
 	
 	//STARTUP METHODS
 	@Override
@@ -360,6 +340,7 @@ public class ControllerMain extends Application{
         recipeView = new RecipeView();
         recipeListView = new RecipeListView();
         shoppingList = new ShoppingList();
+        colorScheme = new ControllerColorScheme("defaultColorScheme");
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
