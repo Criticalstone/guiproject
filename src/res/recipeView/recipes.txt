@@ -1,0 +1,40 @@
+#name
+Tacogratäng
+#info
+Recept | Medel | Tid: 30min
+#image
+res/recipeView/tacoRecipe.jpg
+#ingredients
+115
+Ris
+76
+Nötfärs
+147
+Rosmarin
+141
+Basilika
+55
+Aubergine
+81
+Mozzarella
+#end
+#description
+Barnens favorit – en spännande och supersmarrig variant på fredagstacosen! Den fabulösa gratängen gör du av bland annat nötfärs, taco kryddmix, pastasås (med vitlök), majs, tomat och gratängcrème. Servera med ris, gurka, rödlök och låt er väl smaka!
+#instruction
+
+1. Sätt ugnen på 225°C.
+
+2. Koka riset. Läs på förpackningen hur man gör.
+
+3. Gratäng: Hetta upp oljan i en stekpanna. 
+
+4. Lägg ner färsen, dela den och stek den klar under omrörning. Den ska bli smulig.
+
+5. Rör i tacokryddan i köttfärsen. Blanda ner pastasåsen och vattnet och allt låt koka upp.
+
+6. Låt majsen rinna av och skär tomaterna i skivor. 
+
+7. Grönsaker: Skala löken och gurkan. Hacka löken och tärna gurkan.
+
+8. Servera tacogratängen med ris, resten av majsen, gurka och rödlök.
+#end

@@ -177,9 +177,10 @@ public class ControllerMain extends Application{
 		setBanner("start");
 	}
 	
-	public static void displayRecipeView(){
+	public static void displayRecipeView(String recipeName){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(recipeView);
+		recipeView.setRecipe(recipeName);
 		setBanner("start");
 	}
 	
