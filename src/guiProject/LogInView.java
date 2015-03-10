@@ -64,7 +64,7 @@ public class LogInView extends GridPane {
 					ControllerMain.displayStartView();
 				}
 			}else{
-				wrongPassword.setText("*Fel lösenord!");
+				wrongPassword.setText("*Fel lï¿½senord!");
 				wrongPassword.setVisible(true);
 			}
 	}

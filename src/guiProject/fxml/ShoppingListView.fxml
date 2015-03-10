@@ -43,12 +43,12 @@
       </ListView>
       <TextField prefHeight="26.0" prefWidth="255.0" promptText="Lägg till inköpslista" GridPane.halignment="LEFT" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets left="10.0" right="36.0" />
+            <Insets left="9.5" right="32.5" top="1.0" />
          </GridPane.margin>
       </TextField>
       <Button mnemonicParsing="false" styleClass="addsub-buttons" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets right="8.5" top="1.0" />
          </GridPane.margin>
       </Button>
       <Label styleClass="text-lables" text="Orderhistorik" GridPane.rowIndex="4">
@@ -66,6 +66,9 @@
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
       </ListView>
-      <Button fx:id="buttonAddToCart" mnemonicParsing="false" styleClass="main-buttons" text="Lägg till varukorg" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Button fx:id="buttonAddToCart" mnemonicParsing="false" styleClass="main-buttons" text="Lägg till varukorg" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets top="1.0" />
+         </GridPane.margin></Button>
    </children>
 </fx:root>
