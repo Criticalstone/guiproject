@@ -23,3 +23,22 @@
 	-fx-cell-size: 115;
 }
 
+
+
+.add-to-list-button-menu{
+	-fx-background-color: null;
+	-fx-background-image: url("shoppingListIconAddToButton.png");
+}
+
+.add-to-list-button-menu:hover{
+	-fx-background-image: url("shoppingListIconAddToButtonHover.png");
+}
+
+.add-to-list-button-menu:pressed {
+	-fx-background-image: url("shoppingListIconAddToButtonSelected.png");
+}
+
+.add-to-list-button-menu  .arrow {
+	-fx-background-color: null;
+    
+}

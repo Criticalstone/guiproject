@@ -9,15 +9,20 @@ import java.awt.Dimension;
 import java.io.IOException;
 
 import se.chalmers.ait.dat215.project.Product;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.CustomMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -51,7 +56,9 @@ public class ProductCard extends GridPane implements IFProductCard{
 	@FXML
 	private IntegerTextField textFieldQty;
 
+	private CustomMenuItem newShoppingList;
 
+	private ImageView checkIcon;
 	
 	/**
 	 * Constructor for the product card. Will create and initialize a product card based on the provided product.
@@ -70,13 +77,14 @@ public class ProductCard extends GridPane implements IFProductCard{
         }
         
         //Initialize
+        checkIcon = new ImageView(new Image(ProductCard.class.getResourceAsStream("/res/Check_mark.png")));
         this.product = p;
         setName();
         setPrice();
         setImage();
         updateQtyInCart();
         setStar();
-//        setShoppingLists();
+        updateShoppingLists();
 
 	}
 
@@ -88,9 +96,60 @@ public class ProductCard extends GridPane implements IFProductCard{
 
 
 
-	private void setShoppingLists() {
-		// TODO Auto-generated method stub
+	public void updateShoppingLists() {
+		menuButtonAddToList.getItems().removeAll(menuButtonAddToList.getItems());
+		addNewShoppingListMenuItem();
+		menuButtonAddToList.getItems().add(new SeparatorMenuItem());
 		
+		for (String s: ControllerMain.getShoppingLists().keySet()){
+			MenuItem menuItem = new MenuItem(s);
+			for (ShoppingItem shop: ControllerMain.getShoppingLists().get(s).getProducts()){
+				if (shop.getProduct().equals(product)){
+					menuItem.setGraphic(checkIcon);
+				}
+			}
+
+			menuItem.setOnAction(new EventHandler<ActionEvent>() {
+			    @Override 
+			    public void handle(ActionEvent e) {
+			        ControllerMain.addProductToList(menuItem.getText(), new ShoppingItem(product, 1));
+			    }
+			});
+			menuButtonAddToList.getItems().add(menuItem);
+		}
+		
+	}
+
+
+
+	private void addNewShoppingListMenuItem() {
+		newShoppingList = new CustomMenuItem(new Label("Ny inköpslista..."));
+		newShoppingList.setHideOnClick(false);
+		newShoppingList.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override 
+		    public void handle(ActionEvent e) {
+				TextField listName = new TextField();
+				listName.setOnAction(new EventHandler<ActionEvent>(){
+
+					@Override
+					public void handle(ActionEvent event) {
+						ControllerMain.addShoppingList(listName.getText());
+						ControllerMain.addProductToList(listName.getText(), new ShoppingItem(product,1));
+						ControllerMain.updateCards();
+					}
+					
+				});
+				
+				CustomMenuItem cmi = new CustomMenuItem(listName);
+				cmi.setHideOnClick(false);
+				menuButtonAddToList.getItems().remove(0);
+				menuButtonAddToList.getItems().add(0, cmi);
+				listName.setPromptText("ex Lunchlista");
+				listName.selectPositionCaret(0);
+
+		    }
+		});
+		menuButtonAddToList.getItems().add(newShoppingList);
 	}
 
 
@@ -187,8 +246,6 @@ public class ProductCard extends GridPane implements IFProductCard{
 	}
 	
 	public void shoppingListActionButton(ActionEvent e){
-		Object o = e.getSource();
-		MenuItem selectedItem = (MenuItem)o;
-		selectedItem.getText();
+
 	}
 }

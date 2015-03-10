@@ -74,12 +74,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <MenuButton fx:id="menuButtonAddToList" disable="true" mnemonicParsing="false" opacity="0.0" HBox.hgrow="NEVER">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#shoppingListActionButton" text="Ny inköpslista..." />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                    </items>
-                  </MenuButton>
+                  <MenuButton fx:id="menuButtonAddToList" mnemonicParsing="false" styleClass="add-to-list-button-menu" HBox.hgrow="NEVER" />
                   <ToggleButton fx:id="buttonStar" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#starButtonAction" styleClass="star-button" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" HBox.hgrow="NEVER" />
                </children>
                <opaqueInsets>

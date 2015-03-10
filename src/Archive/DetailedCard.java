@@ -1,4 +1,4 @@
-package guiProject.productCard;
+package Archive;
 
 import java.awt.Dimension;
 import java.io.IOException;
@@ -123,6 +123,13 @@ public class DetailedCard extends GridPane implements IFProductCard{
 
 	@Override
 	public void updateQtyInCart() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void updateShoppingLists() {
 		// TODO Auto-generated method stub
 		
 	}
