@@ -106,6 +106,7 @@ public class ControllerMain extends Application{
     }
 
     public static void performSearch(String query){
+        displayProductResultList();
         List<Product> result = imat.findProducts(query);
         controllerResultList.setItems(result);
     }
