@@ -28,7 +28,7 @@ public class TotalLogInView extends GridPane {
 		  }
 		  
 		  nextSide=side;
-		  hBox.getChildren().add(new CreateNewProfile()); //additionstecknet  
+		  hBox.getChildren().add(new CreateNewProfile(side)); //additionstecknet  
 		  getSavedUsers();  //Sätter upp alla konton som logga in konton	  
 	}
 	
