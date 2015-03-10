@@ -61,10 +61,11 @@ public class LogInView extends GridPane {
 				}else if(nameNextSide.equals("recept")){
 					ControllerMain.displayRecipeListView();
 				}else{
-					ControllerMain.displayProfile(user);
+					//ControllerMain.displayProfile(user);
+					ControllerMain.displayStartView();
 				}
 			}else{
-				wrongPassword.setText("*Fel lösenord!");
+				wrongPassword.setText("*Fel lï¿½senord!");
 				wrongPassword.setVisible(true);
 			}
 	}

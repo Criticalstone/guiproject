@@ -3,15 +3,12 @@ package guiProject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
@@ -29,6 +26,8 @@ public class Banner extends GridPane{
     private Button myProfileButton;
     @FXML
     private Label usernameLabel;
+    @FXML
+    private ImageView profileImg;
 
     
     public Banner() {
@@ -211,7 +210,7 @@ public class Banner extends GridPane{
     		ControllerMain.getLogInView().setLoggedInStatus(false);
     		setTextToLoggedIn();
     		ControllerMain.displayLoginView("");
-		}else{                                                         // Skickar dig så du kan logga in
+		}else{                                                         // Skickar dig sï¿½ du kan logga in
 			ControllerMain.displayLoginView("");
 		}		
     }
@@ -230,8 +229,12 @@ public class Banner extends GridPane{
     	if(ControllerMain.getLogInView().getLoggedInStatus()){
     		myProfileButton.setText("Logga ut");
     		usernameLabel.setVisible(true);
+    		profileImg.setFitWidth(1);
+    		profileImg.setVisible(false);
     	}else{
     		usernameLabel.setVisible(false);
+    		profileImg.setVisible(true);
+    		profileImg.setFitWidth(44);
     		myProfileButton.setText("Logga in");
     	}
     }
