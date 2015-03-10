@@ -19,8 +19,9 @@ public class NewProfileAccount extends GridPane{
 	private TextField name;
 	@FXML 
 	private Label wrongMessage;
+	private String nextSide;
 	
-	public NewProfileAccount(){
+	public NewProfileAccount(String side){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
           "fxml/NewProfileAccount.fxml"));
 
@@ -32,6 +33,8 @@ public class NewProfileAccount extends GridPane{
 		  } catch (IOException exception) {
 			  throw new RuntimeException(exception);
 		  }
+		  
+		  nextSide=side;
 	}
 	
 	
@@ -73,7 +76,17 @@ public class NewProfileAccount extends GridPane{
 			ControllerMain.getBanner().setTextToLoggedIn();
 			ControllerMain.getBanner().setUsernameLabel();
 			
-			ControllerMain.displayProfile(user);
+			if(nextSide.equals("favorite")){
+				ControllerMain.setProductList(ControllerMain.getStaredProducts());
+				ControllerMain.unSelectCategories();
+				ControllerMain.getBanner().setBanner("start");
+			}else if(nextSide.equals("list")){
+				ControllerMain.displayShoppingListView();
+			}else if(nextSide.equals("recept")){
+				ControllerMain.displayRecipeListView();
+			}else{
+				ControllerMain.displayStartView();
+			}
 			
 			clean();	
 	}

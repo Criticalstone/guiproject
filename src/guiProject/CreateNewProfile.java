@@ -15,8 +15,9 @@ public class CreateNewProfile extends HBox{
 	@FXML 
 	private ToggleButton addButton;
 	private int one=1;
+	private String next;
 	
-	public CreateNewProfile(){
+	public CreateNewProfile(String side){
 		  FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
         "fxml/CreateNewProfile.fxml"));
 
@@ -34,6 +35,7 @@ public class CreateNewProfile extends HBox{
 		  }else{
 			  addButton.setDisable(true);
 		  }
+		  next=side;
 		  
 	}
 	
@@ -41,7 +43,7 @@ public class CreateNewProfile extends HBox{
 	public void ButtonAddProfile(){
 		if(Utilities.getSavedFiles(null).size()<=5){
 			if(one==1){
-			hBox.getChildren().add(new NewProfileAccount());
+			hBox.getChildren().add(new NewProfileAccount(next));
 			one=one+1;
 			}
 		}else{
