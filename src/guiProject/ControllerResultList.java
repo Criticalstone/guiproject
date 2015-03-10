@@ -76,20 +76,21 @@ public class ControllerResultList extends ScrollPane implements IFControllerProd
 
 
 	@Override
-	public void updateQtyInCartForAllCards() {
+	public void updateAllCards() {
 		//Cycle through all cards and tells all of them to update the displayed qty.
 		List<Node> displayedCards = tilePaneResultArea.getChildren();
 		for (int i = 0; i < displayedCards.size(); i++){
 			Node temp = displayedCards.get(i);
 			IFProductCard card = (IFProductCard)temp;
 			card.updateQtyInCart();
+			card.updateShoppingLists();
 		}
 
 	}
 
 
 	@Override
-	public void updateQtyInCartForCard(Product p) {
+	public void updateCard(Product p) {
 		//Cycles through all cards and asks on those displaying the specified item to refresh.
 		List<Node> displayedCards = tilePaneResultArea.getChildren();
 		for (int i = 0; i < displayedCards.size(); i++){
@@ -97,6 +98,7 @@ public class ControllerResultList extends ScrollPane implements IFControllerProd
 			IFProductCard card = (IFProductCard)temp;
 			if (card.getProduct().equals(p)){
 				card.updateQtyInCart();
+				card.updateShoppingLists();
 			}
 		}
 		

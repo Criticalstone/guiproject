@@ -310,7 +310,7 @@ public class ShoppingCartHandler extends GridPane{
         @Override
         public void update(Object... obj) {
             addProduct((Product) obj[0], (int) obj[1]);
-            ControllerMain.updateQtyAllCards();
+            ControllerMain.updateCards();
         }
 
         @Override

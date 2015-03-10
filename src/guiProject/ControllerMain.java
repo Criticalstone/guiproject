@@ -104,6 +104,10 @@ public class ControllerMain extends Application{
     public static void addProductToList(String name, List<ShoppingItem> list){
         controllerShoppingLists.addProductToList(name, list);
     }
+    
+    public static void addProductToList(String name, ShoppingItem product){
+    	controllerShoppingLists.addProductToList(name, product);
+    }
 
     public static void performSearch(String query){
         displayProductResultList();
@@ -152,8 +156,8 @@ public class ControllerMain extends Application{
 
     
 	//DISPLAY METHODS
-    public static void updateQtyAllCards(){
-        controllerResultList.updateQtyInCartForAllCards();
+    public static void updateCards(){
+        controllerResultList.updateAllCards();
     }
 
     public static void updateShoppingListView(){

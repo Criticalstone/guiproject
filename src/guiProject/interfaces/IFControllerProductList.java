@@ -14,11 +14,11 @@ public interface IFControllerProductList {
 	 * This method tells all displayed cards to refresh the qty displayed on the cards to the current value. 
 	 * Typically used when loading a shopping list, or emptying the cart.
 	 */
-	public void updateQtyInCartForAllCards();
+	public void updateAllCards();
 	/**
 	 * This method tells all cards containing the specific product to update the qty. 
 	 * Typically used when updating a single item in the shopping cart.
 	 * @param p The product for which all cards should update.
 	 */
-	public void updateQtyInCartForCard(Product p);
+	public void updateCard(Product p);
 }

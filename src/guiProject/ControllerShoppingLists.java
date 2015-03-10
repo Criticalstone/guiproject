@@ -69,7 +69,8 @@ public class ControllerShoppingLists implements Serializable{
 	}
 
     public void addProductToList(String name, ShoppingItem item){
-
+        IFProductList<ShoppingItem> list = shoppingLists.get(name);
+        list.addProduct(item);
     }
 
     public void addProductToList(String name, List<ShoppingItem> items){

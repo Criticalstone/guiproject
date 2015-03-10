@@ -15,4 +15,6 @@ public interface IFProductCard extends Comparable<IFProductCard>{
 	 */
 	public void updateQtyInCart();
 	
+	public void updateShoppingLists();
+	
 }
