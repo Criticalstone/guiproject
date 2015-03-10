@@ -165,7 +165,7 @@
             <Insets />
          </GridPane.margin>
       </Label>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="2">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="2">
          <children>
             <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text="Förnamn: " GridPane.rowIndex="2">
                <VBox.margin>
@@ -219,7 +219,7 @@
             <Insets left="10.0" />
          </VBox.margin>
       </Label>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="6">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="6">
          <children>
             <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Ort: " GridPane.rowIndex="5">
                <VBox.margin>
@@ -239,7 +239,7 @@
             <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="8">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="8">
          <children>
             <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Email: " GridPane.rowIndex="7">
                <VBox.margin>
@@ -259,7 +259,7 @@
             <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="7">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="7">
          <children>
             <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Telefon: " GridPane.rowIndex="6">
                <VBox.margin>
@@ -287,7 +287,7 @@
             <Insets left="20.0" />
          </GridPane.margin>
       </ImageView>
-      <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="4">
+      <HBox alignment="CENTER_LEFT" GridPane.rowIndex="4">
          <children>
             <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text=" Adress: " GridPane.rowIndex="3">
                <GridPane.margin>
@@ -306,7 +306,7 @@
       </HBox>
       <ChoiceBox fx:id="comboPaymentOpt" prefHeight="31.0" prefWidth="353.0" GridPane.rowIndex="10">
          <GridPane.margin>
-            <Insets left="10.0" right="5.0" />
+            <Insets left="10.0" right="15.0" />
          </GridPane.margin>
       </ChoiceBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
