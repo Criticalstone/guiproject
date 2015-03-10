@@ -1,6 +1,9 @@
 package guiProject;
 
+import guiProject.ControllerColorScheme.ColorScheme;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,6 +26,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.Timer;
@@ -57,6 +61,8 @@ public class ProfileView extends GridPane{
     private ChoiceBox comboPaymentOpt;
     @FXML
     private CheckBox checkCardSave;
+    @FXML
+    private ChoiceBox selectStyle;
     
     //Card info
     @SuppressWarnings("rawtypes")
@@ -133,8 +139,26 @@ public class ProfileView extends GridPane{
 	private void setupChoiceBoxes() {
     	comboPaymentOpt.setItems(FXCollections.observableArrayList("","Kredit-/Kontokort", "PayPal", "Direktbank", "Faktura"));
     	comboCard.setItems(FXCollections.observableArrayList("","MasterCard", "Visa", "Maestro"));
-		
-	}
+    	List<ColorScheme> schemesToDisplay = new ArrayList<ColorScheme>();
+    	for (ColorScheme c: ControllerMain.getAllAvailableColorSchemes()){
+    		if (c != ControllerMain.getCurrentColorScheme()){
+    			schemesToDisplay.add(c);
+    		}
+    	}
+    	selectStyle.getItems().add(ControllerMain.getCurrentColorScheme());
+    	selectStyle.getItems().addAll(schemesToDisplay);
+    	selectStyle.setValue(ControllerMain.getCurrentColorScheme());
+    	selectStyle.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<ColorScheme>(){
+			@Override
+			public void changed(
+					ObservableValue<? extends ColorScheme> observable,
+					ColorScheme oldValue, ColorScheme newValue) {
+				ControllerMain.setColorScheme(newValue);
+				
+			}
+    	});
+    	
+    }
 
 	@FXML
     private void saveOnAction(ActionEvent event){
@@ -147,29 +171,30 @@ public class ProfileView extends GridPane{
     @SuppressWarnings("unchecked")
 	public void loadInfo(){
   
-	    	labelName.setText(profile.getFirstName() + " " + profile.getLastName());;
-	    	//User info fields
-	    	textFirstName.setText(profile.getFirstName());;
-	    	textLastName.setText(profile.getLastName());;
-	    	textAdress.setText(profile.getAdress());;
-	    	textPostalCode.setText(profile.getPostalCode());
-	    	textTown.setText(profile.getTown());
-	    	textTel.setText(profile.getPhone());
-	    	textEmail.setText(profile.getEmail());;
-	    	comboPaymentOpt.setValue(profile.getPaymentOption());
-	        
-	        //Card info
-	    	comboCard.setValue(profile.getCard().getCardType());
-	    	if(profile.getCard().getCardNo().length()==16){
-	    		textNum1.setText(profile.getCard().getCardNo().substring(0, 3));
-		    	textNum2.setText(profile.getCard().getCardNo().substring(4, 7));
-		    	textNum3.setText(profile.getCard().getCardNo().substring(8, 11));
-		    	textNum4.setText(profile.getCard().getCardNo().substring(12, 16));
-	    	}
-	    	textExpir1.setText(profile.getCard().getExpiryYear());
-	    	textExpir2.setText(profile.getCard().getExpiryMonth());
-	    	textCardName.setText(profile.getCard().getCardHolder());
-	    	textCVC.setText(profile.getCard().getCvc());
+    	selectStyle.setValue(profile.getColorScheme());
+    	labelName.setText(profile.getFirstName() + " " + profile.getLastName());;
+    	//User info fields
+    	textFirstName.setText(profile.getFirstName());;
+    	textLastName.setText(profile.getLastName());;
+    	textAdress.setText(profile.getAdress());;
+    	textPostalCode.setText(profile.getPostalCode());
+    	textTown.setText(profile.getTown());
+    	textTel.setText(profile.getPhone());
+    	textEmail.setText(profile.getEmail());;
+    	comboPaymentOpt.setValue(profile.getPaymentOption());
+        
+        //Card info
+    	comboCard.setValue(profile.getCard().getCardType());
+    	if(profile.getCard().getCardNo().length()==16){
+    		textNum1.setText(profile.getCard().getCardNo().substring(0, 3));
+	    	textNum2.setText(profile.getCard().getCardNo().substring(4, 7));
+	    	textNum3.setText(profile.getCard().getCardNo().substring(8, 11));
+	    	textNum4.setText(profile.getCard().getCardNo().substring(12, 16));
+    	}
+    	textExpir1.setText(profile.getCard().getExpiryYear());
+    	textExpir2.setText(profile.getCard().getExpiryMonth());
+    	textCardName.setText(profile.getCard().getCardHolder());
+    	textCVC.setText(profile.getCard().getCvc());
 	    	
 	    	
 	//        Customer customer = ControllerMain.getCustomer();
@@ -196,9 +221,10 @@ public class ProfileView extends GridPane{
 	    	profile.setEmail(textEmail.getText());
 	    	profile.setPaymentOption(comboPaymentOpt.getValue().toString());
 	    	
-	    	if(checkCardSave.isSelected()){
-	    		profile.setCard(new CreditCard((String)comboCard.getValue(), (textNum1.getText()+textNum2.getText()+textNum3.getText()+textNum4.getText()), textCardName.getText(), textExpir1.getText(), textExpir2.getText(), textCVC.getText()));
-	    	}
+//	    	if(checkCardSave.isSelected()){
+//	    		profile.setCard(new CreditCard((String)comboCard.getValue(), (textNum1.getText()+textNum2.getText()+textNum3.getText()+textNum4.getText()), textCardName.getText(), textExpir1.getText(), textExpir2.getText(), textCVC.getText()));
+//	    	}
+	    	profile.setColorScheme((ColorScheme)selectStyle.getValue());
 	    	
 	    	Utilities.SaveToFile(profile, null, profile.getUsername());
 	    	

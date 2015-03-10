@@ -1,8 +1,5 @@
 package guiProject;
 
-import com.sun.javafx.collections.ObservableListWrapper;
-
-import guiProject.ControllerMain.ColorScheme;
 import guiProject.interfaces.IFObserver;
 import guiProject.interfaces.IFSubject;
 import javafx.event.*;
@@ -28,6 +25,8 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.List;
+
+import com.sun.javafx.collections.ObservableListWrapper;
 /**
  * 
  * @author Kevin

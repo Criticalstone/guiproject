@@ -29,7 +29,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" />
          </GridPane.margin>
       </HBox>
       <Label styleClass="text-lables" text="Kortinformation" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -39,6 +39,9 @@
          <VBox.margin>
             <Insets left="10.0" />
          </VBox.margin>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
       </Label>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
@@ -60,7 +63,7 @@
             </HBox>
          </children>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -80,7 +83,7 @@
             </ChoiceBox>
          </children>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" />
          </GridPane.margin>
       </HBox>
       <Label styleClass="text-lables" text="Leverans" GridPane.columnIndex="1" GridPane.rowIndex="7">
@@ -91,7 +94,7 @@
             <Insets left="10.0" />
          </VBox.margin>
          <GridPane.margin>
-            <Insets bottom="20.0" top="20.0" />
+            <Insets />
          </GridPane.margin>
       </Label>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -119,7 +122,7 @@
             <IntegerTextField fx:id="textExpir2" alignment="CENTER" prefWidth="60.0" promptText="mm" />
          </children>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="6">
@@ -135,7 +138,7 @@
             <IntegerTextField fx:id="textCVC" maxWidth="50.0" promptText="xxx" />
          </children>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
@@ -161,9 +164,6 @@
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
-         <padding>
-            <Insets left="5.0" />
-         </padding>
       </Label>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="2">
          <children>
@@ -174,9 +174,6 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
             </Label>
             <TextField fx:id="textFirstName" promptText="ex. Karl" GridPane.rowIndex="2">
                <GridPane.margin>
@@ -185,7 +182,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="5.0" />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.rowIndex="5">
@@ -197,11 +194,8 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
                <HBox.margin>
-                  <Insets left="15.0" />
+                  <Insets />
                </HBox.margin>
             </Label>
             <TextField fx:id="textPostalCode" maxWidth="110.0" promptText="ex. 123 45" GridPane.rowIndex="4">
@@ -209,12 +203,12 @@
                   <Insets left="55.0" right="30.0" />
                </GridPane.margin>
                <HBox.margin>
-                  <Insets left="5.0" />
+                  <Insets />
                </HBox.margin>
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
       <Label styleClass="text-lables" text=" Personuppgifter" GridPane.rowIndex="1">
@@ -224,9 +218,6 @@
          <VBox.margin>
             <Insets left="10.0" />
          </VBox.margin>
-         <padding>
-            <Insets left="5.0" />
-         </padding>
       </Label>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="6">
          <children>
@@ -237,9 +228,6 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
             </Label>
             <TextField fx:id="textTown" promptText="ex. Göteborg" GridPane.rowIndex="5">
                <GridPane.margin>
@@ -248,7 +236,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="5.0" />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="8">
@@ -260,9 +248,6 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
             </Label>
             <TextField fx:id="textEmail" promptText="ex. dittemail@gmail.com" GridPane.rowIndex="7">
                <GridPane.margin>
@@ -271,7 +256,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="5.0" />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_RIGHT" GridPane.rowIndex="7">
@@ -283,9 +268,6 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
             </Label>
             <TextField fx:id="textTel" promptText="ex. +46707-123456" GridPane.rowIndex="6">
                <GridPane.margin>
@@ -294,7 +276,7 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="5.0" />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
       <ImageView fx:id="profileImage" fitHeight="151.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
@@ -311,9 +293,6 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
             </Label>
             <TextField fx:id="textAdress" promptText="ex. Storgatan 1" GridPane.rowIndex="3">
                <GridPane.margin>
@@ -322,12 +301,12 @@
             </TextField>
          </children>
          <GridPane.margin>
-            <Insets right="5.0" />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
       <ChoiceBox fx:id="comboPaymentOpt" prefHeight="31.0" prefWidth="353.0" GridPane.rowIndex="10">
          <GridPane.margin>
-            <Insets left="5.0" right="30.0" />
+            <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </ChoiceBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
@@ -335,6 +314,9 @@
             <Label maxWidth="130.0" minWidth="130.0" prefWidth="130.0" styleClass="text-lables" text="Leveranstid:" />
             <ChoiceBox fx:id="comboDeliveryTime" prefWidth="249.0" />
          </children>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="9">
          <children>
@@ -345,6 +327,9 @@
             </Label>
             <ChoiceBox fx:id="comboStore" prefHeight="25.0" prefWidth="249.0" />
          </children>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="10">
          <children>
@@ -355,21 +340,24 @@
             </Label>
             <ChoiceBox fx:id="comboDeliveryOptions" prefHeight="25.0" prefWidth="249.0" />
          </children>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
          <children>
             <Label maxWidth="90.0" minWidth="90.0" prefWidth="90.0" styleClass="text-lables" text="Efternamn:">
                <HBox.margin>
-                  <Insets left="22.0" />
+                  <Insets />
                </HBox.margin></Label>
             <TextField fx:id="textLastName" promptText="ex. Karlsson">
                <HBox.margin>
                   <Insets />
                </HBox.margin></TextField>
          </children>
-         <padding>
-            <Insets right="5.0" />
-         </padding>
+         <GridPane.margin>
+            <Insets left="10.0" right="5.0" />
+         </GridPane.margin>
       </HBox>
       <GridPane maxHeight="-Infinity" prefHeight="300.0" prefWidth="487.0" GridPane.columnIndex="1">
          <columnConstraints>
@@ -426,11 +414,15 @@
             <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" styleClass="text-lables" text="Ta bort denna profil" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
          </children>
       </GridPane>
-      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" styleClass="main-buttons" text="Byt profilbild" GridPane.halignment="LEFT" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets left="10.0" top="10.0" />
-         </GridPane.margin>
-      </Button>
+      <HBox spacing="10.0">
+         <children>
+            <Label styleClass="text-lables" text="Välj färgschema:" />
+            <ChoiceBox fx:id="selectStyle" prefWidth="150.0" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
       <Label fx:id="profileSavedMessage" text="*Ny information sparats" textFill="#2bee4c" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="12" GridPane.valignment="TOP" />
    </children>
    <columnConstraints>

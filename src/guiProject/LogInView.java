@@ -51,7 +51,7 @@ public class LogInView extends GridPane {
 				ControllerMain.getLogInView().setLoggedInStatus(true);
 				ControllerMain.getBanner().setUsernameLabel();
 				ControllerMain.getBanner().setTextToLoggedIn();
-				
+				ControllerMain.setColorScheme(user.getColorScheme());
 				if(nameNextSide.equals("favorite")){
 					ControllerMain.setProductList(ControllerMain.getStaredProducts());
     				ControllerMain.unSelectCategories();
