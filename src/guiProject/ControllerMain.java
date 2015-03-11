@@ -54,6 +54,7 @@ public class ControllerMain extends Application{
     private static ShoppingList shoppingList;
     private static LogInView logInView;
     private static ProfileView profileView;
+    private static PersonNumberView personNumberView;
 //    private static TestFileChooser fileChooser;
     
     //Panes in mainview
@@ -338,6 +339,9 @@ public class ControllerMain extends Application{
 		return colorScheme.getAllSchemes();
 	}
 	
+	public static PersonNumberView getPersonNumberView(){
+		return personNumberView;
+	}
 //	public static TestFileChooser getFileChooser(){
 //		return fileChooser;
 //	}
@@ -359,11 +363,13 @@ public class ControllerMain extends Application{
         recipeListView = new RecipeListView();
         shoppingList = new ShoppingList();
         colorScheme = new ControllerColorScheme("defaultColorScheme");
+    
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
         primaryStage.setTitle("iMat");
         scene = new Scene(root, 1000, 600);
+        
         
         //Initialize main panels.
 		categoriesView = (GridPane) scene.lookup("#categoriesView");
@@ -396,6 +402,8 @@ public class ControllerMain extends Application{
             }
         });
         primaryStage.setScene(scene);
+        primaryStage.minHeightProperty().set(937);
+        primaryStage.minWidthProperty().set(1413);
         primaryStage.show();
         setColorScheme(ColorScheme.DARK);
         controllershoppingCart.updateList();
@@ -418,10 +426,5 @@ public class ControllerMain extends Application{
 	//Add statements to this method to run test data in the environment.
 	private static void testDataTEMPORARY() {
 
-		
-
     }
-
-
-
 }
