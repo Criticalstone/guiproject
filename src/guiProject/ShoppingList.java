@@ -110,8 +110,8 @@ public class ShoppingList extends GridPane {
             name.getStyleClass().add("list-text");
             plus.getStyleClass().add("addsub-buttons");
             minus.getStyleClass().add("addsub-buttons");
-            String tabs = "\t\t\t\t\t";
-            for(int i = 0; i < Math.floor(item.getProduct().getName().length()/4); i++){
+            String tabs = "\t\t\t";
+            for(int i = 0; i < Math.round(item.getProduct().getName().length() / 4); i++){
                 tabs = tabs.substring(1);
             }
             name.setText(item.getProduct().getName() + tabs);// + tabs + Integer.toString((int) item.getAmount()) + " st");
@@ -134,6 +134,7 @@ public class ShoppingList extends GridPane {
                         numberOf.setText("1");
                         numberOf.selectPositionCaret(1);
                     }
+                    updateNumber();
                 }
             };
             numberOf.setOnKeyReleased(eventHandler);
@@ -156,6 +157,11 @@ public class ShoppingList extends GridPane {
 
         public void updateNumber(){
             numberOf.setText(Integer.toString((int) item.getAmount()));
+            System.out.println(Integer.parseInt(numberOf.getText()));
+            if (Integer.parseInt(numberOf.getText())<0){
+                System.out.println("inne! :");
+                productList.remove(item);
+            }
             notifyObserver(item);
         }
 

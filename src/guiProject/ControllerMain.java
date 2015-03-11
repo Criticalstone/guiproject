@@ -122,7 +122,6 @@ public class ControllerMain extends Application{
 	public static void removeProductFromList(String listName, ShoppingItem item){
 		controllerShoppingLists.removeProductFromList(listName, item);
 	}
-	
 
 	//SETTERS
     
@@ -389,7 +388,7 @@ public class ControllerMain extends Application{
         primaryStage.setScene(scene);
         primaryStage.show();
         setColorScheme(ColorScheme.DARK);
-
+        controllershoppingCart.updateList();
 
     }
 
