@@ -141,23 +141,24 @@
             <Insets left="10.0" />
          </GridPane.margin>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+      <HBox alignment="BOTTOM_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
          <children>
-            <HBox alignment="CENTER" spacing="5.0">
+            <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="42.0" prefWidth="457.0" spacing="5.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#RegretOnAction" styleClass="main-buttons" text="Återställ">
+                  <Label maxWidth="-Infinity" prefWidth="155.0" />
+                  <Button maxWidth="-Infinity" mnemonicParsing="false" onAction="#RegretOnAction" prefWidth="100.0" styleClass="main-buttons" text="Återställ">
                      <tooltip>
                         <Tooltip text="Återställ till senast sparad information" />
                      </tooltip>
                   </Button>
-                  <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveOnAction" styleClass="main-buttons" text="Spara" />
+                  <Button fx:id="buttonSave" maxWidth="-Infinity" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="31.0" prefWidth="80.0" styleClass="main-buttons" text="Spara" />
                </children>
                <HBox.margin>
-                  <Insets right="80.0" />
+                  <Insets />
                </HBox.margin></HBox>
          </children>
          <GridPane.margin>
-            <Insets right="10.0" />
+            <Insets />
          </GridPane.margin>
       </HBox>
       <Label styleClass="text-lables" text=" Betalningssätt" GridPane.rowIndex="9">
@@ -310,9 +311,9 @@
             <Insets left="10.0" right="5.0" />
          </GridPane.margin>
       </HBox>
-      <ChoiceBox fx:id="comboPaymentOpt" prefHeight="31.0" prefWidth="353.0" GridPane.rowIndex="10">
+      <ChoiceBox fx:id="comboPaymentOpt" maxWidth="-Infinity" prefHeight="31.0" prefWidth="280.0" GridPane.rowIndex="10">
          <GridPane.margin>
-            <Insets left="10.0" right="15.0" />
+            <Insets left="10.0" />
          </GridPane.margin>
       </ChoiceBox>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
@@ -367,15 +368,15 @@
       </HBox>
       <GridPane maxHeight="-Infinity" prefHeight="300.0" prefWidth="487.0" GridPane.columnIndex="1">
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="186.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="214.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="175.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="267.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <VBox prefHeight="123.0" prefWidth="186.0" GridPane.rowIndex="1">
+            <VBox prefHeight="241.0" prefWidth="175.0" GridPane.rowIndex="1">
                <children>
                   <Label fx:id="labelName" styleClass="text-lables" text="Namn">
                      <font>
@@ -387,34 +388,34 @@
                   <Label fx:id="correctMessage" text="* Lösenordet har byts" textFill="#18d341" visible="false" />
                </children>
             </VBox>
-            <VBox fx:id="changePasswordBox" prefHeight="200.0" prefWidth="100.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <VBox fx:id="changePasswordBox" fillWidth="false" maxWidth="-Infinity" prefHeight="220.0" prefWidth="267.0" visible="false" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <children>
                   <Label />
                   <Label styleClass="text-lables" text="Nuvarande lösenord" />
-                  <PasswordField fx:id="currentPassword" prefHeight="31.0" prefWidth="205.0">
+                  <PasswordField fx:id="currentPassword" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="190.0">
                      <VBox.margin>
-                        <Insets right="60.0" />
+                        <Insets />
                      </VBox.margin>
                   </PasswordField>
                   <Label styleClass="text-lables" text="Nytt lösenord" />
-                  <PasswordField fx:id="newPassword">
+                  <PasswordField fx:id="newPassword" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="190.0">
                      <VBox.margin>
-                        <Insets right="60.0" />
+                        <Insets />
                      </VBox.margin>
                   </PasswordField>
                   <Label styleClass="text-lables" text="Upprepa lösenord" />
-                  <PasswordField fx:id="repeatPassword">
+                  <PasswordField fx:id="repeatPassword" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="190.0">
                      <VBox.margin>
-                        <Insets right="60.0" />
+                        <Insets />
                      </VBox.margin>
                   </PasswordField>
                   <Label fx:id="wrongMessage" prefHeight="21.0" prefWidth="232.0" textFill="#fc5252" />
-                  <Button mnemonicParsing="false" onAction="#SavePasswordOnAction" prefHeight="31.0" prefWidth="73.0" styleClass="main-buttons" text="Spara" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#SavePasswordOnAction" prefHeight="31.0" prefWidth="73.0" styleClass="main-buttons" text="Spara" />
                </children>
             </VBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="287.0" GridPane.columnIndex="1">
+            <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="39.0" prefWidth="287.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <children>
-                  <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" prefHeight="21.0" prefWidth="177.0" styleClass="text-lables" text="Ta bort denna profil" />
+                  <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" prefHeight="21.0" prefWidth="157.0" styleClass="text-lables" text="Ta bort profilen" />
                   <Button fx:id="deleteProfileButton" disable="true" mnemonicParsing="false" onAction="#DeleteProfilOnAction" prefHeight="29.0" prefWidth="35.0" styleClass="main-buttons" text="X">
                      <font>
                         <Font size="18.0" />
@@ -436,8 +437,8 @@
       <Label fx:id="profileSavedMessage" text="*Ny information sparats" textFill="#2bee4c" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="12" GridPane.valignment="TOP" />
    </children>
    <columnConstraints>
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.0" minWidth="361.0" prefWidth="388.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="276.0" prefWidth="338.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="504.0" minWidth="361.0" prefWidth="442.0" />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints maxHeight="276.0" minHeight="260.0" prefHeight="268.0" vgrow="SOMETIMES" />
