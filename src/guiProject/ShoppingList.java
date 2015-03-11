@@ -88,6 +88,10 @@ public class ShoppingList extends GridPane {
         }
     }
 
+    public void clearProductListView(){
+        listProducts.getItems().clear();
+    }
+
     public class ProductListCell extends HBox implements IFSubject{
         Label name = new Label();
         TextField numberOf = new TextField();
@@ -243,6 +247,7 @@ public class ShoppingList extends GridPane {
             label.setText(list.getName() + " : " + list.getTimeStamp());
             label.setMaxWidth(Double.MAX_VALUE);
             remove.setAlignment(Pos.CENTER_RIGHT);
+            remove.getStyleClass().add("addsub-buttons");
             HBox.setHgrow(label, Priority.ALWAYS);
 
             this.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -268,7 +273,7 @@ public class ShoppingList extends GridPane {
             }else{
                 ControllerMain.removeShoppingList(list.getName());
                 updateShoppingListView();
-
+                clearProductListView();
             }
         }
 
