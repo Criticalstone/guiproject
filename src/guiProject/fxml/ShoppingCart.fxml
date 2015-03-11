@@ -58,11 +58,22 @@
                   <Insets />
                </GridPane.margin>
             </Button>
-            <TextField fx:id="listName" onAction="#saveToListButtonAction" prefHeight="25.0" prefWidth="96.0" GridPane.rowIndex="1">
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="119.0" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="listName" prefHeight="25.0" prefWidth="96.0" promptText="Lägg till lista" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#saveToListButtonAction" styleClass="addsub-buttons" text="+" />
+               </children>
                <GridPane.margin>
-                  <Insets left="10.0" right="10.0" />
+                  <Insets left="10.0" right="5.0" />
                </GridPane.margin>
-            </TextField>
+            </HBox>
          </children>
          <GridPane.margin>
             <Insets bottom="10.0" right="10.0" />

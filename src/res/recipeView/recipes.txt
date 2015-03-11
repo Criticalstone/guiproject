@@ -1,0 +1,318 @@
+#name
+Tacogratäng
+#info
+Recept | Medel | Tid: 30min
+#image
+res/recipeView/tacoRecipe.jpg
+#ingredients
+115
+Ris
+76
+Nötfärs
+147
+Rosmarin
+141
+Basilika
+55
+Aubergine
+81
+Mozzarella
+#end
+#description
+Barnens favorit – en spännande och supersmarrig variant på fredagstacosen! Den fabulösa gratängen gör du av bland annat nötfärs, taco kryddmix, pastasås (med vitlök), majs, tomat och gratängcrème. Servera med ris, gurka, rödlök och låt er väl smaka!
+#instruction
+1. Sätt ugnen på 225°C.
+2. Koka riset. Läs på förpackningen hur man gör.
+3. Gratäng: Hetta upp oljan i en stekpanna. 
+4. Lägg ner färsen, dela den och stek den klar under omrörning. Den ska bli smulig.
+5. Rör i tacokryddan i köttfärsen. Blanda ner pastasåsen och vattnet och allt låt koka upp.
+6. Låt majsen rinna av och skär tomaterna i skivor. 
+7. Grönsaker: Skala löken och gurkan. Hacka löken och tärna gurkan.
+8. Servera tacogratängen med ris, resten av majsen, gurka och rödlök.
+#end
+#name
+Rotsellerisoppa
+#info
+Recept | Medel | Tid: 45min
+#image
+res/recipeView/rotsellerisoppaRecipe.jpg
+#ingredients
+116
+Potatis
+128
+Rotselleri
+81
+Mozzarella
+146
+Persilja
+94
+Salt
+#end
+#description
+En makalöst god rotsellerisoppa där svamptoasten är ett givet komplement. Crème fraichen i soppan bidrar till en fantastiskt krämig konsistens, och den färska persiljan gör kryddningen komplett. Toasten gjord på champinjonfräs toppas med en smakrik ost och avslutas i ugnen innan den serveras med soppan.
+#instruction
+1. Tina svampen till svamptoasten.
+2. Sätt ugnen på 225˚C.
+3. Soppa: Skala och skiva lök och potatis.  
+4. Fräs lök och rotselleri i oljan i en kastrull. Tillsätt potatis.
+5. Hacka persiljan. Skölj bönorna i ett durkslag och låt dem rinna av.
+6. Blanda ner bönorna i soppan och låt den bli varm. 
+7. Smaka sedan av med salt, peppar och tryffelolja, rör ner persiljan.
+8. Servera soppan med svamptoast.
+#end
+#name
+Kycklinggryta
+#info
+Recept | Medel | Tid: 20min
+#image
+res/recipeView/kycklinggrytaRecipe.jpg
+#ingredients
+113
+Ris
+73
+Kyckling
+148
+Timjan
+125
+Pepparrot
+94
+Salt
+#end
+#description
+Mustig kycklinggryta med shiitakesvamp är en välsmakande gryträtt som du svänger ihop på under 30 minuter. Bryn svampen och kycklingen i en stekpanna, tillsätt grytbasen och låt sjuda några minuter. Vänd ner hackad timjan och babyspenat i grytan och servera med nykokt ris.
+#instruction
+1. Koka riset enligt anvisningen på förpackningen.
+2. Dela svampen. Skär kycklingen i stora bitar.
+3. Bryn svampen i hälften av oljan i en stekpanna och lyft upp på en tallrik 
+4. Bryn kycklingen i resten av oljan. Salta och peppra. 
+5. Tillsätt grytbasen och lägg tillbaka svampen, låt sjuda några minuter.
+6. Hacka timjanen och vänd ner i grytan tillsammans med spenaten. 
+7. Servera kycklinggrytan med riset.
+#end
+#name
+Pannkakor
+#info
+Recept | Medel | Tid: 25min
+#image
+res/recipeView/pannkakorRecipe.jpg
+#ingredients
+85
+Ägg
+78
+Filmjölk
+96
+Vetemjöl
+95
+Socker
+94
+Salt
+#end
+#description
+Mättande amerikanska pannkakor med hallon och lime uppskattas av både stor och liten. Keso blandat med russin och honung är ett gott tillbehör till rätten.
+#instruction
+1. Vispa samman ägg och filmjölk. Blanda i mjöl, bakpulver, socker och salt till en slät smet. 
+2. Vispa ner matfettet.
+3. Hetta upp en liten stekpanna eller plättlagg. Smörj med lite matfett
+4. Klicka ut smeten i pannan. Grädda tjocka pannkakor eller plättar på svag värme.
+5. Servera dem med djupfrysta sockrade hallon och rivet limeskal
+#end
+#name
+Lax
+#info
+Recept | Medel | Tid: 30min
+#image
+res/recipeView/laxRecipe.jpg
+#ingredients
+50
+lax
+146
+Persilja
+57
+Gurka
+116
+Potatis
+#end
+#description
+Denna rätt på stekt lax och mycket god. Potatisen ugnsrostas tills den blir härligt krispig. Förbered dragonkrämen genom att steka löken mjuk, tillsätta vinäger och när det svalnat blanda i crème fraiche och persilja. Servera laxen med potatis och gurka.
+#instruction
+1. Sätt ugnen på 225°C och sätt in en långpanna.
+2. Potatis: Skär potatisen i skivor och blanda dem med oljan. 
+3. Krydda med salt och peppar och häll över på den varma långpannan. 
+4. Lax och gurka: Stek laxen i oljan några minuter på varje sida i en stekpanna.
+5. Salta och peppra.
+6. Skala och skär gurkan i stavar.
+7. Servera lax och potatis.
+#end
+#name
+Lasagne
+#info
+Recept | Medel | Tid: 60min
+#image
+res/recipeView/lasagneRecipe.jpg
+#ingredients
+76
+Köttfärs
+96
+Vetemjöl
+109
+Lasagne
+94
+Salt
+#end
+#description
+Ett förträffligt recept på lasagne för dig som är vegetarian, mjölkallergiker eller inte tål gluten. Välj antingen en mustig köttfärssås till din lasagne eller en smakrik vegetarisk sås. Béchamelsåsen är baserad på havredryck.
+#instruction
+1. Köttfärssås: Fräs köttfärs och lök i oljan.
+2. Tillsätt tomatkross och kryddor. Låt puttra ca 5 minuter. 
+3. Bechamelsås: Vispa ut majsmjölet med lite av havredrycken i en kastrull. 
+4. Tillsätt resten av havredrycken och margarinet. Låt koka upp under omrörning. 
+5. Sätt ugnen på 225°C.
+6. Varva bechamelsås, plattor och köttfärssås eller vegetarisk sås i en form.
+7. Grädda mitt i ugnen i ca 25 minuter.
+#end
+#name
+Ägg
+#info
+Recept | Enkel | Tid: 10
+#image
+res/recipeView/äggRecipe.jpg
+#ingredients
+85
+Ägg
+94
+Salt
+#end
+#description
+Enkelt recept på hur man kokar ägg! Att koka ägg gör du enkelt i kokande vatten. Välj kortare tid för löskokta ägg, lite längre för mjukkokta ägg och ännu längre för hårdkokta ägg. Proteinrikt och gott!
+#instruction
+1. Lägg äggen i kallt vatten i en kastrull. Vattnet ska precis täcka äggen. 
+2. Låt koka upp utan lock. Salta äggen.
+3. Sjud äggen ca 2 min för löskokt ägg, ca 5 min för mjukkokt och ca 8 min för hårdkokt ägg. 
+4. Spola äggen i kallt vatten någon min innan de serveras så att kokningen avstannar.
+#end
+#name
+Högrev
+#info
+Recept | Medel | Tid: 60min
+#image
+res/recipeView/högrevRecipe.jpg
+#ingredients
+72
+Högrev
+123
+Morot
+146
+Persilja
+125
+Pepparrot
+94
+Salt
+#end
+#description
+En festlig och god kötträtt. Kokt högrev med rotfrukter kan du servera till helgmiddag eller när du bjuder hem gäster på middag. Det är både festligt och riktigt gott!
+#instruction
+1. Ansa och skala rotfrukterna. Skär dem i grova bitar.
+2. Skölj purjolöken och skär den grovt.
+3. Lägg högreven i en gryta, häll på vatten så att det är några cm över köttet och tillsätt salt. 
+4. Koka upp och skumma bort fett och äggviteämnen.
+5. Lägg i rotfrukterna och lagerbladen, koka sakta i 1-1 1/2 tim.
+6. Tillsätt persiljan i buljongen.
+7. Servera rotfrukter, kött och buljong med äppelmos blandat med riven pepparrot.
+#end
+#name
+Köttbullar
+#info
+Recept | Medel | Tid: 45min
+#image
+res/recipeView/köttbullarRecipe.jpg
+#ingredients
+76
+Köttfärs
+57
+Gurka
+146
+Persilja
+116
+Potatis
+85
+Ägg
+80
+Mjölk
+95
+Socker
+94
+Salt
+#end
+#description
+Köttbullar med gräddsås är en riktig husmansklassiker. Dessa köttbullar får en extra touch då citronskal och timjan blandas ned i färsen som först stekts gyllenbruna i en stekpanna och sedan får sjuda i den gräddiga såsen. Som tillbehör serveras gurka i lag och nykokt potatis.
+#instruction
+1. Koka potatisen.
+2. Skiva gurkan tunt med en osthyvel. Hacka persiljan och blanda ner den och gurkan i lagen. 
+3. Köttbullar: Blanda ströbröd, mjölk, ägg, salt och peppar i en bunke.
+4. Låt stå och svälla ca 5 minuter. 
+5. Blanda färs, timjan och citronskal i ströbrödsblandningen.
+6. Forma köttbullar av smeten.
+7. Servera köttbullarna med en såsen, potatisen och gurkan.
+#end
+#name
+Räksallad
+#info
+Recept | Enkel | Tid: 45min
+#image
+res/recipeView/räksalladRecipe.jpg
+#ingredients
+51
+Räkor
+116
+Potatis
+85
+Ägg
+79
+Färskost
+80
+Mjölk
+56
+Avocado
+95
+Socker
+94
+Salt
+#end
+#description
+Den här måltiden på räksallad med ägg och pepparrot är lätt att tillaga och väldigt mättande. Äggen kokas tills gulan är fastare i konsistensen och när koktiden är klar sköljs de kalla. Blanda avokado, silverlök, tomater, övrig sallad och räkor och toppa med en smakrik pepparrotskräm och rätten är komplett.
+#instruction
+1. Räksallad: Skala, dela och koka potatisen.
+2. Lägg äggen i kokande vatten och koka dem 8 minuter. Spola dem sedan kalla.
+3. Skala och häll av räkorna och låt dem rinna av väl i ett durkslag.
+4. Dela avokadon, ta bort kärnan och gröp ur och skiva avokadoköttet.
+5. Pepparrotskräm: Blanda färskosten med mjölken. Smaka av med salt och peppar.
+6. Servera salladen med pepparrotskrämen
+#end
+#name
+Våfflor
+#info
+Recept | Enkel | Tid: 30min
+#image
+res/recipeView/våfflorRecipe.jpg
+#ingredients
+17
+Hallon
+96
+Vetemjöl
+95
+Socker
+80
+Mjölk
+85
+Ägg
+#end
+#description
+Den svenska klassiska våfflan i en ny spännande variant. Här med hallon i våffelsmeten för en extra lyxig smak. Grädda dina hallonvåfflor och servera med färska hallon och en klick vispad grädde.
+#instruction
+1. Låt hallonen tina. Mixa och passera dem. Smält matfettet och låt det svalna.
+2. Blanda mjöl, bakpulver, florsocker och vaniljsocker i en bunke. Rör ner mjölk och ägg.
+3. Tillsätt hallonen och matfettet.
+4. Hetta upp våffeljärnet. Smörj järnet till den första våfflan.
+5. Häll i smeten och bred ut den något och grädda.
+6. Lägg våfflorna på galler. Servera våfflorna.
+#end
