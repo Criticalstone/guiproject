@@ -44,6 +44,10 @@ public class PersonNumberView extends GridPane{
 		return postNumber.getText();
 	}
 	
+	public void setPostNumber(String postNumber){
+		this.postNumber.setText(postNumber);
+	}
+	
 	public String getName(){
 		return name.getText();
 	}

@@ -54,6 +54,7 @@ public class ControllerMain extends Application{
     private static ShoppingList shoppingList;
     private static LogInView logInView;
     private static ProfileView profileView;
+    private static PersonNumberView personNumberView;
 //    private static TestFileChooser fileChooser;
     
     //Panes in mainview
@@ -329,6 +330,9 @@ public class ControllerMain extends Application{
 		return colorScheme.getAllSchemes();
 	}
 	
+	public static PersonNumberView getPersonNumberView(){
+		return personNumberView;
+	}
 //	public static TestFileChooser getFileChooser(){
 //		return fileChooser;
 //	}

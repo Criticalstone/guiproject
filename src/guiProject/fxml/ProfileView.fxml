@@ -94,7 +94,7 @@
             <Insets left="10.0" />
          </VBox.margin>
          <GridPane.margin>
-            <Insets />
+            <Insets left="10.0" />
          </GridPane.margin>
       </Label>
       <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -143,12 +143,18 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
          <children>
-            <Button mnemonicParsing="false" onAction="#RegretOnAction" styleClass="main-buttons" text="Återställ">
-               <tooltip>
-                  <Tooltip text="Återställ till senast sparad information" />
-               </tooltip></Button>
-            <HBox alignment="CENTER" spacing="5.0" />
-            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveOnAction" styleClass="main-buttons" text="Spara" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#RegretOnAction" styleClass="main-buttons" text="Återställ">
+                     <tooltip>
+                        <Tooltip text="Återställ till senast sparad information" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveOnAction" styleClass="main-buttons" text="Spara" />
+               </children>
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin></HBox>
          </children>
          <GridPane.margin>
             <Insets right="10.0" />
@@ -385,33 +391,37 @@
                <children>
                   <Label />
                   <Label styleClass="text-lables" text="Nuvarande lösenord" />
-                  <PasswordField fx:id="currentPassword">
+                  <PasswordField fx:id="currentPassword" prefHeight="31.0" prefWidth="205.0">
                      <VBox.margin>
-                        <Insets right="10.0" />
+                        <Insets right="60.0" />
                      </VBox.margin>
                   </PasswordField>
                   <Label styleClass="text-lables" text="Nytt lösenord" />
                   <PasswordField fx:id="newPassword">
                      <VBox.margin>
-                        <Insets right="10.0" />
+                        <Insets right="60.0" />
                      </VBox.margin>
                   </PasswordField>
                   <Label styleClass="text-lables" text="Upprepa lösenord" />
                   <PasswordField fx:id="repeatPassword">
                      <VBox.margin>
-                        <Insets right="10.0" />
+                        <Insets right="60.0" />
                      </VBox.margin>
                   </PasswordField>
                   <Label fx:id="wrongMessage" prefHeight="21.0" prefWidth="232.0" textFill="#fc5252" />
                   <Button mnemonicParsing="false" onAction="#SavePasswordOnAction" prefHeight="31.0" prefWidth="73.0" styleClass="main-buttons" text="Spara" />
                </children>
             </VBox>
-            <Button fx:id="deleteProfileButton" disable="true" mnemonicParsing="false" onAction="#DeleteProfilOnAction" styleClass="main-buttons" text="X" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" styleClass="text-lables" text="Ta bort denna profil" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="287.0" GridPane.columnIndex="1">
+               <children>
+                  <CheckBox fx:id="deleteProfile" mnemonicParsing="false" onAction="#ActivateDeleteProfile" prefHeight="21.0" prefWidth="177.0" styleClass="text-lables" text="Ta bort denna profil" />
+                  <Button fx:id="deleteProfileButton" disable="true" mnemonicParsing="false" onAction="#DeleteProfilOnAction" prefHeight="29.0" prefWidth="35.0" styleClass="main-buttons" text="X">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </GridPane>
       <HBox spacing="10.0">
