@@ -69,6 +69,29 @@
 
 }
 
+.prominent-done-button{
+	-fx-background-color: linear-gradient(
+        from .75em 20px to 0px .75em,
+        repeat,
+        #CD0074 0%,
+        #CD0074 49%,
+        derive(#CD0074, 30%) 50%,
+        derive(#CD0074, 30%) 99%
+    );
+    -fx-text-fill: white;
+}
+
+.prominent-done-button:hover{
+		-fx-background-color: linear-gradient(
+        from .75em 20px to 0px .75em,
+        repeat,
+        derive(#CD0074, -40%)0%,
+        derive(#CD0074, -40%) 49%,
+        derive(#CD0074, -10%) 50%,
+        derive(#CD0074, -10%) 99%
+    );
+}
+
 .addsub-buttons{
     -fx-background-color: #A65000;
     -fx-background-radius: 5,4,3,5;

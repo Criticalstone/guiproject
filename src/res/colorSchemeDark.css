@@ -37,6 +37,8 @@
 	-fx-background-color: #333333;
 }
 
+
+
 .main-buttons{
     -fx-background-color: #A1A1A1;
     -fx-background-radius: 5,4,3,5;
@@ -56,6 +58,8 @@
 
 }
 
+
+
 .main-buttons:selected {
     -fx-padding: 2 0 0 2;
     -fx-background-color: #646464;
@@ -65,6 +69,29 @@
 .main-buttons:hover{
     -fx-background-color: #646464;
 
+}
+
+.prominent-done-button{
+	-fx-background-color: linear-gradient(
+        from .75em 20px to 0px .75em,
+        repeat,
+        green 0%,
+        green 49%,
+        derive(green, 30%) 50%,
+        derive(green, 30%) 99%
+    );
+    -fx-text-fill: white;
+}
+
+.prominent-done-button:hover{
+		-fx-background-color: linear-gradient(
+        from .75em 20px to 0px .75em,
+        repeat,
+        derive(green, -40%)0%,
+        derive(green, -40%) 49%,
+        derive(green, -10%) 50%,
+        derive(green, -10%) 99%
+    );
 }
 
 .addsub-buttons{
