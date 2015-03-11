@@ -45,16 +45,7 @@
 
 .main-buttons{
     -fx-background-color: #0088cc;
-    -fx-background-radius: 5,4,3,5;
-    -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-    -fx-font-family: "Arial";
-    -fx-text-fill: linear-gradient(white, #d0d0d0);
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-cursor: hand;
-
 }
 
 .main-buttons:pressed {
@@ -70,20 +61,10 @@
 
 .main-buttons:hover{
     -fx-background-color: #0095DF;
-
 }
 
 .addsub-buttons{
     -fx-background-color: #0088cc;
-    -fx-background-radius: 5,4,3,5;
-    -fx-background-insets: 0,1,2,0;
-    -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-    -fx-font-family: "Arial";
-    -fx-text-fill: linear-gradient(white, #d0d0d0);
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-
 }
 
 .addsub-buttons:pressed {

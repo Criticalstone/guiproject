@@ -24,6 +24,9 @@
 .list-cell:even{
 	-fx-background-color: #B2B2B2;
 }
+.list-cell:selected{
+    -fx-background-color: #646464;
+}
 
 .categories-background{
 	-fx-background-color: #333333;
@@ -39,27 +42,16 @@
 
 .main-buttons{
     -fx-background-color: #A1A1A1;
-    -fx-background-radius: 5,4,3,5;
-    -fx-background-insets: 0,1,2,0;
     -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-    -fx-font-family: "Arial";
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-cursor: hand;
-
 }
 
 .main-buttons:pressed {
     -fx-padding: 2 0 0 2;
-
 }
 
 .main-buttons:selected {
     -fx-padding: 2 0 0 2;
     -fx-background-color: #646464;
-
 }
 
 .main-buttons:hover{
@@ -69,23 +61,15 @@
 
 .addsub-buttons{
     -fx-background-color: #A1A1A1;
-    -fx-background-radius: 5,4,3,5;
-    -fx-background-insets: 0,1,2,0;
-    -fx-text-fill: white;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
-    -fx-font-family: "Arial";
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
- 
 }
 
 .addsub-buttons:pressed {
     -fx-padding: 2 0 0 2;
+
 }
 
 .addsub-buttons:hover{
     -fx-background-color: #646464;
-
 }
 
 .icon-buttons{
