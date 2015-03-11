@@ -175,6 +175,7 @@ public class ControllerMain extends Application{
 	public static void displayPurchaseConfirmation(String deliveryDate) {
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(new ThankYouForPurchase(deliveryDate));	
+		controllershoppingCart.setCheckoutButtonStatus(true);
 		
 	}
 	
@@ -183,24 +184,28 @@ public class ControllerMain extends Application{
 		detailView.getChildren().add(startView);
 		collapseCategories();
 		setBanner("start");
+		controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
 	public static void displayRecipeView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(recipeView);
 		setBanner("start");
+		controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
 	
 	public static void displayCheckout(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(checkoutView);
+		controllershoppingCart.setCheckoutButtonStatus(false);
 	}
 	public static void displayRecipeListView(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(recipeListView);
         unSelectCategories();
         setBanner("start");
+        controllershoppingCart.setCheckoutButtonStatus(true);
     }
 	
 	public static void displayShoppingListView(){
@@ -210,17 +215,20 @@ public class ControllerMain extends Application{
         shoppingList.updateShoppingListView();
     	unSelectCategories();
     	setBanner("start");
+    	controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
 
     public static void displayProfile(UserProfile userP){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(new ProfileView(userP)); 
+		controllershoppingCart.setCheckoutButtonStatus(true);
     }
 	
 	public static void displayProductResultList(){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(controllerResultList);
+		controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
 	public static void collapseCategories(){
@@ -234,6 +242,7 @@ public class ControllerMain extends Application{
 	public static void displayLoginView(String side){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(new TotalLogInView(side));
+		controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
 	//GETTERS

@@ -72,7 +72,28 @@
     -fx-background-color: #0095DF;
 
 }
+.prominent-done-button{
+	-fx-background-color: linear-gradient(
+        from .75em 20px to 0px .75em,
+        repeat,
+        green 0%,
+        green 49%,
+        derive(green, 30%) 50%,
+        derive(green, 30%) 99%
+    );
+    -fx-text-fill: white;
+}
 
+.prominent-done-button:hover{
+		-fx-background-color: linear-gradient(
+        from .75em 20px to 0px .75em,
+        repeat,
+        derive(green, -40%)0%,
+        derive(green, -40%) 49%,
+        derive(green, -10%) 50%,
+        derive(green, -10%) 99%
+    );
+}
 .addsub-buttons{
     -fx-background-color: #0088cc;
     -fx-background-radius: 5,4,3,5;

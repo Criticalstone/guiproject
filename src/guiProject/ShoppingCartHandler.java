@@ -85,6 +85,7 @@ public class ShoppingCartHandler extends GridPane{
         });
         
         listView.setPadding(new Insets(5, 0, 0, 0));
+        setCheckoutButtonStatus(true);
     }
 
     /**
@@ -147,6 +148,7 @@ public class ShoppingCartHandler extends GridPane{
         listView.getItems().addAll(finalList);
 
         sum.setText(cart.getTotal() + " kr");
+        setCheckoutButtonStatus(true);
     }
 
     //ActionEvent for the clear button
@@ -324,6 +326,16 @@ public class ShoppingCartHandler extends GridPane{
         cart.clear();
         updateList();
 		
+	}
+	
+	public void setCheckoutButtonStatus(Boolean active){
+		if (active && buttonCheckout.isDisabled() && cart.getItems().size() != 0){
+			buttonCheckout.setDisable(false);
+		} else if (!active && !buttonCheckout.isDisabled()){
+			buttonCheckout.setDisable(true);
+		} else if (cart.getItems().size() == 0){
+			buttonCheckout.setDisable(true);
+		}
 	}
 
 }
