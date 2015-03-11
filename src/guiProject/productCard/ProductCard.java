@@ -58,7 +58,7 @@ public class ProductCard extends GridPane implements IFProductCard{
 
 	private CustomMenuItem newShoppingList;
 
-	private ImageView checkIcon;
+	private Image checkIcon;
 	
 	/**
 	 * Constructor for the product card. Will create and initialize a product card based on the provided product.
@@ -77,7 +77,7 @@ public class ProductCard extends GridPane implements IFProductCard{
         }
         
         //Initialize
-        checkIcon = new ImageView(new Image(ProductCard.class.getResourceAsStream("/res/Check_mark.png")));
+        checkIcon = new Image(ProductCard.class.getResourceAsStream("/res/Check_mark.png"));
         this.product = p;
         setName();
         setPrice();
@@ -100,19 +100,30 @@ public class ProductCard extends GridPane implements IFProductCard{
 		menuButtonAddToList.getItems().removeAll(menuButtonAddToList.getItems());
 		addNewShoppingListMenuItem();
 		menuButtonAddToList.getItems().add(new SeparatorMenuItem());
-		
+
 		for (String s: ControllerMain.getShoppingLists().keySet()){
 			MenuItem menuItem = new MenuItem(s);
 			for (ShoppingItem shop: ControllerMain.getShoppingLists().get(s).getProducts()){
 				if (shop.getProduct().equals(product)){
-					menuItem.setGraphic(checkIcon);
+					menuItem.setGraphic( new ImageView(checkIcon));
 				}
 			}
 
 			menuItem.setOnAction(new EventHandler<ActionEvent>() {
 			    @Override 
 			    public void handle(ActionEvent e) {
-			        ControllerMain.addProductToList(menuItem.getText(), new ShoppingItem(product, 1));
+			    	boolean productFound = false;
+					for (ShoppingItem shop: ControllerMain.getShoppingLists().get(s).getProducts()){
+						if (shop.getProduct().equals(product)){
+							ControllerMain.removeProductFromList(s, shop);
+							productFound = true;
+							break;
+						}
+					}
+					if (!productFound){
+				        ControllerMain.addProductToList(menuItem.getText(), new ShoppingItem(product, 1));
+					}
+			        ControllerMain.updateCards();
 			    }
 			});
 			menuButtonAddToList.getItems().add(menuItem);
@@ -245,7 +256,4 @@ public class ProductCard extends GridPane implements IFProductCard{
 		ControllerMain.starProduct(product, ((ToggleButton)e.getSource()).isSelected());
 	}
 	
-	public void shoppingListActionButton(ActionEvent e){
-
-	}
 }

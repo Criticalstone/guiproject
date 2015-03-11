@@ -119,6 +119,10 @@ public class ControllerMain extends Application{
 		controllershoppingCart.emptyCart();
 	}
 	
+	public static void removeProductFromList(String listName, ShoppingItem item){
+		controllerShoppingLists.removeProductFromList(listName, item);
+	}
+	
 
 	//SETTERS
     

@@ -77,6 +77,10 @@ public class ControllerShoppingLists implements Serializable{
         IFProductList<ShoppingItem> list = shoppingLists.get(name);
         list.addList(items);
     }
+    
+    public void removeProductFromList(String listName, ShoppingItem item){
+    	shoppingLists.get(listName).removeProduct(item);
+    }
 	
 
 	

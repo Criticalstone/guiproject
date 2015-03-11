@@ -44,7 +44,14 @@ public class SavedShoppingList implements IFProductList<ShoppingItem>{
 
 	@Override
 	public void removeProduct(ShoppingItem p) {
-		productList.remove(p);
+		for (ShoppingItem shop: productList){
+			System.out.println(shop.getProduct().getName());
+			if (p.getProduct().equals(shop.getProduct())){
+				productList.remove(shop);
+				break;
+			}
+		}
+
 		
 	}
 
