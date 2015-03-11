@@ -152,6 +152,7 @@ public class ShoppingCartHandler extends GridPane{
     //ActionEvent for the clear button
     @FXML
     private void clearOnClick(ActionEvent event){
+    	ControllerMain.action();
     	emptyCart();
     }
 

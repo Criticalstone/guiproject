@@ -350,11 +350,13 @@ public class ControllerMain extends Application{
         recipeListView = new RecipeListView();
         shoppingList = new ShoppingList();
         colorScheme = new ControllerColorScheme("defaultColorScheme");
+    
         
         //Setup FXML
         Parent root = FXMLLoader.load(getClass().getResource("fxml/MainView.fxml"));
         primaryStage.setTitle("iMat");
         scene = new Scene(root, 1000, 600);
+        
         
         //Initialize main panels.
 		categoriesView = (GridPane) scene.lookup("#categoriesView");
@@ -387,6 +389,8 @@ public class ControllerMain extends Application{
             }
         });
         primaryStage.setScene(scene);
+        primaryStage.minHeightProperty().set(937);
+        primaryStage.minWidthProperty().set(1413);
         primaryStage.show();
         setColorScheme(ColorScheme.DARK);
 
@@ -412,6 +416,10 @@ public class ControllerMain extends Application{
 		
 
     }
+	
+	public static void action(){
+		System.out.println(scene.getHeight() + " : " + scene.getWidth());
+	}
 
 
 
