@@ -186,9 +186,10 @@ public class ControllerMain extends Application{
 		controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
-	public static void displayRecipeView(){
+	public static void displayRecipeView(String recipeName){
 		detailView.getChildren().removeAll(detailView.getChildren());
 		detailView.getChildren().add(recipeView);
+		recipeView.setRecipe(recipeName);
 		setBanner("start");
 		controllershoppingCart.setCheckoutButtonStatus(true);
 	}

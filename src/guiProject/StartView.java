@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
+import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
@@ -24,7 +25,7 @@ public class StartView extends GridPane {
     }
 	
 	public void recipeEvent(MouseEvent e){
-		ControllerMain.displayRecipeView();
+		ControllerMain.displayRecipeView(((Node) e.getSource()).getId());
 	}
 	
 	public void recipeMouseEntered(MouseEvent e){

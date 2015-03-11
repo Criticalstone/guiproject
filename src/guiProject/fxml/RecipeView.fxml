@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
@@ -8,7 +9,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root fx:id="recipeView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="721.0" styleClass="details-background" stylesheets="@../../res/recipeView.css" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="recipeView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="721.0" styleClass="details-background" stylesheets="@../../res/recipeView.css" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -24,51 +25,40 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="77.0" minHeight="5.0" prefHeight="35.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="248.0" fitWidth="350.0" nodeOrientation="INHERIT" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowSpan="4">
-               <image>
-                  <Image url="@../../res/recipeView/tacoRecipe.jpg" />
-               </image>
+            <ImageView fx:id="recipeImage" fitHeight="248.0" fitWidth="350.0" nodeOrientation="INHERIT" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowSpan="4">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </ImageView>
-            <Label styleClass="text-lables" text="Recept | Medel | Tid: 30min">
+            <Label fx:id="infoLabel" styleClass="text-lables">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <VBox GridPane.rowIndex="1">
-               <children>
-                  <Label layoutX="14.0" layoutY="28.0" styleClass="text-lables" text="Tacogratäng">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <HBox layoutX="14.0" layoutY="53.0" prefHeight="16.0" prefWidth="131.0">
-                     <children>
-                        <Region layoutX="14.0" layoutY="44.0" prefHeight="16.0" prefWidth="80.0" style="-fx-border-color: yellow;" />
-                        <Label layoutX="89.0" layoutY="44.0" prefHeight="16.0" prefWidth="50.0" styleClass="text-lables" text="0 röster" />
-                     </children>
-                  </HBox>
-               </children>
+            <Label fx:id="nameLabel" styleClass="text-lables" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
                <padding>
                   <Insets left="5.0" />
                </padding>
-            </VBox>
-            <TextArea editable="false" prefHeight="107.0" prefWidth="341.0" text="Barnens favorit – en spännande och supersmarrig variant på fredagstacosen! Den fabulösa gratängen gör du av bland annat nötfärs, taco kryddmix, pastasås (med vitlök), majs, tomat och gratängcrème. Servera med ris, gurka, rödlök och låt er väl smaka!" wrapText="true" GridPane.rowIndex="2">
+            </Label>
+            <TextArea fx:id="descriptionText" editable="false" prefHeight="107.0" prefWidth="341.0" wrapText="true" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </TextArea>
             <HBox GridPane.rowIndex="3">
                <children>
-                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" styleClass="main-buttons" text="Spara" />
-                  <Button layoutX="80.0" layoutY="8.0" mnemonicParsing="false" styleClass="main-buttons" text="Betygsätt" />
+                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" styleClass="main-buttons" text="Spara">
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin></Button>
                   <Button layoutX="164.0" layoutY="8.0" mnemonicParsing="false" onAction="#addToCartEvent" styleClass="main-buttons" text="Lägg till kundvagn" />
                </children>
                <padding>
@@ -80,14 +70,13 @@
       <GridPane GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="96.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.0" minWidth="10.0" prefWidth="322.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="290.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="509.0" minWidth="10.0" prefWidth="501.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="123.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: Gray;" text="1. Sätt ugnen på 225°C.&#10;2. Koka riset. Läs på förpackningen hur man gör.&#10;3. Gratäng: Hetta upp oljan i en stekpanna. 4. Lägg ner färsen, dela den och stek den klar under omrörning. Den ska bli smulig.&#10;4. Rör i tacokryddan i köttfärsen. Blanda ner pastasåsen och vattnet och allt låt koka upp. Rör då och då. Häll det i en ugnssäker form.&#10;5. Låt majsen rinna av och skär tomaterna i skivor.&#10;Lägg tomaterna och hälften av majsen jämnt fördelat på köttfärsen. Bred över gratängcrèmen. Sätt in formen mitt i ugnen ca 10 minuter så att den blir varm och får lite färg.&#10;7. Grönsaker: Skala löken och gurkan. Hacka löken och tärna gurkan.&#10;8. Servera tacogratängen med ris, resten av majsen, gurka och rödlök." wrapText="true" GridPane.columnIndex="1" />
             <VBox>
                <children>
                   <Label prefHeight="16.0" prefWidth="87.0" styleClass="text-lables" text="Ingridienser">
@@ -95,7 +84,7 @@
                         <Insets left="10.0" />
                      </padding>
                   </Label>
-                  <TextArea editable="false" prefHeight="197.0" prefWidth="102.0" text="Ris&#10;Nötfärs&#10;Rosmarin&#10;Basilika&#10;Aubergine&#10;Mozzarella&#10;&#10;&#10;" wrapText="true" />
+                  <ListView fx:id="ingredientsList" prefHeight="200.0" prefWidth="200.0" />
                </children>
                <GridPane.margin>
                   <Insets left="5.0" />
@@ -110,38 +99,42 @@
                   </Label>
                   <GridPane layoutX="7.0" layoutY="57.0" prefHeight="199.0" prefWidth="303.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
                      <children>
-                        <ImageView fx:id="r1" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true">
+                        <ImageView fx:id="Räksallad" fitHeight="70.0" fitWidth="95.0" onMouseClicked="#recipeEvent" pickOnBounds="true">
                            <GridPane.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets bottom="10.0" />
                            </GridPane.margin>
+                           <image>
+                              <Image url="@../../res/recipeView/räksalladRecipe.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
-                        <ImageView fx:id="r2" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" GridPane.columnIndex="1">
+                        <ImageView fx:id="Våfflor" fitHeight="70.0" fitWidth="95.0" onMouseClicked="#recipeEvent" pickOnBounds="true" GridPane.rowIndex="1">
                            <GridPane.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets bottom="10.0" />
                            </GridPane.margin>
+                           <image>
+                              <Image url="@../../res/recipeView/våfflorRecipe.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
-                        <ImageView fx:id="r3" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" GridPane.rowIndex="1">
-                           <GridPane.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </GridPane.margin>
-                        </ImageView>
-                        <ImageView fx:id="r4" fitHeight="85.0" fitWidth="135.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <GridPane.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </GridPane.margin>
-                        </ImageView>
+                        <Label styleClass="text-lables" text="Våfflor" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Label styleClass="text-lables" text="Räksallad" GridPane.valignment="BOTTOM" />
                      </children>
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
                </children>
             </VBox>
+            <ListView fx:id="instructionList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </children>
