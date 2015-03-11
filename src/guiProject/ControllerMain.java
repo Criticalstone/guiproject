@@ -413,14 +413,5 @@ public class ControllerMain extends Application{
 	//Add statements to this method to run test data in the environment.
 	private static void testDataTEMPORARY() {
 
-		
-
     }
-	
-	public static void action(){
-		System.out.println(scene.getHeight() + " : " + scene.getWidth());
-	}
-
-
-
 }
