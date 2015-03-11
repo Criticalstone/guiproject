@@ -175,7 +175,6 @@ public class ShoppingCartHandler extends GridPane{
     public void saveToListButtonAction(ActionEvent e){
         ControllerMain.addShoppingList(listName.getText());
         ControllerMain.addProductToList(listName.getText(), cart.getItems());
-        System.out.println(listName.getText());
         ControllerMain.updateShoppingListView();
     }
 
@@ -191,8 +190,6 @@ public class ShoppingCartHandler extends GridPane{
             this.addObserver(new CartListObserver());
             this.getStyleClass().add("list-cell");
             this.getStyleClass().add("list-cell-shoppinglist");
-            
-            
         }
 
         @Override

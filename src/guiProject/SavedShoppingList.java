@@ -2,6 +2,7 @@ package guiProject;
 
 import guiProject.interfaces.IFProductList;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -14,11 +15,12 @@ public class SavedShoppingList implements IFProductList<ShoppingItem>{
 	private static final long serialVersionUID = -4789214486011266428L;
 	private List<ShoppingItem> productList;
 	private String name;
-    private Date timeStamp;
+    private String timeStamp;
 	
 	public SavedShoppingList(String name){
 		this.name = name;
-        this.timeStamp = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yy-mm-dd hh:mm:ss");
+        this.timeStamp = dateFormat.format(new Date());
 		productList = new ArrayList<>();
 	}
 
@@ -27,8 +29,8 @@ public class SavedShoppingList implements IFProductList<ShoppingItem>{
 		return productList.contains(p);
 	}
 
-    public Date getTimeStamp(){
-        return (Date)timeStamp.clone();
+    public String getTimeStamp(){
+        return timeStamp;
     }
 
 	@Override

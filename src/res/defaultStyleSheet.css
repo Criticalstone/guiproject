@@ -11,7 +11,41 @@
 	-fx-background-image: url("gold-star-clipart-big_gold_star_toggled.png");
 }
 
+.addsub-buttons{
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-min-height: 26px;
+    -fx-min-width: 25px;
+}
 
+.icon-buttons{
+    -fx-background-color: #51489C;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.main-buttons{
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
 
 .pane{
 	-fx-background-repeat: stretch; 
@@ -22,8 +56,6 @@
 .list-cell-shoppinglist{
 	-fx-cell-size: 115;
 }
-
-
 
 .add-to-list-button-menu{
 	-fx-background-color: null;
@@ -40,7 +72,6 @@
 
 .add-to-list-button-menu  .arrow {
 	-fx-background-color: null;
-    
 }
 
 .prominent-done-button{
@@ -49,5 +80,4 @@
 
 .prominent-done-button:pressed{
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 3 , 3 );
-	    
 }
