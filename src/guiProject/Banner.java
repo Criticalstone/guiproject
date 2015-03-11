@@ -58,7 +58,7 @@ public class Banner extends GridPane{
     	        break;
     		case "BEEFMEAT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
-    			bannerTitle.setText("NÃ¶tÃ¶tt");
+    			bannerTitle.setText("Nötkött");
     			break;
     		case "CHICKEN":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
@@ -70,15 +70,15 @@ public class Banner extends GridPane{
     			break;
     		case "POD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/POD.jpg');");
-    			bannerTitle.setText("BaljvÃ¤xter");
+    			bannerTitle.setText("Baljväxter");
 				break;
     		case "BREAD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BREAD.jpg');");
-    			bannerTitle.setText("BrÃ¶d");
+    			bannerTitle.setText("Bröd");
 				break;
     		case "BERRY":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BERRY.jpg');");
-    			bannerTitle.setText("BÃ¤r");
+    			bannerTitle.setText("Bär");
 				break;
     		case "CITRUS_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CITRUS_FRUIT.jpg');");
@@ -98,11 +98,11 @@ public class Banner extends GridPane{
 				break;
     		case "VEGETABLE_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/VEGETABLE_FRUIT.jpg');");
-    			bannerTitle.setText("GrÃ¶nsaksfrukter");
+    			bannerTitle.setText("Grönsaksfrukter");
 				break;
     		case "CABBAGE":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CABBAGE.jpg');");
-    			bannerTitle.setText("KÃ¥l");
+    			bannerTitle.setText("Kål");
 				break;
     		case "DAIRIES":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/DAIRIES.jpg');");
@@ -114,7 +114,7 @@ public class Banner extends GridPane{
 				break;
     		case "FLOUR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
-    			bannerTitle.setText("MjÃ¶l");
+    			bannerTitle.setText("Mjöl");
 				break;
     		case "SUGAR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
@@ -122,11 +122,11 @@ public class Banner extends GridPane{
 				break;
     		case "SALT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
-    			bannerTitle.setText("MjÃ¶l");
+    			bannerTitle.setText("Salt");
 				break;
     		case "NUTS_AND_SEEDS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/NUTS_AND_SEEDS.jpg');");
-    			bannerTitle.setText("NÃ¶tter & frÃ¶n");
+    			bannerTitle.setText("Nötter & frön");
 				break;
     		case "PASTA":	
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/PASTA.jpg');");
@@ -150,11 +150,11 @@ public class Banner extends GridPane{
 				break;
     		case "SWEET":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/SWEET.jpg');");
-    			bannerTitle.setText("SÃ¶tsaker");
+    			bannerTitle.setText("Sötsaker");
 				break;
     		case "HERB":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/HERB.jpg');");
-    			bannerTitle.setText("Ã–rter");
+    			bannerTitle.setText("Ärter");
 				break;
     		default:
     			break;
