@@ -105,6 +105,12 @@ public class ProfileView extends GridPane{
     private Button deleteProfileButton;
     @FXML
     private Label profileSavedMessage;
+    @FXML
+    private ChoiceBox comboDeliveryTime;
+    @FXML
+    private ChoiceBox comboStore;
+    @FXML
+    private ChoiceBox comboDeliveryOptions;
 //    @FXML
 //    private ImageView profileImage;
 	
@@ -139,6 +145,10 @@ public class ProfileView extends GridPane{
 	private void setupChoiceBoxes() {
     	comboPaymentOpt.setItems(FXCollections.observableArrayList("","Kredit-/Kontokort", "PayPal", "Direktbank", "Faktura"));
     	comboCard.setItems(FXCollections.observableArrayList("","MasterCard", "Visa", "Maestro"));
+    	comboDeliveryTime.setItems(FXCollections.observableArrayList("", "6:00", "12:00","18:00", "20:00", "22:00"));
+    	comboStore.setItems(FXCollections.observableArrayList("","Butik 1"));
+    	comboDeliveryOptions.setItems(FXCollections.observableArrayList("","Hemleverans", "Hämta i butik"));
+    	
     	List<ColorScheme> schemesToDisplay = new ArrayList<ColorScheme>();
     	for (ColorScheme c: ControllerMain.getAllAvailableColorSchemes()){
     		if (c != ControllerMain.getCurrentColorScheme()){
@@ -195,6 +205,10 @@ public class ProfileView extends GridPane{
     	textExpir2.setText(profile.getCard().getExpiryMonth());
     	textCardName.setText(profile.getCard().getCardHolder());
     	textCVC.setText(profile.getCard().getCvc());
+    	
+    	comboDeliveryTime.setValue(profile.getComboDeliveryTime());
+        comboStore.setValue(profile.getComboStore());
+        comboDeliveryOptions.setValue(profile.getComboDeliveryOptions());
 	    	
 	    	
 	//        Customer customer = ControllerMain.getCustomer();
@@ -220,6 +234,11 @@ public class ProfileView extends GridPane{
 	    	profile.setPhone(textTel.getText());
 	    	profile.setEmail(textEmail.getText());
 	    	profile.setPaymentOption(comboPaymentOpt.getValue().toString());
+	    	
+	    	profile.setComboDeliveryTime(comboDeliveryTime.getValue().toString());
+	        profile.setComboStore(comboStore.getValue().toString());
+	        profile.setComboDeliveryOptions(comboDeliveryOptions.getValue().toString());
+		    	
 	    	
 //	    	if(checkCardSave.isSelected()){
 //	    		profile.setCard(new CreditCard((String)comboCard.getValue(), (textNum1.getText()+textNum2.getText()+textNum3.getText()+textNum4.getText()), textCardName.getText(), textExpir1.getText(), textExpir2.getText(), textCVC.getText()));

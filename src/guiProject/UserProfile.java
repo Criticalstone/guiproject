@@ -26,6 +26,10 @@ public class UserProfile implements Serializable {
 	private String town;
 	private ColorScheme colorScheme;
 //	private Image image;
+	private String deliveryTime;
+	private String store;
+	private String deliveryOptions;
+
 	
 	public UserProfile(String username, String password){
 		this.username = username;
@@ -42,6 +46,10 @@ public class UserProfile implements Serializable {
 		this.setCard(creditCard);
 //		this.setImage(null);
 		colorScheme = ControllerColorScheme.ColorScheme.DARK;
+		this.setComboDeliveryTime("");
+		this.setComboStore("");
+		this.setComboDeliveryOptions("");
+		
 	}
 
 	/**
@@ -219,6 +227,30 @@ public class UserProfile implements Serializable {
 	 */
 	public void setColorScheme(ColorScheme colorScheme) {
 		this.colorScheme = colorScheme;
+	}
+	
+	public void setComboDeliveryTime(String deliveryTime){
+		this.deliveryTime=deliveryTime;
+	}
+	
+	public String getComboDeliveryTime(){
+		return deliveryTime;
+	}
+	
+	public void setComboStore(String store){
+		this.store=store;
+	}
+	
+	public String getComboStore(){
+		return store;
+	}
+	
+	public void setComboDeliveryOptions(String deliveryOptions){
+		this.deliveryOptions=deliveryOptions;
+	}
+	
+	public String getComboDeliveryOptions(){
+		return deliveryOptions;
 	}
 
 }
