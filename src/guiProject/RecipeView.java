@@ -85,15 +85,18 @@ public class RecipeView extends GridPane {
                 	description = dis.readLine();
                 }else if(line.equals("#instruction")){
                 	instruction = new ArrayList<String>();
-                	 while (!(line = dis.readLine()).equals("#end")) {
-                		instruction.add(dis.readLine());
+                	line = dis.readLine();
+                	while (!line.equals("#end")) {
+                		instruction.add(line);
+                		line = dis.readLine();
                 	}
+                	recipes.add(new Recipe(name, info, imagePath, ingredients, description, instruction));
                 }
             }
             dis.close();
             reader.close();
       
-            recipes.add(new Recipe(name, info, imagePath, ingredients, description, instruction));
+            
         } catch (Exception e) {
             //System.out.println(e.getMessage());
         }

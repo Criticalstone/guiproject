@@ -21,20 +21,71 @@ Mozzarella
 #description
 Barnens favorit – en spännande och supersmarrig variant på fredagstacosen! Den fabulösa gratängen gör du av bland annat nötfärs, taco kryddmix, pastasås (med vitlök), majs, tomat och gratängcrème. Servera med ris, gurka, rödlök och låt er väl smaka!
 #instruction
-
 1. Sätt ugnen på 225°C.
-
 2. Koka riset. Läs på förpackningen hur man gör.
-
 3. Gratäng: Hetta upp oljan i en stekpanna. 
-
 4. Lägg ner färsen, dela den och stek den klar under omrörning. Den ska bli smulig.
-
 5. Rör i tacokryddan i köttfärsen. Blanda ner pastasåsen och vattnet och allt låt koka upp.
-
 6. Låt majsen rinna av och skär tomaterna i skivor. 
-
 7. Grönsaker: Skala löken och gurkan. Hacka löken och tärna gurkan.
-
 8. Servera tacogratängen med ris, resten av majsen, gurka och rödlök.
+#end
+#name
+Rotsellerisoppa
+#info
+Recept | Medel | Tid: 45min
+#image
+res/recipeView/rotsellerisoppaRecipe.jpg
+#ingredients
+116
+Potatis
+128
+Rotselleri
+81
+Mozzarella
+146
+Persilja
+94
+Salt
+#end
+#description
+En makalöst god rotsellerisoppa där svamptoasten är ett givet komplement. Crème fraichen i soppan bidrar till en fantastiskt krämig konsistens, och den färska persiljan gör kryddningen komplett. Toasten gjord på champinjonfräs toppas med en smakrik ost och avslutas i ugnen innan den serveras med soppan.
+#instruction
+1. Tina svampen till svamptoasten.
+2. Sätt ugnen på 225˚C.
+3. Soppa: Skala och skiva lök och potatis.  
+4. Fräs lök och rotselleri i oljan i en kastrull. Tillsätt potatis.
+5. Hacka persiljan. Skölj bönorna i ett durkslag och låt dem rinna av.
+6. Blanda ner bönorna i soppan och låt den bli varm. 
+7. Smaka sedan av med salt, peppar och tryffelolja, rör ner persiljan.
+8. Servera soppan med svamptoast.
+#end
+#name
+Kycklinggryta
+#info
+Recept | Medel | Tid: 20min
+#image
+res/recipeView/kycklinggrytaRecipe.jpg
+#ingredients
+113
+Ris
+73
+Kyckling
+148
+Timjan
+125
+Pepparrot
+94
+Salt
+#end
+#description
+Mustig kycklinggryta med shiitakesvamp är en välsmakande gryträtt som du svänger ihop på under 30 minuter. Bryn svampen och kycklingen i en stekpanna, tillsätt grytbasen och låt sjuda några minuter. Vänd ner hackad timjan och babyspenat i grytan och servera med nykokt ris.
+#instruction
+1. Koka riset enligt anvisningen på förpackningen.
+2. Dela svampen. Skär kycklingen i stora bitar.
+3. Bryn svampen i hälften av oljan i en stekpanna och lyft upp på en tallrik 
+4. Bryn kycklingen i resten av oljan. Salta och peppra. 
+5. Tillsätt grytbasen och lägg tillbaka svampen, låt sjuda några minuter.
+6. Hacka timjanen och vänd ner i grytan tillsammans med spenaten. 
+7. Servera kycklinggrytan med riset.
 #end

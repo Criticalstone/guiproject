@@ -2,11 +2,9 @@ package guiProject;
 
 import java.io.IOException;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
@@ -27,6 +25,7 @@ public class StartView extends GridPane {
     }
 	
 	public void recipeEvent(MouseEvent e){
+		System.out.println(((Node) e.getSource()).getId());
 		ControllerMain.displayRecipeView(((Node) e.getSource()).getId());
 	}
 	

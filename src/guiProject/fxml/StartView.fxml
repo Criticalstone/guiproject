@@ -94,15 +94,21 @@
                         <Image url="@../../res/recipeView/tacoRecipe.jpg" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="r2" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                  <ImageView fx:id="Rotsellerisoppa" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
+                     <image>
+                        <Image url="@../../res/recipeView/rotsellerisoppaRecipe.jpg" />
+                     </image>
                   </ImageView>
-                  <ImageView fx:id="r3" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                  <ImageView fx:id="Kycklinggryta" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
+                     <image>
+                        <Image url="@../../res/recipeView/kycklinggrytaRecipe.jpg" />
+                     </image>
                   </ImageView>
                   <ImageView fx:id="r4" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
@@ -135,8 +141,8 @@
                      </GridPane.margin>
                   </ImageView>
                   <Label styleClass="text-lables" text="Tacogratäng" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Laxsoppa" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Kött" GridPane.columnIndex="2" GridPane.valignment="BOTTOM" />
+                  <Label styleClass="text-lables" text="Rotselleri" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                  <Label styleClass="text-lables" text="Kycklinggryta" GridPane.columnIndex="2" GridPane.valignment="BOTTOM" />
                   <Label styleClass="text-lables" text="Kyckling" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
                   <Label styleClass="text-lables" text="Spaghetti" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
                   <Label styleClass="text-lables" text="Lax" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
