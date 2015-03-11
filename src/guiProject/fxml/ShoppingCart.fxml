@@ -58,7 +58,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Button maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#clearOnClick" prefHeight="40.0" prefWidth="100.0" styleClass="main-buttons" text="Rensa" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button fx:id="buttonClear" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onAction="#clearOnClick" prefHeight="40.0" prefWidth="100.0" styleClass="main-buttons" text="Rensa" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>

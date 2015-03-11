@@ -54,7 +54,10 @@ public class ShoppingCartHandler extends GridPane{
     @FXML
     private Button buttonSaveToList;
     @FXML
+    private Button buttonClear;
+    @FXML
     private TextField listName;
+
 
     private ShoppingCart cart;
 
@@ -86,6 +89,7 @@ public class ShoppingCartHandler extends GridPane{
         
         listView.setPadding(new Insets(5, 0, 0, 0));
         setCheckoutButtonStatus(true);
+        clearButtonDisable();
     }
 
     /**
@@ -149,6 +153,7 @@ public class ShoppingCartHandler extends GridPane{
 
         sum.setText(cart.getTotal() + " kr");
         setCheckoutButtonStatus(true);
+        clearButtonDisable();
     }
 
     //ActionEvent for the clear button
@@ -335,6 +340,13 @@ public class ShoppingCartHandler extends GridPane{
 			buttonCheckout.setDisable(true);
 		} else if (cart.getItems().size() == 0){
 			buttonCheckout.setDisable(true);
+		}
+	}
+	private void clearButtonDisable(){
+		if (cart.getItems().size() == 0){
+			buttonClear.setDisable(true);
+		} else {
+			buttonClear.setDisable(false);
 		}
 	}
 
