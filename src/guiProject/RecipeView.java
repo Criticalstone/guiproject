@@ -14,10 +14,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
 public class RecipeView extends GridPane {	
@@ -94,13 +96,10 @@ public class RecipeView extends GridPane {
                 }
             }
             dis.close();
-            reader.close();
-      
-            
+            reader.close();           
         } catch (Exception e) {
             //System.out.println(e.getMessage());
         }
-	   
 	}
 	
 	public void setRecipe(String recipeName){
@@ -122,6 +121,10 @@ public class RecipeView extends GridPane {
 				descriptionText.setText(r.getDescription());
 			}
 		}
+	}
+	
+	public void recipeEvent(MouseEvent e){
+		ControllerMain.displayRecipeView(((Node) e.getSource()).getId());
 	}
 	
 	public void addToCartEvent(ActionEvent e){

@@ -25,7 +25,6 @@ public class StartView extends GridPane {
     }
 	
 	public void recipeEvent(MouseEvent e){
-		System.out.println(((Node) e.getSource()).getId());
 		ControllerMain.displayRecipeView(((Node) e.getSource()).getId());
 	}
 	

@@ -26,6 +26,7 @@ public class StarList implements IFProductList<Product>{
 
 	@Override
 	public void addProduct(Product p) {
+		System.out.print(p.getName() + ": ");
 		imat.addFavorite(p);
 		
 	}
