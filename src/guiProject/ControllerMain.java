@@ -9,8 +9,10 @@ import se.chalmers.ait.dat215.project.*;
 import guiProject.interfaces.IFProductList;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import Archive.TestFileChooser;
 import javafx.application.Application;
@@ -184,6 +186,7 @@ public class ControllerMain extends Application{
 		detailView.getChildren().add(startView);
 		collapseCategories();
 		setBanner("start");
+		startView.setRecipe();
 		controllershoppingCart.setCheckoutButtonStatus(true);
 	}
 	
@@ -277,6 +280,14 @@ public class ControllerMain extends Application{
 
     public static void placeOrder(){
         imat.placeOrder();
+    }
+    
+    public static List<String> getRandRecipe(){
+		return recipeView.randRecipe();
+    }
+    
+    public static Set<Recipe> getRecipeSet(){
+    	return recipeView.getRecipeSet();
     }
 
     /**
@@ -388,6 +399,7 @@ public class ControllerMain extends Application{
         
         //Display start
         detailView.getChildren().add(startView);
+        startView.setRecipe();
         
         //THIS METHOD SHOULD BE REMOVED WHEN RUNNING LIVE!!!
 //        testDataTEMPORARY();

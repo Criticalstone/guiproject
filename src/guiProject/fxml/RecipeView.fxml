@@ -55,7 +55,7 @@
             </TextArea>
             <HBox GridPane.rowIndex="3">
                <children>
-                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" styleClass="main-buttons" text="Spara">
+                  <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#addToFavorite" styleClass="main-buttons" text="Spara">
                      <HBox.margin>
                         <Insets right="2.0" />
                      </HBox.margin></Button>
@@ -99,30 +99,24 @@
                   </Label>
                   <GridPane layoutX="7.0" layoutY="57.0" prefHeight="199.0" prefWidth="303.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
                      <children>
-                        <ImageView fx:id="Räksallad" fitHeight="70.0" fitWidth="95.0" onMouseClicked="#recipeEvent" pickOnBounds="true">
+                        <ImageView fx:id="recipeImg1" fitHeight="70.0" fitWidth="95.0" onMouseClicked="#recipeEvent" pickOnBounds="true">
                            <GridPane.margin>
                               <Insets bottom="10.0" />
                            </GridPane.margin>
-                           <image>
-                              <Image url="@../../res/recipeView/räksalladRecipe.jpg" />
-                           </image>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <ImageView fx:id="Våfflor" fitHeight="70.0" fitWidth="95.0" onMouseClicked="#recipeEvent" pickOnBounds="true" GridPane.rowIndex="1">
+                        <ImageView fx:id="recipeImg2" fitHeight="70.0" fitWidth="95.0" onMouseClicked="#recipeEvent" pickOnBounds="true" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="10.0" />
                            </GridPane.margin>
-                           <image>
-                              <Image url="@../../res/recipeView/våfflorRecipe.jpg" />
-                           </image>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Label styleClass="text-lables" text="Våfflor" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                        <Label styleClass="text-lables" text="Räksallad" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="recipeLabel2" styleClass="text-lables" text="Våfflor" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="recipeLabel1" styleClass="text-lables" text="Räksallad" GridPane.valignment="BOTTOM" />
                      </children>
                      <columnConstraints>
                         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
