@@ -35,6 +35,14 @@ public class RecipeView extends GridPane {
 	private TextArea descriptionText;
 	@FXML
 	private ListView<String> instructionList;
+	@FXML
+	private Label recipeLabel1;
+	@FXML
+	private Label recipeLabel2;
+	@FXML
+	private ImageView recipeImg1;
+	@FXML
+	private ImageView recipeImg2;
 	
 	private Set<Recipe> recipes;
 
@@ -118,13 +126,50 @@ public class RecipeView extends GridPane {
 				}
 				ingredientsList.setItems(items);
 				instructionList.setItems(instruction);
-				descriptionText.setText(r.getDescription());
+				descriptionText.setText(r.getDescription());	
+			}
+		}
+		int i = 0;
+		for(String r: randRecipe()){
+			System.out.println(i);
+			if(!(r.equals(nameLabel.getText())) && i==1){
+				recipeLabel1.setText(r);
+				i++;
+			}else if(!(r.equals(nameLabel.getText())) && i==0){
+				recipeLabel2.setText(r);
+				i++;
+			}
+		}
+		for(Recipe r: recipes){
+			if(recipeLabel1.getText().equals(r.getName())){
+				recipeImg1.setImage(r.getImage());
+				i++;
+			}else if(recipeLabel2.getText().equals(r.getName())){
+				recipeImg2.setImage(r.getImage());
+				i++;
 			}
 		}
 	}
 	
+	public List<String> randRecipe(){
+		List<String> random = new ArrayList<String>();
+		for(Recipe r: recipes){
+			random.add(r.getName());
+		}
+		Collections.shuffle(random);
+		return random;
+	}
+	
 	public void recipeEvent(MouseEvent e){
-		ControllerMain.displayRecipeView(((Node) e.getSource()).getId());
+		if(e.getSource().equals(recipeImg1)){
+			ControllerMain.displayRecipeView(recipeLabel1.getText());
+		}else{
+			ControllerMain.displayRecipeView(recipeLabel2.getText());
+		}
+	}
+	
+	public void addToFavorite(ActionEvent e){
+		//TODO
 	}
 	
 	public void addToCartEvent(ActionEvent e){
