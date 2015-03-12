@@ -175,7 +175,7 @@ Ett förträffligt recept på lasagne för dig som är vegetarian, mjölkallergiker el
 #info
 Recept | Enkel | Tid: 10
 #image
-res/recipeView/äggRecipe.jpg
+res/recipeView/aggRecipe.jpg
 #ingredients
 85
 Ägg
@@ -195,7 +195,7 @@ Högrev
 #info
 Recept | Medel | Tid: 60min
 #image
-res/recipeView/högrevRecipe.jpg
+res/recipeView/hogrevRecipe.jpg
 #ingredients
 72
 Högrev
@@ -224,7 +224,7 @@ Köttbullar
 #info
 Recept | Medel | Tid: 45min
 #image
-res/recipeView/köttbullarRecipe.jpg
+res/recipeView/kottbullarRecipe.jpg
 #ingredients
 76
 Köttfärs
@@ -259,7 +259,7 @@ Räksallad
 #info
 Recept | Enkel | Tid: 45min
 #image
-res/recipeView/räksalladRecipe.jpg
+res/recipeView/raksalladRecipe.jpg
 #ingredients
 51
 Räkor
@@ -293,7 +293,7 @@ Våfflor
 #info
 Recept | Enkel | Tid: 30min
 #image
-res/recipeView/våfflorRecipe.jpg
+res/recipeView/vafflorRecipe.jpg
 #ingredients
 17
 Hallon
