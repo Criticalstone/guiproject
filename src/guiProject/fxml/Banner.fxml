@@ -138,7 +138,18 @@
                   <TextField fx:id="textSearch" onAction="#searchOnAction" prefHeight="26.0" prefWidth="40.0" promptText="Sök" GridPane.columnIndex="1">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
-                     </cursor></TextField>
+                     </cursor>
+                     <GridPane.margin>
+                        <Insets left="28.0" />
+                     </GridPane.margin></TextField>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@../../res/searchIcon.png" />
+                     </image>
+                  </ImageView>
                </children>
             </GridPane>
          </children>
