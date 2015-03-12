@@ -86,87 +86,60 @@
             <Label layoutX="7.0" layoutY="6.0" styleClass="text-lables" text="Recept" />
             <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="248.0">
                <children>
-                  <ImageView fx:id="Tacogratäng" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg1" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/tacoRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Rotsellerisoppa" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg2" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/rotsellerisoppaRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Kycklinggryta" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg3" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/kycklinggrytaRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Pannkakor" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg4" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/pannkakorRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Lax" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg5" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/laxRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Lasagne" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg6" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/lasagneRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Ägg" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg7" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/äggRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Högrev" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg8" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/högrevRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <ImageView fx:id="Köttbullar" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                  <ImageView fx:id="recipeImg9" fitHeight="50.0" fitWidth="75.0" onMouseClicked="#recipeEvent" onMouseEntered="#recipeMouseEntered" onMouseExited="#recipeMouseExited" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
-                     <image>
-                        <Image url="@../../res/recipeView/köttbullarRecipe.jpg" />
-                     </image>
                   </ImageView>
-                  <Label styleClass="text-lables" text="Tacogratäng" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Rotselleri" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Kycklinggryta" GridPane.columnIndex="2" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Pannkakor" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Stekt lax" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Lasagne" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Ägg" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Högrev" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                  <Label styleClass="text-lables" text="Köttbullar" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel1" styleClass="text-lables" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel2" styleClass="text-lables" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel3" styleClass="text-lables" GridPane.columnIndex="2" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel4" styleClass="text-lables" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel5" styleClass="text-lables" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel6" styleClass="text-lables" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel7" styleClass="text-lables" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel8" styleClass="text-lables" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="recipeLabel9" styleClass="text-lables" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
                </children>
                <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

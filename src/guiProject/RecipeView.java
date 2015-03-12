@@ -143,10 +143,8 @@ public class RecipeView extends GridPane {
 		for(Recipe r: recipes){
 			if(recipeLabel1.getText().equals(r.getName())){
 				recipeImg1.setImage(r.getImage());
-				i++;
 			}else if(recipeLabel2.getText().equals(r.getName())){
 				recipeImg2.setImage(r.getImage());
-				i++;
 			}
 		}
 	}
@@ -180,5 +178,8 @@ public class RecipeView extends GridPane {
 				}
 			}
 		}
+	}
+	public Set<Recipe> getRecipeSet(){
+		return recipes;
 	}
 }
