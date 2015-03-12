@@ -24,9 +24,9 @@
 	-fx-image: url('home.png');
 }
 
-#profileImg{
+/*#profileImg{
 	-fx-image: url('profileIcon.png');
-}
+}*/
 
 #favoriteImg{
 	-fx-image: url('favoriteListIcon.png');

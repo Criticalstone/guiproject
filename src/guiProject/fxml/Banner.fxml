@@ -96,6 +96,17 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
+                  <ImageView fx:id="profileImg2" fitHeight="17.0" fitWidth="20.0" onMouseClicked="#nameLabelOnAction" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../res/profileIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
                   <Label fx:id="usernameLabel" onMouseClicked="#nameLabelOnAction" styleClass="text-lables">
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -117,7 +128,10 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                      <graphic>
-                        <ImageView fx:id="profileImg" fitHeight="26.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="profileImg" fitHeight="26.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/lockIcon.png" />
+                           </image></ImageView>
                      </graphic>
                   </Button>
                </children>

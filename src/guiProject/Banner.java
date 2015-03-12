@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
@@ -28,6 +29,8 @@ public class Banner extends GridPane{
     private Label usernameLabel;
     @FXML
     private ImageView profileImg;
+    @FXML
+    private ImageView profileImg2;
 
     
     public Banner() {
@@ -43,6 +46,7 @@ public class Banner extends GridPane{
             throw new RuntimeException(exception);
         }
         usernameLabel.setVisible(false);
+        profileImg2.setVisible(false);
         setBanner("start");
     }
     
@@ -58,7 +62,7 @@ public class Banner extends GridPane{
     	        break;
     		case "BEEFMEAT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
-    			bannerTitle.setText("Nötkött");
+    			bannerTitle.setText("Nï¿½tkï¿½tt");
     			break;
     		case "CHICKEN":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
@@ -70,15 +74,15 @@ public class Banner extends GridPane{
     			break;
     		case "POD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/POD.jpg');");
-    			bannerTitle.setText("Baljväxter");
+    			bannerTitle.setText("Baljvï¿½xter");
 				break;
     		case "BREAD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BREAD.jpg');");
-    			bannerTitle.setText("Bröd");
+    			bannerTitle.setText("Brï¿½d");
 				break;
     		case "BERRY":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BERRY.jpg');");
-    			bannerTitle.setText("Bär");
+    			bannerTitle.setText("Bï¿½r");
 				break;
     		case "CITRUS_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CITRUS_FRUIT.jpg');");
@@ -98,11 +102,11 @@ public class Banner extends GridPane{
 				break;
     		case "VEGETABLE_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/VEGETABLE_FRUIT.jpg');");
-    			bannerTitle.setText("Grönsaksfrukter");
+    			bannerTitle.setText("Grï¿½nsaksfrukter");
 				break;
     		case "CABBAGE":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CABBAGE.jpg');");
-    			bannerTitle.setText("Kål");
+    			bannerTitle.setText("Kï¿½l");
 				break;
     		case "DAIRIES":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/DAIRIES.jpg');");
@@ -114,7 +118,7 @@ public class Banner extends GridPane{
 				break;
     		case "FLOUR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
-    			bannerTitle.setText("Mjöl");
+    			bannerTitle.setText("Mjï¿½l");
 				break;
     		case "SUGAR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
@@ -126,7 +130,7 @@ public class Banner extends GridPane{
 				break;
     		case "NUTS_AND_SEEDS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/NUTS_AND_SEEDS.jpg');");
-    			bannerTitle.setText("Nötter & frön");
+    			bannerTitle.setText("Nï¿½tter & frï¿½n");
 				break;
     		case "PASTA":	
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/PASTA.jpg');");
@@ -150,11 +154,11 @@ public class Banner extends GridPane{
 				break;
     		case "SWEET":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/SWEET.jpg');");
-    			bannerTitle.setText("Sötsaker");
+    			bannerTitle.setText("Sï¿½tsaker");
 				break;
     		case "HERB":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/HERB.jpg');");
-    			bannerTitle.setText("Ärter");
+    			bannerTitle.setText("ï¿½rter");
 				break;
     		default:
     			break;
@@ -230,12 +234,12 @@ public class Banner extends GridPane{
     	if(ControllerMain.getLogInView().getLoggedInStatus()){
     		myProfileButton.setText("Logga ut");
     		usernameLabel.setVisible(true);
-    		profileImg.setFitWidth(1);
-    		profileImg.setVisible(false);
+    		profileImg2.setVisible(true);
+    		profileImg.setImage(new Image("res/unlockIcon.png"));
     	}else{
     		usernameLabel.setVisible(false);
-    		profileImg.setVisible(true);
-    		profileImg.setFitWidth(44);
+    		profileImg2.setVisible(false);
+    		profileImg.setImage(new Image("res/lockIcon.png"));
     		myProfileButton.setText("Logga in");
     	}
     }
