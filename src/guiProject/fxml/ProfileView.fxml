@@ -151,7 +151,11 @@
                         <Tooltip text="Återställ till senast sparad information" />
                      </tooltip>
                   </Button>
-                  <Button fx:id="buttonSave" maxWidth="-Infinity" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="31.0" prefWidth="80.0" styleClass="main-buttons" text="Spara" />
+                  <Button fx:id="buttonSave" maxWidth="-Infinity" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="31.0" prefWidth="80.0" text="Spara">
+                     <styleClass>
+                        <String fx:value="main-buttons" />
+                        <String fx:value="prominent-done-button" />
+                     </styleClass></Button>
                </children>
                <HBox.margin>
                   <Insets />
@@ -410,11 +414,6 @@
                      </VBox.margin>
                   </PasswordField>
                   <Label fx:id="wrongMessage" prefHeight="21.0" prefWidth="232.0" textFill="#fc5252" />
-                  <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" prefHeight="100.0" prefWidth="190.0">
-                     <children>
-                        <Button alignment="CENTER" maxWidth="-Infinity" mnemonicParsing="false" onAction="#SavePasswordOnAction" prefHeight="31.0" prefWidth="73.0" styleClass="main-buttons" text="Spara" />
-                     </children>
-                  </HBox>
                </children>
             </VBox>
             <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="39.0" prefWidth="287.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">

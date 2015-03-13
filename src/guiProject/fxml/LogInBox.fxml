@@ -50,10 +50,14 @@
                         <Insets left="5.0" right="10.0" />
                      </VBox.margin>
                   </PasswordField>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="31.0" prefWidth="89.0" styleClass="main-buttons" text="Logga In">
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="31.0" prefWidth="89.0" text="Logga In">
                      <VBox.margin>
                         <Insets bottom="5.0" left="60.0" top="10.0" />
                      </VBox.margin>
+                     <styleClass>
+                        <String fx:value="main-buttons" />
+                        <String fx:value="prominent-done-button" />
+                     </styleClass>
                   </Button>
                   <Label fx:id="wrongPassword" text="*Felaktigt lösenord" textFill="#fc4848" visible="false">
                      <VBox.margin>
