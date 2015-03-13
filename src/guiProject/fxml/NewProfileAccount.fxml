@@ -69,10 +69,14 @@
                </VBox.margin>
             </Label>
             <Label />
-            <Button mnemonicParsing="false" onAction="#ButtonCreateNewAccount" styleClass="main-buttons" text="Skapa konto">
+            <Button mnemonicParsing="false" onAction="#ButtonCreateNewAccount" text="Skapa konto">
                <VBox.margin>
                   <Insets bottom="5.0" left="52.0" />
                </VBox.margin>
+               <styleClass>
+                  <String fx:value="main-buttons" />
+                  <String fx:value="prominent-done-button" />
+               </styleClass>
             </Button>
          </children>
       </VBox>

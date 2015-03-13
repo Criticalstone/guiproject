@@ -172,10 +172,40 @@ public class ProfileView extends GridPane{
 
 	@FXML
     private void saveOnAction(ActionEvent event){
-        setInfoToCustomer();
-        labelName.setText(profile.getFirstName() + " " + profile.getLastName());
-        ControllerMain.getLogInView().setLoggedInStatus(true);
-        profileSavedMessage.setVisible(true);
+		if (changePasswordBox.isVisible()){
+	    	if(profile.getPassword().equals(currentPassword.getText()) && newPassword.getText().equals(repeatPassword.getText())&& repeatPassword.getText().length()!=0 ){ /*kontotslösenord jämförs med inskrivet nuvarande lösenord && nyttlösenord jämförs med upprepat lösenord(ser om samma)*/
+	    		if(profile.getPassword().equals(newPassword.getText())){
+	    			wrongMessage.setText("*Samma lösenord som innan");
+	        		wrongMessage.setVisible(true);
+	    		}else{
+	    			correctMessage.setVisible(true);  //få bort texten?
+	    			profile.setPassword(newPassword.getText());
+	    			cleanBox();
+	    			Utilities.SaveToFile(profile, null, profile.getUsername());       /*sparar ner det nya lösenordet. Rutan försvinner och en liten text kommer upp att det är genomfört(försvinner seda)*/
+	    	        setInfoToCustomer();
+	    	        labelName.setText(profile.getFirstName() + " " + profile.getLastName());
+	    	        ControllerMain.getLogInView().setLoggedInStatus(true);
+	    	        profileSavedMessage.setVisible(true);
+	    		}
+	    	}else if(!profile.getPassword().equals(currentPassword.getText())){/*om kontolösenord och nuvarande lösenord ej överstämmer*/
+	    		wrongMessage.setText("*Ej korrekt nuvarande lösenord");
+	    		wrongMessage.setVisible(true);  /*sätter upp en label som står att det är ej korrekt nuvarande lösenord*/		
+	    	}else if(repeatPassword.getText().length()==0 && newPassword.getText().length()==0){  /*något av de två sista fälten är tomma*/
+	    		wrongMessage.setText("*Skriv in ett nytt lösenord");
+	    		wrongMessage.setVisible(true); /*du måste skriva in ett nytt lösenord*/
+	    	}else{
+	    		wrongMessage.setText("*Nya lösenord ej samma"); /*sätter upp en label, nya lösenordet överstämmer inte*/
+	    	}
+		} else {
+	        setInfoToCustomer();
+	        labelName.setText(profile.getFirstName() + " " + profile.getLastName());
+	        ControllerMain.getLogInView().setLoggedInStatus(true);
+	        profileSavedMessage.setVisible(true);
+		}
+		
+    	
+
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -271,29 +301,6 @@ public class ProfileView extends GridPane{
     	}
     }
 
-    
-    @FXML
-    public void SavePasswordOnAction(){
-    	if(profile.getPassword().equals(currentPassword.getText()) && newPassword.getText().equals(repeatPassword.getText())&& repeatPassword.getText().length()!=0 ){ /*kontotslösenord jämförs med inskrivet nuvarande lösenord && nyttlösenord jämförs med upprepat lösenord(ser om samma)*/
-    		if(profile.getPassword().equals(newPassword.getText())){
-    			wrongMessage.setText("*Samma lösenord som innan");
-        		wrongMessage.setVisible(true);
-    		}else{
-    			correctMessage.setVisible(true);  //få bort texten?
-    			profile.setPassword(newPassword.getText());
-    			cleanBox();
-    			Utilities.SaveToFile(profile, null, profile.getUsername());       /*sparar ner det nya lösenordet. Rutan försvinner och en liten text kommer upp att det är genomfört(försvinner seda)*/
-    		}
-    	}else if(!profile.getPassword().equals(currentPassword.getText())){/*om kontolösenord och nuvarande lösenord ej överstämmer*/
-    		wrongMessage.setText("*Ej korrekt nuvarande lösenord");
-    		wrongMessage.setVisible(true);  /*sätter upp en label som står att det är ej korrekt nuvarande lösenord*/		
-    	}else if(repeatPassword.getText().length()==0 && newPassword.getText().length()==0){  /*något av de två sista fälten är tomma*/
-    		wrongMessage.setText("*Skriv in ett nytt lösenord");
-    		wrongMessage.setVisible(true); /*du måste skriva in ett nytt lösenord*/
-    	}else{
-    		wrongMessage.setText("*Nya lösenord ej samma"); /*sätter upp en label, nya lösenordet överstämmer inte*/
-    	}
-    }
     
     public void cleanBox(){
     	changePasswordBox.setVisible(false);
