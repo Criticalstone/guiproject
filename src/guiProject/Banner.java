@@ -62,7 +62,7 @@ public class Banner extends GridPane{
     	        break;
     		case "BEEFMEAT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
-    			bannerTitle.setText("Nï¿½tkï¿½tt");
+    			bannerTitle.setText("Nötkött");
     			break;
     		case "CHICKEN":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/MEAT.jpg');");
@@ -74,15 +74,15 @@ public class Banner extends GridPane{
     			break;
     		case "POD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/POD.jpg');");
-    			bannerTitle.setText("Baljvï¿½xter");
+    			bannerTitle.setText("Baljväxter");
 				break;
     		case "BREAD":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BREAD.jpg');");
-    			bannerTitle.setText("Brï¿½d");
+    			bannerTitle.setText("Bröd");
 				break;
     		case "BERRY":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/BERRY.jpg');");
-    			bannerTitle.setText("Bï¿½r");
+    			bannerTitle.setText("Bär");
 				break;
     		case "CITRUS_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CITRUS_FRUIT.jpg');");
@@ -102,11 +102,11 @@ public class Banner extends GridPane{
 				break;
     		case "VEGETABLE_FRUIT":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/VEGETABLE_FRUIT.jpg');");
-    			bannerTitle.setText("Grï¿½nsaksfrukter");
+    			bannerTitle.setText("Grönsaksfrukter");
 				break;
     		case "CABBAGE":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/CABBAGE.jpg');");
-    			bannerTitle.setText("Kï¿½l");
+    			bannerTitle.setText("Kål");
 				break;
     		case "DAIRIES":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/DAIRIES.jpg');");
@@ -118,7 +118,7 @@ public class Banner extends GridPane{
 				break;
     		case "FLOUR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
-    			bannerTitle.setText("Mjï¿½l");
+    			bannerTitle.setText("Mjöl");
 				break;
     		case "SUGAR":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/FLOUR_SUGAR_SALT.jpg');");
@@ -130,7 +130,7 @@ public class Banner extends GridPane{
 				break;
     		case "NUTS_AND_SEEDS":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/NUTS_AND_SEEDS.jpg');");
-    			bannerTitle.setText("Nï¿½tter & frï¿½n");
+    			bannerTitle.setText("Nötter & frön");
 				break;
     		case "PASTA":	
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/PASTA.jpg');");
@@ -154,11 +154,11 @@ public class Banner extends GridPane{
 				break;
     		case "SWEET":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/SWEET.jpg');");
-    			bannerTitle.setText("Sï¿½tsaker");
+    			bannerTitle.setText("Sötsaker");
 				break;
     		case "HERB":
     			bannerBackground.setStyle("-fx-background-image: url('res/banner/HERB.jpg');");
-    			bannerTitle.setText("ï¿½rter");
+    			bannerTitle.setText("örter");
 				break;
     		default:
     			break;
@@ -215,7 +215,7 @@ public class Banner extends GridPane{
     		setTextToLoggedIn();
     		ControllerMain.setColorScheme(ControllerColorScheme.ColorScheme.DARK);
     		ControllerMain.displayLoginView("");
-		}else{                                                         // Skickar dig sï¿½ du kan logga in
+		}else{                                                         // Skickar dig sö du kan logga in
 			ControllerMain.displayLoginView("");
 		}		
     }
