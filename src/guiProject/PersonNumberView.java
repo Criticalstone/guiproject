@@ -36,7 +36,6 @@ public class PersonNumberView extends GridPane{
 		 } catch (IOException exception) {
 			 throw new RuntimeException(exception);
 		 }	 	 
-
 	}
 	
 	

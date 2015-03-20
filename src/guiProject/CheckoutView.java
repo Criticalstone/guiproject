@@ -55,8 +55,8 @@ public class CheckoutView extends ScrollPane{
 	}
 	
 	public void buyNowButtonAction(){
-		ControllerMain.displayPurchaseConfirmation(deliverySchedule.getDeliveryTime());
-        ControllerMain.placeOrder();
-        ControllerMain.emptyCart();
+			ControllerMain.displayPurchaseConfirmation(deliverySchedule.getDeliveryTime());
+			ControllerMain.placeOrder();
+			ControllerMain.emptyCart();		
 	}
 }

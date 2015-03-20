@@ -57,5 +57,4 @@ public class PaymentView extends VBox{
 			
 		}
 	}
-  
 }

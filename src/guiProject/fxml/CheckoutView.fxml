@@ -8,6 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
+
 <fx:root fitToHeight="true" fitToWidth="true" maxWidth="1.7976931348623157E308" styleClass="details-background" type="ScrollPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <GridPane styleClass="details-background">

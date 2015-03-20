@@ -57,6 +57,8 @@ public class ControllerMain extends Application{
     private static LogInView logInView;
     private static ProfileView profileView;
     private static PersonNumberView personNumberView;
+    private static PaymentView paymentView;
+    private static CardInformationView cardInfo;
 //    private static TestFileChooser fileChooser;
     
     //Panes in mainview
@@ -352,6 +354,14 @@ public class ControllerMain extends Application{
 	
 	public static PersonNumberView getPersonNumberView(){
 		return personNumberView;
+	}
+	
+	public static PaymentView getPaymentView(){
+		return paymentView;
+	}
+	
+	public static CardInformationView getCardInfoView(){
+		return cardInfo;
 	}
 //	public static TestFileChooser getFileChooser(){
 //		return fileChooser;

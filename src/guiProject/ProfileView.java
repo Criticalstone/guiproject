@@ -269,10 +269,8 @@ public class ProfileView extends GridPane{
 	        profile.setComboStore(comboStore.getValue().toString());
 	        profile.setComboDeliveryOptions(comboDeliveryOptions.getValue().toString());
 		    	
+	        profile.setCard(new CreditCard((String)comboCard.getValue(), (textNum1.getText()+textNum2.getText()+textNum3.getText()+textNum4.getText()), textCardName.getText(), textExpir1.getText(), textExpir2.getText(), textCVC.getText()));
 	    	
-//	    	if(checkCardSave.isSelected()){
-//	    		profile.setCard(new CreditCard((String)comboCard.getValue(), (textNum1.getText()+textNum2.getText()+textNum3.getText()+textNum4.getText()), textCardName.getText(), textExpir1.getText(), textExpir2.getText(), textCVC.getText()));
-//	    	}
 	    	profile.setColorScheme((ColorScheme)selectStyle.getValue());
 	    	
 	    	Utilities.SaveToFile(profile, null, profile.getUsername());

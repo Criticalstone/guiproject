@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
@@ -29,8 +30,16 @@ public class CardInformationView extends GridPane {
 	private TextField cardholder;
 	@FXML
 	private IntegerTextField cvc;
-
-	
+	@FXML
+	private Label dateWrong;
+	@FXML
+	private Label nameholderWrong;
+	@FXML
+	private Label cvcWrong;
+	@FXML
+	private Label cardWrong;
+	@FXML
+	private Label cardNrWrong;
 
 	
 	public CardInformationView(){
@@ -45,8 +54,7 @@ public class CardInformationView extends GridPane {
 			throw new RuntimeException(exception);
 		}
 			setCardType();	
-			setLengthOfTextFields();
-			
+			setLengthOfTextFields();	
 	}
 
 	private void setLengthOfTextFields() {
