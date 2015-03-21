@@ -18,13 +18,8 @@
     <RowConstraints maxHeight="251.0" minHeight="0.0" prefHeight="225.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3">
+      <AnchorPane fx:id="imgSlider" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3">
          <children>
-            <ImageView fitHeight="293.0" fitWidth="1280.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <image>
-                  <Image url="@../../res/startView/start.png" />
-               </image>
-            </ImageView>
             <Button layoutX="90.0" layoutY="229.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="137.0" styleClass="main-buttons" text="Läs mer här">
                <font>
                   <Font size="20.0" />

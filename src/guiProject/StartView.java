@@ -1,15 +1,27 @@
 package guiProject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
+import javafx.animation.Interpolator;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.util.Duration;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 
 public class StartView extends GridPane {
 	@FXML
@@ -48,6 +60,15 @@ public class StartView extends GridPane {
 	private ImageView recipeImg8;
 	@FXML
 	private ImageView recipeImg9;
+	@FXML
+	private AnchorPane imgSlider;
+	
+    private final double IMG_WIDTH = 980;
+    private final double IMG_HEIGHT = 500;
+    
+    private final int SLIDE_FREQ = 4;
+    private final int NUM_OF_IMGS = 3;
+    HBox imgContainer = new HBox();
 	
 	public StartView() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -61,6 +82,49 @@ public class StartView extends GridPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        setSlide();
+
+    }
+	
+	private void setSlide(){
+        ImageView img1 = new ImageView(new Image(getClass().getResourceAsStream("../res/startView/start.png")));
+        ImageView img2 = new ImageView(new Image(getClass().getResourceAsStream("../res/startView/start2.jpg")));
+        ImageView img3 = new ImageView(new Image(getClass().getResourceAsStream("../res/startView/start3.jpg")));
+        imgContainer.getChildren().addAll(img1, img2, img3);
+        startAnimation(imgContainer);
+        imgSlider.getChildren().add(imgContainer);
+	}
+	
+	
+	
+   private void startAnimation(final HBox hbox) {
+	   
+        EventHandler<ActionEvent> slideAction = (ActionEvent t) -> {
+            TranslateTransition trans = new TranslateTransition(Duration.seconds(1.5), hbox);
+            trans.setByX(-IMG_WIDTH);
+            trans.setInterpolator(Interpolator.EASE_BOTH);
+            trans.play();
+        };
+ 
+        EventHandler<ActionEvent> resetAction = (ActionEvent t) -> {
+            TranslateTransition trans = new TranslateTransition(Duration.seconds(1), hbox);
+            trans.setByX((NUM_OF_IMGS - 1) * IMG_WIDTH);
+            trans.setInterpolator(Interpolator.EASE_BOTH);
+            trans.play();
+        };
+ 
+        List<KeyFrame> keyFrames = new ArrayList<>();
+        for (int i = 1; i <= NUM_OF_IMGS; i++) {
+            if (i == NUM_OF_IMGS) {
+                keyFrames.add(new KeyFrame(Duration.seconds(i * SLIDE_FREQ), resetAction));
+            } else {
+                keyFrames.add(new KeyFrame(Duration.seconds(i * SLIDE_FREQ), slideAction));
+            }
+        }
+        Timeline anim = new Timeline(keyFrames.toArray(new KeyFrame[NUM_OF_IMGS]));
+ 
+        anim.setCycleCount(Timeline.INDEFINITE);
+        anim.playFromStart();
     }
 	
 	public void setRecipe(){
